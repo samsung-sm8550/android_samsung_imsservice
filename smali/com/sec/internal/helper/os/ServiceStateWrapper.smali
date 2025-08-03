@@ -136,97 +136,17 @@
 .method public getImsVoiceAvail()Z
     .locals 1
 
-    .line 99
-    invoke-virtual {p0}, Lcom/sec/internal/helper/os/ServiceStateWrapper;->getMobileDataNetworkRegistrationInfo()Landroid/telephony/NetworkRegistrationInfo;
+    const/4 v0, 0x1
 
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    .line 100
-    invoke-virtual {p0}, Landroid/telephony/NetworkRegistrationInfo;->getDataSpecificInfo()Landroid/telephony/DataSpecificRegistrationInfo;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/telephony/NetworkRegistrationInfo;->getDataSpecificInfo()Landroid/telephony/DataSpecificRegistrationInfo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/telephony/DataSpecificRegistrationInfo;->getVopsSupportInfo()Landroid/telephony/VopsSupportInfo;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 101
-    invoke-virtual {p0}, Landroid/telephony/NetworkRegistrationInfo;->getDataSpecificInfo()Landroid/telephony/DataSpecificRegistrationInfo;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/telephony/DataSpecificRegistrationInfo;->getVopsSupportInfo()Landroid/telephony/VopsSupportInfo;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/telephony/VopsSupportInfo;->isVopsSupported()Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return v0
 .end method
 
 .method public getIsEbSupported()Z
     .locals 1
 
-    .line 108
-    invoke-virtual {p0}, Lcom/sec/internal/helper/os/ServiceStateWrapper;->getMobileDataNetworkRegistrationInfo()Landroid/telephony/NetworkRegistrationInfo;
+    const/4 v0, 0x1
 
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    .line 109
-    invoke-virtual {p0}, Landroid/telephony/NetworkRegistrationInfo;->getDataSpecificInfo()Landroid/telephony/DataSpecificRegistrationInfo;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/telephony/NetworkRegistrationInfo;->getDataSpecificInfo()Landroid/telephony/DataSpecificRegistrationInfo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/telephony/DataSpecificRegistrationInfo;->getVopsSupportInfo()Landroid/telephony/VopsSupportInfo;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 110
-    invoke-virtual {p0}, Landroid/telephony/NetworkRegistrationInfo;->getDataSpecificInfo()Landroid/telephony/DataSpecificRegistrationInfo;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/telephony/DataSpecificRegistrationInfo;->getVopsSupportInfo()Landroid/telephony/VopsSupportInfo;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/telephony/VopsSupportInfo;->isEmergencyServiceSupported()Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return v0
 .end method
 
 .method public getIsManualSelection()Z
@@ -283,16 +203,11 @@
 .end method
 
 .method public getMobileDataRegState()I
-    .locals 0
+    .locals 1
 
-    .line 148
-    iget-object p0, p0, Lcom/sec/internal/helper/os/ServiceStateWrapper;->mServiceState:Landroid/telephony/ServiceState;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0}, Landroid/telephony/ServiceState;->getMobileDataRegState()I
-
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
 .method public getNrFrequencyRange()I
@@ -361,16 +276,11 @@
 .end method
 
 .method public getSnapshotStatus()I
-    .locals 0
+    .locals 1
 
-    .line 156
-    iget-object p0, p0, Lcom/sec/internal/helper/os/ServiceStateWrapper;->mServiceState:Landroid/telephony/ServiceState;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0}, Landroid/telephony/ServiceState;->getSnapshotStatus()I
-
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
 .method public getState()I
@@ -439,16 +349,11 @@
 .end method
 
 .method public isPsOnlyReg()Z
-    .locals 0
+    .locals 1
 
-    .line 164
-    iget-object p0, p0, Lcom/sec/internal/helper/os/ServiceStateWrapper;->mServiceState:Landroid/telephony/ServiceState;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0}, Landroid/telephony/ServiceState;->isPsOnlyReg()Z
-
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
 .method public isUsingNonTerrestrialNetwork()Z
