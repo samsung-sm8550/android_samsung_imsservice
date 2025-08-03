@@ -1,0 +1,2255 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "imsprofile.json schema",
+  "description": "Structure and description of imsprofile.json settings",
+  "x-intellij-html-description": "Structure and description of imsprofile.json settings",
+  "type": "object",
+  "definitions": {
+    "profile": {
+      "description": "Operator profiles",
+      "x-intellij-html-description": "Operator profiles",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "mnoname",
+          "representative_plmn",
+          "name"
+        ],
+        "properties": {
+          "setting_example": {
+            "$comment": "Step-by-step guide for Json Schema: https://json-schema.org/learn/getting-started-step-by-step.html",
+            "deprecationMessage": "If setting is deprecated",
+            "description": "Description of setting",
+            "x-intellij-html-description": "Description in HTML format if needed. Works only with AndroidStudio/IntellijIDEA. This tag will be used instead of 'description' if added",
+            "default": "default value for setting",
+            "$comment1": "possible types: array, boolean, integer, null, number, object, string",
+            "type": "null",
+            "$comment2": "regex for String",
+            "pattern": "^ Regular expression for settings value check .*",
+            "$comment3": "Enum if it can be only defined values",
+            "enum": [
+              "possible",
+              "values"
+            ],
+            "$comment4": "MIN and MAX length for strings",
+            "minLength": 2,
+            "maxLength": 10,
+            "$comment5": "Range for numbers",
+            "minimum": 1,
+            "exclusiveMinimum": 0,
+            "maximum": 10,
+            "exclusiveMaximum": 11
+          },
+          "note": {
+            "deprecationMessage": "NOT ALLOWED HERE! Please add description to schema!",
+            "description": "NOT ALLOWED HERE!",
+            "x-intellij-html-description": "NOT ALLOWED HERE!",
+            "type": "string",
+            "default": ""
+          },
+          "name": {
+            "description": "TG: REGI\n\nAny name developer can choose, helps to distinguish IMS, Emergency, RCS profile.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Any name developer can choose, helps to distinguish IMS, Emergency, RCS profile.",
+            "default": "default",
+            "type": "string",
+            "examples": [
+              "Telia Norway Internet RCS",
+              "Telia Norway Volte",
+              "Telia Norway Emergency"
+            ]
+          },
+          "mnoname": {
+            "description": "TG: REGI\n\nUnique key for operator recognition.\nUsually looks like OperatorName_CountryCode.\nWhere country code is as defined in ISO 3166-1 alpha-2 and it is not MCC.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Unique key for operator recognition.<br />Usually looks like OperatorName_CountryCode.<br />Where country code is as defined in ISO 3166-1 alpha-2 and it is not MCC.",
+            "default": "DEFAULT",
+            "type": "string",
+            "examples": [
+              "Telia_NO",
+              "Tele2_NL"
+            ]
+          },
+          "representative_plmn": {
+            "description": "TG: REGI\n\nOperators main (only one) mccmnc code.\nUsed to identify the operator and obtain mccmnc substrings, for example to create PANI header.\n",
+            "x-intellij-html-description": "TG: REGI<br /><br />Operators main (only one) mccmnc code.<br />Used to identify the operator and obtain mccmnc substrings, for example to create PANI header.<br />",
+            "default": "",
+            "type": "string",
+            "examples": [
+              12345,
+              21345
+            ]
+          },
+          "enabled": {
+            "description": "ENABLE_STATUS_OFF = 0\nENABLE_STATUS_MANUAL = 1\nENABLE_STATUS_ON = 2",
+            "x-intellij-html-description": "ENABLE_STATUS_OFF = 0<br />ENABLE_STATUS_MANUAL = 1<br />ENABLE_STATUS_ON = 2",
+            "default": 2,
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "sales_code": {
+            "description": "TG: REGI\n\nComma separated list of sales codes\n\nEach sales code consists of 3 characters.\nCharacter can be either an uppercase letter or a digit",
+            "x-intellij-html-description": "TG: REGI<br /><br />Comma separated list of sales codes<br /><br />Each sales code consists of 3 characters.<br />Character can be either an uppercase letter or a digit",
+            "default": "",
+            "type": "string",
+            "pattern": "^$|^([A-Z]|[0-9]){3}(,([A-Z]|[0-9]){3})*$"
+          },
+          "ipver": {
+            "description": "TG: REGI\n\nIP address family\n\nIt is used by RegistrationGovernorKor.java and by dnsmgr.cpp and dnshelper.cpp",
+            "x-intellij-html-description": "TG: REGI<br /><br />IP address family<br /><br />It is used by RegistrationGovernorKor.java and by dnsmgr.cpp and dnshelper.cpp",
+            "default": "ipv4",
+            "type": "string",
+            "enum": [
+              "ipv4",
+              "ipv6",
+              "ipv4v6"
+            ]
+          },
+          "pcscf": {
+            "description": "TG: REGI\n\nComma separated list of P-CSCF addresses\nP-CSCF address can be:\n  - either IPv4 address,\n  - or IPv6 address,\n  - or FQDN.\n\nUsually it is not used (either left blank or not defined at all), as P-CSCF address is provided on dynamic fashion.\nDo not define this object, unless there is a specific request",
+            "x-intellij-html-description": "TG: REGI<br /><br />Comma separated list of P-CSCF addresses<br />P-CSCF address can be:<br />  - either IPv4 address,<br />  - or IPv6 address,<br />  - or FQDN.<br /><br />Usually it is not used (either left blank or not defined at all), as P-CSCF address is provided on dynamic fashion.<br />Do not define this object, unless there is a specific request",
+            "default": "",
+            "type": "string"
+          },
+          "pcscf_pref": {
+            "description": "TG: REGI\n\nAn integer value, denoting how UE will discover P-CSCF address(es).\n\nFollowing values are used (according to ImsProfile.java):\n    PCSCF_PREF_PCO = 0\n    PCSCF_PREF_ISIM = 1\n    PCSCF_PREF_MANUAL = 2\n    PCSCF_PREF_AUTOCONF = 3\n    PCSCF_PREF_AUTOCONF_IF_RCSONLY = 4\n    PCSCF_PREF_OMADM = 5",
+            "x-intellij-html-description": "TG: REGI<br /><br />An integer value, denoting how UE will discover P-CSCF address(es).<br /><br />Following values are used (according to ImsProfile.java):<br />    PCSCF_PREF_PCO = 0<br />    PCSCF_PREF_ISIM = 1<br />    PCSCF_PREF_MANUAL = 2<br />    PCSCF_PREF_AUTOCONF = 3<br />    PCSCF_PREF_AUTOCONF_IF_RCSONLY = 4<br />    PCSCF_PREF_OMADM = 5",
+            "default": 0,
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "priority": {
+            "description": "TG: REGI\n\nPriority for register task.\nPriority is compared in a few places in code and tasks with higher priority should be registered first.\nOnly 0 and 1 are used in imsprofile, but since integers are compared, other values are also possible.\nThere is no default value, might be unused in user scenarios.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Priority for register task.<br />Priority is compared in a few places in code and tasks with higher priority should be registered first.<br />Only 0 and 1 are used in imsprofile, but since integers are compared, other values are also possible.<br />There is no default value, might be unused in user scenarios.",
+            "type": "integer",
+            "examples": [
+              0,
+              1
+            ]
+          },
+          "authname": {
+            "description": "TG: REGI\n\nDeprecated, not used anymore",
+            "x-intellij-html-description": "TG: REGI<br /><br />Deprecated, not used anymore",
+            "default": "",
+            "type": "string",
+            "deprecationMessage": "not used anymore"
+          },
+          "password": {
+            "description": "TG: REGI\n\nUsually not used",
+            "x-intellij-html-description": "TG: REGI<br /><br />Usually not used",
+            "default": "",
+            "type": "string"
+          },
+          "domain": {
+            "description": "TG: REGI\n\nUsually left undefined.\nIf defined, Home Network Domain will be derived from the setting.\nUsed mainly for VZW and Jansky",
+            "x-intellij-html-description": "TG: REGI<br /><br />Usually left undefined.<br />If defined, Home Network Domain will be derived from the setting.<br />Used mainly for VZW and Jansky",
+            "default": "",
+            "type": "string"
+          },
+          "pdn": {
+            "description": "TG: REGI\n\nPDN on which profile will work\nPossible values:\n* default\n* ims\n* emergency\n* internet\n* wifi",
+            "x-intellij-html-description": "TG: REGI<br /><br />PDN on which profile will work<br />Possible values:<br />* default<br />* ims<br />* emergency<br />* internet<br />* wifi",
+            "default": "ims",
+            "type": "string",
+            "enum": [
+              "default",
+              "ims",
+              "emergency",
+              "internet",
+              "wifi"
+            ]
+          },
+          "qvalue": {
+            "type": "integer",
+            "default": 1000
+          },
+          "transport": {
+            "description": "TG: REGI\n\nTransport for SIP User Agent",
+            "x-intellij-html-description": "TG: REGI<br /><br />Transport for SIP User Agent",
+            "default": "udp-preferred",
+            "type": "string",
+            "enum": [
+              "udp-preferred",
+              "tcp",
+              "udp",
+              "tls"
+            ]
+          },
+          "ssl_type": {
+            "type": "integer",
+            "default": 2
+          },
+          "hash_algo_type": {
+            "description": "TG: REGI\n\nThis value indicates hash algorithm used in sdp fingerprint attribute for msrp-tls sessions.\n based on hash function selected finger print size differs.\n\n RFC 4572",
+            "x-intellij-html-description": "TG: REGI<br /><br />This value indicates hash algorithm used in sdp fingerprint attribute for msrp-tls sessions.<br />based on hash function selected finger print size differs.<br /><br />RFC 4572",
+            "default": 0,
+            "type": "integer",
+            "enum": [
+              "0:sha-1",
+              "1:sha-224",
+              "2:sha-256",
+              "3:sha-384",
+              "4:sha-512",
+              "5:md2",
+              "6:md4",
+              "7:md5"
+            ]
+          },
+          "need_transport_in_contact": {
+            "description": "TG: REGI\n\nWhen \"true\" is set, transport type is added to SIP Contact header.\n\nShould not be set as \"true\", unless explicit Operator request, as it can cause regi problem.\nIt is enabled for T-Mobile Germany by PLM P180719-00478.\nCorresponds to mIsTransportNeeded in imsuserprofile.cpp.",
+            "x-intellij-html-description": "TG: REGI<br /><br />When \"true\" is set, transport type is added to SIP Contact header.<br /><br />Should not be set as \"true\", unless explicit Operator request, as it can cause regi problem.<br />It is enabled for T-Mobile Germany by PLM P180719-00478.<br />Corresponds to mIsTransportNeeded in imsuserprofile.cpp.",
+            "default": false,
+            "type": "boolean"
+          },
+          "support_ipsec": {
+            "description": "TG: REGI\n\nWhen set to \"true\", IP Sec ESP is enabled for SIP User Agent.\ncorresponds to mIsIPSecEnabled in imsuserprofile.cpp.\nAccording to 3GPP TS 33.203 clause S.5.4.2.2 should be always set to \"true\"",
+            "x-intellij-html-description": "TG: REGI<br /><br />When set to \"true\", IP Sec ESP is enabled for SIP User Agent.<br />corresponds to mIsIPSecEnabled in imsuserprofile.cpp.<br />According to 3GPP TS 33.203 clause S.5.4.2.2 should be always set to \"true\"",
+            "default": false,
+            "type": "boolean"
+          },
+          "regi_algo": {
+            "description": "TG: REGI\n\nAuthentication and Key Agreement procedure for IMS Registration.\nIf set to \"none\", registration algorithm is not pushed into SIP Authorization header of first REGISTER at all.\nIn that case UE relies on 401 response from network, which contains selected algorithm.\nSecond (encrypted) REGISTER contains algorithm within SIP Authorization header.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Authentication and Key Agreement procedure for IMS Registration.<br />If set to \"none\", registration algorithm is not pushed into SIP Authorization header of first REGISTER at all.<br />In that case UE relies on 401 response from network, which contains selected algorithm.<br />Second (encrypted) REGISTER contains algorithm within SIP Authorization header.",
+            "default": "AKAv1-MD5",
+            "type": "string",
+            "enum": [
+              "AKAv2-MD5",
+              "AKAv1-MD5",
+              "MD5",
+              "none"
+            ]
+          },
+          "auth_algo": {
+            "description": "TG: REGI\n\nAuthentication Algorithm for IPSec ESP\nAccording to 3GPP TS 33.203 clause S.5.4.2.2 it can NOT be set to \"null\".\nCan be set either to one of the following algorithms:\n    - hmac-md5-96,\n    - hmac-sha-1-96,\n    - hmac-sha-2-256-128,\n    - hmac-sha-2-512-256,\nor set to any combination of them (separated by comma), according to operator requirements, which will result in offering all listed algorithms.\nWhen value is set neither in default section nor in operator section, \"hmac-md5-96,hmac-sha-1-96\" value is taken as a fallback-default.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Authentication Algorithm for IPSec ESP<br />According to 3GPP TS 33.203 clause S.5.4.2.2 it can NOT be set to \"null\".<br />Can be set either to one of the following algorithms:<br />    - hmac-md5-96,<br />    - hmac-sha-1-96,<br />    - hmac-sha-2-256-128,<br />    - hmac-sha-2-512-256,<br />or set to any combination of them (separated by comma), according to operator requirements, which will result in offering all listed algorithms.<br />When value is set neither in default section nor in operator section, \"hmac-md5-96,hmac-sha-1-96\" value is taken as a fallback-default.",
+            "default": "hmac-md5-96,hmac-sha-1-96",
+            "type": "string"
+          },
+          "enc_algo": {
+            "description": "TG: REGI\n\nEncryption Algorithm for IPSec ESP\nCan be set either to one of the following algorithms:\n    - \"null\"          (which means IPSec encryption \"null\" is proposed/accepted by UE),\n    - \"des-ede3-cbc\",\n    - \"aes-cbc\",\n    - \"aes-gcm-16\",\nor to any combination of them (separated by comma), according to operator requirements, which will result in offering all listed algorithms.\nWhen value is set neither in default section nor in operator section, all options will be included in the list as a fallback-default.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Encryption Algorithm for IPSec ESP<br />Can be set either to one of the following algorithms:<br />    - \"null\"          (which means IPSec encryption \"null\" is proposed/accepted by UE),<br />    - \"des-ede3-cbc\",<br />    - \"aes-cbc\",<br />    - \"aes-gcm-16\",<br />or to any combination of them (separated by comma), according to operator requirements, which will result in offering all listed algorithms.<br />When value is set neither in default section nor in operator section, all options will be included in the list as a fallback-default.",
+            "default": "null,des-ede3-cbc,aes-cbc",
+            "type": "string"
+          },
+          "subscribe_for_reg": {
+            "description": "TG: REGI\n\nFlag to control the device to Subscribe for Registration event package on successful Registration.\n\nfalse: no subscribe is sent to Network\ntrue: subscribe is sent to Network with event:reg\n\nRFC 3265, 3680",
+            "x-intellij-html-description": "TG: REGI<br /><br />Flag to control the device to Subscribe for Registration event package on successful Registration.<br /><br />false: no subscribe is sent to Network<br />true: subscribe is sent to Network with event:reg<br /><br />RFC 3265, 3680",
+            "default": true,
+            "type": "boolean"
+          },
+          "subscriber_timer": {
+            "description": "TG: REGI\n\nIndicates the Initial value of Subscriber timer that will be sent by the UE when SIP:SUBSCRIBE request is triggered.\nThe Server can alter this value in the response and this new value takes precedence.\nThe subscribe request will be refreshed, periodically at this negotiated timer interval.\n\nRFC 3265, 3680\n\nValue in seconds",
+            "x-intellij-html-description": "TG: REGI<br /><br />Indicates the Initial value of Subscriber timer that will be sent by the UE when SIP:SUBSCRIBE request is triggered.<br />The Server can alter this value in the response and this new value takes precedence.<br />The subscribe request will be refreshed, periodically at this negotiated timer interval.<br /><br />RFC 3265, 3680<br /><br />Value in seconds",
+            "default": 600000,
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 600000
+          },
+          "useragent": {
+            "description": "TG: REGI\n\nUser-Agent value in SIP Message.\nThe value configured will be set in the User-Agent header in Every SIP Request message.\n\nDefault: [PRODUCT_MODEL]-[BUILD_VERSION] Samsung IMS 6.0\n\nRFC 3261",
+            "x-intellij-html-description": "TG: REGI<br /><br />User-Agent value in SIP Message.<br />The value configured will be set in the User-Agent header in Every SIP Request message.<br /><br />Default: [PRODUCT_MODEL]-[BUILD_VERSION] Samsung IMS 6.0<br /><br />RFC 3261",
+            "default": "[PRODUCT_MODEL]-[BUILD_VERSION] Samsung IMS 6.0",
+            "type": "string"
+          },
+          "reg_expires": {
+            "description": "TG: REGI\n\nIndicates the Initial value of Register expires timer that will be sent by the UE when SIP:REGISTER request is triggered.\nThe Server can alter this value in the response and this new value takes precedence.\nThe REGISTER request will be refreshed, periodically at this negotiated timer interval.\n\nRFC 3261\n\nValue in seconds",
+            "x-intellij-html-description": "TG: REGI<br /><br />Indicates the Initial value of Register expires timer that will be sent by the UE when SIP:REGISTER request is triggered.<br />The Server can alter this value in the response and this new value takes precedence.<br />The REGISTER request will be refreshed, periodically at this negotiated timer interval.<br /><br />RFC 3261<br /><br />Value in seconds",
+            "default": 600000,
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 600000
+          },
+          "sip_uri_only": {
+            "description": "TG: CALL\n\nSets what type of URI will be used for target number",
+            "x-intellij-html-description": "TG: CALL<br /><br />Sets what type of URI will be used for target number",
+            "default": false,
+            "type": "boolean"
+          },
+          "enable_gruu": {
+            "description": "TG: REGI\n\nThis value specifies gruu enabling or disabling. If it is enabled then in REGISTER request Supported header will contain \"gruu\" as well otherwise not.\n\nRFC 5627",
+            "x-intellij-html-description": "TG: REGI<br /><br />This value specifies gruu enabling or disabling. If it is enabled then in REGISTER request Supported header will contain \"gruu\" as well otherwise not.<br /><br />RFC 5627",
+            "default": true,
+            "type": "boolean"
+          },
+          "enable_vcid": {
+            "description": "TG: REGI\n\nThis value specifies vcid enabling or disabling. If it is enabled then in REGISTER request Supported header will contain \"P-VCID-info:ver=1.0\" as well otherwise not.\n\n",
+            "x-intellij-html-description": "TG: REGI<br /><br />This value specifies vcid enabling or disabling. If it is enabled then in REGISTER request Supported header will contain \"P-VCID-info:ver=1.0\" as well otherwise not.<br /><br />",
+            "default": false,
+            "type": "boolean"
+          },
+          "enable_session_id": {
+            "description": "TG: CALL\n\nThis value indicates whether UUID is displayed",
+            "x-intellij-html-description": "TG: CALL<br /><br />This value indicates whether UUID is displayed",
+            "default": false,
+            "type": "boolean"
+          },
+          "sip_mobility": {
+            "description": "TG: REGI\n\nThis value indicates whether mobility is enabled or not.\nIn SIP request CONTACT header will contain mobility parameter if mobility support is there.\n\nRFC 4596, 3840\n\n0 - not supported\n1 - mobile\n2 - fixed",
+            "x-intellij-html-description": "TG: REGI<br /><br />This value indicates whether mobility is enabled or not.<br />In SIP request CONTACT header will contain mobility parameter if mobility support is there.<br /><br />RFC 4596, 3840<br /><br />0 - not supported<br />1 - mobile<br />2 - fixed",
+            "default": 0,
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "session_refresh_method": {
+            "description": "TG: CALL\n\nSession refresh can be done through 2 mechanisms:\n0 - sending re-Invite\n1 - sending update\n\nRFC 4028",
+            "x-intellij-html-description": "TG: CALL<br /><br />Session refresh can be done through 2 mechanisms:<br />0 - sending re-Invite<br />1 - sending update<br /><br />RFC 4028",
+            "deprecationMessage": "According to current implementation, as per operator requirement this value is getting set in config as \"0\" or \"1\" but not getting used. By default UPDATE is getting sent",
+            "default": 1,
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "min_se": {
+            "description": "TG: REGI\n\nMinimal SIP Session expire timer\n\nThis <value> conveys the minimum duration for the Session Interval to be Active means Session should be active at least for <value> seconds in this case. \nIf this header is not present by default this should be set as 90 seconds.\n\nRFC 4028\n\nValue in seconds",
+            "x-intellij-html-description": "TG: REGI<br /><br />Minimal SIP Session expire timer<br /><br />This <value> conveys the minimum duration for the Session Interval to be Active means Session should be active at least for <value> seconds in this case. <br />If this header is not present by default this should be set as 90 seconds.<br /><br />RFC 4028<br /><br />Value in seconds",
+            "default": 90,
+            "type": "integer"
+          },
+          "session_refresher": {
+            "description": "TG: CALL\n\nSession Expires Header will contain refresher parameter which indicates who will be responsible for refreshing the session.\nIn this Example uac means User Agent Client for current session and UAS means User Agent Server.\n\nSIP example:\nSession-Expires: 4000;refresher=uac\n\nRFC 4028",
+            "x-intellij-html-description": "TG: CALL<br /><br />Session Expires Header will contain refresher parameter which indicates who will be responsible for refreshing the session.<br />In this Example uac means User Agent Client for current session and UAS means User Agent Server.<br /><br />SIP example:<br />Session-Expires: 4000;refresher=uac<br /><br />RFC 4028",
+            "default": "none",
+            "type": "string",
+            "enum": [
+              "none",
+              "uac",
+              "uas"
+            ]
+          },
+          "sip_compact_header": {
+            "description": "TG: REGI\n\nSIP provides a common mechanism to represent common header fields in compact form.\nIf this flag is enabled then SIP headers will be sent in compact form otherwise normal form.\nFor example in compact form via header will be represented only with \"v\".\n\nRFC 3261 (section 7.3)",
+            "x-intellij-html-description": "TG: REGI<br /><br />SIP provides a common mechanism to represent common header fields in compact form.<br />If this flag is enabled then SIP headers will be sent in compact form otherwise normal form.<br />For example in compact form via header will be represented only with \"v\".<br /><br />RFC 3261 (section 7.3)",
+            "default": false,
+            "type": "boolean"
+          },
+          "remote_uri_type": {
+            "description": "TG: REGI\n\nType value to select URI type used in SIP message(Register) sent from Server\n(sip/tel)",
+            "x-intellij-html-description": "TG: REGI<br /><br />Type value to select URI type used in SIP message(Register) sent from Server<br />(sip/tel)",
+            "default": "sip",
+            "type": "string",
+            "enum": [
+              "sip",
+              "tel"
+            ]
+          },
+          "need_naptr_dns": {
+            "description": "TG: REGI\n\nUsing NAPTR DNS query type.\nRFC 2915",
+            "x-intellij-html-description": "TG: REGI<br /><br />Using NAPTR DNS query type.<br />RFC 2915",
+            "default": false,
+            "type": "boolean"
+          },
+          "need_ipv4_dns": {
+            "default": false,
+            "type": "boolean"
+          },
+          "support_roaming": {
+            "description": "TG: REGI\n\nSetting is being used to enable/disable VoLTE roaming for the operator.\nDefault value: false",
+            "x-intellij-html-description": "TG: REGI<br /><br />Setting is being used to enable/disable VoLTE roaming for the operator.<br />Default value: false",
+            "default": false,
+            "type": "boolean"
+          },
+          "support_ims_not_available": {
+            "type": "boolean",
+            "default": false
+          },
+          "secure_client_port": {
+            "default": 5000,
+            "type": "integer"
+          },
+          "secure_server_port": {
+            "default": 6000,
+            "type": "integer"
+          },
+          "reregi_on_ratchange": {
+            "description": "TG: REGI\n\nDetermines whether IMS service should re-register once RAT change is observed.\nPossible values are on (default, int 2 in code), off (int 0 in code) and off_rat_change (int 1 in code).\nIt is used in UpdateRegistration method.\nDifference between off and off_rat_change is that for the latter,\nthe RAT change is checked and only when it is present, the registration will be held\n(during execution of UpdateRegistration method).",
+            "x-intellij-html-description": "TG: REGI<br /><br />Determines whether IMS service should re-register once RAT change is observed.<br />Possible values are on (default, int 2 in code), off (int 0 in code) and off_rat_change (int 1 in code).<br />It is used in UpdateRegistration method.<br />Difference between off and off_rat_change is that for the latter,<br />the RAT change is checked and only when it is present, the registration will be held<br />(during execution of UpdateRegistration method).",
+            "default": "on",
+            "type": "string",
+            "enum": [
+              "on",
+              "off",
+              "off_rat_change",
+              "force_nr"
+            ]
+          },
+          "disallow_reregi": {
+            "type": "boolean",
+            "default": false
+          },
+          "select_transport_after_tcp_reset": {
+            "description": "TCP/UDP",
+            "x-intellij-html-description": "TCP/UDP",
+            "default": "",
+            "type": "string",
+            "enum": [
+              "",
+              "TCP",
+              "UDP"
+            ]
+          },
+          "mss_size": {
+            "default": 1500,
+            "type": "integer",
+            "minimum": 300,
+            "maximum": 10000
+          },
+          "timer": {
+            "description": "TG: REGI\n\nDetermine SIP Timer 1,2,4, A~K.\nDefault value: 1:2000,2:16000,4:17000,A:2000,B:128000,C:180000,D:32000,E:2000,F:128000,G:2000,H:128000,I:17000,J:128000,K:17000.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Determine SIP Timer 1,2,4, A~K.<br />Default value: 1:2000,2:16000,4:17000,A:2000,B:128000,C:180000,D:32000,E:2000,F:128000,G:2000,H:128000,I:17000,J:128000,K:17000.",
+            "default": "1:2000,2:16000,4:17000,A:2000,B:128000,C:180000,D:32000,E:2000,F:128000,G:2000,H:128000,I:17000,J:128000,K:17000",
+            "type": "string"
+          },
+          "emergency_support": {
+            "description": "TG: REGI\n\nEnables support of emergency calls.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Enables support of emergency calls.",
+            "default": false,
+            "type": "boolean"
+          },
+          "use_subcontact_when_resub": {
+            "description": "TG: REGI\n\nuse Contacts header had received via 200 OK for initial SUBSCRIBE.",
+            "x-intellij-html-description": "TG: REGI<br /><br />REGI\n\nuse Contacts header had received via 200 OK for initial SUBSCRIBE.",
+            "default": false,
+            "type": "boolean"
+          },
+          "ecall_csfb_without_action_tag": {
+            "description": "TG: CALL\n\nUsed to proceed CSFB for Emergency Call when there is missing <action> tag in 380 Alternative Service response from Network",
+            "x-intellij-html-description": "TG: CALL<br /><br />Used to proceed CSFB for Emergency Call when there is missing <action> tag in 380 Alternative Service response from Network",
+            "default": false,
+            "type": "boolean"
+          },
+          "supported_geolocation_phase": {
+            "description": "TG: REGI\n\nDescribes phase of geolocation support.\n0 - not supported\nGEOLOCATION_IN_PANI = 1 (just a country code might be added into PANI header)\nGEOLOCATION_IN_PIDF = 2 (geo-location information may be contained in 'GeoLocation' header and xml body following PIDF(RFC 3863) specification)\nGEOLOCATION_IN_PIDF_WITH_CD = 3 (geo-location information may be contained in 'GeoLocation' header and xml body following PIDF(RFC 3863) specification with ContentDisposition header\nGEOLOCATION_IN_PIDF_PUBLISH = 4 (geo-location information may be contained in 'GeoLocation' header and xml body following PIDF(RFC 3863) in PUBLISH",
+            "x-intellij-html-description": "TG: REGI<br /><br />Describes phase of geolocation support.<br />0 - not supported<br />GEOLOCATION_IN_PANI = 1 (just a country code might be added into PANI header)<br />GEOLOCATION_IN_PIDF = 2 (geo-location information may be contained in 'GeoLocation' header and xml body following PIDF(RFC 3863) specification)<br />GEOLOCATION_IN_PIDF_WITH_CD = 3 (geo-location information may be contained in 'GeoLocation' header and xml body following PIDF(RFC 3863) specification with ContentDisposition header)<br />GEOLOCATION_IN_PIDF_PUBLISH = 4 (geo-location information may be contained in 'GeoLocation' header and xml body following PIDF(RFC 3863) specification in PUBLISH",
+            "default": 0,
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "need_pidf_sip_msg": {
+            "description": "TG: REGI\n\n SIP msg type for PIDF info.",
+            "x-intellij-html-description": "TG: REGI<br /><br />SIP msg type for PIDF info.",
+            "default": "register,reregister,invite,reinvite,invite_response",
+            "type": "string"
+          },
+          "need_pidf_rat": {
+            "description": "TG: CALL\n\n RAT type for PIDF info.",
+            "x-intellij-html-description": "TG: CALL<br /><br />RAT type for PIDF info.",
+            "default": "wifi",
+            "type": "string"
+          },
+          "support_altitude": {
+            "description": "TG: CALL\n\nDescribes altitude support in geolocation.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Describes altitude support in geolocation.",
+            "default": false,
+            "type": "boolean"
+          },
+          "allow_regi_when_location_unavailable": {
+            "description": "TG: REGI\n\n Allow registration(including PDN connectivity) when location information is unavailable. This configuration is only applicable when the 'supported_geolocation_phase' is bigger than 0 and for IWLAN registration.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Allow registration(including PDN connectivity) when location information is unavailable. This configuration is only applicable when the 'supported_geolocation_phase' is bigger than 0 and for IWLAN registration.",
+            "default": true,
+            "type": "boolean"
+          },
+          "need_autoconfig": {
+            "description": "TG: RCS\n\nSpecify if autoconfig update is required.\nWhen needed device will unregister, set new autoconfig and register with new configuration",
+            "x-intellij-html-description": "TG: RCS<br /><br />Specify if autoconfig update is required.<br />When needed device will unregister, set new autoconfig and register with new configuration",
+            "default": false,
+            "type": "boolean"
+          },
+          "use_msrp_bearer": {
+            "default": false,
+            "type": "boolean"
+          },
+          "wifi_precondition_enabled": {
+            "description": "TG: CALL\n\nFlag to enable/disable precondition/QoS flow as per IR92. \nfalse: normal call flow\ntrue: Additional SDP QoS  parameters will be added. UE will trigger UPDATE request on dedicated bearer allocation notification from Network\n\n\nExample SDP with QoS Info:\n\na=curr:qos local none\na=curr:qos remote none\na=des:qos mandatory local sendrecv\na=des:qos optional remote sendrecv\n\nTS 24.229, RFC 3312, IR.92",
+            "x-intellij-html-description": "TG: CALL<br /><br />Flag to enable/disable precondition/QoS flow as per IR92. <br />false: normal call flow<br />true: Additional SDP QoS  parameters will be added. UE will trigger UPDATE request on dedicated bearer allocation notification from Network<br /><br /><br />Example SDP with QoS Info:<br /><br />a=curr:qos local none<br />a=curr:qos remote none<br />a=des:qos mandatory local sendrecv<br />a=des:qos optional remote sendrecv<br /><br />TS 24.229, RFC 3312, IR.92",
+            "default": false,
+            "type": "boolean"
+          },
+          "use_precondition": {
+            "description": "TG: CALL\n\nFlag to enable/disable precondition/QoS flow as per IR92. \nfalse: normal call flow\ntrue: Additional SDP QoS  parameters will be added. UE will trigger UPDATE request on dedicated bearer allocation notification from Network\n\n\nExample SDP with QoS Info:\n\na=curr:qos local none\na=curr:qos remote none\na=des:qos mandatory local sendrecv\na=des:qos optional remote sendrecv\n\nTS 24.229, RFC 3312, IR.92",
+            "x-intellij-html-description": "TG: CALL<br /><br />Flag to enable/disable precondition/QoS flow as per IR92. <br />false: normal call flow<br />true: Additional SDP QoS  parameters will be added. UE will trigger UPDATE request on dedicated bearer allocation notification from Network<br /><br /><br />Example SDP with QoS Info:<br /><br />a=curr:qos local none<br />a=curr:qos remote none<br />a=des:qos mandatory local sendrecv<br />a=des:qos optional remote sendrecv<br /><br />TS 24.229, RFC 3312, IR.92",
+            "default": false,
+            "type": "boolean"
+          },
+          "precondtion_initial_sendrecv": {
+            "description": "TG: CALL\n\nApplicable if use_precondition == true\nFeature to set the initial SDP direction value\nfalse = inactive :a=inactive\ntrue = sendrecv : a=sendrecv\n\n\nExample SDP:\n\na=curr:qos local none\na=curr:qos remote none\na=des:qos mandatory local sendrecv\na=des:qos optional remote sendrecv\na=sendrecv    (will be a=inactive if set to false)",
+            "x-intellij-html-description": "TG: CALL<br /><br />Applicable if use_precondition == true<br />Feature to set the initial SDP direction value<br />false = inactive :a=inactive<br />true = sendrecv : a=sendrecv<br /><br /><br />Example SDP:<br /><br />a=curr:qos local none<br />a=curr:qos remote none<br />a=des:qos mandatory local sendrecv<br />a=des:qos optional remote sendrecv<br />a=sendrecv    (will be a=inactive if set to false)",
+            "default": true,
+            "type": "boolean"
+          },
+          "use_provisional_response_100rel": {
+            "description": "TG: CALL\n\nIt makes \"PRACK required\" (UE will send PRACK) even if there is no \"100rel\" in the \"required\" header in the incoming 180 or 183 SIP msg",
+            "x-intellij-html-description": "TG: CALL<br /><br />It makes \"PRACK required\" (UE will send PRACK) even if there is no \"100rel\" in the \"required\" header in the incoming 180 or 183 SIP msg",
+            "default": false,
+            "type": "boolean"
+          },
+          "use_183_on_progress_incoming": {
+            "description": "TG: CALL\n\nEnables - forces 183 Session Progress response with SDP for an incoming INVITE during MT VoLTE Call.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enables - forces 183 Session Progress response with SDP for an incoming INVITE during MT VoLTE Call.",
+            "default": false,
+            "type": "boolean"
+          },
+          "support_183_for_ir92v9_precondition": {
+            "description": "TG: CALL\n\nWhen the operator doesn't support 183 Session Progress ir92 v9 it should be set to false.",
+            "x-intellij-html-description": "TG: CALL<br /><br />When the operator doesn't support 183 Session Progress ir92 v9 it should be set to false.",
+            "default": true,
+            "type": "boolean"
+          },
+          "support_199_provisional_response": {
+            "description": "TG: CALL\n\n Support for 199 \"Early Dialog Terminated\" provisional response to an established early dialog, by adding \"199\" option-tag in the Supported header field (\"RFC3261\").\nUpon receiving a 199 provisional SIP response to an established early dialog, \nthe UE releases resources specifically related to that early dialog as described in 3GPP 24.229 5.1.3.1.(origin CL: 17773614).",
+            "x-intellij-html-description": "TG: CALL<br /><br /> Support for 199 \"Early Dialog Terminated\" provisional response to an established early dialog, by adding \"199\" option-tag in the Supported header field (\"RFC3261\").<br />Upon receiving a 199 provisional SIP response to an established early dialog, <br />the UE releases resources specifically related to that early dialog as described in 3GPP 24.229 5.1.3.1.(origin CL: 17773614).",
+            "type": "boolean",
+            "default": false
+          },
+          "support_upgrade_precondition": {
+            "description": "TG: CALL\n\nEnables possibility to update (downgrade or upgrade) precondition parameters during VoLTE or ViLTE call.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enables possibility to update (downgrade or upgrade) precondition parameters during VoLTE or ViLTE call.",
+            "default": false,
+            "type": "boolean"
+          },
+          "send_18x_reliable": {
+            "description": "TG: CALL\n\nIndicates that the SIP 18x responses (other than SIP 183 response) are to be sent reliably or not.(See TS 24.167 5.56)",
+            "x-intellij-html-description": "TG: CALL<br /><br />Indicates that the SIP 18x responses (other than SIP 183 response) are to be sent reliably or not.(See TS 24.167 5.56)",
+            "default": false,
+            "type": "boolean"
+          },
+          "is_rcs_telephony_feature_tag_required": {
+            "description": "TG: RCS\n\nAccording to RCC.07 we should add rcs.telephony feature tag every time we register to RCS with VoLTE/CS capable device.",
+            "x-intellij-html-description": "TG: RCS<br /><br />According to RCC.07 we should add rcs.telephony feature tag every time we register to RCS with VoLTE/CS capable device.",
+            "default": false,
+            "type": "boolean"
+          },
+          "is_full_codec_offer_required": {
+            "description": "TG: CALL\n\nUsed when the operator expects full codec when UE resume the call after hold.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Used when the operator expects full codec when UE resume the call after hold.",
+            "default": false,
+            "type": "boolean"
+          },
+          "timer_100trying": {
+            "description": "TG: Call\n\nUSCC IMS1.2.6 G30: \nThe device must do a silent redial on 1x when it receives either no response within 12 seconds or a SIP response with an error code 380, 4xx (with the exception of 22,423,433,486,487), 5xx, and 6xx during VoLTE voice call origination.",
+            "x-intellij-html-description": "TG: Call<br /><br />USCC IMS1.2.6 G30: <br />The device must do a silent redial on 1x when it receives either no response within 12 seconds or a SIP response with an error code 380, 4xx (with the exception of 22,423,433,486,487), 5xx, and 6xx during VoLTE voice call origination.",
+            "default": 0,
+            "type": "integer",
+            "minimum": 0
+          },
+          "use_pem_header": {
+            "description": "TG: Call\n\nP-Early-Media: The UE indicates support for the P-Early-Media header.",
+            "x-intellij-html-description": "TG: Call<br /><br />P-Early-Media: The UE indicates support for the P-Early-Media header.",
+            "default": true,
+            "type": "boolean"
+          },
+          "support_clir": {
+            "description": "TG: Call\n\nUsed To ignore clir setting as operator requirement",
+            "x-intellij-html-description": "TG: Call<br /><br />Used To ignore clir setting as operator requirement",
+            "default": true,
+            "type": "boolean"
+          },
+          "privacy_header_restricted": {
+            "description": "TG: Call\n\nIf no P-Asserted-Identity header fields are present, but a Privacy header field set to \"id\" was present, then the network-provided identity information was withheld due to presentation restriction.\nIf neither P-Asserted-Identity header fields nor a Privacy header fields set to \"id\" are present, then the network-provided identity information was not available (due, for example, to inter-working with other networks).",
+            "x-intellij-html-description": "TG: Call<br /><br />If no P-Asserted-Identity header fields are present, but a Privacy header field set to \"id\" was present, then the network-provided identity information was withheld due to presentation restriction.<br />If neither P-Asserted-Identity header fields nor a Privacy header fields set to \"id\" are present, then the network-provided identity information was not available (due, for example, to inter-working with other networks).",
+            "default": "header",
+            "type": "string",
+            "enum": [
+              "header",
+              "id"
+            ]
+          },
+          "session_expires": {
+            "description": "TG: CALL\n\nTimer Value for Session-Expires header in SIP: INVITE/UPDATE request.\nUE will sends Session Refresh UPDATE when timer expires to keep the session active.\n\nValue in Seconds",
+            "x-intellij-html-description": "TG: CALL<br /><br />Timer Value for Session-Expires header in SIP: INVITE/UPDATE request.<br />UE will sends Session Refresh UPDATE when timer expires to keep the session active.<br /><br />Value in Seconds",
+            "default": 1800,
+            "type": "integer",
+            "minimum": 0
+          },
+          "use_q850cause_on_480": {
+            "description": "TG: CALL\n\nUsed to correctly extract \"reason\" header from Q850 cause code in 480 response received by UE from the server.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Used to correctly extract \"reason\" header from Q850 cause code in 480 response received by UE from the server.",
+            "default": false,
+            "type": "boolean"
+          },
+          "sos_urn_required": {
+            "description": "TG: CALL\n\nUsed for Emergency Calls for undetected emergency numbers, when there is no contact header with sos urn type in 380 Alternative Service response from network. When this is enabled => the emergency call is treated as a normal call during CSFB. ",
+            "x-intellij-html-description": "TG: CALL<br /><br />Used for Emergency Calls for undetected emergency numbers, when there is no contact header with sos urn type in 380 Alternative Service response from network. When this is enabled => the emergency call is treated as a normal call during CSFB. ",
+            "default": false,
+            "type": "boolean"
+          },
+          "ringing_timer": {
+            "description": "TG: CALL\n\nApplicability: MT device\n\nConfiguration used to control the automatic rejection of Incoming calls by the UE when User does not answer it in a given timer period.\nThe configuration specifies the Time between Incoming Call (180 Ringing sent) and Call acceptance by the User (200 Ok).\nIf this time period elapses and the User does not accept the call, the MT UE will send \"603 No Answer\" response for the Incoming INVITE request.\n\nValue is in Seconds",
+            "x-intellij-html-description": "TG: CALL<br /><br />Applicability: MT device<br /><br />Configuration used to control the automatic rejection of Incoming calls by the UE when User does not answer it in a given timer period.<br />The configuration specifies the Time between Incoming Call (180 Ringing sent) and Call acceptance by the User (200 Ok).<br />If this time period elapses and the User does not accept the call, the MT UE will send \"603 No Answer\" response for the Incoming INVITE request.<br /><br />Value is in Seconds",
+            "default": 30,
+            "type": "integer",
+            "minimum": 0
+          },
+          "ringback_timer": {
+            "description": "TG: CALL\n\nApplicability: MO Device\n\nConfiguration used to control the automatic cancellation of Outgoing calls by the UE when MT does not answer it in a given timer period.\nThe configuration specifies the Time between the MT device ringing (180 Ringing received) and Call acceptance by the MT User (200 Ok).\nIf this time period elapses and the MT does not accept the call, the MO UE will send SIP:CANCEL\" request to release the Outgoing Call.\n\nValue is in Seconds",
+            "x-intellij-html-description": "TG: CALL<br /><br />Applicability: MO Device<br /><br />Configuration used to control the automatic cancellation of Outgoing calls by the UE when MT does not answer it in a given timer period.<br />The configuration specifies the Time between the MT device ringing (180 Ringing received) and Call acceptance by the MT User (200 Ok).<br />If this time period elapses and the MT does not accept the call, the MO UE will send SIP:CANCEL\" request to release the Outgoing Call.<br /><br />Value is in Seconds",
+            "default": 32,
+            "type": "integer",
+            "minimum": 0
+          },
+          "invite_timeout": {
+            "description": "TG: CALL\n\nApplicability: MO device\n\nWhen Outgoing call is initiated, this configuration, indicates the timer value which IMS stack will start after receiving 100 trying provisional response for SIP INVITE till any other SIP Response are received(1xx/2xx/3xx/4xx/5xx/6xx) from MT user/Network.\nIf the timer expires, then the MO device releases the outgoing call with SIP:CANCEL Request.\n\nPN: This timer value is different from transaction timer(timer B) and retransmission timer(timer A) for SIP INVITE.\n\nValue in seconds",
+            "x-intellij-html-description": "TG: CALL<br /><br />Applicability: MO device<br /><br />When Outgoing call is initiated, this configuration, indicates the timer value which IMS stack will start after receiving 100 trying provisional response for SIP INVITE till any other SIP Response are received(1xx/2xx/3xx/4xx/5xx/6xx) from MT user/Network.<br />If the timer expires, then the MO device releases the outgoing call with SIP:CANCEL Request.<br /><br />PN: This timer value is different from transaction timer(timer B) and retransmission timer(timer A) for SIP INVITE.<br /><br />Value in seconds",
+            "default": 180,
+            "type": "integer",
+            "minimum": 0
+          },
+          "dbr_timer": {
+            "description": "TG: CALL\n\nDedicated bearer establishment timeout",
+            "x-intellij-html-description": "TG: CALL<br /><br />Dedicated bearer establishment timeout",
+            "default": 0,
+            "type": "integer",
+            "minimum": 0
+          },
+          "early_media_rtp_timeout_timer": {
+            "description": "TG: CALL\n\nSets timeout for early media RTP. \nWhen set to 0, values from rtp_timeout and rtcp_timeout will be used. When set to a different value, RTCP timeout will be set to 0.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Sets timeout for early media RTP. <br />When set to 0, values from rtp_timeout and rtcp_timeout will be used. When set to a different value, RTCP timeout will be set to 0.",
+            "default": 0,
+            "type": "integer",
+            "minimum": 0
+          },
+          "t_eps_fb_watchdog": {
+            "description": "TG: CALL\n\nSets Timer Teps_fb_watchdog\nWhen set to 0, Teps_fb_watchdog will be infinity/disabled.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Sets Timer Teps_fb_watchdog <br />When set to 0, Teps_fb_watchdog will be infinity/disabled.",
+            "default": 0,
+            "type": "integer",
+            "minimum": 0
+          },
+          "conference_uri": {
+            "description": "TG: CALL\n\nTo create automatically arbitrary number of ad-hoc conferences using SIP control means, a global uri should be allocated and published.\nA call to this uri will result in to automatic creation of conference.\n\nRFC 4579, TS 24.229",
+            "x-intellij-html-description": "TG: CALL<br /><br />To create automatically arbitrary number of ad-hoc conferences using SIP control means, a global uri should be allocated and published.<br />A call to this uri will result in to automatic creation of conference.<br /><br />RFC 4579, TS 24.229",
+            "default": "sip,:mmtel@conf-factory.ims.mncXXX.mccXXX.3gppnetwork.org",
+            "type": "string"
+          },
+          "conference_uri_mccmnc_type": {
+            "description": "TG: CALL\n\nApplicability: \"conference_uri\".endsWith(\"ims.mncXXX.mccXXX.3gppnetwork.org\")\n\nIf \"conference_uri\" ends with \"ims.mncXXX.mccXXX.3gppnetwork.org\" XXX will be changed to:\n0 - PROFILE - to \"representative_plmn\" value of mccmnc with force increasing of mnc length to 3 digits\n1 - PROFILE_RAW - to \"representative_plmn\" value of mccmnc as is\n2 - SIM - to sim value of mccmnc with force increasing of mnc length to 3 digits (Following 3GPP TS 23.003)\n3 - SIM_RAW - to sim value of mccmnc as is",
+            "x-intellij-html-description": "TG: CALL<br /><br />Applicability: \"conference_uri\".endsWith(\"ims.mncXXX.mccXXX.3gppnetwork.org\")<br /><br />If \"conference_uri\" ends with \"ims.mncXXX.mccXXX.3gppnetwork.org\" XXX will be changed to:<br />0 - PROFILE - to \"representative_plmn\" value of mccmnc with force increasing of mnc length to 3 digits<br />1 - PROFILE_RAW - to \"representative_plmn\" value of mccmnc as is<br />2 - SIM - to sim value of mccmnc with force increasing of mnc length to 3 digits (Following 3GPP TS 23.003)<br />3 - SIM_RAW - to sim value of mccmnc as is",
+            "default": 2,
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "conference_subscribe": {
+            "description": "TG: CALL\n\nUser Agent should subscribe to the conference package.\nSUBSCRIBE should be sent outside any INVITE-Initiated dialog.\nIn SUBSCRIBE request event should be set to conference in this case.\n\nPossible values:\n  both_subscribe_unsubscribe\n  only_subscribe\n  not_use\n\nRFC 4579",
+            "x-intellij-html-description": "TG: CALL<br /><br />User Agent should subscribe to the conference package.<br />SUBSCRIBE should be sent outside any INVITE-Initiated dialog.<br />In SUBSCRIBE request event should be set to conference in this case.<br /><br />Possible values:<br />  both_subscribe_unsubscribe<br />  only_subscribe<br />  not_use<br /><br />RFC 4579",
+            "default": "both_subscribe_unsubscribe",
+            "type": "string",
+            "enum": [
+              "both_subscribe_unsubscribe",
+              "only_subscribe",
+              "not_use"
+            ]
+          },
+          "conference_dialog_type": {
+            "description": "TG: CALL\n\nThis parameter value \"0\" specifies that SUBSCRIBE for Event:Conference should be sent with in the same INVITE dialog which is already existing and value \"1\" specifies that SUBSCRIBE for Event:Conference should not be sent in any INVITE initiated dialog.\n\n\"0\" : IN-DIALOG\n\"1\" : OUT-OF-DIALOG",
+            "x-intellij-html-description": "TG: CALL<br /><br />This parameter value \"0\" specifies that SUBSCRIBE for Event:Conference should be sent with in the same INVITE dialog which is already existing and value \"1\" specifies that SUBSCRIBE for Event:Conference should not be sent in any INVITE initiated dialog.<br /><br />\"0\" : IN-DIALOG<br />\"1\" : OUT-OF-DIALOG",
+            "default": "0",
+            "type": "string",
+            "enum": [
+              "0",
+              "1"
+            ]
+          },
+          "conference_referuri_type": {
+            "description": "TG: CALL\n\nPreferred URI Type of refer-to parameter of REFER message",
+            "x-intellij-html-description": "TG: CALL<br /><br />Preferred URI Type of refer-to parameter of REFER message",
+            "default": "siptel",
+            "type": "string",
+            "enum": [
+              "siptel",
+              "siponly"
+            ]
+          },
+          "conference_remove_referuri_type": {
+            "description": "TG: CALL\n\nPreferred URI Type of refer-to parameter of REFER message when removing a participant from conference call",
+            "x-intellij-html-description": "TG: CALL<br /><br />Preferred URI Type of refer-to parameter of REFER message when removing a participant from conference call",
+            "default": "siptel",
+            "type": "string",
+            "enum": [
+              "siptel",
+              "siponly"
+            ]
+          },
+          "conference_referuri_asserted": {
+            "description": "TG: CALL\n\nFlag to use P-Associated Identity of refer-to parameter of REFER message",
+            "x-intellij-html-description": "TG: CALL<br /><br />Flag to use P-Associated Identity of refer-to parameter of REFER message",
+            "default": "0",
+            "type": "string",
+            "enum": [
+              "0",
+              "1"
+            ]
+          },
+          "conference_use_anonymous_update": {
+            "description": "TG: CALL\n\nFlag to notify Conference Subscribe including anonymous URI \"0\" No use the flag \"1\" replace anonymous uri in NOTIFY for ConfParticipant.mUri \"2\" save anonymous uri in NOTIFY for ConfParticipant.mNotifiedUri",
+            "x-intellij-html-description": "TG: CALL<br /><br />Flag to notify Conference Subscribe including anonymous URI \"0\" No use the flag \"1\" replace anonymous uri in NOTIFY for ConfParticipant.mUri \"2\" save anonymous uri in NOTIFY for ConfParticipant.mNotifiedUri",
+            "default": "0",
+            "type": "string",
+            "enum": [
+              "0",
+              "1",
+              "2"
+            ]
+          },
+          "conference_support_premature_end": {
+            "description": "TG: CALL\n\nIf enabled, when conference call is ended prematurely, the participant session will be ended without sending a BYE message. \nPrevents IMS F/W from being blocked when waiting on BYE response from NW.",
+            "x-intellij-html-description": "TG: CALL<br /><br />If enabled, when conference call is ended prematurely, the participant session will be ended without sending a BYE message. <br />Prevents IMS F/W from being blocked when waiting on BYE response from NW.",
+            "default": false,
+            "type": "boolean"
+          },
+          "support_merge_video_conference": {
+            "description": "TG: CALL\n\nEnables support of video conferencing by merging existing calls",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enables support of video conferencing by merging existing calls",
+            "default": false,
+            "type": "boolean"
+          },
+          "support_upgrade_video_conference": {
+            "description": "TG: CALL\n\nEnables support of video conferencing when adding a participant with established video call",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enables support of video conferencing when adding a participant with established video call",
+            "default": false,
+            "type": "boolean"
+          },
+          "support_replace_merge": {
+            "description": "TG: CALL\n\nEnables support of \"Replaces\" header in incoming INVITE msg during merge",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enables support of \"Replaces\" header in incoming INVITE msg during merge",
+            "default": false,
+            "type": "boolean"
+          },
+          "pulling_server_uri": {
+            "description": "TG: CALL\n\nFormat to make a Pulling server URI",
+            "x-intellij-html-description": "TG: CALL<br /><br />Format to make a Pulling server URI",
+            "default": "",
+            "type": "string"
+          },
+          "reg_retry_base_time": {
+            "description": "TG: REGI\n\nWhen Registration flow fails, UA needs to come up with a new flow.\nRegistration base-retry-timer value used to calculate the next retry value base on the following logic:\nW = min (max-time, (base-time * (2 ^ consecutive-failures)))\n\nRFC 5626\n\nValue in seconds",
+            "x-intellij-html-description": "TG: REGI<br /><br />When Registration flow fails, UA needs to come up with a new flow.<br />Registration base-retry-timer value used to calculate the next retry value base on the following logic:<br />W = min (max-time, (base-time * (2 ^ consecutive-failures)))<br /><br />RFC 5626<br /><br />Value in seconds",
+            "default": 30,
+            "type": "integer",
+            "minimum": 1
+          },
+          "reg_retry_max_time": {
+            "description": "TG: REGI\n\nWhen Registration flow fails, UA needs to come up with a new flow.\nBut to try with a new flow User Agent has to wait for some time.\nMaximum Registration Retry Time value after which no more IMS Registration is attempted.\n\nRFC 5626\nValue in seconds",
+            "x-intellij-html-description": "TG: REGI<br /><br />When Registration flow fails, UA needs to come up with a new flow.<br />But to try with a new flow User Agent has to wait for some time.<br />Maximum Registration Retry Time value after which no more IMS Registration is attempted.<br /><br />RFC 5626<br />Value in seconds",
+            "default": 1800,
+            "type": "integer",
+            "minimum": 1
+          },
+          "smsc_set": {
+            "default": "4444",
+            "type": "string"
+          },
+          "audio_capabilities": {
+            "description": "TG: CALL\n\nUsed to determine Audio codec to used for SDP negotiation\nAUDIO_CAPABILITIES_WB_PREF = 0\nAUDIO_CAPABILITIES_NB_PREF = 1\nAUDIO_CAPABILITIES_WB_ONLY = 2\nAUDIO_CAPABILITIES_NB_ONLY = 3",
+            "x-intellij-html-description": "TG: CALL<br /><br />Used to determine Audio codec to used for SDP negotiation<br />AUDIO_CAPABILITIES_WB_PREF = 0<br />AUDIO_CAPABILITIES_NB_PREF = 1<br />AUDIO_CAPABILITIES_WB_ONLY = 2<br />AUDIO_CAPABILITIES_NB_ONLY = 3",
+            "default": "0",
+            "type": "string",
+            "enum": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "audio_codec_mode": {
+            "description": "TG: Call\n\nUsed to determine Audio codec to used for SDP negotiation\n\n0 : bandwidth-efficient\n1 : octet-aligned\n2 : bandwidth-efficient preferred\n3 : octet-aligned preferred\n4 : manual (apply audio_codec)",
+            "x-intellij-html-description": "TG: Call<br /><br />Used to determine Audio codec to used for SDP negotiation<br /><br />0 : bandwidth-efficient<br />1 : octet-aligned<br />2 : bandwidth-efficient preferred<br />3 : octet-aligned preferred<br />4 : manual (apply audio_codec)",
+            "default": "2",
+            "type": "string",
+            "enum": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "notify_codec_on_established": {
+            "description": "TG: CALL\n\nForces a notification of the current codec upon session establishment, so that the HD icon is correctly displayed",
+            "x-intellij-html-description": "TG: CALL<br /><br />Forces a notification of the current codec upon session establishment, so that the HD icon is correctly displayed",
+            "default": false,
+            "type": "boolean"
+          },
+          "notify_call_downgraded": {
+            "description": "TG: CALL\n\nCall notifyCallDowngraded in order to show pop-up when the Call Established\n0:Not notify when downgraded\n1:Always notify when downgraded\n2:Notify downgraded only when retmote video capacity is false",
+            "x-intellij-html-description": "TG: CALL<br /><br />Call notifyCallDowngraded in order to show pop-up when the Call Established<br />0:Not notify when downgraded<br />1:Always notify when downgraded<br />2:Notify downgraded only when retmote video capacity is false",
+            "default": 0,
+            "type": "integer"
+          },
+          "dtmf_mode": {
+            "description": "TG: Call\n\nSet DTMF profile. RTP-EVENT packets will be send according to that profile.\n 0 - default profile\n 1 - LGT\n 2 - SKT\n 3 - UICC\n 4 - KT\n 5 - VzW, Docomo",
+            "x-intellij-html-description": "TG: Call<br /><br />Set DTMF profile. RTP-EVENT packets will be send according to that profile.<br /> 0 - default profile<br /> 1 - LGT<br /> 2 - SKT<br /> 3 - UICC<br /> 4 - KT<br /> 5 - VzW, Docomo",
+            "default": 0,
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "video_capabilities": {
+            "description": "TG: CALL\n\nEnables video capability on UE",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enables video capability on UE",
+            "default": true,
+            "type": "boolean"
+          },
+          "display_format": {
+            "description": "TG: CALL\n\nThis parameter defines what resolution will be chosen\nfor Video Call in case of H264 video codec.\nPossible values: 720p-port, 720p, vga-port, vga, qvga-port, qvga.\nValues without postfix '-port' means landscape resolutions.",
+            "x-intellij-html-description": "TG: CALL<br /><br />This parameter defines what resolution will be chosen<br />for Video Call in case of H264 video codec.<br />Possible values: 720p-port, 720p, vga-port, vga, qvga-port, qvga.<br />Values without postfix '-port' means landscape resolutions.",
+            "default": "vga-port",
+            "type": "string"
+          },
+          "display_format_hevc": {
+            "description": "TG: CALL\n\nThis parameter defines what resolution will be chosen\nfor Video Call in case H265 (HEVC) video codec.\nPossible values: 720p-port, 720p, vga-port, vga, qvga-port, qvga.\nValues without postfix '-port' means landscape resolutions.",
+            "x-intellij-html-description": "TG: CALL<br /><br />This parameter defines what resolution will be chosen<br />for Video Call in case H265 (HEVC) video codec.<br />Possible values: 720p-port, 720p, vga-port, vga, qvga-port, qvga.<br />Values without postfix '-port' means landscape resolutions.",
+            "default": "vga-port",
+            "type": "string"
+          },
+          "framerate": {
+            "description": "TG: CALL\n\nFramerate parameter of Video SDP",
+            "x-intellij-html-description": "TG: CALL<br /><br />Framerate parameter of Video SDP",
+            "default": 15,
+            "type": "integer",
+            "minimum": 1
+          },
+          "rtp_timeout": {
+            "description": "TG: CALL\n\nUsed to trigger RTP inactivity timeout. If you set this value to '0', timeout will be disabled.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Used to trigger RTP inactivity timeout. If you set this value to '0', timeout will be disabled.",
+            "default": 20,
+            "type": "integer",
+            "minimum": 0
+          },
+          "rtcp_timeout": {
+            "description": "TG: CALL\n\nUsed to trigger RTCP inactivity timeout. If you set this value to '0', timeout will be disabled.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Used to trigger RTCP inactivity timeout. If you set this value to '0', timeout will be disabled.",
+            "default": 20,
+            "type": "integer",
+            "minimum": 0
+          },
+          "enable_rtcp_on_active_call": {
+            "description": "TG: CALL\n\nEnables RTCP on active call (VoWiFi).\nWhen enabled, audio_engine sends RTCP report for received RTP packets (at this moment received only).\n\nVoWiFi: when packets loss is over <rtprtcplossmaxcnt> in epdg_apns_conf.xml - W2L handover is started",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enables RTCP on active call (VoWiFi).<br />When enabled, audio_engine sends RTCP report for received RTP packets (at this moment received only).<br /><br />VoWiFi: when packets loss is over <rtprtcplossmaxcnt> in epdg_apns_conf.xml - W2L handover is started",
+            "default": false,
+            "type": "boolean"
+          },
+          "ignore_rtcp_timeout_on_hold_call": {
+            "description": "TG: CALL\n\n Ignore RTCP Timeout in not local & both hold status (sendonly/recvonly)",
+            "x-intellij-html-description": "TG: CALL<br /><br /> Ignore RTCP Timeout in not local & both hold status (sendonly/recvonly)",
+            "default": false,
+            "type": "boolean"
+          },
+          "enable_av_sync": {
+            "description": "TG: CALL / AUDIO ENGINE\n\nEnable on Audio-Video synchronization",
+            "x-intellij-html-description": "TG: CALL / AUDIO ENGINE<br /><br />Enable on Audio-Video synchronization",
+            "default": false,
+            "type": "boolean"
+          },
+          "audio_port_start": {
+            "description": "TG: CALL\n\nThis setting set based AudioPort information in SDP negotiation.\nThe set value should be even.\nFor further information check ImsUserProfile::getFreeLocalPort()",
+            "x-intellij-html-description": "TG: CALL<br /><br />This setting set based AudioPort information in SDP negotiation.<br />The set value should be even.<br />For further information check ImsUserProfile::getFreeLocalPort()",
+            "default": 1234,
+            "type": "integer",
+            "minimum": 1024,
+            "maximum": 65535
+          },
+          "audio_port_end": {
+            "description": "TG: CALL\n\nThis setting is never used.",
+            "x-intellij-html-description": "TG: CALL<br /><br />This setting is never used.",
+            "default": 0,
+            "type": "integer",
+            "deprecationMessage": "Marked for removal"
+          },
+          "video_port_start": {
+            "description": "TG: CALL\n\nThis setting set based VideoPort information in SDP negotiation.\nThe set value should be even.\nFor further information see ImsUserProfile::getFreeLocalPort()",
+            "x-intellij-html-description": "TG: CALL<br /><br />This setting set based VideoPort information in SDP negotiation.<br />The set value should be even.<br />For further information see ImsUserProfile::getFreeLocalPort()",
+            "default": 1574,
+            "type": "integer",
+            "minimum": 1024,
+            "maximum": 65535
+          },
+          "video_port_end": {
+            "description": "TG: CALL\n\nThis setting is never used.",
+            "x-intellij-html-description": "TG: CALL<br /><br />This setting is never used.",
+            "default": 0,
+            "type": "integer",
+            "deprecationMessage": "Marked for removal"
+          },
+          "text_port": {
+            "description": "TG: CALL\n\nUsed to set TextPort for TTY or RTT\nThis setting is never used.\nHowever look for textPort variable in SdpCreator::CreateSdpInitialOffer.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Used to set TextPort for TTY or RTT<br />This setting is never used.<br />However look for textPort variable in SdpCreator::CreateSdpInitialOffer.",
+            "default": 49158,
+            "type": "integer"
+          },
+          "amrnb_mode": {
+            "description": "TG: CALL\n\nMode-set value ranges according to RFC 4867\n\nRestricts the active codec mode set to a subset of all modes, for example, to be able to support transport channels such as GSM networks in gateway use cases.\nPossible values are a comma separated list of modes from the set: 0,...,7.\nThe SID frame type 8 and NO_DATA (frame type 15) are never included in the mode set, but can always be used.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Mode-set value ranges according to RFC 4867<br /><br />Restricts the active codec mode set to a subset of all modes, for example, to be able to support transport channels such as GSM networks in gateway use cases.<br />Possible values are a comma separated list of modes from the set: 0,...,7.<br />The SID frame type 8 and NO_DATA (frame type 15) are never included in the mode set, but can always be used.",
+            "default": "",
+            "type": "string"
+          },
+          "amrwb_mode": {
+            "description": "TG: CALL\n\nMode-set value ranges according to RFC 4867\n\nRestricts the active codec mode set to a subset of all modes, for example, to be able to support transport channels such as GSM networks in gateway use cases.\nPossible values are a comma-separated list of modes from the set: 0,...,8.\nThe SID frame type 9, SPEECH_LOST (frame type 14), and NO_DATA (frame type 15) are never included in the mode set, but can always be used.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Mode-set value ranges according to RFC 4867<br /><br />Restricts the active codec mode set to a subset of all modes, for example, to be able to support transport channels such as GSM networks in gateway use cases.<br />Possible values are a comma-separated list of modes from the set: 0,...,8.<br />The SID frame type 9, SPEECH_LOST (frame type 14), and NO_DATA (frame type 15) are never included in the mode set, but can always be used.",
+            "default": "",
+            "type": "string"
+          },
+          "emm": {
+            "description": "TG: CALL\n\nFlag to indicate use of External Media Manager for Audio Stream\n0 : disabled\n1 : enabled",
+            "x-intellij-html-description": "TG: CALL<br /><br />Flag to indicate use of External Media Manager for Audio Stream<br />0 : disabled<br />1 : enabled",
+            "default": 1,
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "audio_avpf": {
+            "description": "TG: CALL\n\nEnable RTP AVPF.\n0: disabled\n1: enabled",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enable RTP AVPF.<br />0: disabled<br />1: enabled",
+            "default": 0,
+            "type": "integer",
+            "deprecationMessage": "Should be boolean."
+          },
+          "audio_srtp": {
+            "description": "TG: CALL\n\nEnable STRP\n0: disabled\n1: enabled",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enable STRP<br />0: disabled<br />1: enabled",
+            "default": 0,
+            "type": "integer",
+            "deprecationMessage": "Should be boolean."
+          },
+          "video_avpf": {
+            "description": "TG: CALL\n\nEnable RTP AVPF.\n0: disabled\n1: enabled",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enable RTP AVPF.<br />0: disabled<br />1: enabled",
+            "default": 0,
+            "type": "integer",
+            "deprecationMessage": "Should be boolean."
+          },
+          "video_srtp": {
+            "description": "TG: CALL\n\nEnable STRP\n0: disabled\n1: enabled",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enable STRP<br />0: disabled<br />1: enabled",
+            "default": 0,
+            "type": "integer",
+            "deprecationMessage": "Should be boolean."
+          },
+          "text_avpf": {
+            "description": "TG: CALL\n\nExtension to the AVP (Audio Video Profile)\nthat enables receivers to provide, statistically,\nmore immediate feedback to the senders and thus allow\n for short-term adaptation and efficient feedback-based\nrepair mechanisms to be implemented.\n0: disabled\n1: enabled",
+            "x-intellij-html-description": "TG: CALL<br /><br />Extension to the AVP (Audio Video Profile)<br />that enables receivers to provide, statistically,<br />more immediate feedback to the senders and thus allow<br /> for short-term adaptation and efficient feedback-based<br />repair mechanisms to be implemented.<br />0: disabled<br />1: enabled",
+            "default": 0,
+            "type": "integer",
+            "deprecationMessage": "Should be boolean."
+          },
+          "text_srtp": {
+            "description": "TG: CALL\n\nSRTP is a security profile for RTP that adds confidentiality,\nmessage authentication, and replay protection to that protocol.\nIt is an action item in the IETF Audio-Video Transport Working Group,\nwhere it is an Internet Draft and is currently in IETF WG last call.\n\n0: disabled\n1: enabled",
+            "x-intellij-html-description": "TG: CALL<br /><br />SRTP is a security profile for RTP that adds confidentiality,<br />message authentication, and replay protection to that protocol.<br />It is an action item in the IETF Audio-Video Transport Working Group,<br />where it is an Internet Draft and is currently in IETF WG last call.<br /><br />0: disabled<br />1: enabled",
+            "default": 0,
+            "type": "integer",
+            "deprecationMessage": "Should be boolean."
+          },
+          "video_as": {
+            "description": "TG: CALL [Video Stream]\n\nApplication Specific maximum value,\nwhich may be used to specify the total bandwidth\nfor a single media stream for one side [kb/s]. (RFC3556)",
+            "x-intellij-html-description": "TG: CALL [Video Stream]<br /><br />Application Specific maximum value,<br />which may be used to specify the total bandwidth<br />for a single media stream for one side [kb/s]. (RFC3556)",
+            "default": 700,
+            "type": "integer"
+          },
+          "video_rs": {
+            "description": "TG: CALL [Video Stream]\n\nApplication Specific RTCP bandwidth\nfor active data senders [b/s]. (RFC3556)",
+            "x-intellij-html-description": "TG: CALL [Video Stream]<br /><br />Application Specific RTCP bandwidth<br />for active data senders [b/s]. (RFC3556)",
+            "default": 4800,
+            "type": "integer"
+          },
+          "video_rr": {
+            "description": "TG: CALL [Video Stream]\n\nApplication Specific RTCP bandwidth\nfor other participants [b/s]. (RFC3556)",
+            "x-intellij-html-description": "TG: CALL [Video Stream]<br /><br />Application Specific RTCP bandwidth<br />for other participants [b/s]. (RFC3556)",
+            "default": 14400,
+            "type": "integer"
+          },
+          "video_crbt_support_type": {
+            "description": "TG: CALL [Video CRBT]\n\nPlaying video before voice or video call connected.\n\nPossible values:\n\t0 - undefine\n\t1 - MO VCRBT\n\t2 - MT VCRT\n\t3 - MO VCRBT and MT VCRT both",
+            "x-intellij-html-description": "TG: CALL [Video CRBT]<br /><br />Playing video before voice or video call connected.<br /><br />Possible values:<br />",
+            "default": 0,
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "type": "integer"
+          },
+          "audio_as": {
+            "description": "TG: CALL [Audio Stream]\n\nApplication Specific maximum value,\nwhich may be used to specify the total bandwidth\nfor a single media stream for one side [kb/s]. (RFC3556)",
+            "x-intellij-html-description": "TG: CALL [Audio Stream]<br /><br />Application Specific maximum value,<br />which may be used to specify the total bandwidth<br />for a single media stream for one side [kb/s]. (RFC3556)",
+            "default": 38,
+            "type": "integer"
+          },
+          "audio_rs": {
+            "description": "TG: CALL [Audio Stream]\n\nApplication Specific RTCP bandwidth\nfor active data senders [b/s]. (RFC3556)",
+            "x-intellij-html-description": "TG: CALL [Audio Stream]<br /><br />Application Specific RTCP bandwidth<br />for active data senders [b/s]. (RFC3556)",
+            "default": 375,
+            "type": "integer"
+          },
+          "audio_rr": {
+            "description": "TG: CALL [Audio Stream]\n\nApplication Specific RTCP bandwidth\nfor other participants [b/s]. (RFC3556)",
+            "x-intellij-html-description": "TG: CALL [Audio Stream]<br /><br />Application Specific RTCP bandwidth<br />for other participants [b/s]. (RFC3556)",
+            "default": 1125,
+            "type": "integer"
+          },
+          "text_as": {
+            "description": "TG: CALL [Text Stream]\n\nApplication Specific maximum value,\nwhich may be used to specify the total bandwidth\nfor a single media stream for one side [kb/s]. (RFC3556)",
+            "x-intellij-html-description": "TG: CALL [Text Stream]<br /><br />Application Specific maximum value,<br />which may be used to specify the total bandwidth<br />for a single media stream for one side [kb/s]. (RFC3556)",
+            "default": 3,
+            "type": "integer"
+          },
+          "text_rs": {
+            "description": "TG: CALL [Text Stream]\n\nApplication Specific RTCP bandwidth\nfor active data senders [b/s]. (RFC3556)",
+            "x-intellij-html-description": "TG: CALL [Text Stream]<br /><br />Application Specific RTCP bandwidth<br />for active data senders [b/s]. (RFC3556)",
+            "default": 0,
+            "type": "integer"
+          },
+          "text_rr": {
+            "description": "TG: CALL [Text Stream]\n\nApplication Specific RTCP bandwidth\nfor other participants [b/s]. (RFC3556)",
+            "x-intellij-html-description": "TG: CALL [Text Stream]<br /><br />Application Specific RTCP bandwidth<br />for other participants [b/s]. (RFC3556)",
+            "default": 0,
+            "type": "integer"
+          },
+          "amrnbbe_payload": {
+            "description": "TG: CALL [Audio Codec]\n\nPayload type of AMR-NBBE offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Audio Codec]<br /><br />Payload type of AMR-NBBE offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 118,
+            "type": "integer"
+          },
+          "amrnboa_payload": {
+            "description": "TG: CALL [Audio Codec]\n\nPayload type of AMR-NBOA offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Audio Codec]<br /><br />Payload type of AMR-NBOA offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 96,
+            "type": "integer"
+          },
+          "amrwbbe_payload": {
+            "description": "TG: CALL [Audio Codec]\n\nPayload type of AMR-WBBE offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Audio Codec]<br /><br />Payload type of AMR-WBBE offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 116,
+            "type": "integer"
+          },
+          "amrwboa_payload": {
+            "description": "TG: CALL [Audio Codec]\n\nPayload type of AMR-WBOA offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Audio Codec]<br /><br />Payload type of AMR-WBOA offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 107,
+            "type": "integer"
+          },
+          "amropen_payload": {
+            "description": "TG: CALL [Audio Codec]\n\nPayload type of AMR Open offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Audio Codec]<br /><br />Payload type of AMR Open offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 0,
+            "type": "integer"
+          },
+          "h265_hd720p_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of HD (720p) resolution of HEVC codec offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of HD (720p) resolution of HEVC codec offer<br />Choose value in the range 96-127. (RFC3551)",
+            "type": "integer",
+            "default": 110,
+            "minimum": 96,
+            "maximum": 127
+          },
+          "h265_hd720pl_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of HD (720p) landscape resolution of HEVC codec offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of HD (720p) landscape resolution of HEVC codec offer<br />Choose value in the range 96-127. (RFC3551)",
+            "type": "integer",
+            "default": 109,
+            "minimum": 96,
+            "maximum": 127
+          },
+          "h265_vga_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of VGA resolution of HEVC codec offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of VGA resolution of HEVC codec offer<br />Choose value in the range 96-127. (RFC3551)",
+            "type": "integer",
+            "default": 108,
+            "minimum": 96,
+            "maximum": 127
+          },
+          "h265_vgal_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of VGA landscape resolution resolution of HEVC codec offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of VGA landscape resolution resolution of HEVC codec offer<br />Choose value in the range 96-127. (RFC3551)",
+            "type": "integer",
+            "default": 107,
+            "minimum": 96,
+            "maximum": 127
+          },
+          "h265_qvga_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of QVGA resolution of HEVC codec offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of QVGA resolution of HEVC codec offer<br />Choose value in the range 96-127. (RFC3551)",
+            "type": "integer",
+            "default": 106,
+            "minimum": 96,
+            "maximum": 127
+          },
+          "h265_qvgal_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of QVGA landscape resolution of HEVC codec offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of QVGA landscape resolution of HEVC codec offer<br />Choose value in the range 96-127. (RFC3551)",
+            "type": "integer",
+            "default": 105,
+            "minimum": 96,
+            "maximum": 127
+          },
+          "h264_720p_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of H264-720p offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of H264-720p offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 122,
+            "type": "integer"
+          },
+          "h264_720pl_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of H264-720p landscape offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of H264-720p landscape offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 123,
+            "type": "integer"
+          },
+          "h264_vga_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of H264-VGA offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of H264-VGA offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 116,
+            "type": "integer"
+          },
+          "h264_vgal_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of H264-VGA landscape offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of H264-VGA landscape offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 121,
+            "type": "integer"
+          },
+          "h264_qvga_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of H264-QVGA offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of H264-QVGA offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 118,
+            "type": "integer"
+          },
+          "h264_qvgal_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of H264-QVGA landscape offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of H264-QVGA landscape offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 103,
+            "type": "integer"
+          },
+          "h264_cif_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of H264-CIF offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of H264-CIF offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 124,
+            "type": "integer"
+          },
+          "h264_cifl_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of H264-CIF landscape offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of H264-CIF landscape offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 125,
+            "type": "integer"
+          },
+          "h263_qcif_payload": {
+            "description": "TG: CALL [Video Codec]\n\nPayload type of H263 offer\nChoose default value or in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Video Codec]<br /><br />Payload type of H263 offer<br />Choose default value or in the range 96-127. (RFC3551)",
+            "default": 34,
+            "type": "integer"
+          },
+          "use_sps_for_h264_hd": {
+            "description": "TG: CALL\n\nUse sps values to get width/height when it comes to video codec H.264 720p-port or 720p",
+            "x-intellij-html-description": "TG: CALL<br /><br />Use sps values to get width/height when it comes to video codec H.264 720p-port or 720p.",
+            "default": true,
+            "type": "boolean"
+          },
+          "dtmf_nb_payload": {
+            "description": "TG: CALL [Voice Codec]\n\nPayload type of DTMF-NB offer is used for both PS and CS domains.\nChoose default value or in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Voice Codec]<br /><br />Payload type of DTMF-NB offer is used for both PS and CS domains.<br />Choose default value or in the range 96-127. (RFC3551)",
+            "default": 110,
+            "type": "integer"
+          },
+          "dtmf_wb_payload": {
+            "description": "TG: CALL [Voice Codec]\n\nPayload type of DTMF-NB offer is used for both PS and CS domains.\nChoose default value or in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL [Voice Codec]<br /><br />Payload type of DTMF-NB offer is used for both PS and CS domains.<br />Choose default value or in the range 96-127. (RFC3551)",
+            "default": 111,
+            "type": "integer"
+          },
+          "amrnboa_max_red": {
+            "description": "TG: CALL\n\nThe 'max-red' SDP parameter for AMR octet-align codec.\n\nThe maximum duration in milliseconds that elapses between the primary (first) transmission of a frame and any redundant transmission that the sender will use.\nThis parameter allows a receiver to have a bounded delay when redundancy is used.\nAllowed values are between 0 (no redundancy will be used) and 65535.\n\nReference: RFC 4867",
+            "x-intellij-html-description": "TG: CALL<br /><br />The 'max-red' SDP parameter for AMR octet-align codec.<br /><br />The maximum duration in milliseconds that elapses between the primary (first) transmission of a frame and any redundant transmission that the sender will use.<br />This parameter allows a receiver to have a bounded delay when redundancy is used.<br />Allowed values are between 0 (no redundancy will be used) and 65535.<br /><br />Reference: RFC 4867",
+            "default": 220,
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+          },
+          "amrnbbe_max_red": {
+            "description": "TG: CALL\n\nThe 'max-red' SDP parameter for AMR bandwidth-efficient codec.\n\nThe maximum duration in milliseconds that elapses between the primary (first) transmission of a frame and any redundant transmission that the sender will use.\nThis parameter allows a receiver to have a bounded delay when redundancy is used.\nAllowed values are between 0 (no redundancy will be used) and 65535.\n\nReference: RFC 4867",
+            "x-intellij-html-description": "TG: CALL<br /><br />The 'max-red' SDP parameter for AMR bandwidth-efficient codec.<br /><br />The maximum duration in milliseconds that elapses between the primary (first) transmission of a frame and any redundant transmission that the sender will use.<br />This parameter allows a receiver to have a bounded delay when redundancy is used.<br />Allowed values are between 0 (no redundancy will be used) and 65535.<br /><br />Reference: RFC 4867",
+            "default": 220,
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+          },
+          "amrwboa_max_red": {
+            "description": "TG: CALL\n\nThe 'max-red' SDP parameter for AMR-WB octet-align codec.\n\nThe maximum duration in milliseconds that elapses between the primary (first) transmission of a frame and any redundant transmission that the sender will use.\nThis parameter allows a receiver to have a bounded delay when redundancy is used.\nAllowed values are between 0 (no redundancy will be used) and 65535.\n\nReference: RFC 4867",
+            "x-intellij-html-description": "TG: CALL<br /><br />The 'max-red' SDP parameter for AMR-WB octet-align codec.<br /><br />The maximum duration in milliseconds that elapses between the primary (first) transmission of a frame and any redundant transmission that the sender will use.<br />This parameter allows a receiver to have a bounded delay when redundancy is used.<br />Allowed values are between 0 (no redundancy will be used) and 65535.<br /><br />Reference: RFC 4867",
+            "default": 220,
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+          },
+          "amrwbbe_max_red": {
+            "description": "TG: CALL\n\nThe 'max-red' SDP parameter for AMR-WB bandwidth-efficient codec.\n\nThe maximum duration in milliseconds that elapses between the primary (first) transmission of a frame and any redundant transmission that the sender will use.\nThis parameter allows a receiver to have a bounded delay when redundancy is used.\nAllowed values are between 0 (no redundancy will be used) and 65535.\n\nReference: RFC 4867",
+            "x-intellij-html-description": "TG: CALL<br /><br />The 'max-red' SDP parameter for AMR-WB bandwidth-efficient codec.<br /><br />The maximum duration in milliseconds that elapses between the primary (first) transmission of a frame and any redundant transmission that the sender will use.<br />This parameter allows a receiver to have a bounded delay when redundancy is used.<br />Allowed values are between 0 (no redundancy will be used) and 65535.<br /><br />Reference: RFC 4867",
+            "default": 220,
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+          },
+          "evs_max_red": {
+            "description": "TG: CALL\n\nThe 'max-red' SDP parameter for EVS codec.\n\nThe maximum duration in milliseconds that elapses between the primary (first) transmission of a frame and any redundant transmission that the sender will use.\nThis parameter allows a receiver to have a bounded delay when redundancy is used.\nAllowed values are between -1 (parameter is omitted), 0 (no redundancy will be used) and 65535.\nIf the parameter is omitted, no limitation on the use of redundancy is present.\n\nReference: RFC 4867",
+            "x-intellij-html-description": "TG: CALL<br /><br />The 'max-red' SDP parameter for EVS codec.<br /><br />The maximum duration in milliseconds that elapses between the primary (first) transmission of a frame and any redundant transmission that the sender will use.<br />This parameter allows a receiver to have a bounded delay when redundancy is used.<br />Allowed values are between -1 (parameter is omitted), 0 (no redundancy will be used) and 65535.<br />If the parameter is omitted, no limitation on the use of redundancy is present.<br /><br />Reference: RFC 4867",
+            "default": -1,
+            "type": "integer",
+            "minimum": -1,
+            "maximum": 65535
+          },
+          "video_codec": {
+            "description": "TG: CALL\n\nUsed to determine Video codec to be used for SDP negotiation\n\nTS26.114",
+            "x-intellij-html-description": "TG: CALL<br /><br />Used to determine Video codec to be used for SDP negotiation<br /><br />TS26.114",
+            "default": "H264,H263",
+            "type": "string"
+          },
+          "audio_codec": {
+            "description": "TG: CALL\n\nThis parameter defines Which types of AMR codecs should be offered in SDP.\n\n\"AMR WB\"\n\"AMR NB\"",
+            "x-intellij-html-description": "TG: CALL<br /><br />This parameter defines Which types of AMR codecs should be offered in SDP.<br /><br />\"AMR WB\"<br />\"AMR NB\"",
+            "default": "AMRBE-WB,AMR-WB,AMRBE,AMR,DTMFWB,DTMF",
+            "type": "string"
+          },
+          "packetization_mode": {
+            "description": "TG: CALL\n\nThe 'packetization-mode' SDP parameter for H.264/H.265 codec.\n\nFollowing modes are supported: Single NAL Unit Mode (0), Non-Interleaved Mode (1), Interleaved Mode (2).\n\nReference: RFC 6184",
+            "x-intellij-html-description": "TG: CALL<br /><br />The 'packetization-mode' SDP parameter for H.264/H.265 codec.<br /><br />Following modes are supported: Single NAL Unit Mode (0), Non-Interleaved Mode (1), Interleaved Mode (2).<br /><br />Reference: RFC 6184",
+            "default": "1",
+            "type": "string",
+            "enum": [
+              "0",
+              "1",
+              "2",
+              "0,1",
+              "0,2",
+              "1,0",
+              "1,2",
+              "2,0",
+              "2,1"
+            ]
+          },
+          "dtmf_codec_mode": {
+            "description": "TG: CALL\n\nEnable/disable DTMF codec (telephone-event)\n\n0 - enabled (out-of-band)\n1 - disabled (in-band)",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enable/disable DTMF codec (telephone-event)<br /><br /><b>0</b> - enabled (out-of-band)<br /><b>1</b> - disabled (in-band)",
+            "default": "0",
+            "type": "string",
+            "enum": [
+              "0",
+              "1"
+            ]
+          },
+          "mdmn_type": {
+            "description": "TG: CALL\n\nSpecify type of MDMN (Multi Device Multi Number)",
+            "x-intellij-html-description": "TG: CALL<br /><br />Specify type of MDMN (Multi Device Multi Number)",
+            "default": "NotSupport",
+            "type": "string",
+            "examples": [
+              "Softphone",
+              "Samsung"
+            ]
+          },
+          "enable_scr": {
+            "description": "TG: CALL\n\nDiscontinuous TX in audio engine.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Discontinuous TX in audio engine.",
+            "deprecationMessage": "Not used. Every profile has default value.",
+            "default": true,
+            "type": "boolean"
+          },
+          "tty_type": {
+            "description": "TG: REGI:\n\nType of TTY(Text telephone type).\nPossible values: 1 = CS, 2 = PS, 3 = RTT (Real-time text), 0 = No.\nDefault value: 1 (CS).",
+            "x-intellij-html-description": "TG: REGI:<br /><br />Type of TTY(Text telephone type).<br />Possible values: 1 = CS, 2 = PS, 3 = RTT (Real-time text), 0 = No.<br />Default value: 1 (CS).",
+            "default": 1,
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "ptime": {
+            "description": "TG: CALL\n\nThe 'ptime' SDP parameter.\n\nThe length of time in milliseconds represented by the media in a packet. The value should be multiple of 20ms (length on single AMR sample).\n\nReference: RFC 4566",
+            "x-intellij-html-description": "TG: CALL<br /><br />The 'ptime' SDP parameter.<br /><br />The length of time in milliseconds represented by the media in a packet. The value should be multiple of 20ms (length on single AMR sample).<br /><br />Reference: RFC 4566",
+            "default": 20,
+            "type": "integer",
+            "minimum": 20
+          },
+          "maxptime": {
+            "description": "TG: CALL\n\nThe 'maxptime' SDP parameter.\n\nThe maximum amount of media that can be encapsulated in each packet, expressed as time in milliseconds. The value should be multiple of 20ms (length on single AMR sample).\n\nReference: RFC 4566",
+            "x-intellij-html-description": "TG: CALL<br /><br />The 'maxptime' SDP parameter.<br /><br />The maximum amount of media that can be encapsulated in each packet, expressed as time in milliseconds. The value should be multiple of 20ms (length on single AMR sample).<br /><br />Reference: RFC 4566",
+            "default": 20,
+            "type": "integer",
+            "minimum": 20
+          },
+          "audio_rtcpxr": {
+            "description": "TG: CALL\n\nSupport for RTCP Extended Reports (XR) for audio.\n\nPossible values: RTCP XR disabled (0) and RTCP XR enabled (1).\n\nReference: RFC 3611",
+            "x-intellij-html-description": "TG: CALL<br /><br />Support for RTCP Extended Reports (XR) for audio.<br /><br />Possible values: RTCP XR disabled (0) and RTCP XR enabled (1).<br /><br />Reference: RFC 3611",
+            "default": 0,
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "video_rtcpxr": {
+            "description": "TG: CALL\n\nSupport for RTCP Extended Reports (XR) for video.\n\nPossible values: RTCP XR disabled (0) and RTCP XR enabled (1).\n\nReference: RFC 3611",
+            "x-intellij-html-description": "TG: CALL<br /><br />Support for RTCP Extended Reports (XR) for video.<br /><br />Possible values: RTCP XR disabled (0) and RTCP XR enabled (1).<br /><br />Reference: RFC 3611",
+            "default": 0,
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "enable_evs_codec": {
+            "description": "TG: CALL\n\nEnable/Disable EVS Feature",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enable/Disable EVS Feature",
+            "default": false,
+            "type": "boolean"
+          },
+          "evs_discontinuous_transmission": {
+            "description": "TG: CALL\n\nEnable/Disable EVS discontinuous transmission feature\n0 : Disabled\n1 : Enable",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enable/Disable EVS discontinuous transmission feature<br />0 : Disabled<br />1 : Enable",
+            "default": "1",
+            "type": "string",
+            "enum": [
+              "0",
+              "1"
+            ]
+          },
+          "evs_dtx_recv": {
+            "description": "TG: CALL\n\nEnable/Disable DTX (Discontinuous Transmission)\nMTSI client in terminal shall not include dtx-recv. MTSI MGW may modify SDP offer or answer in order to disable DTX for the send direction of the receiver of dtx-recv.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enable/Disable DTX (Discontinuous Transmission)<br />MTSI client in terminal shall not include dtx-recv. MTSI MGW may modify SDP offer or answer in order to disable DTX for the send direction of the receiver of dtx-recv.",
+            "default": "1",
+            "type": "string",
+            "enum": [
+              "0",
+              "1"
+            ]
+          },
+          "evs_header_full": {
+            "description": "TG: CALL\n\nFlag to support header full mode\nIf the hf-only parameter is contained in the SDP answer, the MRFC shall forward this parameter to the MRFP in the remote descriptor.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Flag to support header full mode<br />If the hf-only parameter is contained in the SDP answer, the MRFC shall forward this parameter to the MRFP in the remote descriptor.",
+            "default": "0",
+            "type": "string",
+            "enum": [
+              "0",
+              "1"
+            ]
+          },
+          "evs_mode_switch": {
+            "description": "TG: CALL\n\nFlag whether UE is EVS primary mode or IO mode\n0 : Primary Mode\n1 : IO Mode",
+            "x-intellij-html-description": "TG: CALL<br /><br />Flag whether UE is EVS primary mode or IO mode<br />0 : Primary Mode<br />1 : IO Mode",
+            "default": "0",
+            "type": "string",
+            "enum": [
+              "0",
+              "1"
+            ]
+          },
+          "evs_channel_send": {
+            "description": "TG: CALL\n\nChannel type when sending",
+            "x-intellij-html-description": "TG: CALL<br /><br />Channel type when sending",
+            "default": "0",
+            "type": "string",
+            "enum": [
+              "0",
+              "1"
+            ],
+            "deprecationMessage": "Marked for make it generic.\nThis setting is never used for any of the operators."
+          },
+          "evs_channel_recv": {
+            "description": "TG: CALL\n\nChannel type when receiving",
+            "x-intellij-html-description": "TG: CALL<br /><br />Channel type when receiving",
+            "default": "0",
+            "type": "string",
+            "enum": [
+              "0",
+              "1"
+            ],
+            "deprecationMessage": "Marked for make it generic.\nThis setting is never used for any of the operators."
+          },
+          "evs_channel_aware_receive": {
+            "description": "TG: CALL\n\nIf a positive (2, 3, 5, or 7) value of ch-aw-recv is declared for a payload type and the payload type is accepted, the receiver of the parameter shall send partial redundancy (channel-aware mode) at the start of the session using the value as the offset.\nIf ch-aw-recv=0 is declared or not present for a payload type and the payload type is accepted, the receiver of the parameter shall not send partial redundancy (channel-aware mode) at the start of the session.\nIf ch-aw-recv=-1 is declared for a payload type and the payload type is accepted, the receiver of the parameter shall not send partial redundancy (channel-aware mode) in the session.\nIf not present or a non-negative (0, 2, 3, 5, or 7) value of ch-aw-recv is declared for a payload type and the payload type is accepted, partial redundancy (channel-aware mode) can be activated or deactivated during the session based on the expected or estimated channel condition through adaptation signaling, such as CMR (see Annex A.2 of [125]) or RTCP based signalling (see clause 10.2).\nIf not present or a non-negative (0, 2, 3, 5, or 7) value of ch-aw-recv is declared for a payload type and the payload type is accepted, the partial redundancy offset value can also be adjusted during the session based on the expected or estimated channel condition through adaptation signaling.",
+            "x-intellij-html-description": "TG: CALL<br /><br />If a positive (2, 3, 5, or 7) value of ch-aw-recv is declared for a payload type and the payload type is accepted, the receiver of the parameter shall send partial redundancy (channel-aware mode) at the start of the session using the value as the offset.<br />If ch-aw-recv=0 is declared or not present for a payload type and the payload type is accepted, the receiver of the parameter shall not send partial redundancy (channel-aware mode) at the start of the session.<br />If ch-aw-recv=-1 is declared for a payload type and the payload type is accepted, the receiver of the parameter shall not send partial redundancy (channel-aware mode) in the session.<br />If not present or a non-negative (0, 2, 3, 5, or 7) value of ch-aw-recv is declared for a payload type and the payload type is accepted, partial redundancy (channel-aware mode) can be activated or deactivated during the session based on the expected or estimated channel condition through adaptation signaling, such as CMR (see Annex A.2 of [125]) or RTCP based signalling (see clause 10.2).<br />If not present or a non-negative (0, 2, 3, 5, or 7) value of ch-aw-recv is declared for a payload type and the payload type is accepted, the partial redundancy offset value can also be adjusted during the session based on the expected or estimated channel condition through adaptation signaling.",
+            "default": "-1",
+            "type": "string"
+          },
+          "evs_codec_mode_request": {
+            "description": "TG: CALL\n\nCMR (Codec Mode Request )\nAs per 3GPP 26.445 permissible values are -1, 0, and 1.\n If cmr is -1 and the session is in the EVS primary mode, CMR on the RTP payload header is disabled in the session. If cmr is -1 and the session is in the EVS AMR-WB IO mode, CMR in the CMR byte is restricted to the values of EVS AMR-WB IO bit-rates and NO_REQ as specified in Table A.3. \nIf cmr is 0 or not present, the values of CMR specified in Table A.3 are enabled.\n If cmr is 1, CMR shall be present in each packet. CMR shall be compliant with the negotiated bit-rate and bandwidth media type attributes for EVS primary and EVS AMR-WB IO modes.",
+            "x-intellij-html-description": "TG: CALL<br /><br />CMR (Codec Mode Request )<br />As per 3GPP 26.445 permissible values are -1, 0, and 1.<br />If cmr is -1 and the session is in the EVS primary mode, CMR on the RTP payload header is disabled in the session. If cmr is -1 and the session is in the EVS AMR-WB IO mode, CMR in the CMR byte is restricted to the values of EVS AMR-WB IO bit-rates and NO_REQ as specified in Table A.3. If cmr is 0 or not present, the values of CMR specified in Table A.3 are enabled. If cmr is 1, CMR shall be present in each packet. CMR shall be compliant with the negotiated bit-rate and bandwidth media type attributes for EVS primary and EVS AMR-WB IO modes.",
+            "default": "0",
+            "type": "string",
+            "enum": [
+              "-1",
+              "0",
+              "1"
+            ]
+          },
+          "evs_bit_rate_send": {
+            "description": "TG: CALL\n\nSpecifies the range of source codec bit-rate [kb/s] for EVS Primary mode.\nThe parameter can either have: a single bit-rate (br1);\nor a hyphen-separated pair of two bit-rates (br1-br2)\nIf a single value is included, this bit-rate, br1, is used.\nIf a hyphen-separated pair of two bit-rates is included,\nbr1 and br2 are used as the minimum bit-rate and the maximum bit-rate respectively.\nbr1 and br2 have a value from the set: 5.9, 7.2, 8, 9.6, 13.2, 16.4, 24.4, 32, 48, 64, 96, and 128.\n(TS 26 445)",
+            "x-intellij-html-description": "TG: CALL<br /><br />Specifies the range of source codec bit-rate [kb/s] for EVS Primary mode.<br />The parameter can either have: a single bit-rate (br1);<br />or a hyphen-separated pair of two bit-rates (br1-br2)<br />If a single value is included, this bit-rate, br1, is used.<br />If a hyphen-separated pair of two bit-rates is included,<br />br1 and br2 are used as the minimum bit-rate and the maximum bit-rate respectively.<br />br1 and br2 have a value from the set: 5.9, 7.2, 8, 9.6, 13.2, 16.4, 24.4, 32, 48, 64, 96, and 128.<br />(TS 26 445)",
+            "default": "9.6-24.4",
+            "type": "string"
+          },
+          "evs_bit_rate_receive": {
+            "description": "TG: CALL\n\nSpecifies the range of source codec bit-rate [kb/s] for EVS Primary mode.\nThe parameter can either have: a single bit-rate (br1);\nor a hyphen-separated pair of two bit-rates (br1-br2)\nIf a single value is included, this bit-rate, br1, is used.\nIf a hyphen-separated pair of two bit-rates is included,\nbr1 and br2 are used as the minimum bit-rate and the maximum bit-rate respectively.\nbr1 and br2 have a value from the set: 5.9, 7.2, 8, 9.6, 13.2, 16.4, 24.4, 32, 48, 64, 96, and 128.\n(TS 26 445)",
+            "x-intellij-html-description": "TG: CALL<br /><br />Specifies the range of source codec bit-rate [kb/s] for EVS Primary mode.<br />The parameter can either have: a single bit-rate (br1);<br />or a hyphen-separated pair of two bit-rates (br1-br2)<br />If a single value is included, this bit-rate, br1, is used.<br />If a hyphen-separated pair of two bit-rates is included,<br />br1 and br2 are used as the minimum bit-rate and the maximum bit-rate respectively.<br />br1 and br2 have a value from the set: 5.9, 7.2, 8, 9.6, 13.2, 16.4, 24.4, 32, 48, 64, 96, and 128.<br />(TS 26 445)",
+            "default": "9.6-24.4",
+            "type": "string"
+          },
+          "evs_bandwidth_send": {
+            "description": "TG: CALL\n\nBandwidth in send direction\nThe session should start with the maximum bandwidth supported by the initial\nbit-rate up to the maximum negotiated bandwidth.\nIf a range of bandwidth is negotiated, the codec can operate in any bandwidth\nin the session but the maximum bandwidth in the range\nshould be used after the start of or update of the session.\nIf a single audio bandwidth higher than narrowband is negotiated,\nthe codec operates in the negotiated bandwidth but can use lower bandwidth(s)\nin the session, depending on the input signal.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Bandwidth in send direction<br />The session should start with the maximum bandwidth supported by the initial<br />bit-rate up to the maximum negotiated bandwidth.<br />If a range of bandwidth is negotiated, the codec can operate in any bandwidth<br />in the session but the maximum bandwidth in the range<br />should be used after the start of or update of the session.<br />If a single audio bandwidth higher than narrowband is negotiated,<br />the codec operates in the negotiated bandwidth but can use lower bandwidth(s)<br />in the session, depending on the input signal.",
+            "default": "nb-swb",
+            "type": "string",
+            "enum": [
+              "nb",
+              "wb",
+              "swb",
+              "fb",
+              "nb-wb",
+              "nb-swb",
+              "nb-fb"
+            ]
+          },
+          "evs_bandwidth_receive": {
+            "description": "TG: CALL\n\nIn receive direction\nThe session should start with the maximum bandwidth supported by the initial\nbit-rate up to the maximum negotiated bandwidth.\nIf a range of bandwidth is negotiated, the codec can operate in any bandwidth\nin the session but the maximum bandwidth in the range\nshould be used after the start of or update of the session.\nIf a single audio bandwidth higher than narrowband is negotiated,\nthe codec operates in the negotiated bandwidth but can use lower bandwidth(s)\nin the session, depending on the input signal.",
+            "x-intellij-html-description": "TG: CALL<br /><br />In receive direction<br />The session should start with the maximum bandwidth supported by the initial<br />bit-rate up to the maximum negotiated bandwidth.<br />If a range of bandwidth is negotiated, the codec can operate in any bandwidth<br />in the session but the maximum bandwidth in the range<br />should be used after the start of or update of the session.<br />If a single audio bandwidth higher than narrowband is negotiated,<br />the codec operates in the negotiated bandwidth but can use lower bandwidth(s)<br />in the session, depending on the input signal.",
+            "default": "nb-swb",
+            "type": "string",
+            "enum": [
+              "nb",
+              "wb",
+              "swb",
+              "fb",
+              "nb-wb",
+              "nb-swb",
+              "nb-fb"
+            ]
+          },
+          "evs_payload": {
+            "description": "TG: CALL\n\nPayload type of EVS offer\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL<br /><br />Payload type of EVS offer<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 112,
+            "type": "integer",
+            "minimum": 97,
+            "maximum": 127
+          },
+          "evs_2nd_payload": {
+            "description": "TG: CALL\n\nEnable secondary EVS offer following IR92 V11 : Clause 2.4.3.3.\nFor further information check CL: 13145410\nChoose value in the range 96-127. (RFC3551)",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enable secondary EVS offer following IR92 V11 : Clause 2.4.3.3.<br />For further information check CL: 13145410<br />Choose value in the range 96-127. (RFC3551)",
+            "default": 113,
+            "type": "integer",
+            "minimum": 97,
+            "maximum": 127
+          },
+          "evs_payload_ext": {
+            "description": "TG: CALL\n\nIn case of update EVS audio codec settings.\nUsed only inside of the customizations for VZW operator.\nFor other operators it will use evs_payload json setting.\n(check usage of payload_ext variable in sdpcreator.cpp)",
+            "x-intellij-html-description": "TG: CALL<br /><br />In case of update EVS audio codec settings.<br />Used only inside of the customizations for VZW operator.<br />For other operators it will use evs_payload json setting.<br />(check usage of payload_ext variable in sdpcreator.cpp)",
+            "default": 119,
+            "type": "integer",
+            "minimum": 97,
+            "maximum": 127,
+            "deprecationMessage": "This should be customization.\nMarked for removal."
+          },
+          "evs_bit_rate_send_ext": {
+            "description": "TG: CALL\n\nIn case of update EVS audio codec settings.\nUsed only inside of the customizations for VZW operator.\nFor other operators it will use evs_bit_rate_send json setting.\n(check usage of payload_ext variable in sdpcreator.cpp)",
+            "x-intellij-html-description": "TG: CALL<br /><br />In case of update EVS audio codec settings.<br />Used only inside of the customizations for VZW operator.<br />For other operators it will use evs_bit_rate_send json setting.<br />(check usage of payload_ext variable in sdpcreator.cpp)",
+            "default": "5.9-13.2",
+            "type": "string",
+            "deprecationMessage": "This should be customization.\nMarked for removal."
+          },
+          "evs_bit_rate_receive_ext": {
+            "description": "TG: CALL\n\nIn case of update EVS audio codec settings.\nUsed only inside of the customizations for VZW operator.\nFor other operators it will use evs_bit_rate_receive json setting.\n(check usage of payload_ext variable in sdpcreator.cpp)",
+            "x-intellij-html-description": "TG: CALL<br /><br />In case of update EVS audio codec settings.<br />Used only inside of the customizations for VZW operator.<br />For other operators it will use evs_bit_rate_receive json setting.<br />(check usage of payload_ext variable in sdpcreator.cpp)",
+            "default": "5.9-13.2",
+            "type": "string",
+            "deprecationMessage": "This should be customization.\nMarked for removal."
+          },
+          "evs_bandwidth_send_ext": {
+            "description": "TG: CALL\n\nIn case of update EVS audio codec settings.\nUsed only inside of the customizations for VZW operator.\nFor other operators it will use evs_bandwidth_send json setting.\n(check usage of payload_ext variable in sdpcreator.cpp)",
+            "x-intellij-html-description": "TG: CALL<br /><br />In case of update EVS audio codec settings.<br />Used only inside of the customizations for VZW operator.<br />For other operators it will use evs_bandwidth_send json setting.<br />(check usage of payload_ext variable in sdpcreator.cpp)",
+            "default": "nb-swb",
+            "type": "string",
+            "enum": [
+              "nb",
+              "wb",
+              "swb",
+              "fb",
+              "nb-wb",
+              "nb-swb",
+              "nb-fb"
+            ],
+            "deprecationMessage": "This should be customization.\nMarked for removal."
+          },
+          "evs_bandwidth_receive_ext": {
+            "description": "TG: CALL\n\nIn case of update EVS audio codec settings.\nUsed only inside of the customizations for VZW operator.\nFor other operators it will use evs_bandwidth_receive json setting.\n(check usage of payload_ext variable in sdpcreator.cpp)",
+            "x-intellij-html-description": "TG: CALL<br /><br />In case of update EVS audio codec settings.<br />Used only inside of the customizations for VZW operator.<br />For other operators it will use evs_bandwidth_receive json setting.<br />(check usage of payload_ext variable in sdpcreator.cpp)",
+            "default": "nb-swb",
+            "type": "string",
+            "enum": [
+              "nb",
+              "wb",
+              "swb",
+              "fb",
+              "nb-wb",
+              "nb-swb",
+              "nb-fb"
+            ],
+            "deprecationMessage": "This should be customization.\nMarked for removal."
+          },
+          "evs_default_bandwidth": {
+            "description": "TG: CALL\n\nDefault EVS bandwidth\nThe session should start with the maximum bandwidth supported by the initial bit-rate up to the maximum negotiated bandwidth. If a range of bandwidth is negotiated, the codec can operate in any bandwidth in the session but the maximum bandwidth in the range should be\nused after the start of or update of the session. If a single audio bandwidth higher than narrowband is negotiated, the codec operates in the negotiated bandwidth but can use lower bandwidth(s) in the session, depending on the input signal.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Default EVS bandwidth<br />The session should start with the maximum bandwidth supported by the initial bit-rate up to the maximum negotiated bandwidth. If a range of bandwidth is negotiated, the codec can operate in any bandwidth in the session but the maximum bandwidth in the range should be<br />used after the start of or update of the session. If a single audio bandwidth higher than narrowband is negotiated, the codec operates in the negotiated bandwidth but can use lower bandwidth(s) in the session, depending on the input signal.",
+            "default": "nb-swb",
+            "type": "string",
+            "enum": [
+              "nb",
+              "wb",
+              "swb",
+              "fb",
+              "nb-wb",
+              "nb-swb",
+              "nb-fb"
+            ]
+          },
+          "evs_default_bitrate": {
+            "description": "TG: CALL\n\nDefault EVS bitrate\nAn MTSI client in terminal supporting the EVS codec is required to support the entire bit-rate range but may offer a smaller bit-rate range or even a single bit-rate.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Default EVS bitrate<br />An MTSI client in terminal supporting the EVS codec is required to support the entire bit-rate range but may offer a smaller bit-rate range or even a single bit-rate.",
+            "default": "24.4",
+            "type": "string"
+          },
+          "evs_limited_codec": {
+            "description": "TG: CALL\n\nIf this value is not empty, than it will override EVS bandwidth ranges (default, send and received).",
+            "x-intellij-html-description": "TG: CALL<br /><br />If this value is not empty, than it will override EVS bandwidth ranges (default, send and received).",
+            "default": "",
+            "type": "string",
+            "enum": [
+              "",
+              "nb",
+              "wb",
+              "swb",
+              "fb",
+              "nb-wb",
+              "nb-swb",
+              "nb-fb"
+            ],
+            "deprecationMessage": "Setting never used\nMarked for removal"
+          },
+          "evs_use_default_rtcp_bw": {
+            "description": "TG: CALL\n\nIf this value is true, the sender and receiver RTCP bandwidths will be 1.25 % and 3.75 % of the session bandwidth for EVS codec.(See RFC3556 / RFC3551)\nIf this value is false, RS/RR will be 0/2500",
+            "x-intellij-html-description":"TG: CALL<br /><br />If this value is true, the sender and receiver RTCP bandwidths will be 1.25 % and 3.75 % of the session bandwidth for EVS codec.(See RFC3556 / RFC3551)<br />If this value is false, RS/RR will be 0/2500",
+            "default": false,
+            "type": "boolean"
+          },
+          "support_3gpp_ussi": {
+            "description": "TG: CALL\n\nConfiguration of supporting 3gpp 24.390 USSI",
+            "x-intellij-html-description": "TG: CALL<br /><br />Configuration of supporting 3gpp 24.390 USSI",
+            "default": false,
+            "type": "boolean"
+          },
+          "support_network_init_ussi": {
+            "description": "TG: CALL\n\nSupport of Network initiated USSI",
+            "x-intellij-html-description": "TG: CALL<br /><br />Support of Network initiated USSI",
+            "default": false,
+            "type": "boolean"
+          },
+          "send_bye_for_ussi": {
+            "description": "TG: CALL\n\nSend BYE instead of INFO when USSD is released by user",
+            "x-intellij-html-description": "TG: CALL<br /><br />Send BYE instead of INFO when USSD is released by user",
+            "default": false,
+            "type": "boolean"
+          },
+          "enable_rcs": {
+            "description": "TG: RCS\n\nEnabled or disable RCS",
+            "x-intellij-html-description": "TG: RCS<br /><br />Enabled or disable RCS",
+            "default": false,
+            "type": "boolean"
+          },
+          "enable_rcs_chat": {
+            "description": "TG: RCS\n\nEnabled or disable RCS chat",
+            "x-intellij-html-description": "TG: RCS<br /><br />Enabled or disable RCS chat",
+            "default": false,
+            "type": "boolean"
+          },
+          "closed_group_chat": {
+            "default": false,
+            "type": "boolean"
+          },
+          "subscribe_max_entry": {
+            "description": "TG: RCS\n\nMax entry counts for send List SUBSCRIBE",
+            "x-intellij-html-description": "TG: RCS<br /><br />Max entry counts for send List SUBSCRIBE",
+            "default": 0,
+            "type": "integer",
+            "examples": [
+              0,
+              500
+            ]
+          },
+          "publish_timer": {
+            "description": "TG: RCS\n\nFor sending periodic PUBLISH refresh before the published capability expires.\nDevice shall set the value of Expires header of PUBLISH method to PublishTimer on publication of online status.\n\nValue in seconds",
+            "x-intellij-html-description": "TG: RCS<br /><br />For sending periodic PUBLISH refresh before the published capability expires.<br />Device shall set the value of Expires header of PUBLISH method to PublishTimer on publication of online status.<br /><br />Value in seconds",
+            "default": 0,
+            "type": "integer"
+          },
+          "publish_expiry": {
+            "description": "TG: RCS\n\nThis value indicates the duration for the active publication after which it should be refreshed.\n\nRFC 3903\n\nValue in seconds",
+            "x-intellij-html-description": "TG: RCS<br /><br />This value indicates the duration for the active publication after which it should be refreshed.<br /><br />RFC 3903<br /><br />Value in seconds",
+            "default": 3600,
+            "type": "integer"
+          },
+          "extended_publish_timer": {
+            "description": "TG: RCS\n\nAdds additional delay for periodic publish capability refresh",
+            "x-intellij-html-description": "TG: RCS<br /><br />Adds additional delay for periodic publish capability refresh",
+            "default": 86400,
+            "type": "integer"
+          },
+          "enable_gzip": {
+            "description": "TG: RCS\n\nAdds zipped body when subscribing for presence request in service",
+            "x-intellij-html-description": "TG: RCS<br /><br />Adds zipped body when subscribing for presence request in service",
+            "default": false,
+            "type": "boolean"
+          },
+          "enable_gzip_for_publish": {
+            "description": "TG: RCS\n\nAdds zipped body when sending publish to network",
+            "x-intellij-html-description": "TG: RCS<br /><br />Adds zipped body when sending publish to network",
+            "default": false,
+            "type": "boolean"
+          },
+          "anonymous_fetch": {
+            "description": "TG: RCS\n\nAdds anonymous fetching to Presence Subscription Request",
+            "x-intellij-html-description": "TG: RCS<br /><br />Adds anonymous fetching to Presence Subscription Request",
+            "default": false,
+            "type": "boolean"
+          },
+          "bad_event_expiry": {
+            "description": "TG: RCS\n\nBad event handling for ATT\nAmount of time after which bad event will expire. In seconds",
+            "x-intellij-html-description": "TG: RCS<br /><br />Bad event handling for ATT<br />Amount of time after which bad event will expire. In seconds",
+            "default": 0,
+            "type": "integer",
+            "examples": [
+              0,
+              259200
+            ]
+          },
+          "cap_cache_exp": {
+            "default": 0,
+            "type": "integer"
+          },
+          "cap_poll_interval": {
+            "description": "TG: RCS\n\nIndicates intervals between polling capabilities.",
+            "x-intellij-html-description": "TG: RCS<br /><br />Indicates intervals between polling capabilities.",
+            "default": 0,
+            "type": "integer",
+            "examples": [
+              0,
+              625000
+            ]
+          },
+          "src_throttle_publish": {
+            "default": 60,
+            "type": "integer"
+          },
+          "avail_cache_exp": {
+            "description": "TG: RCS\n\nIndicates how long capabilities info from cache will be valid",
+            "x-intellij-html-description": "TG: RCS<br /><br />Indicates how long capabilities info from cache will be valid",
+            "default": 0,
+            "type": "integer",
+            "examples": [
+              0,
+              259200
+            ]
+          },
+          "publish_err_retry_timer": {
+            "description": "TG: RCS\n\nIndicates interval to next publishing retry. In seconds.",
+            "x-intellij-html-description": "TG: RCS<br /><br />Indicates interval to next publishing retry. In seconds.",
+            "default": 21600,
+            "type": "integer",
+            "examples": [
+              21600
+            ]
+          },
+          "poll_list_sub_exp": {
+            "default": 3,
+            "type": "integer"
+          },
+          "self_port": {
+            "default": 5060,
+            "type": "integer"
+          },
+          "port": {
+            "description": "TG: CALL\n\nSpecify port on which the SIP client is running",
+            "x-intellij-html-description": "TG: CALL<br /><br />Specify port on which the SIP client is running",
+            "default": 5060,
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535,
+            "examples": [
+              5060,
+              9672,
+              5080
+            ]
+          },
+          "notify_history_info": {
+            "description": "TG: CALL\n\nThe setting describes behavior when device receives incoming INVITE with history-info",
+            "x-intellij-html-description": "TG: CALL<br /><br />The setting describes behavior when device receives incoming INVITE with history-info",
+            "default": "not_notify",
+            "type": "string",
+            "enum": [
+              "not_notify",
+              "toast_only",
+              "redirect_number",
+              "change_number"
+            ]
+          },
+          "support_ect": {
+            "description": "TG: CALL\n\nIf setting is set to \"true\",\n   in CallSession::DoConsultativeTransferCall() :\n   - there will be add to Call ID \n - local URI tag as \"from-tag\"; and \n - Remote URI tag as \"to-tag\"\n   - there will be add \"INVITE\" as \"method\" parameter to Refer-To URI  \n\n   in CallSession::DoTransferCall():\n   - there will be add \"INVITE\" as \"method\" parameter to Refer-To URI",
+            "x-intellij-html-description": "TG: CALL<br /><br />If setting is set to \"true\",<br />   in CallSession::DoConsultativeTransferCall() :<br />   - there will be add to Call ID <br /> - local URI tag as \"from-tag\"; and <br /> - Remote URI tag as \"to-tag\"<br />   - there will be add \"INVITE\" as \"method\" parameter to Refer-To URI  <br /><br />   in CallSession::DoTransferCall():<br />   - there will be add \"INVITE\" as \"method\" parameter to Refer-To URI",
+            "default": false,
+            "type": "boolean"
+          },
+          "ect_no_hold_for_active_call": {
+            "description": "TG: CALL\n\nThis parameter is used when there's no need to hold an active call before ECT performed for an operator.",
+            "x-intellij-html-description": "TG: CALL<br /><br />This parameter is used when there's no need to hold an active call before ECT performed for an operator.",
+            "type": "boolean",
+            "default": false
+          },
+          "scm_version": {
+            "description": "TG: CALL\n\nSmart Congestion Mitigation feature. Determines release of SIB2 extension.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Smart Congestion Mitigation feature. Determines release of SIB2 extension.",
+            "default": 0,
+            "type": "integer",
+            "minimum": 0
+          },
+          "acb": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "REGISTER",
+                "INVITE",
+                "MESSAGE",
+                "SUBSCRIBE"
+              ]
+            }
+          },
+          "rcs_profile": {
+            "description": "TG: RCS\n\nSpecify version of RCS profile, depends on the profile of the buyer.",
+            "x-intellij-html-description": "TG: RCS<br /><br />Specify version of RCS profile, depends on the profile of the buyer.",
+            "default": "",
+            "type": "string",
+            "examples": [
+              "joyn_blackbird",
+              "joyn_cpr",
+              "UP_1.0",
+              "UP_2",
+              "UP_2.2",
+              "UP_2.3",
+              "UP_T",
+              "UP",
+              "NAGuidelines"
+            ]
+          },
+          "config_version_mark": {
+            "description": "TG: RCS\n\nUsed for operator comparison between different slots, in case of dual RCS",
+            "x-intellij-html-description": "TG: RCS<br /><br />Used for operator comparison between different slots, in case of dual RCS",
+            "default": "",
+            "type": "string",
+            "examples": [
+              "",
+              "vf",
+              "or"
+            ]
+          },
+          "enable_tcp_graceful_shutdown": {
+            "default": true,
+            "type": "boolean"
+          },
+          "tcprst_uac_errorcode": {
+            "default": -1,
+            "type": "integer"
+          },
+          "tcprst_uas_errorcode": {
+            "default": -1,
+            "type": "integer"
+          },
+          "retry_invite_on_tcp_reset": {
+            "description": "TG: CALL\n\nEnable re-try INVITE after tcp reset",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enable re-try INVITE after tcp reset",
+            "default": false,
+            "type": "boolean"
+          },
+          "add_histinfo": {
+            "description": "TG: CALL\n\nAdd histinfo at Supported header in Initial Invite",
+            "x-intellij-html-description": "TG: CALL<br /><br />Add histinfo at Supported header in Initial Invite",
+            "default": false,
+            "type": "boolean"
+          },
+          "simmobility_allowlist": {
+            "description": "TG: REGI\n\nList of Salescodes for which Simmobility works for a given operator. * -> all, ! -> none",
+            "x-intellij-html-description": "TG: REGI<br /><br />List of Salescodes for which Simmobility works for a given operator. * -> all, ! -> none",
+            "default": "*",
+            "type": "string",
+            "pattern": "^[*!]$|^([A-Z]|[0-9]){3}(,([A-Z]|[0-9]){3})*$",
+            "examples": [
+              "ACG,AIO,ATT,BST,CCT,CHA,DSH,FKR,LRA,SPR,TFN,TMB,TMK,USC,VMU,VZW,XAA,XAG,XAR,XAS"
+            ]
+          },
+          "simmobility_blocklist": {
+            "description": "TG: REGI\n\nList of Salescodes for which Simmobility  doesn't work for a given operator. * -> all, ! -> none",
+            "x-intellij-html-description": "TG: REGI<br /><br />List of Salescodes for which Simmobility  doesn't work for a given operator. * -> all, ! -> none",
+            "default": "!",
+            "type": "string",
+            "pattern": "^[*!]$|^([A-Z]|[0-9]){3}(,([A-Z]|[0-9]){3})*$",
+            "examples": [
+              "ACG,AIO,ATT,BST,CCT,CHA,DSH,FKR,LRA,SPR,TFN,TMB,TMK,USC,VMU,VZW,XAA,XAG,XAR,XAS"
+            ]
+          },
+          "support_lte_preferred": {
+            "default": false,
+            "type": "boolean"
+          },
+          "support_access_type": {
+            "description": "TG: REGI\n\nBoolean value of one of the UaProfile fields - supportAccessType.\nIt is related to a feature-tag g.3gpp.accesstype (part of SIP REGISTER request).\nAccording to 3GPP TS 24.292, this tag (when used) indicates access network technology\nused by the device and the particular registration flow that\nthe device is using to register over.\nValue is boolean, when set to true, it is automatically assigned either cellular or wlan value.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Boolean value of one of the UaProfile fields - supportAccessType.<br />It is related to a feature-tag g.3gpp.accesstype (part of SIP REGISTER request).<br />According to 3GPP TS 24.292, this tag (when used) indicates access network technology<br />used by the device and the particular registration flow that<br />the device is using to register over.<br />Value is boolean, when set to true, it is automatically assigned either cellular or wlan value.",
+            "default": false,
+            "type": "boolean"
+          },
+          "last_pani_header": {
+            "description": "TG: CALL\n\nThe setting determines which field to fill in the SIP message",
+            "x-intellij-html-description": "TG: CALL<br /><br />The setting determines which field to fill in the SIP message",
+            "default": "",
+            "type": "string",
+            "enum": [
+              "",
+              "P-Last-Access-Network-Info",
+              "P-Last-Cell-ID",
+              "Cellular-Network-Info",
+              "Cellular-Network-Info_With_CIA",
+              "Cellular-Network-Info_With_CIA_Inactive"
+            ]
+          },
+          "oip_from_preferred": {
+            "description": "TG: CALL\n\nThe setting indicates operator's originating party identity determination policy. (See TS 24.417 5.4)\ndefault - use P-Asserted-Identity (PAI) header to determine the originating party identity in OIP service. If PAI header field is absent, use From header.\nP-Asserted-Id - Indicates that the PAI header field is used for determination of the originating party identity in OIP service. From header field will not used.\nFrom - Indicates that the identity provided within the From header field is used for determination of the originating party identity in OIP service, regardless the presence or absence of the PAI header field.",
+            "x-intellij-html-description": "TG: CALL<br /><br />The setting indicates operator's originating party identity determination policy. (See TS 24.417 5.4)<br />default - use P-Asserted-Identity (PAI) header to determine the originating party identity in OIP service. If PAI header field is absent, use From header.<br />P-Asserted-Id - Indicates that the PAI header field is used for determination of the originating party identity in OIP service. From header field will not used.<br />From - Indicates that the identity provided within the From header field is used for determination of the originating party identity in OIP service, regardless the presence or absence of the PAI header field.",
+            "default": "Default",
+            "type": "string",
+            "enum": [
+              "Default",
+              "P-Asserted-Id",
+              "From"
+            ]
+          },
+          "enable_verstat": {
+            "description": "TG: CALL\n\nThe setting determines whether the verstat parameter should be used(described in 3GP TS 24.229 section 7.2A.20)",
+            "x-intellij-html-description": "TG: CALL<br /><br />The setting determines whether the verstat parameter should be used(described in 3GP TS 24.229 section 7.2A.20)",
+            "default": false,
+            "type": "boolean"
+          },
+          "try_reregister_from_keepalive": {
+            "description": "TG: RCS\n\n Specify whether UE shall re-register after TCP connection termination is detected via keepalive mechanism\n(as in RFC 6223.5 : \"keep\" parameter with a non-zero value that indicates a recommended keep-alive frequency).\nshould be set to \"true\" only for RCS profiles with TLS transport,\nas according to spec TCP disconnection for TLS transport is equivalent to deregistration,\nso UE shall re-register.",
+            "x-intellij-html-description": "TG: RCS<br /><br /> Specify whether UE shall re-register after TCP connection termination is detected via keepalive mechanism<br />(as in RFC 6223.5 : \"keep\" parameter with a non-zero value that indicates a recommended keep-alive frequency).<br />should be set to \"true\" only for RCS profiles with TLS transport,<br />as according to spec TCP disconnection for TLS transport is equivalent to deregistration,<br />so UE shall re-register.",
+            "default": false,
+            "type": "boolean"
+          },
+          "support_specific_salescode_only": {
+            "description": "TG: RCS\n\nIf set to true only salescodes define in 'sales_code' section will be supported.\nPrimary used in Vodafone network",
+            "x-intellij-html-description": "TG: RCS<br /><br />If set to true only salescodes define in 'sales_code' section will be supported.<br />Primary used in Vodafone network",
+            "default": false,
+            "type": "boolean"
+          },
+          "policy_on_local_numbers": {
+            "description": "TG: CALL\n\nfor geo-local numbers the UE must set the 'phone-context' parameter with additional visited network information when available(in roaming state)",
+            "x-intellij-html-description": "TG: CALL<br /><br />for geo-local numbers the UE must set the 'phone-context' parameter with additional visited network information when available(in roaming state)",
+            "default": "home-local",
+            "type": "string",
+            "enum": [
+              "home-local",
+              "geo-local"
+            ]
+          },
+          "need_presence_xml_upload": {
+            "default": false,
+            "type": "boolean"
+          },
+          "need_omadm_config": {
+            "description": "TG: REGI\n\nFlag for trigger OMADM (OMA Device Management) configuration.\nDefault value: false.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Flag for trigger OMADM (OMA Device Management) configuration.<br />Default value: false.",
+            "default": false,
+            "type": "boolean"
+          },
+          "audio_dscp": {
+            "description": "TG: CALL\n\nThe value of the DSCP field in the IP header for media packets",
+            "default": 0,
+            "type": "integer"
+          },
+          "control_dscp": {
+            "description": "TG: CALL\n\nThe value of the DSCP field in the IP header for SIP packets",
+            "default": 0,
+            "type": "integer"
+          },
+          "block_deregi_on_srvcc": {
+            "description": "TG: REGI\n\nBy default, on SRVCC, UE will send DEREGISTER message and perform IMS deregistration.\nWhen set to true, IMS deregistration on SRVCC will be skipped.",
+            "x-intellij-html-description": "TG: REGI<br /><br />By default, on SRVCC, UE will send DEREGISTER message and perform IMS deregistration.<br />When set to true, IMS deregistration on SRVCC will be skipped.",
+            "default": false,
+            "type": "boolean"
+          },
+          "support_380_policy_by_emcbs": {
+            "description": "TG: CALL\n\nCheck EmcBS value when received 380 message",
+            "x-intellij-html-description": "TG: CALL<br /><br />Check EmcBS value when received 380 message",
+            "default": false,
+            "type": "boolean"
+          },
+          "media_type_restriction_policy": {
+            "description": "TG: REGI\n\n[TS.32][IMS Settings][VxLTE1.27] Media_type_restriction_policy (Voice / Video over LTE allowed when roaming)\nDenotes voice / video support over LTE when roaming.",
+            "x-intellij-html-description": "TG: REGI<br /><br />[TS.32][IMS Settings][VxLTE1.27] Media_type_restriction_policy (Voice / Video over LTE allowed when roaming)<br />Denotes voice / video support over LTE when roaming.",
+            "default": "Voice_and_Video",
+            "type": "string",
+            "enum": [
+              "Voice_Only",
+              "Voice_and_Video"
+            ]
+          },
+          "support_rfc6337_for_delayed_offer": {
+            "description": "TG: CALL\n\nin RFC 6337 section 5.3\nIf it had not previously initiatled 'hold',\nthen it should offer 'a=sendrecv' attribute.",
+            "x-intellij-html-description": "TG: CALL<br /><br />in RFC 6337 section 5.3<br />If it had not previously initiatled 'hold',<br />then it should offer 'a=sendrecv' attribute.",
+            "default": true,
+            "type": "boolean"
+          },
+          "smsoip_usage_policy": {
+            "description": "TG: REGI\n\n[TS.32][IMS Settings][VxLTE1.23] SMSoIP_usage_policy (When to use SMSoIP)\nDenotes whether SMSoIP can be used even if VoLTE is not used (VOPSI=No)",
+            "x-intellij-html-description": "TG: REGI<br /><br />[TS.32][IMS Settings][VxLTE1.23] SMSoIP_usage_policy (When to use SMSoIP)<br />Denotes whether SMSoIP can be used even if VoLTE is not used (VOPSI=No)",
+            "default": "Only with voice",
+            "type": "string",
+            "enum": [
+              "Only_with_voice",
+              "Irrespective_of_voice"
+            ]
+          },
+          "use_200offer_when_remote_not_support_100rel": {
+            "description": "TG: CALL\n\nin RFC 6337 section 5.2.2\nWhen a UAS has received an initial INVITE without an offer, it must include an offer in the first reliable response to the INVITE.\nIf PRACK and UPDATE are not supported, the offer in a 200 response for the initial INVITE should include only the media types and formats believed to be acceptable to the user.",
+            "x-intellij-html-description": "TG: CALL<br /><br />in RFC 6337 section 5.2.2<br />When a UAS has received an initial INVITE without an offer, it must include an offer in the first reliable response to the INVITE.<br />If PRACK and UPDATE are not supported, the offer in a 200 response for the initial INVITE should include only the media types and formats believed to be acceptable to the user.",
+            "default": true,
+            "type": "boolean"
+          },
+          "exclude_pani_vowifi_initial_regi": {
+            "description": "TG: REGI\n\nIf IPsec is enabled, then disable PANI header on VoWIFI first regi (protected register)",
+            "x-intellij-html-description": "TG: REGI<br /><br />If IPsec is enabled, then disable PANI header on VoWIFI first regi (protected register)",
+            "default": false,
+            "type": "boolean"
+          },
+          "reg_retry_pcscf_policy_on_403": {
+            "description": "TG: REGI\n\nwhen NW responds with 403 Forbidden for SIP Regi\nthen UE can either go into permanently prohibited state, or retry to the same PCSCF,\nor retry for same PCSCF only when positive RetryAfter value is attached to 403 Forbidden message\nor retry to next PCSCF",
+            "x-intellij-html-description": "TG: REGI<br /><br />when NW responds with 403 Forbidden for SIP Regi<br />then UE can either go into permanently prohibited state, or retry to the same PCSCF,<br />or retry to next PCSCF",
+            "default": "home-local",
+            "type": "string",
+            "enum": [
+              "perm_stop",
+              "same_pcscf",
+              "next_pcscf"
+            ]
+          },
+          "need_check_allowed_method_for_refresh": {
+            "description": "TG: CALL\n\nAbout session timer, it needs to check the allow header in received sip message if there is UPDATE on remote.",
+            "x-intellij-html-description": "TG: CALL<br /><br />About session timer, it needs to check the allow header in received sip message if there is UPDATE on remote.",
+            "default": false,
+            "type": "boolean"
+          },
+          "support_rcs_across_sales_code": {
+            "description": "TG: REGI\n\nFor KOR devices, enable RCS across other operator's device.",
+            "x-intellij-html-description": "TG: REGI<br /><br />For KOR devices, enable RCS across other operator's device.",
+            "default": false,
+            "type": "boolean"
+          },
+          "delay_pcscf_change_during_call": {
+            "description": "TG: REGI\n\nDelaying PCSCF change if call is in progress",
+            "x-intellij-html-description": "TG: REGI<br /><br />Delaying PCSCF change if call is in progress",
+            "default": false,
+            "type": "boolean"
+          },
+          "mmtel_voice_exempt": {
+            "description": "TG: REGI\n\nIndicates that MMTEL voice is not a 3GPP PS data off exempt service. \n 0 : If PS Data is OFF, mmtel_voice should also be OFF. \n 1 : PS data ON/OFF and mmtel_voice do not affect each other.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Indicates that MMTEL voice is not a 3GPP PS data off exempt service. <br /> 0 : If PS Data is OFF, mmtel_voice should also be OFF. <br /> 1 : PS data ON/OFF and mmtel_voice do not affect each other.",
+            "default": 1,
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "mmtel_video_exempt": {
+            "description": "TG: REGI\n\nIndicates that MMTEL video is not a 3GPP PS data off exempt service. \n 0 : If PS Data is OFF, mmtel_video should also be OFF. \n 1 : PS data ON/OFF and mmtel_video do not affect each other.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Indicates that MMTEL video is not a 3GPP PS data off exempt service. <br /> 0 : If PS Data is OFF, mmtel_video should also be OFF. <br /> 1 : PS data ON/OFF and mmtel_video do not affect each other.",
+            "default": 1,
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "smsoip_exempt": {
+            "description": "TG: REGI\n\nIndicates that the SMS over IP is a 3GPP PS data off exempt service. \n 0 : If PS Data is OFF, smsip should also be OFF. \n 1 : PS data ON/OFF and smsip do not affect each other.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Indicates that the SMS over IP is a 3GPP PS data off exempt service. <br /> 0 : If PS Data is OFF, smsip should also be OFF. <br /> 1 : PS data ON/OFF and smsip do not affect each other.",
+            "default": 1,
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "network": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "description": "TG: REGI\n\nTypes of networks in which 'services' will be 'enabled'\n\nPossible types:\n-lte\n-hspa\n-umts\n-gsm\n-ehrpd\n-tdscdma\n-wifi",
+                  "x-intellij-html-description": "TG: REGI<br /><br />Types of networks in which 'services' will be 'enabled'<br /><br />Possible types:<br />-lte<br />-hspa<br />-umts<br />-gsm<br />-ehrpd<br />-tdscdma<br />-wifi",
+                  "type": "string",
+                  "default": "lte,hspa,umts,gsm,ehrpd,tdscdma,wifi"
+                },
+                "services": {
+                  "description": "TG: REGI\n\nIMS services which will be 'enabled' for networks in 'type'\n\nPossible services:\n\nVoLTE/VoWiFi\n  - mmtel\n  - mmtel-video\n  - smsip\n\nRCS\n  - im\n  - ft\n  - options\n  - gls\n  - profile\n  - vs\n  - is\n  - slm\n  - ft_http\n  - euc\n  - ec\n  - presence\n  - cdpn\n  - chatbot-communication",
+                  "x-intellij-html-description": "TG: REGI<br /><br />IMS services which will be 'enabled' for networks in 'type'<br /><br />Possible services:<br /><br />VoLTE/VoWiFi<br />  - mmtel<br />  - mmtel-video<br />  - smsip<br /><br />RCS<br />  - im<br />  - ft<br />  - options<br />  - gls<br />  - profile<br />  - vs<br />  - is<br />  - slm<br />  - ft_http<br />  - euc<br />  - ec<br />  - presence<br />  - cdpn<br />  - chatbot-communication",
+                  "default": [],
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "mmtel",
+                      "mmtel-video",
+                      "smsip",
+                      "im",
+                      "ft",
+                      "options",
+                      "gls",
+                      "profile",
+                      "vs",
+                      "is",
+                      "slm",
+                      "ft_http",
+                      "euc",
+                      "ec",
+                      "presence",
+                      "cdpn",
+                      "chatbot-communication",
+                      "lastseen"
+                    ]
+                  },
+                  "additionalItems": false
+                },
+                "enabled": {
+                  "description": "TG: REGI\n\nEnable/disable 'services' in network 'type'",
+                  "x-intellij-html-description": "TG: REGI<br /><br />Enable/disable 'services' in network 'type'",
+                  "type": "boolean",
+                  "default": false
+                },
+                "dereg_timeout": {
+                  "description": "TG: REGI\n\nDelay before DEREGISTER will be sent",
+                  "x-intellij-html-description": "TG: REGI<br /><br />Delay before DEREGISTER will be sent",
+                  "type": "integer",
+                  "minimum": 0,
+                  "default": 4000
+                }
+              },
+              "required": [
+                "type",
+                "services",
+                "enabled"
+              ]
+            }
+          },
+          "simmobility_update": {
+            "description": "TG: REGI\n\nSome values should be updated at SimMobility case.",
+            "x-intellij-html-description": "TG: REGI<br /><br />Some values should be updated at SimMobility case.",
+            "default": {},
+            "type": "object"
+          },
+          "t_lte_911_fail": {
+            "description": "TG: CALL\n\nTimer for Emergency Call establishment. If timer run out there is a CSFB.",
+            "x-intellij-html-description": "TG: CALL<br /><br />Timer for Emergency Call establishment. If timer run out there is a CSFB.",
+            "default": 10,
+            "type": "integer"
+          },
+          "need_start_e911_timer_on_alerting": {
+            "description": "TG: CALL\n\nThis feature lets set the device to start E911 timer when it enters alerting state",
+            "x-intellij-html-description": "TG: CALL<br /><br />This feature lets set the device to start E911 timer when it enters alerting state",
+            "default": "false",
+            "type": "boolean"
+          },
+          "need_remove_e911_timer_on_18x": {
+            "description": "TG: CALL\n\nThis feature lets set the device to remove E911 timer when it receives 18x sip message",
+            "x-intellij-html-description": "TG: CALL<br /><br />This feature lets set the device to remove E911 timer when it receives 18x sip message",
+            "default": "false",
+            "type": "boolean"
+          },
+          "t_e911_invite_to_18x": {
+            "description": "TG: CALL\n\nemergency call timer from invite to 18x",
+            "x-intellij-html-description": "TG: CALL<br /><br />emergency call timer from invite to 18x",
+            "default": 0,
+            "type": "integer"
+          },
+          "t_e911_regi": {
+            "description": "TG: CALL\n\nemergency reqi timer for registration as per each PCSCF. It should be less than TimerF value",
+            "x-intellij-html-description": "TG: CALL<br /><br />emergency request expiry timer",
+            "default": 0,
+            "type": "integer"
+          },
+          "e911_pdn_selection_vowifi": {
+            "description": "TG: CALL\n\nPreference for emergency calls when VoWiFi is registered\n\n1. : \nCS only\nemergency_domain_setting: \"CS\"\n\n2. : \nUse emergency pdn for E-Call\nemergency_domain_setting: \"PS\"\ne911_pdn_selection_vowifi: 0\n\n3. : \nUse WiFi even if LTE is available\nemergency_domain_setting: \"PS\"\ne911_pdn_selection_vowifi: 2\n\n4. : \nUse WiFi only if devise is out of service\nemergency_domain_setting: \"PS\"\ne911_pdn_selection_vowifi: 1",
+            "x-intellij-html-description": "TG: CALL<br /><br />Preference for emergency calls when VoWiFi is registered<br /><br />1. : <br />CS only<br />emergency_domain_setting: \"CS\"<br /><br />2. : <br />Use emergency pdn for E-Call<br />emergency_domain_setting: \"PS\"<br />e911_pdn_selection_vowifi: 0<br /><br />3. : <br />Use WiFi even if LTE is available<br />emergency_domain_setting: \"PS\"<br />e911_pdn_selection_vowifi: 2<br /><br />4. : <br />Use WiFi only if devise is out of service<br />emergency_domain_setting: \"PS\"<br />e911_pdn_selection_vowifi: 1",
+            "default": 0,
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "t_location_acquire_fail": {
+            "description": "TG: CALL\n\nTimeout for geolocation provider used when requesting location",
+            "x-intellij-html-description": "TG: CALL<br /><br />Timeout for geolocation provider used when requesting location",
+            "default": 0,
+            "type": "integer"
+          },
+          "t_location_acquire_fail_incall": {
+            "description": "TG: CALL\n\nTimeout for geolocation provider used when requesting location during in call",
+            "x-intellij-html-description": "TG: CALL<br /><br />Timeout for geolocation provider used when requesting location during in call",
+            "default": 0,
+            "type": "integer"
+          },
+          "t_location_acquire_fail_volte": {
+            "description": "TG: CALL\n\nTimeout for geolocation provider used when requesting location in VoLTE",
+            "x-intellij-html-description": "TG: CALL<br /><br />Timeout for geolocation provider used when requesting location",
+            "default": 0,
+            "type": "integer"
+          },
+          "t_location_acquire_fail_sms": {
+            "description": "TG: SMS\n\nTimeout for geolocation provider used when requesting location in SMS",
+            "x-intellij-html-description": "TG: SMS<br /><br />Timeout for geolocation provider used when requesting location",
+            "default": 0,
+            "type": "integer"
+          },
+          "t_valid_location_time": {
+            "description": "TG: CALL\n\nTimer interval used to check for new location",
+            "x-intellij-html-description": "TG: CALL<br /><br />Timer interval used to check for new location",
+            "default": 1800000,
+            "type": "integer"
+          },
+          "confidence_level": {
+            "description": "TG: CALL\n\nUncertainty level of geolocation information",
+            "x-intellij-html-description": "TG: CALL<br /><br />Uncertainty level of geolocation information",
+            "default": 68,
+            "type": "integer"
+          },
+          "request_location_timing": {
+            "description": "TG: CALL\n\nlocation request timing",
+            "x-intellij-html-description": "TG: CALL<br /><br /location request timing",
+            "default": "not_request",
+            "type": "string"
+          },
+          "valid_location_accuracy": {
+            "description": "TG: CALL\n\nvalid location accuracy",
+            "x-intellij-html-description": "TG: CALL<br /><br /valid location accuracy",
+            "default": 0,
+            "type": "integer"
+          },
+          "encr_null_roaming": {
+            "description": "TG: REGI\n\nset encrytion to null during roaming",
+            "x-intellij-html-description": "TG: REGI<br /><br />set encrytion to null during roaming",
+            "default": "false",
+            "type": "boolean"
+          },
+          "usc_sip_list": {
+            "description": "TG: REGI\n\nUAC Support SIP LIST",
+            "x-intellij-html-description": "TG: REGI<br /><br />UAC Support SIP LIST",
+            "type": "array",
+            "items": {
+              "enum": [
+                "REGISTER",
+                "INVITE",
+                "MESSAGE",
+                "SUBSCRIBE",
+                "NOTIFY"
+              ]
+            }
+          },
+          "need_volte_retry_in_nr": {
+            "description": "TG: CALL\n\nThis feature lets set the device to retry volte call in NR after EPSFB",
+            "x-intellij-html-description": "TG: CALL<br /><br />his feature lets set the device to retry volte call in NR after EPSFB",
+            "default": "false",
+            "type": "boolean"
+          },
+          "support_datachannel_with_feature_caps": {
+            "description": "TG: REGI\n\nThis feature indicates whether datachannel is supported with Feature-Caps \"g.3gpp.datachannel\" or not as described in 3GPP TS 24.186 clause 9.2",
+            "x-intellij-html-description": "TG: REGI<br /><br />This feature indicates whether datachannel is supported with Feature-Caps \"g.3gpp.datachannel\" or not as described in 3GPP TS 24.186 clause 9.2",
+            "default": "true",
+            "type": "boolean"
+          },
+          "support_b2c_callcomposer_without_featuretag": {
+            "description": "TG: CALL\n\nIndicates whether B2C callcomposer is supported without callcomposer feature tag or not",
+            "x-intellij-html-description": "TG: CALL<br /><br />Indicates whether B2C callcomposer is supported without callcomposer feature tag or not<br />0 : Not supported<br />1 : Supported",
+            "default": 0,
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "cmc_ext_content_support": {
+            "description": "TG: CALL\n\nEnables CMC extended Contents support during call forking",
+            "x-intellij-html-description": "TG: CALL<br /><br />Enables CallComposer during call forking",
+            "default": "false",
+            "type": "boolean"
+          },
+          "cmc_ext_content_features_list": {
+            "description": "TG: CALL\n\nCMC extended contents supported features list",
+            "x-intellij-html-description": "TG: CALL\n\nCMC extended contents supported features list",
+            "type": "array",
+            "items": {
+              "enum": [
+                "pre-call"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "version": {
+      "description": "Version of file",
+      "x-intellij-html-description": "Version of file",
+      "deprecationMessage": "Not used since CL#16542581",
+      "type": "integer"
+    },
+    "profile": {
+      "$ref": "#/definitions/profile"
+    }
+  }
+}

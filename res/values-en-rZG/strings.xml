@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">Emergency calls in areas with cellular coverage only</string>
+    <string name="aka_challenge_failed_msg_skt">"Couldn't finish HD Voice Service registration. Try restarting your device. If that doesn't work, contact the Customer Center since a SIM or device inspection may be required."</string>
+    <string name="dialog_text_rcs_config_accept">Accept</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications includes new features you can use to send and receive chat messages, pictures, videos, and sounds, as well as text messages, using your Internet connection. You will receive a code via text message for verifying your phone number.</string>
+    <string name="dialog_text_rcs_config_cancel">Cancel</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications includes new features you can use to send and receive chat messages, pictures, videos, and sounds, as well as text messages, using your Internet connection. To register for these features, you must enter a phone number.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">New messaging features</string>
+    <string name="dialog_text_rcs_config_next">Next</string>
+    <string name="dialog_text_rcs_config_no">No</string>
+    <string name="dialog_text_rcs_config_ok">OK</string>
+    <string name="dialog_text_rcs_config_reject">Reject</string>
+    <string name="dialog_text_rcs_config_skip">Skip</string>
+    <string name="dialog_text_rcs_config_yes">Yes</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">Always allow</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">Allow once</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">Do not allow</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Allow Rich Communications to connect to a mobile network? As you are roaming, this may result in significant charges.</string>
+    <string name="dialog_title_rcs_service">Connect to mobile network</string>
+</resources>

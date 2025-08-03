@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">Chamadas de urxencia só en zonas con cobertura móbil</string>
+    <string name="aka_challenge_failed_msg_skt">Non se puido concluír o rexistro do servizo de voz HD. Proba a reiniciar o dispositivo. Se non funciona, ponte en contacto co centro de atención ao cliente xa que é posible que haxa que revisar a SIM ou o dispositivo.</string>
+    <string name="dialog_text_rcs_config_accept">Acep.</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications inclúe funcións novas que podes usar para enviar e recibir mensaxes, imaxes, vídeos e sons de chat, así como mensaxes de texto mediante a túa conexión a Internet. Recibirás un código mediante unha mensaxe de texto para verificar o teu número de teléfono.</string>
+    <string name="dialog_text_rcs_config_cancel">Cancel</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications inclúe funcións novas que podes usar para enviar e recibir mensaxes, imaxes, vídeos e sons de chat, así como mensaxes de texto mediante a túa conexión a Internet. Para rexistrarse para estas funcións, debes inserir un número de teléfono.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">Novas funcións de mensaxería</string>
+    <string name="dialog_text_rcs_config_next">Seguinte</string>
+    <string name="dialog_text_rcs_config_no">Non</string>
+    <string name="dialog_text_rcs_config_ok">Aceptar</string>
+    <string name="dialog_text_rcs_config_reject">Rex.</string>
+    <string name="dialog_text_rcs_config_skip">Omitir</string>
+    <string name="dialog_text_rcs_config_yes">Si</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">Permi.sempre</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">Perm.1 vez</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">Non permitir</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Queres permitir que Rich Communications se conecten a unha rede móbil? Como estás en itinerancia, é posible que isto carrexe custos elevados.</string>
+    <string name="dialog_title_rcs_service">Conéctate a unha rede móbil</string>
+</resources>

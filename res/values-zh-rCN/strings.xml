@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">正在下载…%1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS 服务更新</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS 服务更新可用。</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">进行 IMS 更新需要重启手机</string>
+    <string name="LEGAL_LATER">稍后</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">点击“确定”按钮即可更新三星 IMS，设备将重启以完成三星 IMS 的更新。</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"三星 IMS（IP 多媒体子系统）是一项在 Galaxy 设备上提供高清语音和视频通话以及富通信服务（增强聊天功能）的服务。
+点击“确定”按钮后，将下载改进的三星 IMS。
+大小：%1$s MB
+
+请注意，如果您没有连接到 WLAN 网络，可能会产生数据费用。如果您正在通话，应用程序更新可能会暂停，或者在更新过程中通话可能会终止。"</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">成功下载更新</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">仅限在有手机网络覆盖的区域使用紧急呼叫</string>
+    <string name="UPDATABLE_OK">确定</string>
+    <string name="aka_challenge_failed_msg_skt">无法完成 HD 语音服务注册。请尝试重启设备。如果这样做未解决问题，请联系客服中心，因为可能需要检查 SIM 卡或设备。</string>
+    <string name="call_notification_answer_action">接听</string>
+    <string name="call_notification_answer_video_action">视频通话</string>
+    <string name="call_notification_decline_action">拒接</string>
+    <string name="call_notification_hang_up_action">挂断</string>
+    <string name="call_notification_incoming_text">来电</string>
+    <string name="call_notification_ongoing_text">正在通话</string>
+    <string name="call_notification_screening_text">正在过滤来电</string>
+    <string name="common_google_play_services_unknown_issue">%1$s无法访问 Google Play 服务，请重试。</string>
+    <string name="dialog_text_rcs_config_accept">接受</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications 的新功能可让您通过网络连接发送和接收聊天信息、图片、视频、声音以及短信。为了验证您的手机号码，您将收到一条验证码短信。</string>
+    <string name="dialog_text_rcs_config_cancel">取消</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications 包括您可用于通过互联网连接发送和接收聊天信息、图片、视频、声音和短信的新功能。若要注册这些功能，您必须输入手机号码。</string>
+    <string name="dialog_text_rcs_config_msisdn_title">全新信息功能</string>
+    <string name="dialog_text_rcs_config_next">下一步</string>
+    <string name="dialog_text_rcs_config_no">否</string>
+    <string name="dialog_text_rcs_config_ok">确定</string>
+    <string name="dialog_text_rcs_config_reject">拒绝</string>
+    <string name="dialog_text_rcs_config_skip">略过</string>
+    <string name="dialog_text_rcs_config_yes">是</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">总是允许</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">允许一次</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">不允许</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">是否允许 Rich Communications 连接至移动网络？当您漫游时，这可能会产生大量费用。</string>
+    <string name="dialog_text_rcs_sensitive_api_remember">记住此次操作</string>
+    <string name="dialog_text_rcs_sensitive_api_text">请确认是否允许程序执行此操作 ?</string>
+    <string name="dialog_text_rcs_sensitive_api_title">敏感操作</string>
+    <string name="dialog_title_rcs_service">连接至移动网络</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">Panggilan darurat di area dengan cakupan seluler saja</string>
+    <string name="aka_challenge_failed_msg_skt">Tidak dapat menyelesaikan pendaftaran Layanan Suara HD. Coba mulai ulang perangkat Anda. Jika tidak berhasil, hubungi Pusat Pelanggan karena inspeksi SIM atau perangkat mungkin diperlukan.</string>
+    <string name="call_notification_answer_action">Jawab</string>
+    <string name="call_notification_answer_video_action">Video</string>
+    <string name="call_notification_decline_action">Tolak</string>
+    <string name="call_notification_hang_up_action">Tutup</string>
+    <string name="call_notification_incoming_text">Panggilan masuk</string>
+    <string name="call_notification_ongoing_text">Panggilan sedang berlangsung</string>
+    <string name="call_notification_screening_text">Menyaring panggilan masuk</string>
+    <string name="common_google_play_services_unknown_issue">%1$s mengalami masalah dengan layanan Google Play. Coba lagi.</string>
+    <string name="dialog_text_rcs_config_accept">Terima</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications mencakup fitur baru yang bisa Anda gunakan untuk mengirim dan menerima pesan obrolan, gambar, video, dan suara, serta pesan teks, menggunakan koneksi Internet. Anda akan menerima kode lewat pesan teks untuk memverifikasi nomor telepon Anda.</string>
+    <string name="dialog_text_rcs_config_cancel">Batal</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications mencakup fitur baru yang bisa Anda gunakan untuk mengirim dan menerima pesan obrolan, gambar, video, dan suara, serta pesan teks, menggunakan koneksi Internet. Untuk mendaftar pada fitur ini, Anda harus memasukkan nomor telepon.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">Fitur pesan baru</string>
+    <string name="dialog_text_rcs_config_next">Brkt</string>
+    <string name="dialog_text_rcs_config_no">Tidak</string>
+    <string name="dialog_text_rcs_config_ok">OK</string>
+    <string name="dialog_text_rcs_config_reject">Tolak</string>
+    <string name="dialog_text_rcs_config_skip">Lewati</string>
+    <string name="dialog_text_rcs_config_yes">Ya</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">Slalu izinkn</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">Izinkan 1x</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">Jgn izinkan</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Izinkan Rich Communications menyambung ke jaringan seluler? Saat roaming, ini dapat berakibat biaya yang signifikan.</string>
+    <string name="dialog_title_rcs_service">Sambungkan ke jaringan seluler</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

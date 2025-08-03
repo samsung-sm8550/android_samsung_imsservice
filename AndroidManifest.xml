@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest ns0:sharedUserId="android.uid.system" ns0:versionCode="250630180" ns0:versionName="6.250630" ns0:compileSdkVersion="35" ns0:compileSdkVersionCodename="15" coreApp="true" package="com.sec.imsservice" platformBuildVersionCode="35" platformBuildVersionName="15"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:ns0="http://schemas.android.com/apk/res/android"
+  xmlns:ns1="http://schemas.android.com/apk/prv/res/android">
+    <protected-broadcast ns0:name="com.android.ims.IMS_SERVICE_UP" />
+    <protected-broadcast ns0:name="com.android.ims.IMS_SERVICE_DOWN" />
+    <protected-broadcast ns0:name="com.sec.imsservice.action.IMS_PROFILE_LOADED" />
+    <protected-broadcast ns0:name="com.sec.ims.imsmanager.RESTART" />
+    <protected-broadcast ns0:name="com.gsma.services.rcs.action.SERVICE_UP" />
+    <protected-broadcast ns0:name="com.samsung.ims.action.onsimloaded" />
+    <protected-broadcast ns0:name="com.samsung.ims.action.IMS_REGISTRATION" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.imsservice.alarmmanager" />
+    <protected-broadcast ns0:name="com.sec.imsservice.REGISTERED_IMPU" />
+    <protected-broadcast ns0:name="com.samsung.ims.action.SHOW_IMS_UPDATE_DIALOG" />
+    <protected-broadcast ns0:name="com.samsung.ims.action.NOTIFICATION_DISMISSED" />
+    <protected-broadcast ns0:name="com.samsung.ims.action.SHOW_IMS_REBOOT_DIALOG" />
+    <protected-broadcast ns0:name="com.samsung.ims.action.REBOOT_NOTIFICATION_DISMISSED" />
+    <protected-broadcast ns0:name="com.android.ims.RCS_AUTOCONFIG_START" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.config.workflow.validity_timeout" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.config.workflow.token_expired_after_max_retry" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.config.workflow.general_error_max_retry" />
+    <protected-broadcast ns0:name="com.samsung.ims.dm.DM_CHANGED" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.imsservice.dm_polling_timeout" />
+    <protected-broadcast ns0:name="com.sec.android.internal.ims.FLIGHT_MODE" />
+    <protected-broadcast ns0:name="com.samsung.intent.action.IMS_CALL_DROP" />
+    <protected-broadcast ns0:name="android.intent.action.IMS_SETTINGS_UPDATED" />
+    <protected-broadcast ns0:name="com.samsung.ims.action.apcsconfigurationinfo" />
+    <protected-broadcast ns0:name="com.samsung.intent.action.SMS_CALLBACK_MODE_CHANGED_INTERNAL" />
+    <protected-broadcast ns0:name="com.sec.imsservice.ACTION_DAILY_REPORT_EXPIRED" />
+    <protected-broadcast ns0:name="com.samsung.intent.action.EMERGENCY_SMS_OVER_IMS" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.filetransfer.notification.TRANSFER_INCOMING" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.filetransfer.notification.TRANSFER_PROGRESS" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.filetransfer.notification.TRANSFER_COMPLETED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.filetransfer.notification.TRANSFER_CANCELED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.filetransfer.notification.TRANSFER_CREATED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.filetransfer.notification.TRANSFER_ATTACHED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.filetransfer.notification.REQUEST_FAILED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.filetransfer.request.REQUEST_FILE_RESIZE" />
+    <protected-broadcast ns0:name="com.samsung.ims.rcs.filetransfer.action.INCOMING_FILE_TRANSFER" />
+    <protected-broadcast ns0:name="com.samsung.ims.rcs.filetransfer.action.RESUME_FILE_TRANSFER" />
+    <protected-broadcast ns0:name="com.gsma.services.rcs.filetransfer.action.NEW_FILE_TRANSFER" />
+    <protected-broadcast ns0:name="com.gsma.services.rcs.filetransfer.action.RESUME_FILE_TRANSFER" />
+    <protected-broadcast ns0:name="com.gsma.services.rcs.filetransfer.action.UNDELIVERED_FILE_TRANSFERS" />
+    <protected-broadcast ns0:name="com.gsma.services.rcs.filetransfer.action.FILE_TRANSFER_DELIVERY_EXPIRED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.CREATE_CHAT_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.ADD_PARTICIPANTS_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.REMOVE_PARTICIPANTS_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.CHANGE_GROUPCHAT_LEADER_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.DELETE_MESSAGES_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.DELETE_CHATS_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.SEND_MESSAGE_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.SEND_MESSAGE_RESPONSE_TAKETOOLONG" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.CLOSE_CHAT_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.CANCEL_MESSAGE_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_TYPING_NOTIFICATION" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_CHAT_ESTABLISHED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_CHAT_CLOSED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_NEW_MESSAGE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_CHAT_INVITATION" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_MESSAGE_NOTIFICATION_STATUS" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_MESSAGE_INSERTED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_SEND_MESSAGE_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_PARTICIPANT_INSERTED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_PARTICIPANT_DELETED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_PARTICIPANT_UPDATED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_CHAT_UPDATED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.GET_IS_COMPOSING_ACTIVE_URIS_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.GET_LAST_MESSAGES_SENT_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.OUT_OF_MEMORY_ERROR" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_GROUPCHAT_SESSION" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.SET_CHAT_SUBJECT_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.SET_GROUPCHAT_ICON_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.CHANGE_GROUP_ALIAS_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_PARTICIPANTS_INSERTED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_PARTICIPANTS_DELETED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_PARTICIPANTS_UPDATED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.IGNORE_INCOMING_MESSAGE_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_CHAT_SUBJECT_UPDATED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_GROUPCHAT_ICON_UPDATED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_GROUPCHAT_LEADER_CHANGED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.MESSAGE_REVOKE_TIMER_EXPIRED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_GROUPCHAT_ICON_DELETED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_PARTICIPANT_ALIAS_UPDATED" />
+    <protected-broadcast ns0:name="com.gsma.services.rcs.action.RECEIVE_RCS_MESSAGE" />
+    <protected-broadcast ns0:name="com.gsma.services.rcs.action.RCS_MESSAGE" />
+    <protected-broadcast ns0:name="com.gsma.services.rcs.chat.action.NEW_ONE_TO_ONE_CHAT_MESSAGE" />
+    <protected-broadcast ns0:name="com.gsma.services.rcs.chat.action.NEW_GROUP_CHAT" />
+    <protected-broadcast ns0:name="com.gsma.services.rcs.chat.action.UNDELIVERED_MESSAGES" />
+    <protected-broadcast ns0:name="com.gsma.services.rcs.chat.action.NEW_GROUP_CHAT_MESSAGE" />
+    <protected-broadcast ns0:name="com.samsung.ims.rcs.chat.action.INCOMING_MESSAGE_EVENT" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.RESTART" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.MSGDATA" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.MSGDATA.INITIALSYNCSTART" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.MSGDATA.INITIALSYNCEND" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.MSGDATA.INITIALSYNCFAIL" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.MSGDELETEFAILURE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.MSGUI" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.MSGAPPREQUEST" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.VVMDATA" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.VVMDATADELETEFAILURE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.VVMDATA.SYNCSTART" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.VVMDATA.SYNCFINISHED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.VVMDATA.SYNCFAIL" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.VVMDATA.BUSY" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.CALLLOGDATA" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.CALLLOGDATADELETEFAILURE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.cloudmessage.action.VVMMWI" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.geolocationshare.action.SHARE_LOCATION_IN_CHAT_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.geolocationshare.action.RECEIVE_SHARE_LOCATION_IN_CHAT_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.geolocationshare.action.RECEIVE_LOCATION_SHARE_MESSAGE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.geolocationshare.action.CREATE_SHARE_LOCATION_INCALL_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.geolocationshare.action.START_SHARE_LOCATION_INCALL_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.geolocationshare.action.SHARE_LOCATION_INCALL_COMPLETED" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.geolocationshare.action.RECEIVE_LOCATION_NOTIFICATION_STATUS" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.geolocationshare.action.INCOMING_LOCATION_SHARE_INCALL_INVITATION" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.geolocationshare.action.ACCEPT_LOCATION_SHARE_INCALL_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.geolocationshare.action.REJECT_LOCATION_SHARE_INCALL_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.geolocationshare.action.CANCEL_LOCATION_SHARE_INCALL_RESPONSE" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.geolocationshare.action.DELETE_ALL_LOCATION_SHARE_INCALL_RESPONSE" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_CREATED" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_INCOMING" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_PROGRESS" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_INTERRUPTED" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_COMPLETED" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_CANCELED" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_CONNECTED" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_TERMINATED" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_LIMIT_EXCEEDED" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_COMMUNICATION_ERROR" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_FILE_PATH_ERROR" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_SERVICE_NOTRSEPOSNIVE" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_SERVICE_READY" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.ish.notification.SHARE_SERVICE_NOT_READY" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.vsh.notification.SHARE_CREATED" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.vsh.notification.SHARE_INCOMING" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.vsh.notification.SHARE_CANCELED" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.vsh.notification.SHARE_CONNECTED" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.vsh.notification.CONFIGURATION_CHANGE" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.vsh.notification.SHARE_LCOMMUNICATION_ERROR" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.vsh.notification.SHARE_VIDEO_PATH_ERROR" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.vsh.notification.SHARE_SERVICE_NOTRESPOSNIVE" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.vsh.notification.SHARE_SERVICE_READY" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.vsh.notification.SHARE_SERVICE_NOT_READY" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.vsh.notification.APPROCHING_VS_MAX_DURATION" />
+    <protected-broadcast ns0:name="com.sec.rcs.mediatransfer.vsh.notification.CSH_CAM_ERROR" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.servicemodules.options.sub_throttled_timeout" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.servicemodules.options.poll_timeout" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.servicemodules.options.poll_partial" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.servicemodules.presence.bad_event_timeout" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.servicemodules.presence.publish_timeout" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.servicemodules.presence.retry_publish" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.servicemodules.presence.retry_subscribe" />
+    <protected-broadcast ns0:name="com.samsung.sdm.START_DM_SYNC_SESSION" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.eucr.action.VOLATILE_TIMEOUT" />
+    <protected-broadcast ns0:name="com.sec.android.statistics.VZW_QUALITY_STATISTICS" />
+    <protected-broadcast ns0:name="com.sec.imsservice.sip.signalling" />
+    <protected-broadcast ns0:name="com.sec.imsservice.REQUEST_AKA_CHALLENGE" />
+    <protected-broadcast ns0:name="com.sec.imsservice.AKA_CHALLENGE_COMPLETE" />
+    <protected-broadcast ns0:name="com.samsung.intent.action.PHONE_NEED_SILENT_REDIAL" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.imsservice.periodic_lu" />
+    <protected-broadcast ns0:name="diagandroid.phone.imsSignallingMessage" />
+    <protected-broadcast ns0:name="diagandroid.phone.RTPDLStat" />
+    <protected-broadcast ns0:name="diagandroid.phone.RTPULStat" />
+    <protected-broadcast ns0:name="diagandroid.phone.emergencyCallTimerState" />
+    <protected-broadcast ns0:name="diagandroid.phone.carrierConfig" />
+    <protected-broadcast ns0:name="diagandroid.phone.detailedCallState" />
+    <protected-broadcast ns0:name="diagandroid.phone.VoiceRadioBearerHandoverState" />
+    <protected-broadcast ns0:name="com.samsung.rcs.framework.multimediadata.notification.MULTI_DATA_INSERTION" />
+    <protected-broadcast ns0:name="com.sec.rcs.config.action.SET_SHOW_MSISDN_DIALOG" />
+    <protected-broadcast ns0:name="com.samsung.nsds.action.SIM_DEVICE_ACTIVATED" />
+    <protected-broadcast ns0:name="com.samsung.nsds.action.SIM_DEVICE_DEACTIVATED" />
+    <protected-broadcast ns0:name="com.samsung.nsds.action.RECEIVED_PUSH_NOTIFICATION" />
+    <protected-broadcast ns0:name="com.samsung.nsds.action.DEVICE_CONFIG_UPDATED" />
+    <protected-broadcast ns0:name="com.samsung.nsds.action.ENTITLEMENT_AND_LOCTC_CHECK_COMPLETED" />
+    <protected-broadcast ns0:name="com.samsung.nsds.action.ENTITLEMENT_CHECK_COMPLETED" />
+    <protected-broadcast ns0:name="com.samsung.nsds.action.RECEIVED_GCM_EVENT_NOTIFICATION" />
+    <protected-broadcast ns0:name="com.sec.vsim.ericssonnsds.E911_AID_EXP_CHECK_TIMEOUT" />
+    <protected-broadcast ns0:name="com.sec.vsim.ericssonnsds.SVC_PROVISION_CHECK_TIMEOUT" />
+    <protected-broadcast ns0:name="com.sec.vsim.ericssonnsds.ACTION_SVC_PROVISION_CHECK_RETRY_TIMEOUT" />
+    <protected-broadcast ns0:name="com.sec.vsim.ericssonnsds.ACTION_REFRESH_DEVICE_INFO" />
+    <protected-broadcast ns0:name="com.sec.vsim.ericssonnsds.ACTION_REFRESH_ENTITLEMENT_CHECK" />
+    <protected-broadcast ns0:name="com.sec.vsim.ericssonnsds.ACTION_RETRY_ENTITLEMENT_CHECK" />
+    <protected-broadcast ns0:name="com.sec.internal.vsim.action.UNIFIED_WFC_LOCATIONANDTC_OPEN_WEBSHEET" />
+    <protected-broadcast ns0:name="com.sec.internal.vsim.action.SNT_MODE_LOCATIONANDTC_OPEN_WEBSHEET" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.entitlement.DEVICE_READY_AFTER_BOOTUP" />
+    <protected-broadcast ns0:name="com.sec.imsservice.aec.action.COMPLETED_ENTITLEMENT" />
+    <protected-broadcast ns0:name="com.samsung.softphone.action.ACCOUNT_LOGIN_COMPLETED" />
+    <protected-broadcast ns0:name="com.samsung.softphone.action.ACCOUNT_REGISTERED" />
+    <protected-broadcast ns0:name="com.samsung.softphone.action.ACCOUNT_DEREGISTERED" />
+    <protected-broadcast ns0:name="com.samsung.softphone.action.ACCOUNT_REQUEST_LOGOUT" />
+    <protected-broadcast ns0:name="com.samsung.softphone.action.ACCOUNT_IDENTITY_RELEASED" />
+    <protected-broadcast ns0:name="com.samsung.softphone.action.ACCOUNT_MISSING_E911" />
+    <protected-broadcast ns0:name="com.samsung.softphone.action.ACCOUNT_IN_INTERNATIONAL" />
+    <protected-broadcast ns0:name="com.samsung.softphone.action.ACCOUNT_LOCATION_UNKNOWN" />
+    <protected-broadcast ns0:name="com.samsung.ims.imsservice.handler.secims.audio_info" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.fcm.action.RECEIVE_FCM_REGISTRATION_TOKEN" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.fcm.action.REFRESH_FCM_REGISTRATION_TOKEN" />
+    <protected-broadcast ns0:name="com.sec.internal.ims.fcm.action.RECEIVE_FCM_PUSH_NOTIFICATION" />
+    <protected-broadcast ns0:name="com.samsung.ims.mcs.ACTION_CHECK_NOTIFICATION_CHANNEL_LIFETIME" />
+    <protected-broadcast ns0:name="com.samsung.ims.mcs.ACTION_RETRY_FAILED_API" />
+    <protected-broadcast ns0:name="com.sec.imsservice.cmstore.mcs.action.ACCESS_TOKEN_VALIDITY_TIMEOUT" />
+    <protected-broadcast ns0:name="com.sec.imsservice.cmstore.mcs.action.REFRESH_TOKEN_VALIDITY_TIMEOUT" />
+    <protected-broadcast ns0:name="com.sec.imsservice.cmstore.mcs.action.REGISTRATION_CODE_VALIDITY_TIMEOUT" />
+    <protected-broadcast ns0:name="com.sec.imsservice.cmstore.mcs.action.AUTH_CODE_VALIDITY_TIMEOUT" />
+    <protected-broadcast ns0:name="com.sec.imsservice.cmstore.mcs.action.OTP_RESPONSE_TIMEOUT" />
+    <protected-broadcast ns0:name="com.samsung.ims.mcs.START_CONTACT_SYNC" />
+    <protected-broadcast ns0:name="com.samsung.ims.mcs.STOP_CONTACT_SYNC" />
+    <protected-broadcast ns0:name="com.samsung.intent.action.imsservice.install_session_state_changed" />
+    <protected-broadcast ns0:name="com.sec.ims.imsservice.update_schedule" />
+    <permission ns0:name="com.sec.imsservice.PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.sec.imsservice.READ_IMS_PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.sec.ims.android.rcs.READ_PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.sec.ims.android.rcs.WRITE_PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.samsung.rcs.presence.READ_PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.samsung.rcs.presence.WRITE_PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.gsma.services.permission.RCS" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.sec.imsservice.sip.signalling.READ_PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:label="@string/permlab_readImsStatus" ns0:name="com.sec.imsservice.READ_IMS_STATUS" ns0:protectionLevel="normal" ns0:description="@string/permdesc_readImsStatus" />
+    <permission ns0:name="com.sec.imsservice.permission.RECEIVE_AKA_TOKEN" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.sec.ims.nsds.READ_NSDS_PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.sec.ims.nsds.WRITE_NSDS_PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.sec.ims.entitlementconfigservice.PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.sec.ims.entitlementconfigservice.READ_ENTITLEMENT_CONFIG_PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.sec.ims.entitlementconfigservice.WRITE_ENTITLEMENT_CONFIG_PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="android.permission.PERFORM_IMS_SINGLE_REGISTRATION" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.sec.imsservice.TELEPHONY_NOT_RESPONDING" ns0:protectionLevel="signature|privileged" />
+    <permission ns0:name="com.sec.imsservice.QUANTUM_ENCRYPTION" ns0:protectionLevel="normal" />
+    <permission ns0:name="com.samsung.rcs.im.READ_PERMISSION" ns0:protectionLevel="signature|privileged" />
+    <uses-permission ns0:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission ns0:name="android.permission.REBOOT" />
+    <uses-permission ns0:name="android.permission.RECEIVE_SMS" />
+    <uses-permission ns0:name="android.permission.RECEIVE_MMS" />
+    <uses-permission ns0:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission ns0:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission ns0:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission ns0:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission ns0:name="android.permission.MANAGE_USERS" />
+    <uses-permission ns0:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission ns0:name="android.permission.MONITOR_DEFAULT_SMS_PACKAGE" />
+    <uses-permission ns0:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission ns0:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission ns0:name="com.samsung.android.unifiedwfc.VOWIFI_PROVISIONING_PERMISSION" />
+    <uses-permission ns0:name="com.sec.nsds.READ_NSDS_PERMISSION" />
+    <uses-permission ns0:name="com.sec.nsds.WRITE_NSDS_PERMISSION" />
+    <uses-permission ns0:name="com.sec.android.settings.permission.SOFT_RESET" />
+    <uses-permission ns0:name="com.sec.android.settings.permission.NETWORK_RESET" />
+    <uses-permission ns0:name="com.sec.imslogger.permission.SERVICE" />
+    <meta-data ns0:name="com.google.android.gms.version" ns0:value="@integer/google_play_services_version" />
+    <uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission ns0:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission ns0:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission ns0:name="android.permission.INTERNET" />
+    <uses-permission ns0:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission ns0:name="android.permission.READ_CONTACTS" />
+    <uses-permission ns0:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission ns0:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission ns0:name="android.permission.WAKE_LOCK" />
+    <uses-permission ns0:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission ns0:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission ns0:name="com.verizon.vzwavs.permission.READ" />
+    <uses-permission ns0:name="android.permission.READ_BLOCKED_NUMBERS" />
+    <uses-permission ns0:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission ns0:name="android.permission.SAMSUNG_MODIFY_IPTABLES" />
+    <uses-permission ns0:name="android.permission.SAMSUNG_MODIFY_ROUTE" />
+    <uses-permission ns0:name="com.sec.ImsTelephonyService.EPDN" />
+    <uses-permission ns0:name="com.sec.android.SAMSUNG_MODIFY_IPTABLES" />
+    <uses-permission ns0:name="com.sec.android.SAMSUNG_MODIFY_ROUTE" />
+    <uses-permission ns0:name="android.permission.BROADCAST_SMS" />
+    <uses-permission ns0:name="android.permission.READ_SMS" />
+    <uses-permission ns0:name="android.permission.WRITE_SMS" />
+    <uses-permission ns0:name="android.permission.MANAGE_APP_OPS_MODES" />
+    <uses-permission ns0:name="com.samsung.rcs.im.READ_PERMISSION" />
+    <uses-permission ns0:name="samsung.permission.DMSERVICE" />
+    <uses-permission ns0:name="android.permission.RECEIVE_WAP_PUSH" />
+    <uses-permission ns0:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission ns0:name="android.permission.RECORD_AUDIO" />
+    <uses-permission ns0:name="android.permission.CAMERA" />
+    <uses-permission ns0:name="com.sec.sveservice.PERMISSION" />
+    <uses-permission ns0:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission ns0:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission ns0:name="com.sec.epdg.PERMISSION" />
+    <uses-permission ns0:name="com.sec.android.providers.iwlansettings.permission.WRITE_IWLANSETTINGS" />
+    <uses-permission ns0:name="com.sec.android.providers.iwlansettings.permission.READ_IWLANSETTINGS" />
+    <uses-permission ns0:name="com.vzw.qualitydatalog.permission.LOG_EVENT" />
+    <uses-permission ns0:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission ns0:name="android.permission.ACCESS_IMS_CALL_SERVICE" />
+    <uses-permission ns0:name="com.sec.ims.nsds.OPEN_WEBSHEET" />
+    <uses-permission ns0:name="com.samsung.android.mdec.provider.setting.CMC_ES_PERMISSION" />
+    <uses-permission ns0:name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS" />
+    <uses-permission ns0:name="com.ims.dm.permission.WRITE_DATABASES" />
+    <uses-permission ns0:name="android.permission.INSTALL_SELF_UPDATES" />
+    <uses-permission ns0:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission ns0:name="com.samsung.android.messaging.permission.READ_MESSAGE" />
+    <queries>
+        <package ns0:name="com.motricity.verizon.ssodownloadable" />
+        <package ns0:name="com.motricity.verizon.ssoengine" />
+        <package ns0:name="com.verizon.loginengine.unbranded" />
+        <package ns0:name="com.verizon.mips.services" />
+    </queries>
+    <permission ns0:name="com.sec.imsservice.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" ns0:protectionLevel="signature" />
+    <uses-permission ns0:name="com.sec.imsservice.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <application ns0:label="@string/app_name" ns0:name="com.sec.imsservice.ImsFrameworkApp" ns0:allowClearUserData="false" ns0:persistent="true" ns0:process="com.sec.imsservice" ns0:allowBackup="false" ns0:largeHeap="true" ns0:extractNativeLibs="true" ns0:usesCleartextTraffic="true" ns0:defaultToDeviceProtectedStorage="true" ns0:directBootAware="true" ns0:appComponentFactory="androidx.core.app.CoreComponentFactory" ns0:usesNonSdkApi="true">
+        <service ns0:name="com.sec.internal.ims.imsservice.ImsService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true">
+            <intent-filter>
+                <category ns0:name="com.samsung.rcs.framework.instantmessaging.category.ACTION" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.CREATE_CHAT" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.ADD_PARTICIPANTS" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.REMOVE_PARTICIPANTS" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.CHANGE_GROUPCHAT_LEADER" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.DELETE_MESSAGES" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.REPORT_MESSAGES" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.CHANGE_GROUP_ALIAS" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.IGNORE_INCOMING_MESSAGE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.IGNORE_INCOMING_MESSAGE_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.DELETE_ALL_MESSAGES" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.DELETE_CHATS" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.DELETE_ALL_CHATS" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.OPEN_CHAT" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.ACCEPT_CHAT" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.CLOSE_CHAT" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.ANSWER_CHAT_INVITATION" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.SEND_MESSAGE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.SEND_MESSAGE_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.SEND_TYPING_NOTIFICATION" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.READ_MESSAGE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.SEND_DISPLAY_NOTIFICATION" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.CREATE_CHAT_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.ADD_PARTICIPANTS_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.REMOVE_PARTICIPANTS_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.CHANGE_GROUPCHAT_LEADER_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.SET_CHAT_SUBJECT_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.SET_GROUPCHAT_ICON_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.CHANGE_GROUP_ALIAS_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.REPORT_MESSAGES_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.ANSWER_CHAT_INVITATION_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.SEND_TYPING_NOTIFICATION_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.SEND_DISPLAY_NOTIFICATION_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_TYPING_NOTIFICATION" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_CHAT_CLOSED" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_NEW_MESSAGE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.RECEIVE_CHAT_INVITATION" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.SET_CHAT_SUBJECT" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.SET_GROUPCHAT_ICON" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.DELETE_GROUPCHAT_ICON" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.SET_CHAT_SETTING" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.MUTE_CHAT" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.DELETE_ALL_CHATS_BY_CONTENT_TYPE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.DELETE_CHATS_BY_CONTENT_TYPE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.GET_IS_COMPOSING_ACTIVE_URIS" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.GET_IS_COMPOSING_ACTIVE_URIS_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.GET_LAST_MESSAGES_SENT" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.GET_LAST_MESSAGES_SENT_RESPONSE" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.OUT_OF_MEMORY_ERROR" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.ANSWER_GC_CHAT_INVITATION" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.SEND_MESSAGE_RESPONSE_TAKETOOLONG" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.DELIVERY_TIMEOUT" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.MESSAGE_REVOKE_REQUEST" />
+                <action ns0:name="com.samsung.rcs.framework.instantmessaging.action.CANCEL_MESSAGE" />
+                <action ns0:name="com.samsung.rcs.framework.chatbot.action.REPORT_CHATBOT_AS_SPAM" />
+                <action ns0:name="com.samsung.rcs.framework.chatbot.action.CHATBOT_ANONYMIZE" />
+            </intent-filter>
+            <intent-filter>
+                <category ns0:name="com.samsung.rcs.framework.filetransfer.category.ACTION" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.TRANSFER_ACCEPT" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.TRANSFER_DECLINE" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.TRANSFER_CANCEL" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.SEND_FILE" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.SEND_MULTIPLE" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.ATTACH_FILE" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.SEND_FILE_TO_GROUP_CHAT" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.SEND_MULTIPLE_TO_GROUP_CHAT" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.ATTACH_FILE_TO_GROUP_CHAT" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.DELETE" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.MARK_AS_READ" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.SET_AUTO_ACCEPT_FT" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.RESUME_SENDING_FILE" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.action.RESUME_INCOMING_FILE" />
+                <action ns0:name="com.samsung.rcs.framework.filetransfer.response.RESPONSE_FILE_RESIZE" />
+            </intent-filter>
+            <intent-filter>
+                <category ns0:name="com.samsung.rcs.framework.geolocationshare.category.ACTION" />
+                <action ns0:name="com.samsung.rcs.framework.geolocationshare.action.SHARE_LOCATION_IN_CHAT" />
+                <action ns0:name="com.samsung.rcs.framework.geolocationshare.action.SHARE_LOCATION_IN_CHAT_GC" />
+                <action ns0:name="com.samsung.rcs.framework.geolocationshare.action.CREATE_SHARE_LOCATION_INCALL" />
+                <action ns0:name="com.samsung.rcs.framework.geolocationshare.action.ACCEPT_SHARE_LOCATION_INCALL" />
+                <action ns0:name="com.samsung.rcs.framework.geolocationshare.action.REJECT_SHARE_LOCATION_INCALL" />
+                <action ns0:name="com.samsung.rcs.framework.geolocationshare.action.START_SHARE_LOCATION_INCALL" />
+                <action ns0:name="com.samsung.rcs.framework.geolocationshare.action.CREATE_SHARE_LOCATION_INCALL_GC" />
+            </intent-filter>
+            <intent-filter>
+                <category ns0:name="com.sec.rcs.mediatransfer.ish.category.ACTION" />
+                <action ns0:name="com.sec.rcs.mediatransfer.ish.action.SHARE_ACCEPT" />
+                <action ns0:name="com.sec.rcs.mediatransfer.ish.action.SHARE_CANCEL" />
+                <action ns0:name="com.sec.rcs.mediatransfer.ish.action.SHARE_CONTENT" />
+            </intent-filter>
+            <intent-filter>
+                <category ns0:name="com.sec.rcs.mediatransfer.vsh.category.ACTION" />
+                <action ns0:name="com.sec.rcs.mediatransfer.vsh.action.SHARE_ACCEPT" />
+                <action ns0:name="com.sec.rcs.mediatransfer.vsh.action.SHARE_CANCEL" />
+                <action ns0:name="com.sec.rcs.mediatransfer.vsh.action.SHARE_CONTENT" />
+                <action ns0:name="com.sec.rcs.mediatransfer.vsh.action.SHARE_HIDE" />
+                <action ns0:name="com.sec.rcs.mediatransfer.vsh.action.TOGGLE_CAMERA" />
+                <action ns0:name="com.sec.rcs.mediatransfer.vsh.action.CHANGE_VIDEO_ORIENTATION" />
+                <action ns0:name="com.sec.rcs.mediatransfer.vsh.action.CHANGE_ACTIVITY_ORIENTATION" />
+            </intent-filter>
+            <intent-filter>
+                <category ns0:name="com.sec.rcs.config.category.ACTION" />
+                <action ns0:name="com.sec.rcs.config.action.ADDITIONAL_DEVICE_INFO" />
+            </intent-filter>
+            <intent-filter>
+                <category ns0:name="com.sec.internal.ims.euc.workflow.category.ACTION" />
+                <action ns0:name="com.sec.internal.ims.euc.workflow.action.VOLATILE_TIMEOUT" />
+            </intent-filter>
+        </service>
+        <service ns0:name="com.sec.internal.imsphone.SecImsService" ns0:permission="android.permission.BIND_IMS_SERVICE" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true">
+            <intent-filter>
+                <action ns0:name="android.telephony.ims.ImsService" />
+            </intent-filter>
+        </service>
+        <service ns0:name="com.sec.internal.ims.imsservice.CapabilityService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true" />
+        <service ns0:name="com.sec.internal.ims.imsservice.SemCapabilityService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true" />
+        <service ns0:name="com.sec.internal.ims.imsservice.PresenceService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true" />
+        <service ns0:name="com.sec.imsservice.service.VshService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true" />
+        <service ns0:name="com.sec.internal.ims.imsservice.VolteService2" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true">
+            <intent-filter>
+                <action ns0:name="com.sec.internal.ims.imsservice.VolteService2" />
+            </intent-filter>
+        </service>
+        <service ns0:name="com.sec.internal.ims.imsservice.SmsService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true">
+            <intent-filter>
+                <action ns0:name="com.sec.internal.ims.imsservice.SmsService" />
+            </intent-filter>
+        </service>
+        <service ns0:name="com.sec.internal.ims.imsservice.UtService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true">
+            <intent-filter>
+                <action ns0:name="com.sec.internal.ims.imsservice.UtService" />
+            </intent-filter>
+        </service>
+        <service ns0:name="com.sec.internal.ims.cmstore.CloudMessageService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:process=":CloudMessageService" ns0:singleUser="true" />
+        <service ns0:name="com.sec.internal.ims.imsservice.OpenApiService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true">
+            <intent-filter>
+                <action ns0:name="com.sec.internal.ims.imsservice.OpenApiService" />
+            </intent-filter>
+        </service>
+        <service ns0:name="com.sec.internal.ims.imsservice.MdmiService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true" />
+        <service ns0:name="com.sec.internal.ims.imsservice.QuantumEncryptionService" ns0:permission="com.sec.imsservice.QUANTUM_ENCRYPTION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true" />
+        <service ns0:name="com.sec.internal.ims.entitlement.nsds.NSDSMultiSimService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" />
+        <service ns0:name="com.sec.internal.ims.entitlement.config.EntitlementConfigService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="false" ns0:singleUser="true" />
+        <service ns0:name="com.sec.internal.ims.entitlement.softphone.SoftphoneService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true" />
+        <service ns0:name="com.sec.internal.ims.updater.ImsUpdateService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="false" ns0:process=":ImsUpdateService" ns0:singleUser="true" />
+        <service ns0:name="com.sec.internal.ims.imsservice.TapiService" ns0:permission="com.gsma.services.permission.RCS" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true">
+            <intent-filter>
+                <action ns0:name="com.sec.rcs.SERVICE" />
+                <action ns0:name="com.gsma.services.rcs.contact.IContactService" />
+                <action ns0:name="com.gsma.services.rcs.capability.ICapabilityService" />
+                <action ns0:name="com.gsma.services.rcs.chat.IChatService" />
+                <action ns0:name="com.gsma.services.rcs.filetransfer.IFileTransferService" />
+                <action ns0:name="com.gsma.services.rcs.sharing.video.IVideoSharingService" />
+                <action ns0:name="com.gsma.services.rcs.sharing.image.IImageSharingService" />
+                <action ns0:name="com.gsma.services.rcs.sharing.geoloc.IGeolocSharingService" />
+                <action ns0:name="com.gsma.services.rcs.upload.IFileUploadService" />
+                <action ns0:name="com.gsma.services.rcs.extension.IMultimediaSessionService" />
+                <action ns0:name="com.gsma.services.rcs.ipcall.IIPCallService" />
+                <action ns0:name="com.gsma.services.rcs.history.IHistoryService" />
+            </intent-filter>
+        </service>
+        <service ns0:name="com.sec.internal.ims.imsservice.ImsStatusService" ns0:permission="android.permission.READ_PHONE_STATE" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true" />
+        <service ns0:name="com.sec.internal.ims.config.UserMessageIntentService" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true">
+            <intent-filter>
+                <action ns0:name="com.sec.rcs.config.action.SHOW_MSISDN_DIALOG" />
+            </intent-filter>
+        </service>
+        <receiver ns0:name="com.sec.internal.ims.imsservice.ImsServiceStub$BootCompleteReceiver" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true" ns1:systemUserOnly="true">
+            <intent-filter ns0:priority="1001">
+                <action ns0:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver ns0:name="com.sec.internal.ims.imsservice.ImsIntentReceiver" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true" ns1:systemUserOnly="true">
+            <intent-filter>
+                <action ns0:name="android.telephony.action.CARRIER_SIGNAL_PCO_VALUE" />
+            </intent-filter>
+        </receiver>
+        <receiver ns0:name="com.sec.internal.extension.cpota.ImsCpOtaIntentReceiver" ns0:permission="com.sec.imsservice.PERMISSION" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true">
+            <intent-filter>
+                <action ns0:name="com.samsung.android.cpota.intent.action.IMS_DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+        <receiver ns0:name="com.sec.internal.ims.servicemodules.tapi.service.receiver.RcsServiceControlReceiver" ns0:permission="com.gsma.services.permission.RCS" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true" ns1:systemUserOnly="true">
+            <intent-filter>
+                <action ns0:name="com.gsma.services.rcs.action.GET_ACTIVATION_MODE" />
+                <action ns0:name="com.gsma.services.rcs.action.GET_ACTIVATION_MODE_CHANGEABLE" />
+                <action ns0:name="com.gsma.services.rcs.action.SET_ACTIVATION_MODE" />
+                <action ns0:name="com.gsma.services.rcs.action.GET_SERVICE_STARTING_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver ns0:name="com.sec.internal.ims.updater.ImsUpdateService$ImsUpdateConsentReceiver" ns0:enabled="true" ns0:exported="false" ns0:process=":ImsUpdateService" ns0:singleUser="true" ns1:systemUserOnly="true">
+            <intent-filter>
+                <action ns0:name="com.samsung.ims.action.SHOW_IMS_UPDATE_DIALOG" />
+                <action ns0:name="com.samsung.ims.action.NOTIFICATION_DISMISSED" />
+                <action ns0:name="com.samsung.ims.action.SHOW_IMS_REBOOT_DIALOG" />
+                <action ns0:name="com.samsung.ims.action.REBOOT_NOTIFICATION_DISMISSED" />
+            </intent-filter>
+        </receiver>
+        <service ns0:name="com.sec.internal.ims.fcm.FcmListenerService" ns0:exported="false">
+            <intent-filter>
+                <action ns0:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service ns0:name="com.sec.internal.ims.aec.receiver.fcm.FcmIntentService" ns0:exported="false" />
+        <service ns0:name="com.sec.internal.ims.entitlement.nsds.app.fcm.ericssonnsds.RegistrationIntentService" ns0:exported="false" />
+        <service ns0:name="com.sec.internal.ims.fcm.receiver.McsFcmIntentService" ns0:exported="false" />
+        <provider ns0:name="com.sec.internal.ims.servicemodules.tapi.service.provider.HistoryLogProvider" ns0:readPermission="com.gsma.services.permission.RCS" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.gsma.services.rcs.provider.history" ns0:singleUser="true" />
+        <provider ns0:name="com.sec.internal.ims.servicemodules.tapi.service.provider.CapsProvider" ns0:readPermission="com.gsma.services.permission.RCS" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.gsma.services.rcs.provider.capability" ns0:singleUser="true" />
+        <provider ns0:name="com.sec.internal.ims.servicemodules.tapi.service.provider.ChatProvider" ns0:readPermission="com.gsma.services.permission.RCS" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.gsma.services.rcs.provider.chat" ns0:singleUser="true" />
+        <provider ns0:name="com.sec.internal.ims.servicemodules.tapi.service.provider.GroupDeliveryInfoProvider" ns0:readPermission="com.gsma.services.permission.RCS" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.gsma.services.rcs.provider.groupdeliveryinfo" ns0:singleUser="true" />
+        <provider ns0:name="com.sec.internal.ims.servicemodules.tapi.service.provider.FtProvider" ns0:readPermission="com.gsma.services.permission.RCS" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.gsma.services.rcs.provider.filetransfer" ns0:singleUser="true" />
+        <provider ns0:name="com.sec.internal.ims.servicemodules.tapi.service.provider.GeolocProvider" ns0:readPermission="com.gsma.services.permission.RCS" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.gsma.services.rcs.provider.geolocshare" ns0:singleUser="true" />
+        <provider ns0:name="com.sec.internal.ims.servicemodules.tapi.service.provider.RcsSettingsProvider" ns0:readPermission="com.gsma.services.permission.RCS" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.gsma.services.rcs.provider.settings" ns0:singleUser="true" />
+        <provider ns0:name="com.sec.internal.ims.servicemodules.tapi.service.provider.IshProvider" ns0:readPermission="com.gsma.services.permission.RCS" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.gsma.services.rcs.provider.imageshare" ns0:singleUser="true" />
+        <provider ns0:name="com.sec.internal.ims.servicemodules.tapi.service.provider.VideoSharingProvider" ns0:readPermission="com.gsma.services.permission.RCS" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.gsma.services.rcs.provider.videoshare" ns0:singleUser="true" />
+        <provider ns0:name="com.sec.internal.ims.servicemodules.tapi.service.provider.BlockedContactProvider" ns0:readPermission="com.gsma.services.permission.RCS" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.gsma.services.rcs.provider.blockedcontact" ns0:singleUser="true" />
+        <provider ns0:label="User Consent Provider" ns0:name="com.sec.internal.ims.servicemodules.tapi.service.provider.UserConsentProvider" ns0:readPermission="com.sec.imsservice.READ_IMS_PERMISSION" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.sec.internal.userconsentprovider" ns0:singleUser="true" />
+        <provider ns0:label="IMS Settings Provider" ns0:name="com.sec.internal.ims.settings.SettingsProvider" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.sec.ims.settings;com.samsung.rcs.dmconfigurationprovider" ns0:singleUser="true">
+            <path-permission ns0:readPermission="com.sec.imsservice.READ_IMS_STATUS" ns0:pathPattern="/imsswitch/.*" />
+            <path-permission ns0:readPermission="com.sec.imsservice.READ_IMS_STATUS" ns0:pathPattern="/nvstorage/omadm/.*" />
+            <path-permission ns0:readPermission="com.sec.imsservice.READ_IMS_STATUS" ns0:pathPattern="/omadm/.*/3GPP_IMS/VOLTE_ENABLED" />
+            <path-permission ns0:readPermission="com.sec.imsservice.READ_IMS_STATUS" ns0:pathPattern="/omadm/.*/3GPP_IMS/VWF_ENABLED" />
+            <path-permission ns0:readPermission="com.sec.imsservice.READ_IMS_STATUS" ns0:pathPattern="/omadm/.*/3GPP_IMS/VCE_CONFIG" />
+            <path-permission ns0:readPermission="com.sec.imsservice.READ_IMS_STATUS" ns0:pathPattern="/omadm/.*/3GPP_IMS/LVC_ENABLED" />
+            <path-permission ns0:readPermission="com.sec.imsservice.READ_IMS_STATUS" ns0:pathPattern="/omadm/.*/3GPP_IMS/EAB_SETTING" />
+            <path-permission ns0:readPermission="com.sec.imsservice.READ_IMS_PERMISSION" ns0:pathPattern="/.*" />
+        </provider>
+        <provider ns0:label="IMS Log Provider" ns0:name="com.sec.internal.ims.diagnosis.ImsLogAgent" ns0:readPermission="com.sec.imsservice.READ_IMS_PERMISSION" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.sec.imsservice.log" ns0:singleUser="true" />
+        <provider ns0:label="RCS Config Provider" ns0:name="com.sec.internal.ims.config.ConfigProvider" ns0:readPermission="com.sec.imsservice.READ_IMS_PERMISSION" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.samsung.rcs.autoconfigurationprovider" ns0:singleUser="true" />
+        <provider ns0:label="RCS Capabilities Provider" ns0:name="com.sec.internal.ims.servicemodules.options.CapabilityProvider" ns0:readPermission="com.sec.imsservice.READ_IMS_PERMISSION" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.samsung.rcs.serviceprovider" ns0:singleUser="true" />
+        <provider ns0:label="Allows generating URIs from phone number" ns0:name="com.sec.internal.ims.servicemodules.options.UriGeneratorProvider" ns0:readPermission="com.sec.imsservice.READ_IMS_PERMISSION" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.samsung.rcs.urigenerator.provider" ns0:singleUser="true" />
+        <provider ns0:label="RCS Im Provider" ns0:name="com.sec.internal.ims.servicemodules.im.ImProvider" ns0:readPermission="com.sec.imsservice.READ_IMS_PERMISSION" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.samsung.rcs.im" ns0:singleUser="true" />
+        <provider ns0:label="Cloud Message Provider" ns0:name="com.sec.internal.ims.cmstore.CloudMessageProvider" ns0:readPermission="com.sec.imsservice.READ_IMS_PERMISSION" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:process=":CloudMessageService" ns0:authorities="com.samsung.rcs.cmstore" ns0:singleUser="true" />
+        <provider ns0:label="Rcs Csh Provider" ns0:name="com.sec.internal.ims.servicemodules.csh.CshProvider" ns0:readPermission="com.sec.imsservice.READ_IMS_PERMISSION" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.samsung.rcs.cs" ns0:singleUser="true" />
+        <provider ns0:label="Rcs Preferences Provider" ns0:name="com.sec.internal.ims.rcscore.RcsPreferencesProvider" ns0:readPermission="com.sec.ims.android.rcs.READ_PERMISSION" ns0:writePermission="com.sec.ims.android.rcs.WRITE_PERMISSION" ns0:exported="true" ns0:authorities="com.sec.ims.android.rcs" ns0:singleUser="true" />
+        <provider ns0:label="Rcs Shared Multimedia Provider for Enriched Calling" ns0:name="com.sec.internal.ims.servicemodules.session.SharedMultimediaProvider" ns0:readPermission="com.sec.imsservice.READ_IMS_PERMISSION" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.samsung.rcs.sharedmultimedia" ns0:singleUser="true" />
+        <provider ns0:label="Softphone Settings Provider" ns0:name="com.sec.internal.ims.entitlement.softphone.SoftphoneSettingsProvider" ns0:readPermission="com.sec.imsservice.READ_IMS_PERMISSION" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:authorities="com.sec.vsim.attsoftphone.settings" ns0:singleUser="true" />
+        <provider ns0:label="NSDS Provider" ns0:name="com.sec.internal.ims.entitlement.nsds.ericssonnsds.persist.NSDSContentProvider" ns0:readPermission="com.sec.ims.nsds.READ_NSDS_PERMISSION" ns0:writePermission="com.sec.ims.nsds.WRITE_NSDS_PERMISSION" ns0:exported="true" ns0:authorities="com.samsung.ims.nsds.provider" ns0:singleUser="true" />
+        <provider ns0:label="Entitlement Provider" ns0:name="com.sec.internal.ims.entitlement.EntitlementContentProvider" ns0:readPermission="com.sec.ims.nsds.READ_NSDS_PERMISSION" ns0:writePermission="com.sec.ims.nsds.WRITE_NSDS_PERMISSION" ns0:exported="true" ns0:authorities="com.samsung.ims.entitlement.provider" ns0:singleUser="true" />
+        <provider ns0:name="androidx.core.content.FileProvider" ns0:exported="false" ns0:authorities="com.sec.internal.ims.rcs.fileprovider" ns0:grantUriPermissions="true">
+            <meta-data ns0:name="android.support.FILE_PROVIDER_PATHS" ns0:resource="@xml/imfilepath" />
+        </provider>
+        <provider ns0:label="Entitlement Config Provider" ns0:name="com.sec.internal.ims.entitlement.config.persist.EntitlementConfigProvider" ns0:readPermission="com.sec.ims.entitlementconfigservice.READ_ENTITLEMENT_CONFIG_PERMISSION" ns0:writePermission="com.sec.ims.entitlementconfigservice.WRITE_ENTITLEMENT_CONFIG_PERMISSION" ns0:exported="true" ns0:authorities="com.samsung.ims.entitlementconfig.provider" ns0:singleUser="true" />
+        <provider ns0:label="IMS Updatable Provider" ns0:name="com.sec.internal.ims.updater.provider.ImsUpdatableProvider" ns0:readPermission="com.sec.imsservice.READ_IMS_PERMISSION" ns0:writePermission="com.sec.imsservice.WRITE_IMS_PERMISSION" ns0:exported="true" ns0:process=":ImsUpdateService" ns0:authorities="com.sec.imsservice.updatable" ns0:singleUser="true" />
+        <service ns0:name="com.sec.internal.ims.imsservice.SemGbaService" ns0:permission="android.permission.BIND_GBA_SERVICE" ns0:enabled="true" ns0:exported="true" ns0:singleUser="true">
+            <intent-filter>
+                <action ns0:name="android.telephony.gba.GbaService" />
+            </intent-filter>
+        </service>
+        <meta-data ns0:name="gsma.joyn.client" ns0:value="true" />
+        <meta-data ns0:name="gsma.joyn.settings.activity" ns0:value="com.samsung.rcs.configs.VIEW_SETTINGS_DIALOG" />
+        <meta-data ns0:name="gsma.joyn.preferences" ns0:value="com.sec.imsservice.gsma.joyn.preferences" />
+        <uses-library ns0:name="imsmanager" />
+        <uses-library ns0:name="rcsopenapi" ns0:required="false" />
+        <uses-library ns0:name="svemanager" ns0:required="false" />
+        <uses-library ns0:name="secimshttpclient" ns0:required="false" />
+        <uses-library ns0:name="vsimmanager" ns0:required="false" />
+        <uses-library ns0:name="EpdgManager" ns0:required="false" />
+        <uses-library ns0:name="telephony-common" ns0:required="false" />
+        <uses-library ns0:name="ims-common" ns0:required="false" />
+        <uses-library ns0:name="org.apache.http.legacy" />
+        <uses-library ns0:name="cmcp2phelper" ns0:required="false" />
+        <uses-library ns0:name="cmcsettingapi" ns0:required="false" />
+        <provider ns0:name="com.google.firebase.provider.FirebaseInitProvider" ns0:exported="false" ns0:authorities="com.sec.imsservice.firebaseinitprovider" ns0:initOrder="100" ns0:directBootAware="true" />
+        <service ns0:name="com.google.firebase.components.ComponentDiscoveryService" ns0:exported="false" ns0:directBootAware="true">
+            <meta-data ns0:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" ns0:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data ns0:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar" ns0:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data ns0:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" ns0:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data ns0:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" ns0:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data ns0:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" ns0:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data ns0:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" ns0:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <receiver ns0:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" ns0:permission="com.google.android.c2dm.permission.SEND" ns0:exported="true">
+            <intent-filter>
+                <action ns0:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+            <meta-data ns0:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED" ns0:value="true" />
+        </receiver>
+        <service ns0:name="com.google.firebase.messaging.FirebaseMessagingService" ns0:exported="false" ns0:directBootAware="true">
+            <intent-filter ns0:priority="-500">
+                <action ns0:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data ns0:name="com.google.android.gms.version" ns0:value="@integer/google_play_services_version" />
+        <provider ns0:name="androidx.startup.InitializationProvider" ns0:exported="false" ns0:authorities="com.sec.imsservice.androidx-startup" />
+        <receiver ns0:name="androidx.profileinstaller.ProfileInstallReceiver" ns0:permission="android.permission.DUMP" ns0:enabled="true" ns0:exported="true" ns0:directBootAware="false">
+            <intent-filter>
+                <action ns0:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action ns0:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action ns0:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action ns0:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

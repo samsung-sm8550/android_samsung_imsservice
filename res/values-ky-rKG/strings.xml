@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">Шашылыш кырдаал чалуулары уюлдук аракет чөйрөсүнүн аймагында гана</string>
+    <string name="aka_challenge_failed_msg_skt">HD Үн Кызматы катталган жок. Түзмөгүңүздү өчүрүп күйгүзүңүз. Эгер ал иштебесе, Кардарлар Борборуна кайрылыңыз, анткени SIM картаны же түзмөктү текшерүү талап кылынышы мүмкүн.</string>
+    <string name="dialog_text_rcs_config_accept">Кабыл алуу</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications, Интернет туташууңузду колдонуу менен чат билдирүүлөрдү, сүрөттөрдү, видеолорду, жана үндөрдү ошондой эле текст билдирүүлөрүн жөнөтүү жана кабыл алуу үчүн колдоно ала турган жаңы өзгөчөлүктөрдү камтыйт. Сиз, телефон номериңизди ырастоо үчүн, текст билдирүү аркылуу код кабыл аласыз.</string>
+    <string name="dialog_text_rcs_config_cancel">Токтт</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications сизге Интернет туташууңузду колдонуп, чат билдирүүлөрүн, cүрөттөрдү, видеолорду, үндөрдү жана ошондой эле текст билдирүүлөрүн жөнөтеөнгө жана кабыл алганга колдоно ала турган жаңы өзгөчөлүктөрдү камтыйт. Бул өзгөчөлүктөрдү каттоого, сиз телефон номурун киргизишиңиз керек.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">Жаңы билдирүү алмашуу каситеттери</string>
+    <string name="dialog_text_rcs_config_next">Кийинки</string>
+    <string name="dialog_text_rcs_config_no">Жок</string>
+    <string name="dialog_text_rcs_config_ok">ОК</string>
+    <string name="dialog_text_rcs_config_reject">Чет.как</string>
+    <string name="dialog_text_rcs_config_skip">Өткөрүп жиберүү</string>
+    <string name="dialog_text_rcs_config_yes">Ооба</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">Дайыма урукс. бер</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">Бир жолу урукc. бер</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">Уруксат жок</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Мобилдик тармакка туташуу үчүн Rich Communications уруксат берүү керекпи? Роумингде болгонуңуз үчүн бул маанилүү төлөмдөргө жол ачышы мүмкүн.</string>
+    <string name="dialog_title_rcs_service">Мобилдик тармакка туташуу</string>
+</resources>

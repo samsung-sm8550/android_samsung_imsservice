@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">Połączenia alarmowe tylko w zasięgu sieci komórkowych</string>
+    <string name="aka_challenge_failed_msg_skt">Nie można zakończyć rejestracji usługi HD Voice. Spróbuj ponownie uruchomić urządzenie. Jeśli to nie pomoże, skontaktuj się Centrum obsługi klienta, ponieważ może być konieczne sprawdzenie karty SIM lub urządzenia.</string>
+    <string name="call_notification_answer_action">Odbierz</string>
+    <string name="call_notification_answer_video_action">Wideo</string>
+    <string name="call_notification_decline_action">Odrzuć</string>
+    <string name="call_notification_hang_up_action">Rozłącz</string>
+    <string name="call_notification_incoming_text">Połączenie przychodzące</string>
+    <string name="call_notification_ongoing_text">Trwa połączenie</string>
+    <string name="call_notification_screening_text">Filtruję połączenie przychodzące</string>
+    <string name="common_google_play_services_unknown_issue">%1$s ma problem z dostępem do Usług Google Play. Spróbuj jeszcze raz.</string>
+    <string name="dialog_text_rcs_config_accept">Akceptuj</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Aplikacja Rich Communications zawiera nowe funkcje, których można używać do wysyłania i odbierania wiadomości czatu, zdjęć, filmów i dźwięków oraz SMS, korzystając z połączenia internetowego. Otrzymasz wiadomość SMS z kodem służącym do weryfikowania numeru telefonu.</string>
+    <string name="dialog_text_rcs_config_cancel">Anuluj</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Aplikacja Rich Communications zawiera nowe funkcje, których można używać do wysyłania i odbierania wiadomości czatu, zdjęć, filmów i dźwięków, jak też SMS, korzystając z połączenia internetowego. Aby zarejestrować się w celu korzystania z tych funkcji, musisz wprowadzić swój numer telefonu.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">Nowe funkcje wysyłania wiadomości</string>
+    <string name="dialog_text_rcs_config_next">Dalej</string>
+    <string name="dialog_text_rcs_config_no">Nie</string>
+    <string name="dialog_text_rcs_config_ok">OK</string>
+    <string name="dialog_text_rcs_config_reject">Odrzuć</string>
+    <string name="dialog_text_rcs_config_skip">Pomiń</string>
+    <string name="dialog_text_rcs_config_yes">Tak</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">Zawsze zezw.</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">Zezwól raz</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">Nie zezwalaj</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Zezwolić aplikacji Rich Communications na łączenie się z siecią komórkową? Ponieważ obecnie korzystasz z połączeń w ramach roamingu, może to spowodować naliczenie znacznych opłat.</string>
+    <string name="dialog_title_rcs_service">Połączenie z siecią komórkową</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

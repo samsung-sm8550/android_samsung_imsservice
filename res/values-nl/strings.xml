@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">4G</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">Noodoproepen alleen in gebieden met mobiele dekking</string>
+    <string name="aka_challenge_failed_msg_skt">Kan registratie van HD Voice-service niet voltooien. Probeer uw apparaat opnieuw te starten. Als dat niet werkt, neemt u contact op met de klantenservice. Mogelijk moet de SIM-kaart of het apparaat worden nagekeken.</string>
+    <string name="call_notification_answer_action">Beantwoorden</string>
+    <string name="call_notification_answer_video_action">Video</string>
+    <string name="call_notification_decline_action">Weigeren</string>
+    <string name="call_notification_hang_up_action">Ophangen</string>
+    <string name="call_notification_incoming_text">Inkomend gesprek</string>
+    <string name="call_notification_ongoing_text">Actief gesprek</string>
+    <string name="call_notification_screening_text">Een inkomend gesprek screenen</string>
+    <string name="common_google_play_services_unknown_issue">%1$s ondervindt problemen met Google Play-services. Probeer het opnieuw.</string>
+    <string name="dialog_text_rcs_config_accept">OK</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">"Rich Communications omvat nieuwe voorzieningen waarmee u chatberichten, foto's, video's, geluiden en sms-berichten kunt verzenden en ontvangen via uw internetverbinding. U ontvangt een sms met een code voor het controleren van uw telefoonnummer."</string>
+    <string name="dialog_text_rcs_config_cancel">Annul.</string>
+    <string name="dialog_text_rcs_config_msisdn_text">"Rich Communication Services omvat nieuwe voorzieningen waarmee u chatberichten, foto's, video's, geluiden en sms-berichten kunt verzenden en ontvangen via uw internetverbinding. Als u zich voor deze functies wilt aanmelden, geeft u een telefoonnummer op."</string>
+    <string name="dialog_text_rcs_config_msisdn_title">Nieuwe berichtfuncties</string>
+    <string name="dialog_text_rcs_config_next">Volgende</string>
+    <string name="dialog_text_rcs_config_no">Nee</string>
+    <string name="dialog_text_rcs_config_ok">OK</string>
+    <string name="dialog_text_rcs_config_reject">Weiger</string>
+    <string name="dialog_text_rcs_config_skip">Overslaan</string>
+    <string name="dialog_text_rcs_config_yes">Ja</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">Altijd</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">Eenmaal</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">Niet toestaan</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Rich Communication Services toestemming geven om te verbinden met mobiele netwerk? Bij roaming kan dit leiden tot aanzienlijke kosten.</string>
+    <string name="dialog_title_rcs_service">Verbinden met mobiel netwerk</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

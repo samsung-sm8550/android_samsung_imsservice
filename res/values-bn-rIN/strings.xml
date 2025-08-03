@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">কেবলমাত্র সেলুলার কভারেজ সহ এলাকাগুলিতে আপৎকালীন কল</string>
+    <string name="aka_challenge_failed_msg_skt">HD ভয়েস পরিষেবার রেজিস্ট্রেশন শেষ করা যায়নি। আপনার ডিভাইসটি পুনঃশুরু করার চেষ্টা করুন। এটি কাজ না করলে, যেহেতু SIM বা ডিভাইসের পরিদর্শন আবশ্যক হতে পারে তাই গ্রাহক কেন্দ্রের সাথে যোগাযোগ করুন।</string>
+    <string name="dialog_text_rcs_config_accept">স্বীকার</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications-এ এমন নতুন বৈশিষ্ট্যগুলি রয়েছে যার সাহায্যে আপনি আপনার ইন্টারনেট সংযোগ ব্যবহার করে চ্যাট বার্তা, ছবি, ভিডিও এবং ধ্বনি এমনকি পাঠ্য বার্তাগুলি পাঠাতে এবং পেতে পারবেন। আপনার ফোন নম্বর যাচাই করার জন্য আপনি পাঠ্য বার্তার মাধ্যমে একটি কোড পাবেন।</string>
+    <string name="dialog_text_rcs_config_cancel">বাতিল</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications-এ এমন নতুন বৈশিষ্ট্যগুলি রয়েছে যা আপনি আপনার ইন্টারনেট সংযোগ ব্যবহার করে চ্যাট বার্তাগুলি, ছবিগুলি, ভিডিওগুলি এবং ধ্বনিগুলি, এমনকি পাঠ্য বার্তাগুলি পাঠাতে এবং গ্রহণ করতে ব্যবহার করতে পারেন। এই বৈশিষ্ট্যগুলির জন্য নিবন্ধন করতে আপনাকে অবশ্যই একটি ফোন নম্বর লিখতে হবে।</string>
+    <string name="dialog_text_rcs_config_msisdn_title">নতুন মেসেজিং বৈশিষ্ট্যগুলি</string>
+    <string name="dialog_text_rcs_config_next">পরে</string>
+    <string name="dialog_text_rcs_config_no">না</string>
+    <string name="dialog_text_rcs_config_ok">ওকে</string>
+    <string name="dialog_text_rcs_config_reject">রিজেক্ট</string>
+    <string name="dialog_text_rcs_config_skip">স্কিপ</string>
+    <string name="dialog_text_rcs_config_yes">হ্যাঁ</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">সদা অনুমতি</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">একক অনুমতি</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">অনুমতি নয়</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">একটি মোবাইল নেটওয়ার্কে সংযোগ করার জন্য Rich Communications-কে অনুমতি দেবেন? যেহেতু আপনি রোমিং-এ আছেন তাই এর ফলে পর্যাপ্ত চার্জ লাগতে পারে।</string>
+    <string name="dialog_title_rcs_service">মোবাইল নেটওয়ার্কে সংযোগ করুন</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+    <phrase missed_call_sms="" mnoname="DEFAULT" />
+    <phrase missed_call_sms="캐치콜" mnoname="KT_KR" />
+    <phrase missed_call_sms="매너콜" mnoname="LGU+_KR" />
+    <phrase missed_call_sms="콜키퍼" mnoname="SKT_KR" />
+</phrases>

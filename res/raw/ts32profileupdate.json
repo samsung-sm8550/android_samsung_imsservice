@@ -1,0 +1,2978 @@
+{
+  "note": "To overwrite the TS32 profile & global-settings with more detailed configs",
+  "profile": [
+    {
+      "mvno": "45001",
+      "mvno_name": "testbed",
+      "gid1": "FFFFFFFFFFFFFFFF",
+      "gid2": "FFFFFFFFFFFFFFFF",
+      "use_precondition": false,
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "policy_on_local_numbers": "geo-local",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "send_18x_reliable": false,
+      "amrnb_mode": "0,1,2,3,4,5,6,7,8",
+      "evs_bit_rate_send": "9.6-24.4",
+      "evs_bit_rate_receive": "9.6-24.4"
+    },
+    {
+      "mvno": "20817",
+      "mvno_name": "bornsip",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "22865",
+      "mvno_name": "nx",
+      "gid1": "",
+      "gid2": "",
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "amrnb_mode": "0",
+      "mmtel_voice_exempt": 0,
+      "mmtel_video_exempt": 0,
+      "enable_evs_codec": false
+    },
+    {
+      "mvno": "23420",
+      "mvno_name": "three",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "conf-factory@three.co.uk",
+      "reg_retry_max_time": 300,
+      "oip_from_preferred": "P-Asserted-Id",
+      "policy_on_local_numbers": "geo-local",
+      "amrnb_mode": "0,1,2,3,4,5,6,7,8",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "23594",
+      "mvno_name": "three",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "conf-factory@three.co.uk",
+      "reg_retry_max_time": 300,
+      "oip_from_preferred": "P-Asserted-Id",
+      "policy_on_local_numbers": "geo-local",
+      "amrnb_mode": "0,1,2,3,4,5,6,7,8",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "311240",
+      "mvno_name": "cordova",
+      "gid1": "",
+      "gid2": "",
+      "use_precondition": false,
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "Default",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "302480",
+      "mvno_name": "eeyou",
+      "gid1": "02",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "441216",
+      "mvno_name": "void",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "23453",
+      "mvno_name": "mobileuc",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "64009",
+      "mvno_name": "void",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "302620",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "25915",
+      "mvno_name": "idc",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "mmtel@conf-factory.ims.mnc015.mcc259.3gppnetwork.org",
+      "reg_retry_base_time": 12,
+      "reg_retry_max_time": 3600,
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0,
+      "timer": "1:1000,2:4000,4:5000,A:2000,B:128000,C:180000,D:32000,E:2000,F:128000,G:2000,H:128000,I:17000,J:128000,K:17000"
+    },
+    {
+      "mvno": "208037",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "310690",
+      "mvno_name": "limitless",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc690.mcc310.3gppnetwork.org",
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "1",
+      "amrwb_mode": "0,1,2",
+      "mmtel_voice_exempt": 0,
+      "smsoip_exempt": 0,
+      "t_lte_911_fail": 30,
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "25016",
+      "mvno_name": "miatel",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "310500",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "310040",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "310460",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "311040",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "311460",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "311500",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "313040",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "313460",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "313500",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "20804",
+      "mvno_name": "wordnet",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "346007",
+      "mvno_name": "paradise",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video"
+    },
+    {
+      "mvno": "311670",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "50588",
+      "mvno_name": "pivotel",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id"
+    },
+    {
+      "mvno": "65538",
+      "mvno_name": "rain",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "65573",
+      "mvno_name": "rain",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "41750",
+      "mvno_name": "rcell",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "24007",
+      "mvno_name": "spusu",
+      "gid1": "0052",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc071.mcc228.3gppnetwork.org",
+      "use_precondition": false,
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "send_18x_reliable": false,
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "302480",
+      "mvno_name": "ssi",
+      "gid1": "1",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "29001",
+      "mvno_name": "ssi",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc001.mcc290.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "amrwb_mode": "0,2,4,7",
+      "mmtel_voice_exempt": 0,
+      "smsoip_exempt": 0,
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "20606",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc006.mcc206.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "20409",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc009.mcc204.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "22616",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc016.mcc226.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "25013",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc013.mcc250.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "22254",
+      "mvno_name": "plintron",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc054.mcc222.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "50519",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc019.mcc505.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "29404",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc004.mcc294.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "65553",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc053.mcc655.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "20601",
+      "mvno_name": "telnyx",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "311210",
+      "mvno_name": "telnyx",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "313930",
+      "mvno_name": "mymobiletxt",
+      "gid1": "FF",
+      "gid2": "",
+      "support_3gpp_ussi": true
+    },
+    {
+      "mvno": "311780",
+      "mvno_name": "astca",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "media_type_restriction_policy": "Voice_and_Video"
+    },
+    {
+      "mvno": "50501",
+      "mvno_name": "telstra",
+      "gid1": "",
+      "gid2": "",
+      "reg_retry_base_time": 60,
+      "reg_retry_max_time": 480,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "evs_channel_aware_receive": "2"
+    },
+    {
+      "mvno": "50571",
+      "mvno_name": "telstra",
+      "gid1": "",
+      "gid2": "",
+      "reg_retry_base_time": 60,
+      "reg_retry_max_time": 480,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "evs_channel_aware_receive": "2"
+    },
+    {
+      "mvno": "50572",
+      "mvno_name": "telstra",
+      "gid1": "",
+      "gid2": "",
+      "reg_retry_base_time": 60,
+      "reg_retry_max_time": 480,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "evs_channel_aware_receive": "2"
+    },
+    {
+      "mvno": "20403",
+      "mvno_name": "enreach",
+      "gid1": "",
+      "gid2": "",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "policy_on_local_numbers": "geo-local",
+      "media_type_restriction_policy": "Voice_and_Video"
+    },
+    {
+      "mvno": "26203",
+      "mvno_name": "enreach",
+      "gid1": "",
+      "gid2": "",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "policy_on_local_numbers": "geo-local",
+      "media_type_restriction_policy": "Voice_and_Video"
+    },
+    {
+      "mvno": "26220",
+      "mvno_name": "enreach",
+      "gid1": "",
+      "gid2": "",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "policy_on_local_numbers": "geo-local",
+      "media_type_restriction_policy": "Voice_and_Video"
+    },
+    {
+      "mvno": "26214",
+      "mvno_name": "lebara",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc014.mcc262.3gppnetwork.org",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "amrwb_mode": "0,2,4,7"
+    },
+    {
+      "mvno": "20838",
+      "mvno_name": "lebara",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc038.mcc208.3gppnetwork.org",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "amrwb_mode": "0,2,4,7"
+    },
+    {
+      "mvno": "20417",
+      "mvno_name": "lebara",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc017.mcc204.3gppnetwork.org",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "amrwb_mode": "0,2,4,7"
+    },
+    {
+      "mvno": "334160",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "63517",
+      "mvno_name": "ktrn",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc017.mcc635.3gppnetwork.org",
+      "reg_retry_base_time": 15,
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "amrnb_mode": "0,1,2,3,4,5,6,7,8",
+      "t_lte_911_fail": 2
+    },
+    {
+      "mvno": "55299",
+      "mvno_name": "pmci",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "50501",
+      "mvno_name": "telstra",
+      "gid1": "",
+      "gid2": "",
+      "reg_retry_base_time": 60,
+      "reg_retry_max_time": 480,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "evs_channel_aware_receive": "2"
+    },
+    {
+      "mvno": "50571",
+      "mvno_name": "telstra",
+      "gid1": "",
+      "gid2": "",
+      "reg_retry_base_time": 60,
+      "reg_retry_max_time": 480,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "evs_channel_aware_receive": "2"
+    },
+    {
+      "mvno": "50572",
+      "mvno_name": "telstra",
+      "gid1": "",
+      "gid2": "",
+      "reg_retry_base_time": 60,
+      "reg_retry_max_time": 480,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "evs_channel_aware_receive": "2"
+    },
+    {
+      "mvno": "310020",
+      "mvno_name": "union",
+      "gid1": "",
+      "gid2": "",
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video"
+    },
+    {
+      "mvno": "21404",
+      "mvno_name": "xfera",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc004.mcc214.3gppnetwork.org",
+      "oip_from_preferred": "P-Asserted-Id",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "amrwb_mode": "0,2,4,7",
+      "mmtel_video_exempt": 0,
+      "timer": "1:1000,2:4000,4:5000,A:2000,B:128000,C:180000,D:32000,E:2000,F:128000,G:2000,H:128000,I:17000,J:128000,K:17000"
+    },
+    {
+      "mvno": "52002",
+      "mvno_name": "mybynt",
+      "gid1": "02",
+      "gid2": "",
+      "conference_uri": "mmtel@conf-factory.ims.mnc002.mcc520.3gppnetwork.org",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video"
+    },
+    {
+      "mvno": "72429",
+      "mvno_name": "unifique",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "90146",
+      "mvno_name": "globalnet",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "61801",
+      "mvno_name": "lonestar",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "22871",
+      "mvno_name": "spusu",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc071.mcc228.3gppnetwork.org",
+      "use_precondition": false,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "send_18x_reliable": false,
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "42833",
+      "mvno_name": "ondo",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video"
+    },
+    {
+      "mvno": "54715",
+      "mvno_name": "vodafone",
+      "gid1": "",
+      "gid2": "",
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "27821",
+      "mvno_name": "go",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc021.mcc278.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "amrnb_mode": "0,1,2,3,4,5,6,7,8",
+      "enable_evs_codec": false
+    },
+    {
+      "mvno": "42206",
+      "mvno_name": "vodafone",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:conference@factory.ims.mnc006.mcc422.3gppnetwork.org",
+      "use_precondition": false,
+      "oip_from_preferred": "P-Asserted-Id",
+      "evs_bit_rate_send": "5.9-128",
+      "evs_bit_rate_receive": "5.9-128",
+      "evs_bandwidth_send": "nb-fb",
+      "evs_bandwidth_receive": "nb-fb",
+      "t_lte_911_fail": 30,
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "20613",
+      "mvno_name": "citymesh",
+      "gid1": "",
+      "gid2": "",
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "334170",
+      "mvno_name": "oxio",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:conference@conf-factory.ims.mnc170.mcc334.3gppnetwork.org",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id"
+    },
+    {
+      "mvno": "20812",
+      "mvno_name": "truphone",
+      "gid1": "547275554B3030656E",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.truphone.net",
+      "use_precondition": false,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "amrwb_mode": "0,1,2"
+    },
+    {
+      "mvno": "50538",
+      "mvno_name": "truphone",
+      "gid1": "547275554B3030656E",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.truphone.net",
+      "use_precondition": false,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "amrwb_mode": "0,1,2"
+    },
+    {
+      "mvno": "90154",
+      "mvno_name": "tcl",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "20407",
+      "mvno_name": "tcl",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "23427",
+      "mvno_name": "tcl",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "20603",
+      "mvno_name": "intranet",
+      "gid1": "",
+      "gid2": "",
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "23103",
+      "mvno_name": "4ka",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc003.mcc231.3gppnetwork.org",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "20809",
+      "mvno_name": "4ka",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc003.mcc231.3gppnetwork.org",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "53603",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "314560",
+      "mvno_name": "cape",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "conf-factory.ims.cape.net",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video"
+    },
+    {
+      "mvno": "23208",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc008.mcc232.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0,
+      "timer": "1:2000,2:16000,4:16000,A:2000,B:128000,C:180000,D:32000,E:2000,F:128000,G:2000,H:128000,I:17000,J:128000,K:17000"
+    },
+    {
+      "mvno": "23812",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc012.mcc238.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0,
+      "timer": "1:2000,2:16000,4:16000,A:2000,B:128000,C:180000,D:32000,E:2000,F:128000,G:2000,H:128000,I:17000,J:128000,K:17000"
+    },
+    {
+      "mvno": "20825",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc025.mcc208.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0,
+      "timer": "1:2000,2:16000,4:16000,A:2000,B:128000,C:180000,D:32000,E:2000,F:128000,G:2000,H:128000,I:17000,J:128000,K:17000"
+    },
+    {
+      "mvno": "26243",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc043.mcc262.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "27213",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc013.mcc272.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0,
+      "timer": "1:2000,2:16000,4:16000,A:2000,B:128000,C:180000,D:32000,E:2000,F:128000,G:2000,H:128000,I:17000,J:128000,K:17000"
+    },
+    {
+      "mvno": "24223",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc023.mcc242.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "26009",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc009.mcc260.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "21402",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc002.mcc214.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "22854",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc054.mcc228.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "64104",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc004.mcc641.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_exempt": 0
+    },
+    {
+      "mvno": "22858",
+      "mvno_name": "mucho",
+      "gid1": "",
+      "gid2": "",
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "amrnb_mode": "0",
+      "mmtel_voice_exempt": 0,
+      "mmtel_video_exempt": 0,
+      "enable_evs_codec": false
+    },
+    {
+      "mvno": "28622",
+      "mvno_name": "void",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "23405",
+      "mvno_name": "spitfire1",
+      "gid1": "",
+      "gid2": "",
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "evs_channel_aware_receive": "no",
+      "mmtel_video_exempt": 0,
+      "enable_evs_codec": false
+    },
+    {
+      "mvno": "314720",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:conference@conf-factory.ims.mnc170.mcc334.3gppnetwork.org",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id"
+    },
+    {
+      "mvno": "74801",
+      "mvno_name": "antel",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "54705",
+      "mvno_name": "viti",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "ora@conf.ims.mnc005.mcc547.3gppnetwork.org",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "Default",
+      "smsoip_usage_policy": "Irrespective_of_voice"
+    },
+    {
+      "mvno": "53005",
+      "mvno_name": "spark",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc005.mcc530.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "reg_retry_max_time": 7200,
+      "media_type_restriction_policy": "Voice_and_Video",
+      "amrnb_mode": "7",
+      "amrwb_mode": "2,8"
+    },
+    {
+      "mvno": "52510",
+      "mvno_name": "tpg",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc010.mcc525.3gppnetwork.org",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "amrwb_mode": "0",
+      "evs_bit_rate_send": "9.6-24.4",
+      "evs_bit_rate_receive": "9.6-24.4"
+    },
+    {
+      "mvno": "310320",
+      "mvno_name": "isp",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc320.mcc310.3gppnetwork.org",
+      "oip_from_preferred": "P-Asserted-Id"
+    },
+    {
+      "mvno": "22603",
+      "mvno_name": "connect",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "send_18x_reliable": false,
+      "evs_channel_aware_receive": "0",
+      "t_lte_911_fail": 5,
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "22606",
+      "mvno_name": "connect",
+      "gid1": "",
+      "gid2": "",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "send_18x_reliable": false,
+      "evs_channel_aware_receive": "0",
+      "t_lte_911_fail": 5,
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "63910",
+      "mvno_name": "faiba",
+      "gid1": "",
+      "gid2": "",
+      "use_precondition": false,
+      "support_3gpp_ussi": true,
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "302490",
+      "mvno_name": "freedom",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:conf@mobilefrdm.ca",
+      "support_3gpp_ussi": true,
+      "oip_from_preferred": "P-Asserted-Id",
+      "mmtel_voice_exempt": 0,
+      "smsoip_exempt": 0,
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "27002",
+      "mvno_name": "mtx",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "conf-factory@ims.mnc002.mcc270.3gppnetwork.org",
+      "support_3gpp_ussi": true,
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "90139",
+      "mvno_name": "mtx",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "conf-factory@ims.mnc002.mcc270.3gppnetwork.org",
+      "support_3gpp_ussi": true
+    },
+    {
+      "mvno": "425019",
+      "mvno_name": "019Mobile",
+      "gid1": "",
+      "gid2": "",
+      "conference_uri": "sip:mmtel@conf-factory.ims.mnc019.mcc425.3gppnetwork.org",
+      "network": [
+        {
+          "type": "nr,lte",
+          "services": [
+            "mmtel"
+          ],
+          "enabled": true
+        }
+      ],
+      "smsoip_usage_policy": "Irrespective_of_voice"
+    },
+    {
+      "mvno": "36301",
+      "mvno_name": "setar",
+      "gid1": "",
+      "gid2": "",
+      "oip_from_preferred": "P-Asserted-Id"
+    },
+    {
+      "mvno": "42526",
+      "mvno_name": "annatel",
+      "gid1": "",
+      "gid2": "",
+      "oip_from_preferred": "P-Asserted-Id",
+      "smsoip_usage_policy": "Irrespective_of_voice"
+    },
+    {
+      "mvno": "23450",
+      "mvno_name": "pepper",
+      "gid1": "",
+      "gid2": "",
+      "policy_on_local_numbers": "geo-local",
+      "media_type_restriction_policy": "Voice_and_Video"
+    },
+    {
+      "mvno": "313770",
+      "mvno_name": "mobileuc",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "23418",
+      "mvno_name": "globaldata",
+      "gid1": "6764",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    },
+    {
+      "mvno": "24209",
+      "mvno_name": "com4",
+      "gid1": "",
+      "gid2": "",
+      "smsoip_usage_policy": "Irrespective_of_voice",
+      "media_type_restriction_policy": "Voice_and_Video",
+      "mmtel_video_exempt": 0
+    }
+  ],
+  "globalsettings": [
+    {
+      "mvno": "45001",
+      "mvno_name": "testbed",
+      "gid1": "FFFFFFFFFFFFFFFF",
+      "gid2": "FFFFFFFFFFFFFFFF",
+      "update": [
+        {
+          "emergency_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20817",
+      "mvno_name": "bornsip",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "22865",
+      "mvno_name": "nx",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "ss_xcap_config_exempt": 0,
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "23420",
+      "mvno_name": "three",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "23594",
+      "mvno_name": "three",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "311240",
+      "mvno_name": "cordova",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "302480",
+      "mvno_name": "eeyou",
+      "gid1": "02",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "65102",
+      "mvno_name": "eeyou",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "441216",
+      "mvno_name": "void",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "23453",
+      "mvno_name": "mobileuc",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "64009",
+      "mvno_name": "void",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "64009",
+      "mvno_name": "halotel",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "302620",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "25915",
+      "mvno_name": "idc",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "208037",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "310690",
+      "mvno_name": "limitless",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc690.mcc310.pub.3gppnetwork.org",
+          "ss_xcap_config_exempt": 0,
+          "ussi_exempt": 0,
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "25016",
+      "mvno_name": "miatel",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "310500",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc460.mcc313.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "310040",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc460.mcc313.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "310460",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc460.mcc313.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "311040",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc460.mcc313.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "311460",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc460.mcc313.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "311500",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc460.mcc313.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "313040",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc460.mcc313.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "313460",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc460.mcc313.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "313500",
+      "mvno_name": "mobi",
+      "gid1": "6624",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc460.mcc313.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20804",
+      "mvno_name": "wordnet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "346007",
+      "mvno_name": "paradise",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "311670",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "50588",
+      "mvno_name": "pivotel",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "65538",
+      "mvno_name": "rain",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "65573",
+      "mvno_name": "rain",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "41750",
+      "mvno_name": "rcell",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "24007",
+      "mvno_name": "spusu",
+      "gid1": "0052",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "302480",
+      "mvno_name": "ssi",
+      "gid1": "1",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "29001",
+      "mvno_name": "ssi",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_xcap_config_exempt": 0,
+          "ussi_exempt": 0,
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20606",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20409",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "22616",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "25013",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "22254",
+      "mvno_name": "plintron",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "50519",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "29404",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "65553",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20601",
+      "mvno_name": "telnyx",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "311210",
+      "mvno_name": "telnyx",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "313260",
+      "mvno_name": "telnyx",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "313930",
+      "mvno_name": "mymobiletxt",
+      "gid1": "FF",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "311780",
+      "mvno_name": "astca",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "50501",
+      "mvno_name": "telstra",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "50571",
+      "mvno_name": "telstra",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "50572",
+      "mvno_name": "telstra",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20403",
+      "mvno_name": "enreach",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "26203",
+      "mvno_name": "enreach",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "26220",
+      "mvno_name": "enreach",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "26214",
+      "mvno_name": "lebara",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc014.mcc262.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20838",
+      "mvno_name": "lebara",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc038.mcc208.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20417",
+      "mvno_name": "lebara",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc017.mcc204.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "314330",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "28022",
+      "mvno_name": "cablenet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "21434",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "28613",
+      "mvno_name": "netgsm",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "65001",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "334160",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc160.mcc334.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "63517",
+      "mvno_name": "ktrn",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc017.mcc635.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "55299",
+      "mvno_name": "pmci",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20834",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "50501",
+      "mvno_name": "telstra",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "50571",
+      "mvno_name": "telstra",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "50572",
+      "mvno_name": "telstra",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "310020",
+      "mvno_name": "union",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "21404",
+      "mvno_name": "xfera",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "52002",
+      "mvno_name": "mybynt",
+      "gid1": "02",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "72429",
+      "mvno_name": "unifique",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "90146",
+      "mvno_name": "globalnet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "61801",
+      "mvno_name": "lonestar",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "22871",
+      "mvno_name": "spusu",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "42833",
+      "mvno_name": "ondo",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "54715",
+      "mvno_name": "vodafone",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "27821",
+      "mvno_name": "go",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "emergency_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "42206",
+      "mvno_name": "vodafone",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc006.mcc422.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20613",
+      "mvno_name": "citymesh",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "72477",
+      "mvno_name": "brisanet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "334170",
+      "mvno_name": "oxio",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "314440",
+      "mvno_name": "tgs",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20812",
+      "mvno_name": "truphone",
+      "gid1": "547275554B3030656E",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "http:xcap.ims.truphone.net",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "50538",
+      "mvno_name": "truphone",
+      "gid1": "547275554B3030656E",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "http:xcap.ims.truphone.net",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "90154",
+      "mvno_name": "tcl",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20407",
+      "mvno_name": "tcl",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "23427",
+      "mvno_name": "tcl",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20603",
+      "mvno_name": "intranet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "23103",
+      "mvno_name": "4ka",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20809",
+      "mvno_name": "4ka",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "53603",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "43705",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "314560",
+      "mvno_name": "cape",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "23208",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "23812",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20825",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "26243",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "27213",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "24223",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "26009",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "21402",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "22854",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "64104",
+      "mvno_name": "",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "22858",
+      "mvno_name": "mucho",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "ss_xcap_config_exempt": 0,
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "28622",
+      "mvno_name": "void",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "23405",
+      "mvno_name": "spitfire1",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_xcap_config_exempt": 0,
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "314720",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "63301",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "21410",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "26601",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "25062",
+      "mvno_name": "internet",
+      "gid1": "FF",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "74801",
+      "mvno_name": "antel",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "54705",
+      "mvno_name": "viti",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc005.mcc547.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "53005",
+      "mvno_name": "spark",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "52510",
+      "mvno_name": "tpg",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.ims.mnc010.mcc525.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "21414",
+      "mvno_name": "internet",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "310320",
+      "mvno_name": "isp",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "epc.mnc320.mcc310.pub.3gppnetwork.org",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "22603",
+      "mvno_name": "connect",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "22606",
+      "mvno_name": "connect",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "63910",
+      "mvno_name": "faiba",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "45707",
+      "mvno_name": "we",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "302490",
+      "mvno_name": "freedom",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "xcap_root_uri": "xcap.mobilefrdm.ca",
+          "ss_xcap_config_exempt": 0,
+          "ussi_exempt": 0,
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "42006",
+      "mvno_name": "lebara",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "27002",
+      "mvno_name": "mtx",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "90139",
+      "mvno_name": "mtx",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "425019",
+      "mvno_name": "019Mobile",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20839",
+      "mvno_name": "mobile",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "36301",
+      "mvno_name": "setar",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "20828",
+      "mvno_name": "datapro",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "42526",
+      "mvno_name": "annatel",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "23450",
+      "mvno_name": "pepper",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "ss_domain_setting": "CS",
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "313770",
+      "mvno_name": "mobileuc",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "23418",
+      "mvno_name": "globaldata",
+      "gid1": "6764",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    },
+    {
+      "mvno": "24209",
+      "mvno_name": "com4",
+      "gid1": "",
+      "gid2": "",
+      "update": [
+        {
+          "volte_domestic_default_enabled": true
+        }
+      ]
+    }
+  ]
+}

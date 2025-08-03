@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">僅可在有手機網絡覆蓋的區域撥打緊急電話</string>
+    <string name="aka_challenge_failed_msg_skt">無法完成高清語音服務註冊。請嘗試重新啟動裝置。若不起作用，請聯絡客戶服務，因為可能需要進行 SIM 卡或裝置檢查。</string>
+    <string name="call_notification_answer_action">接聽</string>
+    <string name="call_notification_answer_video_action">視像</string>
+    <string name="call_notification_decline_action">拒接</string>
+    <string name="call_notification_hang_up_action">掛斷</string>
+    <string name="call_notification_incoming_text">來電</string>
+    <string name="call_notification_ongoing_text">通話中</string>
+    <string name="call_notification_screening_text">正在過濾來電</string>
+    <string name="common_google_play_services_unknown_issue">「%1$s」存取 Google Play 服務時發生問題。請稍後再試一次。</string>
+    <string name="dialog_text_rcs_config_accept">接受</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications 包括可用於使用互聯網連接來發送與接收聊天訊息、圖片、影片、聲音與文字訊息的新功能。您將透過文字訊息收到驗證電話號碼的代碼。</string>
+    <string name="dialog_text_rcs_config_cancel">取消</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications 包括可用於使用互聯網連接來發送與接收聊天訊息、圖片、影片、聲音與短訊的新功能。若要註冊這些功能，您必須輸入電話號碼。</string>
+    <string name="dialog_text_rcs_config_msisdn_title">全新訊息功能</string>
+    <string name="dialog_text_rcs_config_next">下一步</string>
+    <string name="dialog_text_rcs_config_no">否</string>
+    <string name="dialog_text_rcs_config_ok">確定</string>
+    <string name="dialog_text_rcs_config_reject">拒絕</string>
+    <string name="dialog_text_rcs_config_skip">略過</string>
+    <string name="dialog_text_rcs_config_yes">是</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">總是允許</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">允許一次</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">不允許</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">允許 Rich Communications 連接至流動網絡嗎？當您漫遊時，這可能會產生大量費用。</string>
+    <string name="dialog_title_rcs_service">連接至流動網絡</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

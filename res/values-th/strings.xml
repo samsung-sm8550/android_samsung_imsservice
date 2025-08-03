@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">การโทรฉุกเฉินในพื้นที่ที่มีสัญญาณมือถือครอบคลุมเท่านั้น</string>
+    <string name="aka_challenge_failed_msg_skt">ไม่สามารถลงทะเบียนบริการเสียง HD ให้เสร็จสมบูรณ์ได้ ลองรีสตาร์ทอุปกรณ์ของคุณ หากไม่ได้ผล ให้ติดต่อศูนย์บริการลูกค้า เนื่องจากอาจต้องมีการตรวจสอบ SIM หรืออุปกรณ์</string>
+    <string name="call_notification_answer_action">รับสาย</string>
+    <string name="call_notification_answer_video_action">วิดีโอ</string>
+    <string name="call_notification_decline_action">ปฏิเสธ</string>
+    <string name="call_notification_hang_up_action">วางสาย</string>
+    <string name="call_notification_incoming_text">สายเรียกเข้า</string>
+    <string name="call_notification_ongoing_text">สายที่สนทนาอยู่</string>
+    <string name="call_notification_screening_text">กำลังสกรีนสายเรียกเข้า</string>
+    <string name="common_google_play_services_unknown_issue">%1$s มีปัญหาเกี่ยวกับบริการของ Google Play โปรดลองอีกครั้ง</string>
+    <string name="dialog_text_rcs_config_accept">ยอม​รับ</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications มีคุณสมบัติใหม่ๆ ที่คุณสามารถใช้ในการรับส่งข้อความสนทนา รูปภาพ วิดีโอ และเสียงได้ รวมทั้งข้อความตัวอักษร โดยใช้การเชื่อมต่ออินเทอร์เน็ตของคุณ คุณจะได้รับรหัสผ่านข้อความสำหรับยืนยันหมายเลขโทรศัพท์ของคุณ</string>
+    <string name="dialog_text_rcs_config_cancel">ยกเลิก</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications มีคุณสมบัติใหม่ๆ ที่คุณสามารถใช้ในการรับส่งข้อความสนทนา รูปภาพ วิดีโอ และเสียงได้ รวมทั้งข้อความตัวอักษร โดยใช้การเชื่อมต่ออินเทอร์เน็ต ในการลงทะเบียนเพื่อคุณสมบัติเหล่านี้ คุณต้องใส่หมายเลขโทรศัพท์</string>
+    <string name="dialog_text_rcs_config_msisdn_title">คุณสมบัติการส่งข้อความใหม่</string>
+    <string name="dialog_text_rcs_config_next">ถัดไป</string>
+    <string name="dialog_text_rcs_config_no">ไม่</string>
+    <string name="dialog_text_rcs_config_ok">ตกลง</string>
+    <string name="dialog_text_rcs_config_reject">ปฏิเสธ</string>
+    <string name="dialog_text_rcs_config_skip">ข้าม</string>
+    <string name="dialog_text_rcs_config_yes">ใช่</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">อนุญาตเสมอ</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">อนุญาต</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">ไม่อนุญาต</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">อนุญาตให้ Rich Communications เชื่อมต่อกับเครือข่ายมือถือ? เนื่องจากคุณกำลังโรมมิ่ง อาจมีค่าใช้จ่ายเพิ่มเติม</string>
+    <string name="dialog_title_rcs_service">เชื่อมต่อกับเครือข่ายมือถือ</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress... %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_MSG">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click “OK,” Improved Samsung IMS will be downloaded.
+Size: %1$s MB"</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">Emergency calls require cellular coverage</string>
+    <string name="UPDATABLE_OK">OK</string>
+    <string name="aka_challenge_failed_msg_skt">"Couldn't finish HD Voice Service registration. Try restarting your device. If that doesn't work, contact the Customer Center since a SIM or device inspection may be required."</string>
+    <string name="androidx_startup">androidx.startup</string>
+    <string name="app_name">IMS Service</string>
+    <string name="btn_text_yes">OK</string>
+    <string name="call_notification_answer_action">Answer</string>
+    <string name="call_notification_answer_video_action">Video</string>
+    <string name="call_notification_decline_action">Decline</string>
+    <string name="call_notification_hang_up_action">Hang Up</string>
+    <string name="call_notification_incoming_text">Incoming call</string>
+    <string name="call_notification_ongoing_text">Ongoing call</string>
+    <string name="call_notification_screening_text">Screening an incoming call</string>
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
+    <string name="debug_log_disabled">Debug log is disabled.</string>
+    <string name="debug_log_enabled">"Debug log is enabled.
+Personal information might get included in the log."</string>
+    <string name="dialog_text_rcs_config_accept">Accept</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications includes new features you can use to send and receive chat messages, pictures, videos, and sounds, as well as text messages, using your Internet connection. You will receive a verification code via SMS to verify your phone number.</string>
+    <string name="dialog_text_rcs_config_cancel">Cancel</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications includes new features you can use to send and receive chat messages, pictures, videos, and sounds, as well as text messages, using your Internet connection. To register for these features, you must enter a phone number.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">New messaging features</string>
+    <string name="dialog_text_rcs_config_next">Next</string>
+    <string name="dialog_text_rcs_config_no">No</string>
+    <string name="dialog_text_rcs_config_ok">OK</string>
+    <string name="dialog_text_rcs_config_otp_title">Enter OTP</string>
+    <string name="dialog_text_rcs_config_reject">Reject</string>
+    <string name="dialog_text_rcs_config_skip">Skip</string>
+    <string name="dialog_text_rcs_config_yes">Yes</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">Always allow</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">Allow once</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">Do not allow</string>
+    <string name="dialog_text_rcs_pdn_pref_home">Allow data connection for RCS service?</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Allow Rich Communications to connect to a mobile network? As you are roaming, this may result in significant charges.</string>
+    <string name="dialog_text_rcs_sensitive_api_remember">Remember this opetation.</string>
+    <string name="dialog_text_rcs_sensitive_api_text">Please ensure whether use sensitive api ?</string>
+    <string name="dialog_text_rcs_sensitive_api_title">Sensitive Api</string>
+    <string name="dialog_title_rcs_service">Connect to mobile network</string>
+    <string name="done">Done</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="enter_sms_code">Enter SMS Code</string>
+    <string name="extensions_details">Start a SIP session via RCS</string>
+    <string name="extensions_summary">Start a SIP session</string>
+    <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
+    <string name="file_transfer_details">Transfer a file via RCS</string>
+    <string name="file_transfer_summary">Transfer a file</string>
+    <string name="geoloc_push_details">Share location via RCS</string>
+    <string name="geoloc_push_summary">Share location</string>
+    <string name="hyperlink_format_not_supported_exception">Link format not supported</string>
+    <string name="im_session_details">Initiate a chat via RCS</string>
+    <string name="im_session_summary">Initiate a chat</string>
+    <string name="image_share_details">Share an image via RCS</string>
+    <string name="image_share_summary">Share an image</string>
+    <string name="network_error">A network error occurred. Try again later</string>
+    <string name="permdesc_readImsStatus">Allows the app to access the IMS status. This permission allows the app to determine the IMS registration status and IMS call status.</string>
+    <string name="permlab_readImsStatus">Read IMS Status</string>
+    <string name="rcs_is_registered">RCS is registered.</string>
+    <string name="regi_failed_msg_kt">Service registration failed. If this error persists even after rebooting the terminal, please contact the customer center.</string>
+    <string name="regi_failed_msg_lgu">Unable to send/receive calls. Failed to register for VoLTE. Restart the device. If the problem continues, contact the customer service centre(%s)</string>
+    <string name="regi_failed_msg_skt">HD Voice Service registration failed. If this error persists even after rebooting the terminal, please contact the customer center.</string>
+    <string name="show_pin">Show PIN</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="tmo_jansky_install">"Multi-line settings is enabled. &lt;br>&lt;br>&lt;b>What's new:&lt;/b> &lt;br>&lt;b>&amp;middot;&lt;/b>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Multi-line setting allows &lt;br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; access to use multiple phone &lt;br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; numbers on this device. &lt;br>&lt;b>&amp;middot;&lt;/b>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Voice over LTE has been &lt;br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; enabled. &lt;br>&lt;br>Go to Settings > Cloud and accounts > Multi-line settings and sign in with your T-Mobile ID to use additional lines."</string>
+    <string name="tmo_jansky_uninstall">Multi-line settings is uninstalled.</string>
+    <string name="toast_text_rcs_being_reconfigured">RCS is being reconfigured - IMS service will not be available until the reconfiguration is complete</string>
+    <string name="video_share_details">Share a video via RCS</string>
+    <string name="video_share_summary">Share a video</string>
+</resources>

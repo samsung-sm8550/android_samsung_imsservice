@@ -1,0 +1,1628 @@
+{
+  "base": {
+    "application": {
+      "0": {
+        "appid": "ap2001",
+        "appref": "ims-rcs",
+        "ext": {
+          "inturlfmt": "1",
+          "maxsizeimageshare": "15360000",
+          "maxtimevideoshare": "3600",
+          "q-value": "0.5"
+        },
+        "home_network_domain_name": "one.att.net",
+        "name": "RCS IMS Settings"
+      },
+      "1": {
+        "appid": "ap2002",
+        "capdiscovery": {
+          "capinfoexpiry": "21600",
+          "pollingperiod": "0"
+        },
+        "im": {
+          "autaccept": "1",
+          "autacceptgroupchat": "1",
+          "firstmessageinvite": "0",
+          "ftautaccept": "0",
+          "ftwarnsize": "0",
+          "imcapalwayson": "0",
+          "immsgtech": "1",
+          "imsessionstart": "0",
+          "imwarnsf": "0",
+          "max_adhoc_group_size": "11",
+          "maxsize1to1": "20480",
+          "maxsize1tom": "20480",
+          "maxsizefiletr": "10240",
+          "smsfallbackauth": "1",
+          "timeridle": "660"
+        },
+        "ims": {
+          "to-appref": "ims-rcs"
+        },
+        "other": {
+          "transportproto": {
+            "psmedia": "MSRP"
+          }
+        },
+        "presence": {
+          "max-number-ofsubscriptions-inpresence-list": "100",
+          "publishtimer": "21600",
+          "source-throttlepublish": "30"
+        },
+        "services": {
+          "chatauth": "1",
+          "ftauth": "1",
+          "geolocpushauth": "0",
+          "groupchatauth": "1",
+          "standalonemsgauth": "1"
+        },
+        "xdms": {
+          "revoketimer": "0"
+        }
+      }
+    },
+    "vers": {
+      "validity": "432000",
+      "version": "59"
+    }
+  },
+  "att,aio,app": {
+    "vers": {
+      "version": "60"
+    },
+    "application": {
+      "1": {
+        "capdiscovery": {
+          "capdisccommonstack": "0",
+          "defaultdisc": "1",
+          "disableinitialaddressbookscan": "1",
+          "nonrcscapinfoexpiry": "259200"
+        },
+        "cpm": {
+          "standalonemsg": {
+            "maxsizestandalone": "1048576"
+          }
+        },
+        "im": {
+          "conf-fcty-uri": "sip:n-way_messaging@one.att.net",
+          "ftautaccept": "1",
+          "ftdefaultmech": "HTTP",
+          "fthttpcsuri": "https://ftcontentserver.rcs.mnc<MNC>.mcc<MCC>.pub.3gppnetwork.org",
+          "ftwarnsize": "10240",
+          "imcapnonrcs": "0",
+          "max_adhoc_group_size": "100",
+          "maxsize": "8192",
+          "maxsizefiletr": "102400",
+          "maxsizefiletrincoming": "102400",
+          "timeridle": "330"
+        },
+        "presence": {
+          "publishtimer": "3600",
+          "client-obj-datalimit": "13000"
+        },
+        "services": {
+          "ftauth": "0",
+          "ir94videoauth": "1",
+          "presenceprfl": "0"
+        }
+      }
+    }
+  },
+  "att_preconfig": {
+    "vers": {
+      "version": "1",
+      "validity": "0"
+    },
+    "application": {
+      "1": {
+        "capdiscovery": {
+          "disableinitialaddressbookscan": "1",
+          "pollingperiod": "0",
+          "capinfoexpiry": "86400",
+          "nonrcscapinfoexpiry": "259200",
+          "defaultdisc": "1",
+          "capdisccommonstack": "0"
+        },
+        "im": {
+          "fthttpcsuri": "",
+          "fthttpcsuser": "",
+          "fthttpcspwd": ""
+        },
+        "services": {
+          "chatauth": "0",
+          "groupchatauth": "0",
+          "ftauth": "0",
+          "standalonemsgauth": "0",
+          "ir94videoauth": "1"
+        }
+      }
+    }
+  },
+  "cct,lra,tfn,cha,vzw,vzw_up,vpp": {
+    "application": {
+      "0": {
+        "ext": {
+          "inturlfmt": "0",
+          "naturlfmt": "0"
+        },
+        "home_network_domain_name": "vzims.com",
+        "keep_alive_enabled": "0",
+        "lbo_p-cscf_address": {
+          "0": {
+            "address": "2600:80d:1::10:161:44:a2",
+            "addresstype": "IPv6"
+          }
+        },
+        "pdp_contextoperpref": "0",
+        "private_user_identity": "sip:31148012244004245@ims.mnc480.mcc311.3gppnetwork.org",
+        "public_user_identity_list": {
+          "0": {
+            "public_user_identity": "sip:+12244004245@vzims.com"
+          }
+        },
+        "regretrybasetime": "120",
+        "regretrymaxtime": "7200",
+        "timer_t1": "2000",
+        "timer_t2": "16000",
+        "timer_t4": "17000"
+      },
+      "1": {
+        "apn": {
+          "alwaysuseimsapn": "1",
+          "enablercseswitch": "1",
+          "rcseonlyapn": "ims"
+        },
+        "capdiscovery": {
+          "capdisccommonstack": "0",
+          "capinfoexpiry": "60",
+          "nonrcscapinfoexpiry": "60",
+          "defaultdisc": "1",
+          "pollingperiod": "625000"
+        },
+        "cpm": {
+          "standalonemsg": {
+            "maxsizestandalone": "1048576"
+          }
+        },
+        "im": {
+          "cpmcontrollingfuncuri": "sip:confserver@vzims.com",
+          "ftdefaultmech": "MSRP",
+          "max_adhoc_group_size": "10",
+          "maxsizefiletr": "0",
+          "provideft": "1"
+        },
+        "other": {
+          "enduserconfreqid": "31148012244004245@vzims.com",
+          "transportproto": {
+            "psrtmedia": "RTP",
+            "pssignalling": "SIPoUDP"
+          }
+        },
+        "presence": {
+          "favlink": {
+            "autma": "Auto",
+            "labelmaxlength": "0"
+          },
+          "location": {
+            "locinfomaxvalidtime": "0",
+            "textmaxlength": "0"
+          },
+          "publishtimer": "1200",
+          "source-throttlepublish": "60",
+          "usepresence": "1"
+        },
+        "services": {
+          "chatauth": "0",
+          "ftauth": "0",
+          "geolocpullauth": "0",
+          "groupchatauth": "0",
+          "isauth": "0",
+          "presenceprfl": "0",
+          "rcsipvideocallauth": "0",
+          "rcsipvoicecallauth": "0",
+          "standalonemsgauth": "0",
+          "vsauth": "0"
+        }
+      }
+    }
+  },
+  "chm": {
+    "application": {
+      "0": {
+        "appauth": {
+          "authtype": "AKA",
+          "realm": "ims.mnc000.mcc460.3gppnetwork.org",
+          "username": "+8613810417518@ims.mnc000.mcc460.3gppnetwork.org",
+          "userpwd": "123456"
+        },
+        "appref": "IMS-Settings",
+        "conrefs": {
+          "0": {
+            "conref": "TTTaccesspoint"
+          }
+        },
+        "ext": {
+          "maxsizeimageshare": "10485760",
+          "naturlfmt": "1",
+          "secondarydevicepar": {
+            "chat": "1",
+            "filetranfer": "1",
+            "imageshare": "1",
+            "sendsms": "1",
+            "videoshare": "1",
+            "voicecall": "0"
+          }
+        },
+        "home_network_domain_name": "bj.ims.mnc000.mcc460.3gppnetwork.org",
+        "icsi_list": {
+          "0": {
+            "icsi": "0",
+            "icsi_resource_allocation_mode": "0"
+          }
+        },
+        "keep_alive_enabled": "1",
+        "lbo_p-cscf_address": {
+          "0": {
+            "address": "120.197.90.65:5260",
+            "addresstype": "IPv4"
+          }
+        },
+        "mobility_management_ims_voice_termination": "0",
+        "name": "IMS Settings",
+        "pdp_contextoperpref": "1",
+        "phonecontext_list": {
+          "0": {
+            "phonecontext": "183.62.212.197:80",
+            "public_user_identity": {
+              "0": "sip:+8613810417518@ims.mnc000.mcc460.3gppnetwork.org"
+            }
+          }
+        },
+        "private_user_identity": "460000483136285@ims.mnc000.mcc460.3gppnetwork.org",
+        "public_user_identity_list": {
+          "0": {
+            "public_user_identity": "sip:+8613810417518@bj.ims.mnc000.mcc460.3gppnetwork.org"
+          }
+        },
+        "regretrybasetime": "30",
+        "regretrymaxtime": "1800",
+        "sms_over_ip_networks_indication": "1",
+        "timer_t1": "800",
+        "timer_t2": "5600",
+        "timer_t4": "12000",
+        "voice_domain_preference_e_utran": "0",
+        "voice_domain_preference_utran": "1"
+      },
+      "1": {
+        "apn": {
+          "enablercseswitch": "1",
+          "rcseonlyapn": "0"
+        },
+        "appref": "RCSe-Settings",
+        "capdiscovery": {
+          "capinfoexpiry": "3600",
+          "pollingperiod": "84600",
+          "presencedisc": "0"
+        },
+        "im": {
+          "autaccept": "0",
+          "autacceptgroupchat": "0",
+          "chatauth": "1",
+          "conf-fcty-uri": "sip:1252000199@as99.gc.rcs1.chinamobile.com",
+          "cpmcontrollingfuncuri": "sip:1252000199@as99.gc.rcs1.chinamobile.com",
+          "deferred-msg-func-uri": "sip:msgas@as99.message.rcs1.chinamobile.com",
+          "exploder-uri": "sip:msgas@as99.message.rcs1.chinamobile.com",
+          "firstmessageinvite": "1",
+          "ftautaccept": "1",
+          "ftthumb": "1",
+          "ftwarnsize": "5120",
+          "imcapalwayson": "1",
+          "imwarnsf": "1",
+          "max_adhoc_group_size": "10",
+          "maxsize1to1": "3000",
+          "maxsize1tom": "3000",
+          "maxsizefiletr": "15360",
+          "maxsizestandalone": "5120",
+          "pres-srv-cap": "X",
+          "smsfallbackauth": "0",
+          "timeridle": "30"
+        },
+        "ims": {
+          "to-appref": "IMS-Settings"
+        },
+        "name": "RCS-e settings",
+        "other": {
+          "deviceid": "0",
+          "enduserconfreqid": "+8613810417518@bj.ims.mnc000.mcc460.3gppnetwork.org",
+          "transportproto": {
+            "psrtmedia": "RTP",
+            "pssignalling": "SIPoTCP",
+            "wifimedia": "MSRP",
+            "wifirtmedia": "RTP",
+            "wifisignalling": "SIPoTCP"
+          },
+          "warnsizeimageshare": "10240"
+        },
+        "presence": {
+          "availabilityauth": "0",
+          "client-obj-datalimit": "0",
+          "content-serveruri": "0",
+          "favlink": {
+            "autma": "0"
+          },
+          "iconmaxsize": "0",
+          "max-number-ofsubscriptions-inpresence-list": "0",
+          "notemaxsize": "0",
+          "presenceprfl": "0",
+          "publishtimer": "0",
+          "servcappresentity": {
+            "watcherfetchauth": "0"
+          },
+          "servcapwatch": {
+            "contactcappresaut": "0",
+            "fetchauth": "0"
+          },
+          "service-uritemplate": "0",
+          "source-throttlepublish": "0",
+          "usepresence": "0"
+        },
+        "services": {
+          "geolocpushauth": "1"
+        },
+        "xdms": {
+          "xcapauthenticationsecret": "0",
+          "xcapauthenticationtype": "0",
+          "xcapauthenticationusername": "0",
+          "xcaprooturi": "0"
+        }
+      }
+    },
+    "msg": {
+      "accept_btn": "1",
+      "message": "Welcome to JOYN",
+      "reject_btn": "0",
+      "title": "JOYN"
+    },
+    "publicaccount": {
+      "addr": "as99.pa.rcs1.chinamobile.com",
+      "addrtype": "X"
+    },
+    "vers": {
+      "validity": "1728000",
+      "version": "9985"
+    }
+  },
+  "lgt,luc": {
+    "application": {
+      "0": {
+        "appauth": {
+          "authtype": "AKA",
+          "realm": "lte-lguplus.co.kr",
+          "username": "",
+          "userpwd": ""
+        },
+        "appref": "IMS-Settings",
+        "conrefs": {
+          "0": {
+            "conref": ""
+          }
+        },
+        "ext": {
+          "inturlfmt": "0",
+          "maxsizeimageshare": "307200",
+          "maxtimevideoshare": "600",
+          "naturlfmt": "0",
+          "q-value": "0.1",
+          "secondarydevicepar": {
+            "chat": "0",
+            "filetransfer": "0",
+            "geolocpush": "0",
+            "imageshare": "0",
+            "sendmms": "0",
+            "sendsms": "0",
+            "videocall": "0",
+            "videoshare": "0",
+            "voicecall": "0"
+          }
+        },
+        "home_network_domain_name": "lte-lguplus.co.kr",
+        "icsi_list": {
+          "0": {
+            "icsi": "",
+            "icsi_resource_allocation_mode": "0"
+          }
+        },
+        "keep_alive_enabled": "0",
+        "lbo_p-cscf_address": {
+          "0": {
+            "address": "tcscf5-6.uplus.co.kr:5060",
+            "addresstype": "FQDN"
+          }
+        },
+        "mobility_management_ims_voice_termination": "",
+        "name": "IMS Settings",
+        "pdp_contextoperpref": "",
+        "phonecontext_list": {
+          "0": {
+            "phonecontext": "lte-lguplus.co.kr",
+            "public_user_identity": {
+              "0": ""
+            }
+          }
+        },
+        "private_user_identity": "",
+        "public_user_identity_list": {
+          "0": {
+            "public_user_identity": ""
+          }
+        },
+        "regretrybasetime": "30",
+        "regretrymaxtime": "1800",
+        "sms_over_ip_networks_indication": "0",
+        "timer_t1": "2000",
+        "timer_t2": "8000",
+        "timer_t4": "16000",
+        "voice_domain_preference_e_utran": "0",
+        "voice_domain_preference_utran": "0"
+      },
+      "1": {
+        "apn": {
+          "alwaysuseimsapn": "1",
+          "enablercseswitch": "0",
+          "rcseonlyapn": ""
+        },
+        "appref": "IMS-Settings",
+        "capdiscovery": {
+          "capdisccommonstack": "0",
+          "capinfoexpiry": "86400",
+          "defaultdisc": "1",
+          "pollingperiod": "86400",
+          "pollingrate": "5",
+          "pollingrateperiod": "1"
+        },
+        "ext": {
+          "tta": {
+            "pollingbuddycount": "200",
+            "pollingbuddyrate": "5",
+            "pollingbuddyrateperiod": "1"
+          }
+        },
+        "im": {
+          "conf-fcty-uri": "sip:conference-factory@lte-lguplus.co.kr",
+          "deferred-msg-func-uri": "",
+          "exploder-uri": "sip:foo@bar",
+          "firstmessageinvite": "1",
+          "ftautaccept": "1",
+          "ftcapalwayson": "0",
+          "ftdefaultmech": "HTTP",
+          "fthttpcspwd": "eZ6AO2AUlKN3AHxRb2QrJXGCSDE4KPw2fgyVqkYoKdf%2FJaGChFaV7onCrBXw3g",
+          "fthttpcsuri": "https://cs-rcs.uplus.co.kr:8080",
+          "fthttpcsuser": "+821022336317@lte-lguplus.co.kr",
+          "fthttpextracsuri": "https://cs-rcs.uplus.co.kr:8090",
+          "ftstandfwenabled": "0",
+          "ftthumb": "0",
+          "ftwarnsize": "512",
+          "groupchatfullstandfwd": "1",
+          "groupchatonlyfstandfwd": "1",
+          "imcapalwayson": "1",
+          "imcapnonrcs": "0",
+          "immsgtech": "0",
+          "imwarniw": "0",
+          "imwarnsf": "1",
+          "max_adhoc_group_size": "301",
+          "maxconcurrentsession": "",
+          "maxsize1to1": "30000",
+          "maxsize1tom": "30000",
+          "maxsizeextrafiletr": "307200",
+          "maxsizefiletr": "5120",
+          "multimediachat": "0",
+          "pres-srv-cap": "0",
+          "smscallbackauth": "1",
+          "timeridle": "300"
+        },
+        "ims": {
+          "to-appref": "IMS-Settings"
+        },
+        "name": "RCS-e Settings",
+        "other": {
+          "allowvssave": "0",
+          "deviceid": "0",
+          "enduserconfreqid": "",
+          "ipcallbreakout": "0",
+          "ipcallbreakoutcs": "0",
+          "rcsipvideocallupgradeattemptearly": "0",
+          "rcsipvideocallupgradefromcs": "0",
+          "rcsipvideocallupgradeoncaperror": "0",
+          "transportproto": {
+            "psrtmedia": "RTP",
+            "pssignalling": "SIPoUDP",
+            "wifimedia": "MSRPoTLS",
+            "wifirtmedia": "RTP",
+            "wifisignalling": "SIPoTLS"
+          },
+          "uuid_value": ""
+        },
+        "presence": {
+          "availabilityauth": "0",
+          "client-obj-datalimit": "9999",
+          "content-serveruri": "",
+          "favlink": {
+            "autma": "Auto",
+            "labelmaxlength": "0"
+          },
+          "iconmaxsize": "0",
+          "max-number-ofsubscriptions-inpresence-list": "50",
+          "nicknamelength": "0",
+          "notemaxsize": "0",
+          "publishtimer": "36000",
+          "rls-uri": "sip:anonymous@lte-lguplus.co.kr;pres-list\u003ddefault",
+          "service-uritemplate": "",
+          "source-throttlepublish": "1",
+          "usepresence": "1",
+          "vipcontacts": {
+            "nonvipmaxpollperperiod": "0",
+            "nonvippollperiodsetting": "0"
+          }
+        },
+        "services": {
+          "geolocpullauth": "0",
+          "isauth": "0",
+          "presenceprfl": "0",
+          "rcsipvideocallauth": "0",
+          "rcsipvoicecallauth": "0",
+          "standalonemsgauth": "0",
+          "vsauth": "0"
+        },
+        "supl": {
+          "addr": "",
+          "addrtype": "FQDN",
+          "geolocpullapigwaddress": "",
+          "geolocpullblocktimer": "0",
+          "geolocpullopen": "0",
+          "locinfomaxvalidtime": "0",
+          "textmaxlength": "0"
+        },
+        "xdms": {
+          "xcapauthenticationsecret": "password",
+          "xcapauthenticationtype": "Digest",
+          "xcapauthenticationusername": "",
+          "xcaprooturi": ""
+        }
+      }
+    },
+    "token": {
+      "token": "",
+      "validity": ""
+    },
+    "vers": {
+      "validity": "259200",
+      "version": "13"
+    }
+  },
+  "skc,skt": {
+    "application": {
+      "0": {
+        "appref": "IMS-Settings",
+        "ext": {
+          "inturlfmt": "0",
+          "maxsizeimageshare": "0",
+          "maxtimevideoshare": "0",
+          "naturlfmt": "0"
+        },
+        "home_network_domain_name": "ims.mnc005.mcc450.3gppnetwork.org",
+        "keep_alive_enabled": "0",
+        "lbo_p-cscf_address": {
+          "0": {
+            "address": "pcscf.rcs.sktdns.com:5080",
+            "addresstype": "FQDN"
+          }
+        },
+        "name": "IMS-Settings",
+        "pdp_contextoperpref": "1",
+        "regretrybasetime": "30",
+        "regretrymaxtime": "1800",
+        "timer_t1": "2000",
+        "timer_t2": "16000",
+        "timer_t4": "17000"
+      },
+      "1": {
+        "apn": {
+          "alwaysuseimsapn": "1",
+          "enablercseswitch": "-1",
+          "rcseonlyapn": "ims"
+        },
+        "appref": "RCS-e Settings",
+        "capdiscovery": {
+          "capdisccommonstack": "0",
+          "capdiscoverywhitelist": {
+            "capdiscoveryallowedprefixes": {
+              "prefix1": "+8210",
+              "prefix2": "+8270",
+              "prefix3": "+821588"
+            }
+          },
+          "capinfoexpiry": "86400",
+          "defaultdisc": "1",
+          "pollingperiod": "86400",
+          "pollingrate": "5",
+          "pollingrateperiod": "10"
+        },
+        "im": {
+          "chatauth": "1",
+          "conf-fcty-uri": "sip:conference-factory@sktims.net",
+          "deferred-msg-func-uri": "sip:foo@bar",
+          "exploder-uri": "sip:foo@bar",
+          "firstmessageinvite": "1",
+          "ftautaccept": "1",
+          "ftcapalwayson": "0",
+          "ftdefaultmech": "HTTP",
+          "fthttpcsuri": "https://211.115.7.206:8080",
+          "ftstandfwenabled": "0",
+          "ftthumb": "0",
+          "ftwarnsize": "5120",
+          "groupchatfullstandfwd": "1",
+          "imcapalwayson": "1",
+          "imcapnonrcs": "0",
+          "immsgtech": "0",
+          "imsessionstart": "1",
+          "max_adhoc_group_size": "100",
+          "maxconcurrentsession": "10",
+          "maxsize1to1": "30000",
+          "maxsize1tom": "30000",
+          "maxsizefiletr": "5120",
+          "multimediachat": "0",
+          "pres-srv-cap": "0",
+          "timeridle": "350"
+        },
+        "ims": {
+          "to-appref": "IMS-Settings"
+        },
+        "name": "RCS-e Settings",
+        "other": {
+          "enduserconfreqid": "sip:TBD@sktims.net",
+          "ipcallbreakout": "0",
+          "ipcallbreakoutcs": "0",
+          "rcsipvideocallupgradeattemptearly": "0",
+          "rcsipvideocallupgradefromcs": "0",
+          "rcsipvideocallupgradeoncaperror": "0",
+          "summit-tech": {
+            "android_force_reformat_uri": "1",
+            "client.presence": "0",
+            "ft_wait_before_auto_accept": "1",
+            "groupchat.eventfilterdelay": "300",
+            "presence.fixedtupleid": "1",
+            "presence.mode": "rcs3",
+            "rcs.filetransfer.msrpgc": "1",
+            "rcs.ft.resume": "1",
+            "rcs.ft.thumbs.rfc5547": "1",
+            "rcs.ftalwayssendthumbnail": "1",
+            "sip.keepalive.force": "1",
+            "sip.keepalive.timeout": "630",
+            "stack.setproxyauthorization": "1",
+            "totalcomms.enablevcoip": "1",
+            "totalcomms.enablevoip": "0",
+            "xcap.useimpu": "1",
+            "xdms.quoteidentity": "1",
+            "xdms.utf8": "0"
+          },
+          "transportproto": {
+            "psrtmedia": "RTP",
+            "pssignalling": "SIPoUDP",
+            "wifimedia": "MSRP",
+            "wifirtmedia": "RTP",
+            "wifisignalling": "SIPoUDP"
+          }
+        },
+        "presence": {
+          "availabilityauth": "0",
+          "client-obj-datalimit": "8888",
+          "content-serveruri": "",
+          "iconmaxsize": "0",
+          "max-number-ofsubscriptions-inpresence-list": "40",
+          "nicknamelength": "0",
+          "notemaxsize": "0",
+          "publishtimer": "30000",
+          "rls-uri": "",
+          "service-uritemplate": "\u003cxui\u003e;pres-list\u003d\u003cid\u003e",
+          "source-throttlepublish": "60",
+          "usepresence": "1"
+        },
+        "serviceproviderext": {
+          "joyn": {
+            "messaging": {
+              "deliverytimeout": "0",
+              "ext": {
+                "undeliverywarning1": "172800",
+                "undeliverywarning2": "518400"
+              },
+              "fthttpcapalwayson": "0"
+            },
+            "ux": {
+              "breakoutipcalllabel": "1",
+              "e2eipcalllabel": "0",
+              "e2evoicecapabilityhandling": "1",
+              "messagingux": "0",
+              "onebuttonvideocall": "0"
+            }
+          }
+        },
+        "services": {
+          "geolocpullauth": "0",
+          "geolocpushauth": "1",
+          "isauth": "0",
+          "presenceprfl": "0",
+          "rcsipvideocallauth": "0",
+          "rcsipvoicecallauth": "0",
+          "standalonemsgauth": "0",
+          "vsauth": "0"
+        },
+        "supl": {
+          "locinfomaxvalidtime": "3600",
+          "textmaxlength": "200"
+        },
+        "xdms": {
+          "xcapauthenticationsecret": "0",
+          "xcapauthenticationtype": "0",
+          "xcapauthenticationusername": "0",
+          "xcaprooturi": "http://211.115.7.207:6010"
+        }
+      }
+    },
+    "token": {
+      "token": "17a0d6e2578549ec"
+    },
+    "vers": {
+      "validity": "86400",
+      "version": "1616"
+    }
+  },
+  "spr,tce": {
+    "application": {
+      "0": {
+        "appauth": {
+          "authtype": "Digest",
+          "realm": "iot.jibecloud.net",
+          "username": "+19132784107@iot.jibecloud.net",
+          "userpwd": "9Ok8wlDCM25kkXVDowTRiMBn"
+        },
+        "appref": "IMS-Settings",
+        "ext": {
+          "inturlfmt": "0",
+          "maxsizeimageshare": "52428800",
+          "naturlfmt": "0",
+          "secondarydevicepar": {
+            "chat": "0",
+            "filetranfer": "0",
+            "geolocpush": "0",
+            "imageshare": "0",
+            "sendmms": "0",
+            "sendsms": "0",
+            "videocall": "0",
+            "videoshare": "0",
+            "voicecall": "0"
+          }
+        },
+        "home_network_domain_name": "iot.jibecloud.net",
+        "icsi_list": {
+          "0": {
+            "icsi": "0",
+            "icsi_resource_allocation_mode": "0"
+          }
+        },
+        "keep_alive_enabled": "1",
+        "lbo_p-cscf_address": {
+          "0": {
+            "address": "rcs-iot-dev-1-sip.iot.jibecloud.net:5672",
+            "addresstype": "FQDN",
+            "voice_domain_preference_e_utran": "",
+            "voice_domain_preference_utran": ""
+          }
+        },
+        "mobility_management_ims_voice_termination": "0",
+        "name": "IMS Settings",
+        "pdp_contextoperpref": "0",
+        "phonecontext_list": {
+          "0": {
+            "phonecontext": "+1",
+            "public_user_identity": {
+              "0": "tel:+19132784107"
+            }
+          }
+        },
+        "private_user_identity": "+19132784107@iot.jibecloud.net",
+        "public_user_identity_list": {
+          "0": {
+            "public_user_identity": "sip:+19132784107@iot.jibecloud.net"
+          }
+        },
+        "regretrybasetime": "30",
+        "regretrymaxtime": "1800",
+        "sms_over_ip_networks_indication": "0",
+        "timer_t1": "600",
+        "timer_t2": "9500",
+        "timer_t4": "10000",
+        "voice_domain_preference_e_utran": "1",
+        "voice_domain_preference_utran": "1"
+      },
+      "1": {
+        "apn": {
+          "alwaysuseimsapn": "0",
+          "enablercseswitch": "1",
+          "rcseonlyapn": "0"
+        },
+        "appref": "RCSe-Settings",
+        "capdiscovery": {
+          "capdisccommonstack": "0",
+          "capinfoexpiry": "0",
+          "defaultdisc": "0",
+          "ext": {
+            "joyn": {
+              "msgcapvalidity": "10"
+            }
+          },
+          "pollingrate": "0",
+          "pollingrateperiod": "0",
+          "presencedisc": "0"
+        },
+        "cpm": {
+          "messagestore": {
+            "authprot": "0",
+            "url": "http://foo.bar",
+            "username": "unused",
+            "userpwd": "unused"
+          },
+          "standalonemsg": {
+            "maxsizestandalone": "0"
+          }
+        },
+        "im": {
+          "conf-fcty-uri": "sip:conference@iot.jibecloud.net",
+          "conv-hist-func-uri": "sip:foo@bar",
+          "deferred-msg-func-uri": "sip:foo@bar",
+          "delete-uri": "sip:foo@bar",
+          "exploder-uri": "sip:foo@bar",
+          "firstmessageinvite": "1",
+          "ftautaccept": "1",
+          "ftcapalwayson": "0",
+          "ftdefaultmech": "HTTP",
+          "fthttpcspwd": "UIogiD8h0z1Jw1r5UJZnqqfA",
+          "fthttpcsuri": "https://rcs-iot-dev-1-css.iot.jibecloud.net/cs",
+          "fthttpcsuser": "+19132784107@iot.jibecloud.net",
+          "ftstandfwenabled": "0",
+          "ftthumb": "0",
+          "ftwarnsize": "5120",
+          "groupchatfullstandfwd": "1",
+          "groupchatonlyfstandfwd": "0",
+          "imcapalwayson": "1",
+          "imcapnonrcs": "0",
+          "immsgtech": "0",
+          "imwarniw": "0",
+          "max_adhoc_group_size": "50",
+          "maxconcurrentsession": "0",
+          "maxsize1to1": "3000",
+          "maxsize1tom": "3000",
+          "maxsizefiletr": "51200",
+          "msgstore-uri": "sip:foo@bar",
+          "multimediachat": "0",
+          "pres-srv-cap": "0",
+          "smsfallbackauth": "0",
+          "timeridle": "180"
+        },
+        "ims": {
+          "to-appref": "IMS-Settings"
+        },
+        "name": "RCS-e settings",
+        "other": {
+          "allowvssave": "0",
+          "deviceid": "0",
+          "enduserconfreqid": "unused",
+          "ipcallbreakout": "0",
+          "ipcallbreakoutcs": "0",
+          "rcsipvideocallupgradeattemptearly": "0",
+          "rcsipvideocallupgradefromcs": "0",
+          "rcsipvideocallupgradeoncaperror": "0",
+          "transportproto": {
+            "psrtmedia": "RTP",
+            "pssignalling": "SIPoUDP",
+            "wifimedia": "MSRP",
+            "wifirtmedia": "RTP",
+            "wifisignalling": "SIPoUDP"
+          },
+          "uuid_value": "0",
+          "warnsizeimageshare": ""
+        },
+        "presence": {
+          "availabilityauth": "0",
+          "client-obj-datalimit": "0",
+          "content-serveruri": "0",
+          "favlink": {
+            "autma": "0",
+            "labelmaxlength": "0",
+            "links": {
+              "opfavurl1": "http://foo.bar",
+              "opfavurl2": "http://foo.bar",
+              "opfavurl3": "http://foo.bar"
+            }
+          },
+          "iconmaxsize": "0",
+          "location": {
+            "locinfomaxvalidtime": "0",
+            "textmaxlength": "0"
+          },
+          "max-number-ofsubscriptions-inpresence-list": "0",
+          "nicknamelength": "0",
+          "notemaxsize": "0",
+          "presenceprfl": "0",
+          "publishtimer": "0",
+          "rls-uri": "0",
+          "servcappresentity": {
+            "watcherfetchauth": "0"
+          },
+          "servcapwatch": {
+            "contactcappresaut": "0",
+            "fetchauth": "0"
+          },
+          "service-uritemplate": "0",
+          "source-throttlepublish": "0",
+          "usepresence": "0",
+          "vipcontacts": {
+            "nonvipmaxpollperperiod": "0",
+            "nonvippollperiodsetting": "0"
+          }
+        },
+        "serviceproviderext": {
+          "joyn": {
+            "messaging": {
+              "deliverytimeout": "300",
+              "fthttpcapalwayson": "1"
+            },
+            "ux": {
+              "breakoutipcalllabel": "",
+              "e2eipcalllabel": "",
+              "e2evoicecapabilityhandling": "0",
+              "messagingux": "1",
+              "onebuttonvideocall": "0"
+            }
+          }
+        },
+        "services": {
+          "geolocpullauth": "0",
+          "geolocpushauth": "1",
+          "isauth": "1",
+          "presenceprfl": "0",
+          "rcsipvideocallauth": "0",
+          "rcsipvoicecallauth": "0",
+          "standalonemsgauth": "0",
+          "vsauth": "1"
+        },
+        "supl": {
+          "addr": "0",
+          "addrtype": "0",
+          "geolocpullapigwaddress": "http://foo.bar",
+          "geolocpullblocktimer": "0",
+          "geolocpullopen": "0",
+          "locinfomaxvalidtime": "0",
+          "textmaxlength": "30"
+        },
+        "xdms": {
+          "enablepnbmanagement": "0",
+          "enablexdmsubscribe": "0",
+          "xcapauthenticationsecret": "unused",
+          "xcapauthenticationtype": "0",
+          "xcapauthenticationusername": "unused",
+          "xcaprooturi": "http://foo.bar"
+        }
+      }
+    },
+    "jibe": {
+      "userid": "68"
+    },
+    "oauth": {
+      "key": "68",
+      "secret": "M2NDJrlzC0ccgMTw"
+    },
+    "token": {
+      "token": "jJJeRjL3DFArycSIGgNK",
+      "validity": "7776000"
+    },
+    "vers": {
+      "validity": "1728000",
+      "version": "2"
+    }
+  },
+  "tfa": {
+    "application": {
+      "1": {
+        "apn": {
+          "alwaysuseimsapn": "1"
+        },
+        "capdiscovery": {
+          "capdisccommonstack": "0",
+          "capinfoexpiry": "259200",
+          "defaultdisc": "1"
+        },
+        "cpm": {
+          "standalonemsg": {
+            "maxsizestandalone": "1048576"
+          }
+        },
+        "im": {
+          "cpmcontrollingfuncuri": "sip:n-way_messaging@one.att.net",
+          "ftdefaultmech": "MSRP",
+          "maxconcurrentsession": "10",
+          "maxsizefiletrincoming": "4194304",
+          "provideft": "1"
+        },
+        "other": {
+          "transportproto": {
+            "wifimedia": "MSRP"
+          }
+        },
+        "presence": {
+          "favlink": {
+            "autma": "Auto",
+            "labelmaxlength": "0"
+          },
+          "location": {
+            "locinfomaxvalidtime": "0",
+            "textmaxlength": "0"
+          },
+          "usepresence": "1"
+        },
+        "services": {
+          "geolocpullauth": "0",
+          "isauth": "0",
+          "presenceprfl": "0",
+          "rcsipvideocallauth": "1",
+          "rcsipvoicecallauth": "1",
+          "vsauth": "0"
+        }
+      }
+    },
+    "vers": {
+      "version": "58"
+    }
+  },
+  "tft": {
+    "application": {
+      "0": {
+        "appauth": {
+          "authtype": "AKA",
+          "realm": "msg.pc.t-mobile.com",
+          "username": "310260990001234@msg.pc.t-mobile.com",
+          "userpwd": "ims*1234"
+        },
+        "appref": "ims",
+        "conrefs": {
+          "0": {
+            "conref": "0"
+          }
+        },
+        "ext": {
+          "maxsizeimageshare": "5242880",
+          "maxtimevideoshare": "300",
+          "naturlfmt": "0",
+          "secondarydevicepar": {
+            "chat": "0",
+            "filetransfer": "0",
+            "geolocpush": "0",
+            "imageshare": "0",
+            "sendmms": "0",
+            "sendsms": "0",
+            "videocall": "0",
+            "videoshare": "0",
+            "voicecall": "0"
+          }
+        },
+        "home_network_domain_name": "msg.pc.t-mobile.com",
+        "icsi_list": {
+          "0": {
+            "icsi": "",
+            "icsi_resource_allocation_mode": ""
+          }
+        },
+        "keep_alive_enabled": "0",
+        "lbo_p-cscf_address": {
+          "0": {
+            "address": "epdg.epc.mnc260.mcc310.pub.3gppnetwork.org",
+            "addresstype": "FQDN"
+          }
+        },
+        "mobility_management_ims_voice_termination": "1",
+        "name": "IMS Settings",
+        "pdp_contextoperpref": "0",
+        "phonecontext_list": {
+          "0": {
+            "phonecontext": "0",
+            "public_user_identity": {
+              "0": "sip:+19876543210@msg.pc.t-mobile.com"
+            }
+          }
+        },
+        "private_user_identity": "sip:310260990001234@msg.pc.t-mobile.com",
+        "public_user_identity_list": {
+          "0": {
+            "public_user_identity": "sip:+19876543210@msg.pc.t-mobile.com"
+          }
+        },
+        "regretrybasetime": "300",
+        "regretrymaxtime": "3600",
+        "sms_over_ip_networks_indication": "1",
+        "timer_t1": "2000",
+        "timer_t2": "16000",
+        "timer_t4": "17000",
+        "voice_domain_preference_e_utran": "1",
+        "voice_domain_preference_utran": "1"
+      },
+      "1": {
+        "apn": {
+          "alwaysuseimsapn": "1",
+          "enablercseswitch": "-1",
+          "rcseonlyapn": "ims"
+        },
+        "appref": "rcs",
+        "capdiscovery": {
+          "capdisccommonstack": "0",
+          "capinfoexpiry": "86400",
+          "defaultdisc": "1",
+          "pollingperiod": "1209600",
+          "pollingrate": "20",
+          "pollingrateperiod": "1"
+        },
+        "cpm": {
+          "messagestore": {
+            "authprot": "0",
+            "url": "",
+            "username": "",
+            "userpwd": ""
+          },
+          "standalonemsg": {
+            "maxsizestandalone": "1048576"
+          }
+        },
+        "im": {
+          "conf-fcty-uri": "sip:adhoc@msg.pc.t-mobile.com",
+          "cpmcontrollingfuncuri": "sip:adhoc@msg.pc.t-mobile.com",
+          "deferred-msg-func-uri": "sip:foo@bar",
+          "exploder-uri": "sip:foo@bar",
+          "ftautaccept": "1",
+          "ftcapalwayson": "0",
+          "ftdefaultmech": "MSRP",
+          "fthttpcspwd": "",
+          "fthttpcsuri": "",
+          "fthttpcsuser": "",
+          "ftstandfwenabled": "0",
+          "ftthumb": "1",
+          "ftwarnsize": "9999999",
+          "groupchatfullstandfwd": "0",
+          "groupchatnonrcswhitelist": {
+            "imcapnonrcslimitgroupchat": "10"
+          },
+          "groupchatonlyfstandfwd": "0",
+          "imcapnonrcs": "0",
+          "imwarniw": "0",
+          "max_adhoc_group_size": "21",
+          "maxconcurrentsession": "10",
+          "maxsize1to1": "1000",
+          "maxsize1tom": "1000",
+          "maxsizefiletr": "10240",
+          "maxsizefiletrincoming": "0",
+          "multimediachat": "0",
+          "pres-srv-cap": "0",
+          "timeridle": "210",
+          "ext": {
+            "ftMSRPftWarnSize": "9999999",
+            "ftMSRPMaxSizeFileTr": "10240",
+            "ftMSRPMaxSizeFileTrIncoming": "0"
+          }
+        },
+        "ims": {
+          "ext": {
+            "rcsvoltesingleregistration": "1"
+          },
+          "to-appref": "ims"
+        },
+        "name": "RCS Settings",
+        "other": {
+          "allowvssave": "1",
+          "enduserconfreqid": "sip:+19876543210@msg.pc.t-mobile.com",
+          "ipcallbreakout": "0",
+          "ipcallbreakoutcs": "0",
+          "rcsipvideocallupgradeattemptearly": "0",
+          "rcsipvideocallupgradefromcs": "0",
+          "rcsipvideocallupgradeoncaperror": "0",
+          "transportproto": {
+            "psrtmedia": "RTP",
+            "pssignalling": "SIPoUDP",
+            "wifimedia": "MSRP",
+            "wifirtmedia": "RTP",
+            "wifisignalling": "SIPoUDP"
+          },
+          "uuid_value": "0"
+        },
+        "presence": {
+          "availabilityauth": "0",
+          "client-obj-datalimit": "4096",
+          "content-serveruri": "",
+          "favlink": {
+            "autma": "Auto",
+            "labelmaxlength": "200",
+            "links": {
+              "opfavurl1": "",
+              "opfavurl2": "",
+              "opfavurl3": ""
+            }
+          },
+          "iconmaxsize": "200",
+          "location": {
+            "locinfomaxvalidtime": "",
+            "textmaxlength": ""
+          },
+          "nicknamelength": "200",
+          "notemaxsize": "200",
+          "rls-uri": "",
+          "service-uritemplate": "rcs",
+          "vipcontacts": {
+            "nonvipmaxpollperperiod": "1",
+            "nonvippollperiodsetting": "200"
+          }
+        },
+        "services": {
+          "geolocpullauth": "0",
+          "geolocpushauth": "1",
+          "ir94videoauth": "1",
+          "isauth": "0",
+          "presenceprfl": "0",
+          "rcsipvideocallauth": "0",
+          "rcsipvoicecallauth": "0",
+          "standalonemsgauth": "0",
+          "vsauth": "0"
+        },
+        "supl": {
+          "addr": "",
+          "addrtype": "",
+          "geolocpullapigwaddress": "",
+          "geolocpullblocktimer": "0",
+          "geolocpullopen": "0",
+          "locinfomaxvalidtime": "43200",
+          "textmaxlength": "200"
+        },
+        "xdms": {
+          "enablepnbmanagement": "0",
+          "enablexdmsubscribe": "0",
+          "revoketimer": "86400",
+          "xcapauthenticationsecret": "GBA",
+          "xcapauthenticationtype": "GBA",
+          "xcapauthenticationusername": "GBA",
+          "xcaprooturi": "xcap.ims.mnc260.mcc310.pub.3gppnetwork.org"
+        }
+      }
+    },
+    "vers": {
+      "validity": "1728000",
+      "version": "20141208"
+    }
+  },
+  "tfv": {
+    "application": {
+      "0": {
+        "ext": {
+          "inturlfmt": "0",
+          "naturlfmt": "0"
+        },
+        "home_network_domain_name": "vzims.com",
+        "keep_alive_enabled": "0",
+        "lbo_p-cscf_address": {
+          "0": {
+            "address": "2600:80d:1::10:161:44:a2",
+            "addresstype": "IPv6"
+          }
+        },
+        "pdp_contextoperpref": "0",
+        "private_user_identity": "sip:31148012244004245@ims.mnc480.mcc311.3gppnetwork.org",
+        "public_user_identity_list": {
+          "0": {
+            "public_user_identity": "sip:+12244004245@vzims.com"
+          }
+        },
+        "regretrybasetime": "120",
+        "regretrymaxtime": "7200",
+        "timer_t1": "2000",
+        "timer_t2": "16000",
+        "timer_t4": "17000"
+      },
+      "1": {
+        "apn": {
+          "alwaysuseimsapn": "1",
+          "enablercseswitch": "1",
+          "rcseonlyapn": "ims"
+        },
+        "capdiscovery": {
+          "capdisccommonstack": "0",
+          "capinfoexpiry": "60",
+          "defaultdisc": "1",
+          "pollingperiod": "604800"
+        },
+        "cpm": {
+          "standalonemsg": {
+            "maxsizestandalone": "1048576"
+          }
+        },
+        "im": {
+          "cpmcontrollingfuncuri": "sip:confserver@vzims.com",
+          "ftdefaultmech": "MSRP",
+          "max_adhoc_group_size": "10",
+          "provideft": "1"
+        },
+        "other": {
+          "enduserconfreqid": "31148012244004245@vzims.com",
+          "transportproto": {
+            "psrtmedia": "RTP",
+            "pssignalling": "SIPoUDP"
+          }
+        },
+        "presence": {
+          "favlink": {
+            "autma": "Auto",
+            "labelmaxlength": "0"
+          },
+          "location": {
+            "locinfomaxvalidtime": "0",
+            "textmaxlength": "0"
+          },
+          "publishtimer": "1200",
+          "usepresence": "1"
+        },
+        "services": {
+          "geolocpullauth": "0",
+          "isauth": "0",
+          "presenceprfl": "0",
+          "rcsipvideocallauth": "0",
+          "rcsipvoicecallauth": "0",
+          "slmauth": "1",
+          "vsauth": "0"
+        }
+      }
+    },
+    "vers": {
+      "version": "58"
+    }
+  },
+  "tmb,tmk,dsh": {
+    "application": {
+      "0": {
+        "appauth": {
+          "authtype": "AKA",
+          "realm": "msg.pc.t-mobile.com",
+          "username": "310260990001234@msg.pc.t-mobile.com",
+          "userpwd": "ims*1234"
+        },
+        "appref": "ims",
+        "conrefs": {
+          "0": {
+            "conref": "0"
+          }
+        },
+        "ext": {
+          "maxsizeimageshare": "5242880",
+          "maxtimevideoshare": "300",
+          "naturlfmt": "0",
+          "secondarydevicepar": {
+            "chat": "0",
+            "filetransfer": "0",
+            "geolocpush": "0",
+            "imageshare": "0",
+            "sendmms": "0",
+            "sendsms": "0",
+            "videocall": "0",
+            "videoshare": "0",
+            "voicecall": "0"
+          }
+        },
+        "home_network_domain_name": "msg.pc.t-mobile.com",
+        "icsi_list": {
+          "0": {
+            "icsi": "",
+            "icsi_resource_allocation_mode": ""
+          }
+        },
+        "keep_alive_enabled": "0",
+        "lbo_p-cscf_address": {
+          "0": {
+            "address": "ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org",
+            "addresstype": "FQDN"
+          }
+        },
+        "mobility_management_ims_voice_termination": "1",
+        "name": "IMS Settings",
+        "pdp_contextoperpref": "0",
+        "phonecontext_list": {
+          "0": {
+            "phonecontext": "0",
+            "public_user_identity": {
+              "0": "sip:+19876543210@msg.pc.t-mobile.com"
+            }
+          }
+        },
+        "private_user_identity": "sip:310260990001234@msg.pc.t-mobile.com",
+        "public_user_identity_list": {
+          "0": {
+            "public_user_identity": "sip:+19876543210@msg.pc.t-mobile.com"
+          }
+        },
+        "regretrybasetime": "300",
+        "regretrymaxtime": "3600",
+        "sms_over_ip_networks_indication": "1",
+        "timer_t1": "2000",
+        "timer_t2": "16000",
+        "timer_t4": "17000",
+        "voice_domain_preference_e_utran": "1",
+        "voice_domain_preference_utran": "1"
+      },
+      "1": {
+        "apn": {
+          "alwaysuseimsapn": "1",
+          "enablercseswitch": "-1",
+          "rcseonlyapn": "ims"
+        },
+        "appref": "rcs",
+        "capdiscovery": {
+          "capdisccommonstack": "0",
+          "capinfoexpiry": "86400",
+          "defaultdisc": "1",
+          "disableinitialaddressbookscan": "0",
+          "pollingperiod": "604800",
+          "pollingrate": "20",
+          "pollingrateperiod": "1"
+        },
+        "cpm": {
+          "messagestore": {
+            "authprot": "0",
+            "url": "",
+            "username": "",
+            "userpwd": ""
+          },
+          "standalonemsg": {
+            "maxsizestandalone": "1048576"
+          }
+        },
+        "im": {
+          "conf-fcty-uri": "sip:adhoc@msg.pc.t-mobile.com",
+          "cpmcontrollingfuncuri": "sip:adhoc@msg.pc.t-mobile.com",
+          "deferred-msg-func-uri": "sip:foo@bar",
+          "exploder-uri": "sip:foo@bar",
+          "ftautaccept": "1",
+          "ftcapalwayson": "0",
+          "ftdefaultmech": "MSRP",
+          "fthttpcspwd": "",
+          "fthttpcsuri": "",
+          "fthttpcsuser": "",
+          "ftstandfwenabled": "0",
+          "ftthumb": "1",
+          "ftwarnsize": "9999999",
+          "groupchatfullstandfwd": "0",
+          "groupchatnonrcswhitelist": {
+            "imcapnonrcslimitgroupchat": "10"
+          },
+          "groupchatonlyfstandfwd": "0",
+          "imcapnonrcs": "0",
+          "imwarniw": "0",
+          "max_adhoc_group_size": "21",
+          "maxconcurrentsession": "10",
+          "maxsize1to1": "1000",
+          "maxsize1tom": "1000",
+          "maxsizefiletr": "10240",
+          "maxsizefiletrincoming": "0",
+          "multimediachat": "0",
+          "pres-srv-cap": "0",
+          "timeridle": "210",
+          "ext": {
+            "ftMSRPftWarnSize": "9999999",
+            "ftMSRPMaxSizeFileTr": "10240",
+            "ftMSRPMaxSizeFileTrIncoming": "0"
+          }
+        },
+        "ims": {
+          "ext": {
+            "rcsvoltesingleregistration": "1"
+          },
+          "to-appref": "ims"
+        },
+        "name": "RCS Settings",
+        "other": {
+          "allowvssave": "1",
+          "enduserconfreqid": "sip:+19876543210@msg.pc.t-mobile.com",
+          "ipcallbreakout": "0",
+          "ipcallbreakoutcs": "0",
+          "ipvideocalldefaultmech": "0",
+          "rcsipvideocallupgradeattemptearly": "0",
+          "rcsipvideocallupgradefromcs": "0",
+          "rcsipvideocallupgradeoncaperror": "0",
+          "transportproto": {
+            "psrtmedia": "RTP",
+            "pssignalling": "SIPoUDP",
+            "wifimedia": "MSRP",
+            "wifirtmedia": "RTP",
+            "wifisignalling": "SIPoUDP"
+          },
+          "uuid_value": "0"
+        },
+        "presence": {
+          "availabilityauth": "0",
+          "client-obj-datalimit": "4096",
+          "content-serveruri": "",
+          "favlink": {
+            "autma": "Auto",
+            "labelmaxlength": "200",
+            "links": {
+              "opfavurl1": "",
+              "opfavurl2": "",
+              "opfavurl3": ""
+            }
+          },
+          "iconmaxsize": "204800",
+          "location": {
+            "locinfomaxvalidtime": "86400",
+            "textmaxlength": "200"
+          },
+          "nicknamelength": "200",
+          "notemaxsize": "200",
+          "publishtimer": "3600",
+          "rls-uri": "",
+          "service-uritemplate": "rcs",
+          "vipcontacts": {
+            "nonvipmaxpollperperiod": "1",
+            "nonvippollperiodsetting": "200"
+          }
+        },
+        "services": {
+          "ext": {
+            "dataoff": {
+              "contentsharedataoff": "0",
+              "extensionsdataoff": "0",
+              "filetransferdataoff": "0",
+              "ir94dataoff": "0",
+              "mmsdataoff": "0",
+              "provisioningdataoff": "0",
+              "rcsipvideodataoff": "0",
+              "rcsmessagingdataoff": "0",
+              "smsoipdataoff": "1",
+              "voltedataoff": "1"
+            }
+          },
+          "geolocpullauth": "0",
+          "geolocpushauth": "1",
+          "ir94videoauth": "1",
+          "isauth": "0",
+          "presenceprfl": "0",
+          "rcsipvideocallauth": "0",
+          "rcsipvoicecallauth": "0",
+          "standalonemsgauth": "0",
+          "vsauth": "0"
+        },
+        "supl": {
+          "addr": "",
+          "addrtype": "",
+          "geolocpullapigwaddress": "",
+          "geolocpullblocktimer": "0",
+          "geolocpullopen": "0",
+          "locinfomaxvalidtime": "43200",
+          "textmaxlength": "200"
+        },
+        "xdms": {
+          "enablepnbmanagement": "0",
+          "enablexdmsubscribe": "0",
+          "revoketimer": "86400",
+          "xcapauthenticationsecret": "GBA",
+          "xcapauthenticationtype": "GBA",
+          "xcapauthenticationusername": "GBA",
+          "xcaprooturi": "xcap.ims.mnc260.mcc310.pub.3gppnetwork.org"
+        }
+      }
+    },
+    "vers": {
+      "validity": "604800",
+      "version": "20150707"
+    }
+  }
+}

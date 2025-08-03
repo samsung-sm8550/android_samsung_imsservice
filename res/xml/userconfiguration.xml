@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configurations>
+    <configuration enable_call_wait="true" mnoname="DEFAULT" name="default" rcs="0" rcs_home_pref="1" rcs_roaming_pref="1" ss_clip_pref="1" ss_clir_pref="0" ss_video_cb_pref="0" ss_volte_cb_pref="0" />
+    <configuration mnoname="TMobile_US" name="TMO" rcs_roaming_pref="1" />
+    <configuration mnoname="VZW_US" name="VZW" rcs_roaming_pref="1" />
+    <configuration mnoname="ATT_US" name="ATT" rcs_roaming_pref="1" />
+    <configuration mnoname="Sprint_US" name="SPR" rcs_roaming_pref="1" />
+    <configuration enable_call_wait="false" mnoname="Lowi_ES" name="LOWI" />
+    <configuration enable_call_wait="false" mnoname="Finetwork_ES" name="FI" />
+</configurations>

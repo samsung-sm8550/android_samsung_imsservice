@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">다운로드 중… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS 서비스 업데이트</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS 서비스 업데이트가 사용 가능합니다.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS 업데이트를 적용하려면 전화를 재시작해야 합니다.</string>
+    <string name="LEGAL_LATER">나중에</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">삼성 IMS는 “확인” 버튼을 클릭하면 업데이트가 가능하며, 삼성 IMS 업데이트를 완료하려면 사용자가 기기를 재시작해야 합니다.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"삼성 IMS(IP 멀티미디어 서브시스템)은 Galaxy 기기에 고품질(HD) 음성 및 영상 통화와 RCS(Rich communication Service, 향상된 채팅 기능)를 제공합니다.
+\"확인\" 버튼을 클릭하면, 개선된 삼성 IMS가 다운로드됩니다.
+크기: %1$s MB
+
+Wi-Fi 네트워크에 연결되어 있지 않은 경우 데이터 요금이 발생할 수 있습니다. 통화 중인 경우 앱 업데이트가 보류되거나, 업데이트 프로세스 동안에는 통화가 중단될 수 있습니다."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">업데이트가 성공적으로 다운로드되었습니다</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">이동통신 서비스 전용 긴급전화</string>
+    <string name="UPDATABLE_OK">확인</string>
+    <string name="aka_challenge_failed_msg_skt">HD Voice 서비스 등록에 실패했습니다. 휴대폰 전원을 껐다가 켠 후에도 해결되지 않으면 고객센터로 문의하여 주십시오. SIM 또는 기기점검이 필요할 수 있습니다.</string>
+    <string name="call_notification_answer_action">통화</string>
+    <string name="call_notification_answer_video_action">동영상</string>
+    <string name="call_notification_decline_action">거절</string>
+    <string name="call_notification_hang_up_action">전화 끊기</string>
+    <string name="call_notification_incoming_text">수신 전화</string>
+    <string name="call_notification_ongoing_text">진행 중인 통화</string>
+    <string name="call_notification_screening_text">수신 전화 검사 중</string>
+    <string name="common_google_play_services_unknown_issue">%1$s에서 Google Play 서비스를 사용하는 데 문제가 있습니다. 다시 시도하세요.</string>
+    <string name="dialog_text_rcs_config_accept">수락</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications은 인터넷을 사용하여 문자 메시지, 대화 메시지, 사진, 동영상, 소리를 보낼 수 있는 새로운 기능을 포함합니다. 전화번호 인증을 위해 문자 메시지로 코드를 받습니다.</string>
+    <string name="dialog_text_rcs_config_cancel">취소</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications은 인터넷을 사용하여 문자 메시지, 대화 메시지, 사진, 동영상, 소리를 보낼 수 있는 새로운 기능을 포함하고 있습니다. 이 기능을 사용하려면 전화번호를 입력해야 합니다.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">새로운 메시지 기능</string>
+    <string name="dialog_text_rcs_config_next">다음</string>
+    <string name="dialog_text_rcs_config_no">아니요</string>
+    <string name="dialog_text_rcs_config_ok">확인</string>
+    <string name="dialog_text_rcs_config_reject">거절</string>
+    <string name="dialog_text_rcs_config_skip">건너뛰기</string>
+    <string name="dialog_text_rcs_config_yes">예</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">항상 허용</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">한 번만 허용</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">허용 안 함</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Rich Communications에서 모바일 네트워크에 연결할 수 있도록 허용할까요? 로밍 중에는 과다한 요금이 부과될 수 있습니다.</string>
+    <string name="dialog_title_rcs_service">모바일 네트워크에 연결</string>
+    <string name="permdesc_readImsStatus">앱이 IMS 상태에 액세스 할 수 있도록 허용합니다. 이 권한을 사용하면 IMS 등록 상태 및 통화 상태를 확인할 수 있습니다.</string>
+    <string name="permlab_readImsStatus">IMS 상태 읽기</string>
+    <string name="regi_failed_msg_kt">서비스 등록에 실패하였습니다. 단말 재부팅 후에도 재발할 경우 고객센터로 문의하십시오.</string>
+    <string name="regi_failed_msg_lgu">서버 등록에 실패하여 전화 수/발신이 제한됩니다. 단말을 다시 켜보시고, 재발할 경우 고객센터(%s)로 문의하세요.</string>
+    <string name="regi_failed_msg_skt">HD Voice 서비스 등록에 실패했습니다. 휴대폰 전원을 껐다가 켠 후에도 해결되지 않으면 고객센터로 문의하여 주십시오.</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

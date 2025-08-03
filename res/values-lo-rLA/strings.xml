@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">ການໂທສຸກເສີນໃນພື້ນທີ່ທີ່ມີເຄືອຂ່າຍມືຖືເທົ່ານັ້ນ</string>
+    <string name="aka_challenge_failed_msg_skt">ບໍ່ສາມາດສຳເລັດການລົງທະບຽນການບໍລິການສຽງ HD. ລອງປິດເປີດອຸປະກອນຂອງທ່ານຄືນໃໝ່. ຖ້າຍັງບໍ່ໄດ້ຜົນ, ຕິດຕໍ່ສູນບໍລິການລູກຄ້າເນື່ອງຈາກອາດຈຳເປັນຕ້ອງມີການກວດກາ SIM ຫຼື ອຸປະກອນ.</string>
+    <string name="dialog_text_rcs_config_accept">ຮັບ​</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communication ​ລວມ​ມີ​ຄຸນສົມບັດ​ໃໝ່​ທີ່​ທ່ານ​ສາ​ມາດ​ໃຊ້​ເພື່ອ​ສົ່ງ ແລະ​ຮັບ​ຂໍ້​ຄວາມ​ແຊັດ, ຮູບ, ວິ​ດີ​ໂອ, ແລະ​ສຽງ​ໄດ້, ພ້ອມ​ທັງ​ຂໍ້​ຄວາມຕົວອັກສອນ, ດ້ວຍ​ການ​ໃຊ້​ການ​ເຊື່ອມ​ຕໍ່​ອິນ​ເຕີ​ເນັດ​ຂອງ​ທ່ານ. ທ່ານຈະໄດ້ຮັບລະຫັດຜ່ານຂໍ້ຄວາມຕົວອັກສອນສຳລັບການກວດສອບເບີໂທລະສັບຂອງທ່ານ.</string>
+    <string name="dialog_text_rcs_config_cancel">ຍົກເລີກ</string>
+    <string name="dialog_text_rcs_config_msisdn_text">ການ​ສື່​ສານແບບ​ສົມ​ບູນ​ລວມ​ມີ​ຟີ​ເຈີ​ໃໝ່​ທີ່​ທ່ານ​ສາ​ມາດ​ໃຊ້​ເພື່ອ​ສົ່ງ ແລະ​ຮັບ​ຂໍ້​ຄວາມ​ແຊັດ, ຮູບ, ວິ​ດີ​ໂອ, ແລະ​ສຽງ​ໄດ້, ພ້ອມ​ທັງ​ຂໍ້​ຄວາມ, ດ້ວຍ​ການ​ໃຊ້​ການ​ເຊື່ອມ​ຕໍ່​ອິນ​ເຕີ​ເນັດ​ຂອງ​ທ່ານ. ເພື່ອ​ລົງ​ທະ​ບຽນ​ຟີ​ເຈີ​ເຫຼົ່າ​ນີ້, ທ່ານ​ຕ້ອງ​ປ້ອນ​ເບີ​ໂທ​ລະ​ສັບ​ເຂົ້າ​ໄປ.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">ຟີເຈີການສົ່ງຂໍ້ຄວາມໃໝ່</string>
+    <string name="dialog_text_rcs_config_next">ຕໍ່ໄປ</string>
+    <string name="dialog_text_rcs_config_no">ບໍ່</string>
+    <string name="dialog_text_rcs_config_ok">ຕົກລົງ</string>
+    <string name="dialog_text_rcs_config_reject">ບໍ່ຮັບ</string>
+    <string name="dialog_text_rcs_config_skip">ຂ້າມ</string>
+    <string name="dialog_text_rcs_config_yes">ແມ່ນ</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">ອະນຸຍາດທຸກເທື່ອ</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">ອະນຸຍາດຄັ້ງດຽວ</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">ບໍ່ອະນຸຍາດ</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">ອະ​ນຸ​ຍາດ​ໃຫ້​ການ​ສື່​ສານ​ອຸ​ດົມ​ສົມ​ບູນ​ເຊື່ອມ​ຕໍ່​ກັບເຄືອຂ່າຍມືຖືບໍ? ເນື່ອງ​ຈາກ​ທ່ານ​ກຳ​ລັງ​ໂຣມ​ມິງ, ອັນ​ນີ້​ອາດ​ຈະ​ເຮັດ​ໃຫ້​ມີ​ການ​ເກັບ​ຄ່າ​ຫຼາຍ.</string>
+    <string name="dialog_title_rcs_service">ເຊື່ອງຕໍ່ກັບເຄືອຂ່າຍມືຖື</string>
+</resources>

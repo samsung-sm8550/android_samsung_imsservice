@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">Thirrje të urgjencës vetëm në zona me mbulim celular</string>
+    <string name="aka_challenge_failed_msg_skt">Nuk e përfundova dot regjistrimin e Shërbimit Zanor HD. Provo ta rinisësh pajisjen. Në qoftë se as kjo nuk zgjidh gjë, lidhu me Qendrën e Klientit, meqë mund të jetë nevoja për një inspektim të SIM-it ose të pajisjes.</string>
+    <string name="dialog_text_rcs_config_accept">Prano</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications përmban funksionalitete të reja që ti mund të përdorësh për të dërguar dhe marrë mesazhe chat, foto, video dhe tinguj si dhe mesazhe tekst, nëpërmjet lidhjes sate në Internet. Do të marrësh një kod nëpërmjet një mesazhi tekst për të verifikuar numrin tënd të telefonit.</string>
+    <string name="dialog_text_rcs_config_cancel">Anulo</string>
+    <string name="dialog_text_rcs_config_msisdn_text">"Rich Communications përmban funksionalitete të reja që ti mund të përdorësh për të dërguar dhe marrë mesazhe chat, foto, video dhe tinguj si dhe mesazhe tekst, nëpërmjet lidhjes sate në Internet. Për t'u regjistruar për këto funksionalitete, duhet të futësh një numër telefoni."</string>
+    <string name="dialog_text_rcs_config_msisdn_title">Funksionalitete të reja mesazhimi</string>
+    <string name="dialog_text_rcs_config_next">Më pas</string>
+    <string name="dialog_text_rcs_config_no">Jo</string>
+    <string name="dialog_text_rcs_config_ok">Ok</string>
+    <string name="dialog_text_rcs_config_reject">Refuzo</string>
+    <string name="dialog_text_rcs_config_skip">Kapërce</string>
+    <string name="dialog_text_rcs_config_yes">Po</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">Gjthnjë lejo</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">Një herë</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">Mos lejo</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Ta lejoj Rich Communications të lidhet me një rrjet celular? Meqë ti je në bredhje, kjo mund të sjellë shpenzime të konsiderueshme.</string>
+    <string name="dialog_title_rcs_service">Lidhu me rrjetin celular</string>
+</resources>

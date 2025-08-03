@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">केवळ सेल्युलर कव्हरेजसह क्षेत्रांमध्ये आपात्कालीन कॉल्स</string>
+    <string name="aka_challenge_failed_msg_skt">HD आवाज सेवा नोंदणी समाप्त करू शकलो नाही. आपल्या उपकरणाचा पुनरारंभ करून पहा. जर ते कार्य करत नसेल तर, SIM किंवा उपकरण तपासणीची आवश्यकता असू शकते म्हणून ग्राहक केंद्राशी संपर्क साधा.</string>
+    <string name="dialog_text_rcs_config_accept">स्वी.</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications आपण चॅट संदेश, चित्रे, व्हिडिओस आणि ध्‍वनी पाठविण्‍या साठी आणि प्राप्‍त करण्‍या साठी वापरू शकाल अशी नवीन वैशिष्‍ट्ये तसेच आपले इंटरनेट कनेक्‍शन वापरून, मजकूर संदेश देखील समाविष्‍ट आहेत. आपल्या फोन नंबरची पडताळणी करण्या साठी आपल्याला मजकूर संदेशा द्वारे कोड प्राप्त होईल.</string>
+    <string name="dialog_text_rcs_config_cancel">रद्द करा</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications मध्‍ये आपण चॅट संदेश, चित्रे, व्हिडिओस आणि ध्‍वनी पाठविण्‍यासाठी आणि प्राप्‍त करण्‍यासाठी वापरू शकाल अशी नवीन वैशिष्‍ट्ये तसेच आपले इंटरनेट कनेक्‍शन वापरून, मजकूर संदेश देखील समाविष्‍ट आहेत. या वैशिष्‍ट्यांची नोंदणी करण्यासाठी, आपण फोन नंबर प्रविष्‍ट करणे आवश्‍यक आहे.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">नवीन संदेश प्रेषण वैशिष्ट्ये</string>
+    <string name="dialog_text_rcs_config_next">पुढील</string>
+    <string name="dialog_text_rcs_config_no">नाही</string>
+    <string name="dialog_text_rcs_config_ok">ठीक</string>
+    <string name="dialog_text_rcs_config_reject">नकार</string>
+    <string name="dialog_text_rcs_config_skip">वगळा</string>
+    <string name="dialog_text_rcs_config_yes">होय</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">नेहमी अनुमती द्या</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">एकदा अनुमती द्या</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">अनुमती देऊ नका</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Rich Communications ला मोबाईल नेटवर्कशी कनेक्ट करण्याची अनुमती द्यायची? आपण रोमिंगमध्‍ये असल्यामुळे, यास लाक्षणिक शुल्क आकारले जाईल.</string>
+    <string name="dialog_title_rcs_service">मोबाईल नेटवर्कशी कनेक्‍ट करा</string>
+</resources>

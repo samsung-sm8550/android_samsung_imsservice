@@ -1,0 +1,645 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "rcspolicy.json schema",
+  "description": "Structure and description of rcspolicy.json settings",
+  "type": "object",
+  "definitions": {
+    "profiles": {
+      "description": "Operator profiles",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/profile"
+      }
+    },
+    "profile": {
+      "description": "Operator profile",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [ "policy_name"],
+      "properties": {
+        "setting_example": {
+          "$comment": "Step-by-step guide for Json Schema: https://json-schema.org/learn/getting-started-step-by-step.html",
+          "deprecationMessage": "If setting is deprecated",
+          "description": "Description of setting",
+          "default": "default value for setting",
+          "$comment1": "possible types: array, boolean, integer, null, number, object, string",
+          "type": "null",
+          "$comment2": "regex for String",
+          "pattern": "^ Regular expression for settings value check .*",
+          "$comment3": "Enum if it can be only defined values",
+          "enum": [
+            "possible",
+            "values"
+          ],
+          "$comment4": "MIN and MAX length for strings",
+          "minLength": 2,
+          "maxLength": 10,
+          "$comment5": "Range for numbers",
+          "minimum": 1,
+          "exclusiveMinimum": 0,
+          "maximum": 10,
+          "exclusiveMaximum": 11
+        },
+        "policy_name": {
+          "description": "Any name developer can choose, helps to distinguish RCS profile.",
+          "x-intellij-html-description": "Any name developer can choose, helps to distinguish RCS profile.",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "JIBE_UP",
+            "SEC_UP",
+            "VODA_UP"
+          ]
+        },
+        "block_msg": {
+          "description": "Allows to block RCS messages.",
+          "x-intellij-html-description": "Allows to block RCS messages.",
+          "type": "boolean",
+          "default": false
+        },
+        "start_session_when_create_groupchat": {
+          "description": "Determine whether start IMSession when creating GroupChat based by ID.",
+          "x-intellij-html-description": "Determine whether start IMSession when creating GroupChat based by ID.",
+          "type": "boolean",
+          "default": false
+        },
+        "support_chat_close_by_server": {
+          "description": "Enables chat closing by server.",
+          "x-intellij-html-description": "Enables chat closing by server.",
+          "type": "boolean",
+          "default": false
+        },
+        "use_individual_refer": {
+          "description": "Enables adding \"ImParticipants\" to \"ImsService\" one by one.",
+          "x-intellij-html-description": "Enables adding \"ImParticipants\" to I\"msService\" one by one.",
+          "type": "boolean",
+          "default": false
+        },
+        "use_sipuri_for_urigenerator": {
+          "description": "Determines whether use \"SIP_URI\" to get UriGenerator instance.",
+          "x-intellij-html-description": "Determines whether use \"SIP_URI\" to get UriGenerator instance.",
+          "type": "boolean",
+          "default": false
+        },
+        "wait_deactvaing_delete_chat": {
+          "description": "This value specifies requirement of waiting for \"ImsSession\" deactivation while chats being deleted. If false specified ImsSession is closed immediately.",
+          "x-intellij-html-description": "This value specifies requirement of waiting for \"ImsSession\" deactivation while chats being deleted. If false specified ImsSession is closed immediately.",
+          "type": "boolean",
+          "default": false
+        },
+        "max_sipinvite_atonce": {
+          "description": "This value specifies maximum number of SIP invites at one time.\\nIf value == 0, all Group Chats process to rejoin simultaneously.",
+          "x-intellij-html-description": "This value specifies maximum number of SIP invites at one time.<br />If value = 0, all Group Chats process to rejoin simultaneously.",
+          "type": "integer",
+          "default": 0,
+          "minimum": 0
+        },
+        "num_of_display_notification_atonce": {
+          "description": "This value specifies maximum number of displayed notifications at one time.\\nIf value == 0, all pending notifications will be shown simultaneously.",
+          "x-intellij-html-description": "This value specifies maximum number of displayed notifications at one time.<br />If value = 0, all pending notifications will be shown simultaneously.",
+          "type": "integer",
+          "default": 0,
+          "minimum": 0
+        },
+        "skip_block_chatbot_msg": {
+          "description": "Determines whether ChatBot message should be skipped.",
+          "x-intellij-html-description": "Determines whether ChatBot message should be skipped.",
+          "type": "boolean",
+          "default": false
+        },
+        "cancel_ft_wifi_disconnected": {
+          "description": "Determines whether all file transfers should be cancelled due to wifi disconnection.",
+          "x-intellij-html-description": "Determines whether all file transfers should be cancelled due to wifi disconnection.",
+          "type": "boolean",
+          "default": false
+        },
+        "check_gonemembers_of_fullnotify": {
+          "description": "If enabled, if some participants have left, UE need to remove them in local list also for updating latest state.\nUP feature: If some participants is in local list but absent in full conferenceInfo.\nThat is because they have not confirm the invitation or have left when SUBSCRIBE.",
+          "x-intellij-html-description": "If enabled, if some participants have left, UE need to remove them in local list also for updating latest state.<br />UP feature: If some participants is in local list but absent in full conferenceInfo.<br />That is because they have not confirm the invitation or have left when SUBSCRIBE.",
+          "type": "boolean",
+          "default": false
+        },
+        "ignore_wifi_warnsize": {
+          "description": "Allows auto-download big files if user is connected to WiFi. If value == false user will be prompt to explicitly accept big file transfer.",
+          "x-intellij-html-description": "Allows auto-download big files if user is connected to WiFi. If value == false user will be prompt to explicitly accept big file transfer.",
+          "type": "boolean",
+          "default": false
+        },
+        "fthttp_force_auto_accept_on_wifi": {
+          "description": "Determines whether support FT HTTP auto accept regardless of FT auto accept option on WiFi.",
+          "x-intellij-html-description": "Determines whether support FT HTTP auto accept regardless of FT auto accept option on WiFi.",
+          "type": "boolean",
+          "default": false
+        },
+        "use_chatbot_manualaccept": {
+          "description": "Determines whether manual accept is used for ChatBot to confirm ChatBot info by Messaging APP.",
+          "x-intellij-html-description": "Determines whether manual accept is used for ChatBot to confirm ChatBot info by Messaging APP.",
+          "type": "boolean",
+          "default": false
+        },
+        "use_rand_delay_periodic_poll": {
+          "description": "Determines whether delay for periodic polling should be randomized.",
+          "x-intellij-html-description": "Determines whether delay for periodic polling should be randomized.",
+          "type": "boolean",
+          "default": false
+        },
+        "trigger_capex_when_starttyping": {
+          "description": "If enabled trigger discover capability for participants whose capability is not fresh in msg context.",
+          "x-intellij-html-description": "If enabled trigger discover capability for participants whose capability is not fresh in msg context.",
+          "type": "boolean",
+          "default": false
+        },
+        "support_revoke_msg_for_486_resp": {
+          "description": "If enabled support revoking message when response is 486.",
+          "x-intellij-html-description": "If enabled support revoking message when response is 486.",
+          "type": "boolean",
+          "default": false
+        },
+        "file_name_length_limit_In_server": {
+          "description": "This value specifies maximum length of filename uploaded on server.\\nIf value == 0 there is no such limit.",
+          "x-intellij-html-description": "This value specifies maximum length of filename uploaded on server.\\nIf value == 0 there is no such limit.",
+          "type": "integer",
+          "default": 0,
+          "minimum": 0
+        },
+        "check_imsibased_regi": {
+          "description": "If enabled check if registration is based on Imsi otherwise return false.",
+          "x-intellij-html-description": "If enabled check if registration is based on Imsi otherwise return false.",
+          "type": "boolean",
+          "default": false
+        },
+        "update_im_icon": {
+          "description": "If enabled, updates IM icon with conference info update.",
+          "x-intellij-html-description": "If enabled, updates IM icon with conference info update.",
+          "type": "boolean",
+          "default": false
+        },
+        "ft_net_capability": {
+          "description": "An integer value, denoting network capabilities.\\n\\nFollowing value is used (FtMessage.java and ImModule.java):\\n\"NetworkCapabilities.NET_CAPABILITY_IMS\" = 4",
+          "x-intellij-html-description": "An integer value, denoting network capabilities.<br /><br />Following value is used (FtMessage.java and ImModule.java):<br />\"NetworkCapabilities.NET_CAPABILITY_IMS\" = 4",
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 18
+        },
+        "rcs_as_policy": {
+          "description": "Name of RCS policy which should be used instead of current.\\n\\nThis field indicate name of inherited policy.",
+          "x-intellij-html-description": "Name of RCS policy which should be used instead of current.<br /><br />This field indicate name of inherited policy.",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "JIBE_UP",
+            "SEC_UP"]
+        },
+        "auto_accept_gls": {
+          "description": "If enabled, automatically accept incoming GLS message.",
+          "x-intellij-html-description": "If enabled, automatically accept incoming GLS message.",
+          "type": "boolean",
+          "default": false
+        },
+        "auto_accept_rram": {
+          "description": "If enabled, automatically accept incoming rcs recorded audio message.",
+          "x-intellij-html-description": "If enabled, automatically accept incoming rcs recorded audio message.",
+          "type": "boolean",
+          "default": false
+        },
+        "check_byecause": {
+          "description": "If enabled, specify \"ImError\" in case of \"IMSession\" release code was 200.\\n\\nPossible values returned:\\nIn case that group user was kicked: \"ImError.CONFERENCE_PARTY_BOOTED\"\\nIn case that group chat was dismissed: \"ImError.CONFERENCE_CALL_COMPLETED\"\\nOtherwise: \"ImError.NORMAL_RELEASE\"",
+          "x-intellij-html-description": "If enabled, specify \"ImError\" in case of \"IMSession\" release code was 200.<br /><br />Possible values returned:<br />In case that group user was kicked: \"ImError.CONFERENCE_PARTY_BOOTED\"<br />In case that group chat was dismissed: \"ImError.CONFERENCE_CALL_COMPLETED\"<br />Otherwise: \"ImError.NORMAL_RELEASE\"",
+          "type": "boolean",
+          "default": false
+        },
+        "check_im_subject_change": {
+          "description": "If enabled, checks if conference subject has changed otherwise return false.",
+          "x-intellij-html-description": "If enabled check if conference subject has changed otherwise return false.",
+          "type": "boolean",
+          "default": false
+        },
+        "check_initiator_sessionuri": {
+          "description": "If enabled, while creating new \"ImSession\" checks if session initiator is equals to session uri and update chat state with \"ChatData.State.CLOSED_BY_USER\".",
+          "x-intellij-html-description": "If enabled, while creating new \"ImSession\" checks if session initiator is equals to session uri and update chat state with \"ChatData.State.CLOSED_BY_USER\".",
+          "type": "boolean",
+          "default": false
+        },
+        "confinfo_update_not_allowed": {
+          "description": "Drop invalid event information if this flag is enabled and list of participants is empty while updating \"ImConferenceInfo\".",
+          "x-intellij-html-description": "Drop invalid event information if this flag is enabled and list of participants is empty while updating \"ImConferenceInfo\".",
+          "type": "boolean",
+          "default": false
+        },
+        "force_auto_accept": {
+          "description": "Overrides SESSION AUTO ACCEPT parameter sent in configuration (see RCC.07 v11, section A.1.3) setting parameter value to \"1\".",
+          "x-intellij-html-description": "Overrides SESSION AUTO ACCEPT parameter sent in configuration (see RCC.07 v11, section A.1.3) setting parameter value to \"1\".",
+          "type": "boolean",
+          "default": false
+        },
+        "gone_should_endsession": {
+          "description": "Determines whether session should end when \"ImError.GONE\" occurs.",
+          "x-intellij-html-description": "Determines whether session should end when \"ImError.GONE\" occurs.",
+          "type": "boolean",
+          "default": false
+        },
+        "groupchat_invitationui_used": {
+          "description": "Check if need to use group chat invitation UI",
+          "x-intellij-html-description": "Check if need to use group chat invitation UI",
+          "type": "boolean",
+          "default": false
+        },
+        "support_offline_gc_invitation": {
+          "description": "If enabled, offline group chat invitation is supported.",
+          "x-intellij-html-description": "If enabled, offline group chat invitation is supported.",
+          "type": "boolean",
+          "default": false
+        },
+        "support_quickft": {
+          "description": "If enabled, Quick FileTransfer is supported.",
+          "x-intellij-html-description": "If enabled, Quick FileTransfer is supported.",
+          "type": "boolean",
+          "default": false
+        },
+        "use_tempfile_when_download": {
+          "description": "If enabled \"*.temp\" filename is used during download.",
+          "x-intellij-html-description": "If enabled \"*.temp\" filename is used during download.",
+          "type": "boolean",
+          "default": false
+        },
+        "auto_resend_failed_ft": {
+          "description": "If enabled and File transfer is not cancelled by user and not \"ImConstants.TransferState.IN_PROGRESS\" state, resume file transfer taken from queue.",
+          "x-intellij-html-description": "If enabled and File transfer is not cancelled by user and not \"ImConstants.TransferState.IN_PROGRESS\" state, resume file transfer taken from queue.",
+          "type": "boolean",
+          "default": false
+        },
+        "check_participant_of_partial_state": {
+          "description": "If enabled and conference user is in \"ImConferenceUserElemState.PARTIAL\" state, add user to list of participants that left conference.",
+          "x-intellij-html-description": "If enabled and conference user is in \"ImConferenceUserElemState.PARTIAL\" state, add user to list of participants that left conference.",
+          "type": "boolean",
+          "default": false
+        },
+        "onekey_report_psi": {
+          "description": "String value denoting platform number. Gives user possibility to report text message or FT message to given platform number.",
+          "x-intellij-html-description": "String value denoting platform number. Gives user possibility to report text message or FT message to given platform number.",
+          "type": "string",
+          "default": null,
+          "examples": [
+            "tel:+861008699999"
+          ]
+        },
+        "dual_simhandling": {
+          "description": "Enables handling Dual sim.\nWhen enabled and current sim lost network, process to change connection",
+          "x-intellij-html-description": "Enables handling Dual sim.<br />When enabled and current sim lost network process to change connection",
+          "type": "boolean",
+          "default": false
+        },
+        "ps_only_network": {
+          "description": "Determines whether network is PS only.",
+          "x-intellij-html-description": "Determines whether network is PS only.",
+          "type": "boolean",
+          "default": false
+        },
+        "trigger_invite_after_18x": {
+          "description": "If enabled allows to triggering invite for IM session after response of form 18x.",
+          "x-intellij-html-description": "If enabled allows to triggering invite for IM session after response of form 18x.",
+          "type": "boolean",
+          "default": false
+        },
+        "support_highresolutionvideo_thumbnail": {
+          "description": "If enabled allows to set high resolution videos as thumbnail.",
+          "x-intellij-html-description": "If enabled allows to set high resolution videos as thumbnail.",
+          "type": "boolean",
+          "default": false
+        },
+        "support_highresolutionimage_thumbnail": {
+          "description": "If enabled allows to set high resolution images as thumbnail.",
+          "x-intellij-html-description": "If enabled allows to set high resolution images as thumbnail.",
+          "type": "boolean",
+          "default": false
+        },
+        "update_session_after_registration": {
+          "description": "If enabled the previous active sessions are not closed in case for single registration for RCS and VOLTE.",
+          "x-intellij-html-description": "If enabled the previous active sessions are not closed in case for single registration for RCS and VOLTE.",
+          "type": "boolean",
+          "default": false
+        },
+        "pending_for_regi": {
+          "description": "Determines whether registration can be pending while user try to create chat or send message.",
+          "x-intellij-html-description": "Determines whether registration can be pending while user try to create chat or send message.",
+          "type": "boolean",
+          "default": false
+        },
+        "retry_upload_after_maxretries": {
+          "description": "Determines if retry upload is supported after reach maximum retries when receiving 503 response for GET_UPLOAD_INFO request.",
+          "x-intellij-html-description": "Determines if retry upload is supported after reach maximum retries when receiving 503 response for GET_UPLOAD_INFO request.",
+          "type": "boolean",
+          "default": false
+        },
+        "ft_internet_pdn": {
+          "description": "Determines whether file transfer performed over \"internet\" PDN.",
+          "x-intellij-html-description": "Determines whether file transfer performed over \"internet\" PDN.",
+          "type": "boolean",
+          "default": false
+        },
+        "ft_with_gba": {
+          "description": "Determines whether file transfer should be performed with GBA authentication.",
+          "x-intellij-html-description": "Determines whether file transfer should be performed with GBA authentication.",
+          "type": "boolean",
+          "default": false
+        },
+        "support_fthttp_contentlength": {
+          "description": "If enabled set \"contentLength\" in http request, otherwise set chunked streaming mode to 0 size in request.",
+          "x-intellij-html-description": "If enabled set \"contentLength\" in http request, otherwise set chunked streaming mode to 0 size in request.",
+          "type": "boolean",
+          "default": false
+        },
+        "allow_list_capex": {
+          "description": "If enabled allow to list capabilities and request list subscribe, otherwise individual fetch request is made.",
+          "x-intellij-html-description": "If enabled allow to list capabilities and request list subscribe, otherwise individual fetch request is made.",
+          "type": "boolean",
+          "default": false
+        },
+        "allow_only_opengroupchat": {
+          "description": "If enabled and GroupChat is \"ChatType.PARTICIPANT_BASED_GROUP_CHAT\" only OpenGroupChat is allowed and strategyResponse is set to \"StatusCode.FALLBACK_TO_SLM\" or \"StatusCode.FALLBACK_TO_LEGACY\"",
+          "x-intellij-html-description": "If enabled and GroupChat is \"ChatType.PARTICIPANT_BASED_GROUP_CHAT\" only OpenGroupChat is allowed and strategyResponse is set to \"StatusCode.FALLBACK_TO_SLM\" or \"StatusCode.FALLBACK_TO_LEGACY\"",
+          "type": "boolean",
+          "default": false
+        },
+        "block_ft_auto_download_for_gc": {
+          "description": "Determines whether UE need to check blocked number for FT auto download in GC.",
+          "x-intellij-html-description": "Determines whether UE need to check blocked number for FT auto download in GC.",
+          "type": "boolean",
+          "default": false
+        },
+        "central_msg_store": {
+          "description": "If enabled handle cloud messaging.",
+          "x-intellij-html-description": "If enabled handle cloud messaging.",
+          "type": "boolean",
+          "default": false
+        },
+        "firstmsg_groupchat_invite": {
+          "description": "Enables support of first message in GroupChat start in MNO strategy.",
+          "x-intellij-html-description": "Enables support of first message in GroupChat start in MNO strategy.",
+          "type": "boolean",
+          "default": false
+        },
+        "has_useragent_msgappversion": {
+          "description": "Determines whether check if \"UserAgent\" includes the version of messaging application",
+          "x-intellij-html-description": "Determines whether check if \"UserAgent\" includes the version of messaging application",
+          "type": "boolean",
+          "default": false
+        },
+        "notify_rcs_msg": {
+          "description": "Determines whether RCS messages need to notify or not for 3rd party apps as per MNO strategy.",
+          "x-intellij-html-description": "Determines whether RCS messages need to notify or not for 3rd party apps as per MNO strategy.",
+          "type": "boolean",
+          "default": false
+        },
+        "resume_with_complete_file": {
+          "description": "Determines whether resume request should resend entire file.",
+          "x-intellij-html-description": "Determines whether resume request should resend entire file.",
+          "type": "boolean",
+          "default": false
+        },
+        "poll_allowed": {
+          "description": "Determines whether Capability Discovery polling is allowed.",
+          "x-intellij-html-description": "Determines whether Capability Discovery polling is allowed.",
+          "type": "boolean",
+          "default": false
+        },
+        "replace_specialcharacter": {
+          "description": "Determines whether special character \"u00a4\" should be to replace by \"u20ac\" in IM",
+          "x-intellij-html-description": "Determines whether special character \"u00a4\" should be to replace by \"u20ac\" in IM",
+          "type": "boolean",
+          "default": false
+        },
+        "support_large_msg_resizing": {
+          "description": "Handling http FileTransfer failure caused by too large file.\\nIf enabled and file is resizable, request resizing for LMM.",
+          "x-intellij-html-description": "Handling http FileTransfer failure caused by too large file.<br />If enabled and file is resizable, request resizing for LMM.",
+          "type": "boolean",
+          "default": false
+        },
+        "cancel_for_deregi_promptly": {
+          "description": "If enabled cancel operations promptly otherwise try to resume or update state.\\nDepends on type of operations.",
+          "x-intellij-html-description": "If enabled cancel operations promptly otherwise try to resume or update state.<br />Depends on type of operations.",
+          "type": "boolean",
+          "default": false
+        },
+        "remove_failed_participant_groupchat": {
+          "description": "Determines whether participant should be removed if during conference info update is in one of below states:\\n\"ImParticipant.Status.DECLINED\"\\n\"ImParticipant.Status.FAILED\"",
+          "x-intellij-html-description": "Determines whether participant should be removed if during conference info update is in one of below states:<br />\"ImParticipant.Status.DECLINED\"<br />\"ImParticipant.Status.FAILED\"",
+          "type": "boolean",
+          "default": false
+        },
+        "check_msgapp_imsession_reject": {
+          "description": "Specifies whether \"ImSession\" should be rejected if the default messaging application is not used.\\n\"Reject reason is set to \"ImSessionRejectReason.INVOLUNTARILY\"",
+          "x-intellij-html-description": "Specifies whether \"ImSession\" should be rejected if the default messaging application is not used.<br />\"Reject reason is set to \"ImSessionRejectReason.INVOLUNTARILY\"",
+          "type": "boolean",
+          "default": false
+        },
+        "contentlength_in_byte": {
+          "description": "Specifies whether encoded file name bytes length should be added to length of content request.",
+          "x-intellij-html-description": "Specifies whether encoded file name bytes length should be added to length of content request.",
+          "type": "boolean",
+          "default": false
+        },
+        "list_sub_uri_translation": {
+          "description": "Specifies whether uri type should be converted before subscribe.",
+          "x-intellij-html-description": "Specifies whether uri type should be converted before subscribe.",
+          "type": "boolean",
+          "default": false
+        },
+        "participantbased_closed_groupchat": {
+          "description": "Specifies whether group chat type should be set to \"ChatType.PARTICIPANT_BASED_GROUP_CHAT\".\\nOtherwise set to:\\nIf it is closed chat- \"ChatType.CLOSED_GROUP_CHAT\" \\nElse - \"ChatType.REGULAR_GROUP_CHAT\"",
+          "x-intellij-html-description": "Specifies whether group chat type should be set to \"ChatType.PARTICIPANT_BASED_GROUP_CHAT\".<br />Otherwise set to:<br />If it is closed chat- \"ChatType.CLOSED_GROUP_CHAT\" <br />Else - \"ChatType.REGULAR_GROUP_CHAT\"",
+          "type": "boolean",
+          "default": false
+        },
+        "support_7digit_msg": {
+          "description": "Determines if current operator support messaging to 7 digit number i.e.\nsending message without adding area code.",
+          "x-intellij-html-description": "Determines if current operator support messaging to 7 digit number i.e.<br />sending message without adding area code.",
+          "type": "boolean",
+          "default": false
+        },
+        "support_sendmsg_resp_timeout": {
+          "description": "Some cases it takes long time to send message response to UI, messaging app team is requesting FW to post timeout event to dismiss send progress notification to improve UX experience.\\nIf this flag is set to \"true\" send message delayed with \"mSendMessageResponseTimeout\"",
+          "x-intellij-html-description": "Some cases it takes long time to send message response to UI, messaging app team is requesting FW to post timeout event to dismiss send progress notification to improve UX experience.<br />If this flag is set to \"true\" send message delayed with \"mSendMessageResponseTimeout\"",
+          "type": "boolean",
+          "default": false
+        },
+        "use_capcache_expiry": {
+          "description": "Determines whether Capabilities cache should be deleted after capability cache expiry (\"capInfoExpiry\" + 1 day)",
+          "x-intellij-html-description": "Determines whether Capabilities cache should be deleted after capability cache expiry (\"capInfoExpiry\" + 1 day)",
+          "type": "boolean",
+          "default": false
+        },
+        "use_useridentity_for_fthttp": {
+          "description": "If enabled add X-3GPP-Intended-Identity to HTTP Request header.",
+          "x-intellij-html-description": "If enabled add X-3GPP-Intended-Identity to HTTP Request header.",
+          "type": "boolean",
+          "default": false
+        },
+        "compsing_noti_idle_interval": {
+          "description": "Composing notification should be sent to remote UEs with state IM_ISCOMPOSING_STATE_IDLE \"after idle timeout (user stopped typing for more than idle timeout).",
+          "x-intellij-html-description": "Composing notification should be sent to remote UEs with state IM_ISCOMPOSING_STATE_IDLE <br />after idle timeout (user stopped typing for more than idle timeout).",
+          "type": "integer",
+          "default": 0
+        },
+        "sendmsg_resp_timeout": {
+          "description": "Indicates default value of \"mSendMessageResponseTimeout\"",
+          "x-intellij-html-description": "Indicates default value of \"mSendMessageResponseTimeout\"",
+          "type": "integer",
+          "default": 0,
+          "minimum": 0
+        },
+        "session_establish_timer": {
+          "description": "If this value is greater than \"0\" start a timer with this value to wait for session establishment event.\"TIME OUT event will be triggered if the timer expires.",
+          "x-intellij-html-description": "If this value is greater than \"0\" start a timer with this value to wait for session establishment event.\"TIME OUT event will be triggered if the timer expires.",
+          "type": "integer",
+          "default": 0,
+          "minimum": 0
+        },
+        "display_ft_in_gallery": {
+          "description": "If enabled displays transferred file in gallery upon transfer complete.",
+          "x-intellij-html-description": "If enabled displays transferred file in gallery upon transfer complete.",
+          "type": "boolean",
+          "default": false
+        },
+        "support_encoding_filename_by_server": {
+          "description": "If enabled, file name will be encoded using \"URLEncoder.encode(fileName, UTF_8)\" method during upload files feature.",
+          "x-intellij-html-description": "If enabled, file name will be encoded using \"URLEncoder.encode(fileName, UTF_8)\" method during upload files feature.",
+          "type": "boolean",
+          "default": false
+        },
+        "fthttp_ignore_when_untrusted_url": {
+          "description": "Determine checking incoming FT HTTP URLs whenever they are trusted or not (if not, silently ignore them).",
+          "x-intellij-html-description": "Determine checking incoming FT HTTP URLs whenever they are trusted or not (if not, silently ignore them)",
+          "type": "boolean",
+          "default": false
+        },
+        "capa_skip_notify_force_refresh_sync": {
+          "description": "If \"TRUE\" perform network capability query independently on the validity of the capabilities in the \ndatabase and have no capabilities in immediate return.",
+          "x-intellij-html-description": "If \"TRUE\" perform network capability query independently on the validity of the capabilities in the <br />database and have no capabilities in immediate return.",
+          "type": "boolean",
+          "default": false
+        },
+        "always_rcs_on": {
+          "description": "Determine whether RCS is always on.",
+          "x-intellij-html-description": "Determine whether RCS is always on.",
+          "type": "boolean",
+          "default": false
+        },
+        "check_presence_rules": {
+          "description": "Determine whether Presence Rules are checked after successfully register of IMS process.",
+          "x-intellij-html-description": "Determine whether Presence Rules are checked after successfully register of IMS process.",
+          "type": "boolean",
+          "default": false
+        },
+        "display_invited_systemmessage": {
+          "description": "Used for update information about participants in Conference.",
+          "x-intellij-html-description": "Used for update information about participants in Conference.",
+          "type": "boolean",
+          "default": false
+        },
+        "support_auto_rejoin_for_bye": {
+          "description": "If enabled, enqueue message (\"EVENT_REJOIN_IM_GC_SESSION_FOR_BYE\") to the state machine to rejoin group chat session for BYE message.",
+          "x-intellij-html-description": "If enabled, enqueue message (\"EVENT_REJOIN_IM_GC_SESSION_FOR_BYE\") to the state machine to rejoin group chat session for BYE message.",
+          "type": "boolean",
+          "default": false
+        },
+        "use_msrp": {
+          "description": "Determines whether first message is sent using MSRP or bundled to \"SIP INVITE\".",
+          "x-intellij-html-description": "Determines whether first message is sent using MSRP or bundled to \"SIP INVITE\".",
+          "type": "boolean",
+          "default": false
+        },
+        "use_provisional_response_assent": {
+          "description": "If enabled and AsyncResult used in \"onSendImMessageDone\" callback is not provisional, handle IM message sent done event(\"ImSession.EVENT_SEND_MESSAGE_DONE\").",
+          "x-intellij-html-description": "If enabled and AsyncResult used in \"onSendImMessageDone\" callback is not provisional, handle IM message sent done event(\"ImSession.EVENT_SEND_MESSAGE_DONE\").",
+          "type": "boolean",
+          "default": false
+        },
+        "ft_fallback_directly_offline": {
+          "description": "When registration error occurs during file transfer and this flag is set to \"TRUE\", cancel transfer with \"CancelReason.REMOTE_TEMPORARILY_UNAVAILABLE\".",
+          "x-intellij-html-description": "When registration error occurs during file transfer and this flag is set to \"TRUE\", cancel transfer with \"CancelReason.REMOTE_TEMPORARILY_UNAVAILABLE\".",
+          "type": "boolean",
+          "default": false
+        },
+        "use_aggregation_displayed_imdn": {
+          "description": "If enabled, \"IMDN\" notifications aggregation is supported.",
+          "x-intellij-html-description": "If enabled, \"IMDN\" notifications aggregation is supported.",
+          "type": "boolean",
+          "default": false
+        },
+        "useragent_has_msgappversion": {
+          "description": "Determines whether messaging app version is set to SIP User Agent.",
+          "x-intellij-html-description": "Determines whether messaging app version is set to SIP User Agent.",
+          "type": "boolean",
+          "default": false
+        },
+        "delay_to_cancel_for_deregi": {
+          "description": "Denotes delay time for cancel \"FileTransfer\" when de-registration doesn't occur in given time.",
+          "x-intellij-html-description": "Denotes delay time for cancel \"FileTransfer\" when de-registration doesn't occur in given time.",
+          "type": "integer",
+          "default": 0,
+          "minimum": 0
+        },
+        "block_chatbot_nw": {
+          "description": "Determines whether network contains list with blocked Chatbots.",
+          "x-intellij-html-description": "Determines whether network contains list with blocked Chatbots.",
+          "type": "boolean",
+          "default": false
+        },
+        "ignore_state_to_find_absent_participant": {
+          "description": "If enabled, ignore current participant's state to find absent participant in full NOTIFY.",
+          "x-intellij-html-description": "If enabled, ignore current participant's state to find absent participant in full NOTIFY.",
+          "type": "boolean",
+          "default": false
+        },
+        "notify_participant_updates": {
+          "description": "Determines whether participant lists are updated according to participants state.",
+          "x-intellij-html-description": "Determines whether participant lists are updated according to participants state.",
+          "type": "boolean",
+          "default": false
+        },
+        "uri_update": {
+          "description": "Determines whether URI need to be updated in \"onConferenceInfoUpdated\" when conference is own by participant.",
+          "x-intellij-html-description": "Determines whether URI need to be updated in \"onConferenceInfoUpdated\" when conference is own by participant.",
+          "type": "boolean",
+          "default": false
+        },
+        "fthttp_upload_resume_from_the_start": {
+          "description": "If enabled, upload the file from the start when receives HTTP errors during FT HTTP Upload resumption.",
+          "x-intellij-html-description": "If enabled, upload the file from the start when receives HTTP errors during FT HTTP Upload resumption.",
+          "type": "boolean",
+          "default": false
+        },
+        "fthttp_single_thread": {
+          "description": "If enabled, FT HTTP file upload is performed in a single thread.",
+          "x-intellij-html-description": "If enabled, FT HTTP file upload is performed in a single thread.",
+          "type": "boolean",
+          "default": false
+        },
+        "check_p_asserted_identity": {
+          "description": "Determines whether participant is updated with P Asserted Identity after successfully sent SLM message.",
+          "x-intellij-html-description": "Determines whether participant is updated with P Asserted Identity after successfully sent SLM message.",
+          "type": "boolean",
+          "default": false
+        },
+        "ignore_max_size_file_tr_for_unlimited_ft_download": {
+          "description": "If enabled, download the file regardless of the size when MaxSizeFileTrIncoming is not defined.",
+          "x-intellij-html-description": "If enabled, download the file regardless of the size when MaxSizeFileTrIncoming is not defined.",
+          "type": "boolean",
+          "default": false
+        }
+      }
+    }
+  },
+  "properties": {
+    "version": {
+      "description": "Version of file",
+      "deprecationMessage": "Not used since CL#16542581",
+      "type": "integer"
+    },
+    "rcs_policy": {
+      "$ref": "#/definitions/profiles"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">କେବଳ ସେଲ୍ୟୁଲାର୍ କଭରେଜ୍ ସହ ଅଞ୍ଚଳରେ ଜରୁରୀକାଳୀନ କଲ୍</string>
+    <string name="aka_challenge_failed_msg_skt">HD ଭଏସ୍‌ ସେବା ପଞ୍ଜିକରଣ ସମାପ୍ତ କରାଯାଇ ପାରିଲା ନାହିଁ। ଆପଣଙ୍କ ଡିଭାଇସ୍ ପୁନଃଆରମ୍ଭ କରିବା ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ଏହା କାର୍ଯ୍ୟ ନକରେ, ଗ୍ରାହକ କେନ୍ଦ୍ର ସହ ସମ୍ପର୍କ କରନ୍ତୁ କାରଣ ଏକ SIM କିମ୍ବା ଡିଭାଇସ୍ ଯାଞ୍ଚ ଆବଶ୍ୟକ ହୋଇପାରେ।</string>
+    <string name="call_notification_answer_action">ଉତ୍ତର ଦିଅନ୍ତୁ</string>
+    <string name="call_notification_answer_video_action">ଭିଡିଓ</string>
+    <string name="call_notification_decline_action">ଅଗ୍ରାହ୍ୟ କର</string>
+    <string name="call_notification_hang_up_action">ସମାପ୍ତ କରନ୍ତୁ</string>
+    <string name="call_notification_incoming_text">ଇନକମିଂ କଲ୍</string>
+    <string name="call_notification_ongoing_text">ଚାଲିଥିବା କଲ୍</string>
+    <string name="call_notification_screening_text">ଏକ ଇନକମିଂ କଲକୁ ସ୍କ୍ରିନ୍ କରୁଛି</string>
+    <string name="common_google_play_services_unknown_issue">%1$sର Google Play ସେବା ସହ ଏକ ସମସ୍ୟା ରହିଛି। ଦୟାକରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
+    <string name="dialog_text_rcs_config_accept">ସ୍ଵୀକାର</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communicationsରେ ଏପରି ନୂତନ ବୈଶିଷ୍ଟ୍ୟଗୁଡିକ ଅନ୍ତର୍ଭୁକ୍ତ କରେ ଯାହା ସାହାର୍ଯ୍ୟରେ ଆପଣ ଆପଣଙ୍କ ଇଣ୍ଟର୍ନେଟ୍ ସଂଯୋଜନା ବ୍ୟବହାର କରି ଚାଟ୍ ସନ୍ଦେଶ, ଫଟୋ, ଭିଡିଓ‌ ଏବଂ ଧ୍ୱନି, ଏପରିକି ଟେକ୍ସଟ୍ ସନ୍ଦେଶ ପ୍ରେରଣ ଏବଂ ପ୍ରାପ୍ତ କରିପାରିବେ। ଆପଣଙ୍କ ଫୋନ୍ ନମ୍ଵର୍ ଯାଞ୍ଚ କରିବା ପାଇଁ ଆପଣଙ୍କୁ ଟେକ୍ସଟ୍ ସନ୍ଦେଶ ମାଧ୍ୟମରେ ଏକ କୋଡ୍ ପ୍ରାପ୍ତ ହେବ।</string>
+    <string name="dialog_text_rcs_config_cancel">ବାତିଲ୍</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications ଏପରି ନୂତନ ବୈଶିଷ୍ଟ୍ୟଗୁଡିକ ଅନ୍ତର୍ଭୁକ୍ତ କରେ ଯାହା ସାହାର୍ଯ୍ୟରେ ଆପଣ ଆପଣଙ୍କ ଇଣ୍ଟର୍ନେଟ୍ ସଂଯୋଜନା ବ୍ୟବହାର କରି ଚାଟ୍ ସନ୍ଦେଶ, ଫଟୋ, ଭିଡିଓ‌ ଏବଂ ଧ୍ୱନିଗୁଡିକ, ଏପରିକି ଟେକ୍ସଟ୍ ସନ୍ଦେଶଗୁଡିକ ପ୍ରେରଣ ଏବଂ ପ୍ରାପ୍ତ କରିପାରିବେ। ଏହି ବୈଶିଷ୍ଟ୍ୟଗୁଡିକ ପଞ୍ଜିକରଣ କରିବାକୁ, ଆପଣ ଏକ ଫୋନ୍ ନମ୍ଵର୍ ପ୍ରବେଶ କରିବା ଆବଶ୍ୟକ।</string>
+    <string name="dialog_text_rcs_config_msisdn_title">ନୂତନ ମେସେଜିଂ ବୈଶିଷ୍ଟ୍ୟଗୁଡିକ</string>
+    <string name="dialog_text_rcs_config_next">ପରବର୍ତ୍ତୀ</string>
+    <string name="dialog_text_rcs_config_no">ନା</string>
+    <string name="dialog_text_rcs_config_ok">ଓକେ</string>
+    <string name="dialog_text_rcs_config_reject">ଅଗ୍ରାହ୍ୟ</string>
+    <string name="dialog_text_rcs_config_skip">ସ୍କିପ୍</string>
+    <string name="dialog_text_rcs_config_yes">ହଁ</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">ସର୍ବଦା ଅନୁମତି ଦିଅ.</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">ଥରେ ଅନୁମତି ଦିଅ.</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">ଅନୁମତି ଦିଅନ୍ତୁ ନାହିଁ</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">ଏକ ମୋବାଇଲ୍ ନେଟୱାର୍କ୍ ସଂଯୋଗ କରିବାକୁ Rich Communicationsକୁ ଅନୁମତି ଦେବେ କି? ଯେହେତୁ ଆପଣ ରୋମିଂରେ ଅଛନ୍ତି ଏହା ଫଳାଫଳ ପର୍ଯ୍ୟାପ୍ତ ଦେୟ ଲାଗୁ ହୋଇପାରେ।</string>
+    <string name="dialog_title_rcs_service">ମୋବାଇଲ୍‍ ନେଟୱାର୍କକୁ ସଂଯୋଗ</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

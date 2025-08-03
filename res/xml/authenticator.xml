@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator android:label="RCS" android:accountType="com.samsung.ims.rcs"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

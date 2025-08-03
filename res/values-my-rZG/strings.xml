@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">ဆယ္လူလာကြန္ယက္ျဖင့္ နယ္ပယ္မ်ားမွ အေရးေပၚ ေခၚဆိုမႈမ်ားသာလၽွင္</string>
+    <string name="aka_challenge_failed_msg_skt">HD အသံဝန္ေဆာင္မႈ မွတ္ပုံတင္ျခင္းကို ၿပီးဆုံးေအာင္ လုပ္၍မရပါ။ သင့္ကိရိယာကို ျပန္လည္စတင္ပါ။ အလုပ္မလုပ္ပါက၊ SIM (သို႔) ကိရိယာ စစ္ေဆးမႈ လိုအပ္ႏိုင္သည့္အတြက္ သုံးစြဲသူစင္တာကို ဆက္သြယ္ပါ။</string>
+    <string name="dialog_text_rcs_config_accept">လက္ခံ</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications တြင္ အင္တာနက္ခ်ိတ္ဆက္မႈမ်ားကို သုံးၿပီး ခ်တ္မက္ေဆ့ခ်္မ်ား၊ ပုံမ်ား၊ ဗီဒီယိုမ်ား ႏွင့္၊ အသံမ်ားကိုသာ မက၊ စာသားမက္ေဆ့ခ်္မ်ားကိုလည္း ပို႔ရန္ႏွင့္ လက္ခံရန္အတြက္ သင္သုံးႏိုင္ေသာ အစီအစဥ္သစ္မ်ား ပါဝင္သည္။ ဖုန္းနံပါတ္ကို စိစစ္ရန္အတြက္ ကုဒ္တစ္ခုကို စာသားမက္ေဆ့ခ်္မွတဆင့္ သင္ရရွိပါမည္။</string>
+    <string name="dialog_text_rcs_config_cancel">ပယ္ဖ်က္ပါ</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications သည္ သင္၏ အင္တာနက္ ခ်ိတ္ဆက္မႈကိုသုံးၿပီး ခ်တ္ မက္ေဆ့ခ္်မ်ား၊ ႐ုပ္ပုံမ်ား၊ ဗီဒီယိုမ်ား၊ အသံမ်ားႏွင့္ စာသား မက္ေဆ့ခ္်မ်ား ေပးပို႔ရန္ႏွင့္ လက္ခံရယူရန္ သုံးႏိုင္သည့္ ဝိေသသသစ္မ်ား ပါဝင္သည္။ ဤဝိေသသမ်ားအတြက္ မွတ္ပုံတင္ရန္ ဖုန္းနံပါတ္တစ္ခု ထည့္သြင္းရမည္။</string>
+    <string name="dialog_text_rcs_config_msisdn_title">မက္ေဆ့ခ္်ပို႔ လကၡဏာသစ္မ်ား</string>
+    <string name="dialog_text_rcs_config_next">ေနာက္</string>
+    <string name="dialog_text_rcs_config_no">မဟုတ္</string>
+    <string name="dialog_text_rcs_config_ok">အုိေက</string>
+    <string name="dialog_text_rcs_config_reject">ပယ္</string>
+    <string name="dialog_text_rcs_config_skip">ေက်ာ္ပါ</string>
+    <string name="dialog_text_rcs_config_yes">ဟုတ္ကဲ့</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">အၿမဲ ခြင့္ျပဳပါ</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">တစ္ႀကိမ္ ခြင့္ျပဳပါ</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">ခြင့္မျပဳပါႏွင့္</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">မိုဘိုင္း ကြန္ယက္တစ္ခုသို႔ ခ်ိတ္ဆက္ရန္ Rich Communications ကို ခြင့္ျပဳမလား? သင္ အျခားကြန္ယက္သုံးေနသည့္အတြက္ ၄င္းသည္ သိသိသာသာ ကုန္က်စရိတ္မ်ား က်သင့္ေစႏိုင္သည္။</string>
+    <string name="dialog_title_rcs_service">မိုဘိုင္း ကြန္ရက္သို႔ ခ်ိတ္ဆက္ပါ</string>
+</resources>

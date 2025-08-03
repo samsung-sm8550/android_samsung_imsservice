@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">تماس‌های اضطراری فقط در نواحی تحت پوشش شبکه تلفنی</string>
+    <string name="aka_challenge_failed_msg_skt">ثبت سرویس صوتی HD به پایان نرسید. دستگاه خود را دوباره راه‌اندازی کنید. اگر کار نکرد، با ”مرکز مشتریان“ تماس بگیرید زیرا ممکن است به بازبینی سیم‌کارت یا دستگاه نیاز باشد.</string>
+    <string name="call_notification_answer_action">پاسخ دادن</string>
+    <string name="call_notification_answer_video_action">ویدیو</string>
+    <string name="call_notification_decline_action">رد کردن</string>
+    <string name="call_notification_hang_up_action">قطع تماس</string>
+    <string name="call_notification_incoming_text">تماس ورودی</string>
+    <string name="call_notification_ongoing_text">تماس درحال انجام</string>
+    <string name="call_notification_screening_text">درحال غربال کردن تماس ورودی</string>
+    <string name="common_google_play_services_unknown_issue">‏%1$s برای استفاده از خدمات Google Play با مشکل روبرو است. لطفاً دوباره امتحان کنید.</string>
+    <string name="dialog_text_rcs_config_accept">پذيرش</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">‏Rich Communications برای ارسال و دریافت پیام‌های چت، عکس‌ها، ویدیوها و صداها و همچنین پیام‌های متنی با استفاده از اتصال اینترنت، شامل ویژگی‌های جدیدی است که می‌توانید از آنها استفاده کنید. یک کد به صورت پیام متنی برای تأیید شماره تلفن خود دریافت می‌کنید.</string>
+    <string name="dialog_text_rcs_config_cancel">لغو</string>
+    <string name="dialog_text_rcs_config_msisdn_text">‏Rich Communications شامل ویژگی‌های جدیدی است که می‌توانید با استفاده از اتصال اینترنت از آنها برای ارسال و دریافت پیام‌های چت، عکس‌ها، ویدیوها و صداها و همچنین پیام‌های متنی استفاده نمایید. برای ثبت نام در این ویژگی‌ها، باید یک شماره تلفن وارد کنید.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">ویژگی‌های پیام‌رسانی جدید</string>
+    <string name="dialog_text_rcs_config_next">بعدی</string>
+    <string name="dialog_text_rcs_config_no">خير</string>
+    <string name="dialog_text_rcs_config_ok">تاييد</string>
+    <string name="dialog_text_rcs_config_reject">رد</string>
+    <string name="dialog_text_rcs_config_skip">رد شدن</string>
+    <string name="dialog_text_rcs_config_yes">بلی</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">همیشه مجاز</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">یکبار مجاز</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">اجازه داده نشود</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">به Rich Communications اجازه میدهید به یک شبکه تلفن همراه متصل شود؟ با توجه به این که در حالت رومینگ هستید، ممکن است هزینه‌ها افزایش یابد.</string>
+    <string name="dialog_title_rcs_service">اتصال به شبکه تلفن همراه</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

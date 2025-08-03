@@ -1,0 +1,30 @@
+.class public final Lcom/google/firebase/messaging/ktx/FirebaseMessagingKtxRegistrar;
+.super Ljava/lang/Object;
+.source "Messaging.kt"
+
+# interfaces
+.implements Lcom/google/firebase/components/ComponentRegistrar;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 69
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getComponents()Ljava/util/List;
+    .locals 0
+
+    .line 74
+    invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method

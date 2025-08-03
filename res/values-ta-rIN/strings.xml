@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">செல்லுலார் கவரேஜ் உள்ள பகுதிகளில் மட்டுமே அவசரநிலை அழைப்புகள்</string>
+    <string name="aka_challenge_failed_msg_skt">HD குரல் சேவை பதிவை நிறைவுசெய்ய இயலவில்லை. உங்கள் சாதனத்தை மீண்டும் துவங்க முயலவும். அது வேலை செய்யவில்லை என்றால், SIM அல்லது சாதன ஆய்வு தேவைப்படலாம் என்பதால் வாடிக்கையாளர் மையத்தைத் தொடர்பு கொள்ளவும்.</string>
+    <string name="dialog_text_rcs_config_accept">ஏற்.</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">உங்கள் இணைய இணைப்பைப் பயன்படுத்தி, அரட்டைத் தகவல்கள், படங்கள், நிகழ்படங்கள் மற்றும் ஒலிகள் அத்துடன் உரைத் தகவல்கள் ஆகியவற்றை அனுப்ப மற்றும் பெறப் பயன்படுகின்ற புதிய அம்சங்கள் Rich Communications-இல் உள்ளன. உங்கள் ஃபோன் எண்ணைச் சரிபார்ப்பதற்காக உரைத் தகவல் வழியாக குறியீட்டைப் பெறுவீர்கள்.</string>
+    <string name="dialog_text_rcs_config_cancel">ரத்துசெய்க</string>
+    <string name="dialog_text_rcs_config_msisdn_text">உங்கள் இணைய இணைப்பைப் பயன்படுத்தி, அரட்டைத் தகவல்கள், படங்கள், நிகழ்படங்கள், ஒலிகள், உரைத் தகவல்கள் ஆகியவற்றை அனுப்ப மற்றும் பெறப் பயன்படுகின்ற புதிய அம்சங்கள் Rich Communications-இல் உள்ளன. இந்த அம்சங்களுக்காகப் பதிவுசெய்ய, நீங்கள் ஒரு ஃபோன் எண்ணை உள்ளிட வேண்டும்.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">புதிய மெசேஜிங் அம்சங்கள்</string>
+    <string name="dialog_text_rcs_config_next">அடுத்து</string>
+    <string name="dialog_text_rcs_config_no">இல்லை</string>
+    <string name="dialog_text_rcs_config_ok">சரி</string>
+    <string name="dialog_text_rcs_config_reject">தவிர்</string>
+    <string name="dialog_text_rcs_config_skip">தவிர்க்கவும்</string>
+    <string name="dialog_text_rcs_config_yes">ஆம்</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">எப். அனுமதி.</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">ஒரு. அனும.</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">அனுமதிக்க வேண்டாம்</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">ஒரு மொபைல் நெட்வொர்க்குடன் இணைக்க, Rich Communications-ஐ அனுமதிக்கவா? நீங்கள் ரோமிங்கில் இருக்கும் போது, இதற்கு குறிப்பிடத்தக்க கட்டணங்கள் விதிக்கப்படலாம்.</string>
+    <string name="dialog_title_rcs_service">மொபைல் நெட்வொர்க்குடன் இணைக்கவும்</string>
+</resources>

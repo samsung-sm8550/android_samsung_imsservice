@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "mnomap.json schema",
+  "description": "Structure and description of mnomap.json settings",
+  "type": "object",
+  "definitions": {
+    "mnos": {
+      "description": "Operators",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/mno"
+      }
+    },
+    "mno": {
+      "description": "Operator profile",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mnoname",
+        "mccmnc",
+        "gid1",
+        "gid2",
+        "spname",
+        "subset"
+      ],
+      "properties": {
+
+        "setting_example": {
+          "$comment": "Step-by-step guide for Json Schema: https://json-schema.org/learn/getting-started-step-by-step.html",
+
+          "deprecationMessage": "If setting is deprecated",
+
+          "description": "Description of setting",
+          "x-intellij-html-description": "Description in HTML format if needed. Works only with AndroidStudio/IntellijIDEA. This tag will be used instead of 'description' if added",
+
+          "default": "default value for setting",
+
+          "$comment1": "possible types: array, boolean, integer, null, number, object, string",
+          "type": "null",
+
+          "$comment2": "regex for String",
+          "pattern": "^ Regular expression for settings value check .*",
+
+          "$comment3": "Enum if it can be only defined values",
+          "enum": ["possible", "values"],
+
+          "$comment4": "MIN and MAX length for strings",
+          "minLength": 2,
+          "maxLength": 10,
+
+          "$comment5": "Range for numbers",
+          "minimum": 1,
+          "exclusiveMinimum": 0,
+          "maximum": 10,
+          "exclusiveMaximum": 11
+        },
+
+        "mccmnc": {
+          "description": "Operator MCC MNC",
+          "type": "string"
+        },
+        "subset": {
+          "description": "SPCode from customer.xml",
+          "type": "string"
+        },
+        "gid1": {
+          "description": "SubsetCode from customer.xml gid1",
+          "type": "string"
+        },
+        "gid2": {
+          "type": "string"
+        },
+        "spname": {
+          "type": "string"
+        },
+        "mnoname": {
+          "description": "Operator mnoname for profile matching",
+          "type": "string"
+        },
+        "note": {
+          "description": "Comment",
+          "type": "string"
+        },
+        "hosted_roaming": {
+          "description": "Operator mnoname for hosted roaming",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "properties": {
+  "version": {
+    "description": "Version of file",
+    "deprecationMessage": "Not used from CL#16542581",
+    "type": "integer"
+  },
+  "mnomap": {
+    "$ref": "#/definitions/mnos"
+  }
+}
+}

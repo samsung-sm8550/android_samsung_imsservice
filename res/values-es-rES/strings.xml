@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Descarga en curso… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">Actualización del servicio IMS</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">Hay una actualización del servicio IMS disponible.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">La actualización de IMS requiere reiniciar el teléfono</string>
+    <string name="LEGAL_LATER">En otro momento</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">El servicio IMS de Samsung se puede actualizar haciendo clic en el botón “Aceptar”. Una vez que hace clic, el dispositivo se reinicia para completar la actualización del servicio IMS de Samsung.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"El servicio IMS (subsistema multimedia IP) de Samsung ofrece llamadas de voz y vídeo de alta definición, así como servicios de comunicación enriquecida (funciones mejoradas de chat), en dispositivos Galaxy.
+Si hace clic en el botón “Aceptar”, se descargará el servicio IMS mejorado de Samsung.
+Tamaño: %1$s MB
+
+Tenga en cuenta que, si no está conectado a una red de Wi-Fi, es posible que se apliquen cargos por el uso de datos móviles. Si se encuentra en una llamada, es posible que esta actualización de la aplicación se ponga en espera, o bien que la llamada se corte durante la actualización."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Actualizaciones descargadas correctamente</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">Llamadas de emergencia solo en zonas con cobertura móvil</string>
+    <string name="UPDATABLE_OK">Aceptar</string>
+    <string name="aka_challenge_failed_msg_skt">No se ha podido completar el registro del Servicio de voz HD. Prueba a reiniciar el dispositivo. Si eso no funciona, ponte en contacto con el Servicio de atención al cliente, ya que es posible que sea necesario una inspección de la SIM o del dispositivo.</string>
+    <string name="dialog_text_rcs_config_accept">Aceptar</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications incluye nuevas funciones que puede utilizar para enviar y recibir mensajes de chat, imágenes, vídeos y sonidos, así como mensajes de texto, mediante su conexión a Internet. Recibirá un código mediante mensaje de texto para verificar su número de teléfono.</string>
+    <string name="dialog_text_rcs_config_cancel">Cancelar</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications incluye nuevas funciones que puede utilizar para enviar y recibir mensajes de chat, imágenes, vídeos y sonidos, así como mensajes de texto, utilizando su conexión a Internet. Para registrar estas funciones, debe introducir un número de teléfono.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">Nuevas funciones de mensajería</string>
+    <string name="dialog_text_rcs_config_next">Siguiente</string>
+    <string name="dialog_text_rcs_config_no">No</string>
+    <string name="dialog_text_rcs_config_ok">Aceptar</string>
+    <string name="dialog_text_rcs_config_reject">Rechazar</string>
+    <string name="dialog_text_rcs_config_skip">Omitir</string>
+    <string name="dialog_text_rcs_config_yes">Sí</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">Siempre</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">Una vez</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">No permitir</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">¿Quiere permitir que Rich Communications se conecte a una red móvil? Mientras se encuentre en itinerancia, esto puede suponer costes considerables.</string>
+    <string name="dialog_title_rcs_service">Conectarse a red móvil</string>
+</resources>

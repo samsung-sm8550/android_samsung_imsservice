@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">"চেলুলাৰ ক'ভাৰেজৰ সৈতে ক্ষেত্ৰত কেৱল জৰুৰীকালীন কল"</string>
+    <string name="aka_challenge_failed_msg_skt">"HD ভইচ সেৱাৰ পঞ্জীয়ন সমাপ্ত কৰিব পৰা নগ'ল। আপোনাৰ ডিভাইচ পুনঃছেট কৰি চাওক। সেইটোৱে কাম নকৰিলে, যিহেতু এখন SIM বা ডিভাইচ নিৰীক্ষণৰ আৱশ্যক হ'ব পাৰে গতিকে গ্ৰাহক কেন্দ্ৰৰ সৈতে সম্পৰ্ক কৰক।"</string>
+    <string name="call_notification_answer_action">উত্তৰ দিয়ক</string>
+    <string name="call_notification_answer_video_action">ভিডিঅ’</string>
+    <string name="call_notification_decline_action">প্ৰত্যাখ্যান কৰক</string>
+    <string name="call_notification_hang_up_action">কল কাটি দিয়ক</string>
+    <string name="call_notification_incoming_text">অন্তৰ্গামী কল</string>
+    <string name="call_notification_ongoing_text">চলি থকা কল</string>
+    <string name="call_notification_screening_text">এটা অন্তৰ্গামী কলৰ পৰীক্ষা কৰি থকা হৈছে</string>
+    <string name="common_google_play_services_unknown_issue">Google প্লে সেৱাত %1$s ত সমস্যা হৈ আছে। আকৌ চেষ্টা কৰক।</string>
+    <string name="dialog_text_rcs_config_accept">গ্ৰহণ</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">"Rich Communications-এ নতুন সুবিধা অন্তৰ্ভুক্ত কৰে যাতে আপুনি আপোনাৰ ইণ্টাৰনেট সংযোগ ব্যৱহাৰ কৰি পাঠ মেচেজৰ লগতে চাট মেচেজ, চিত্ৰ, ভিডিঅ' আৰু ধ্বনি প্ৰেৰণ আৰু প্ৰাপ্ত কৰিবলৈ ব্যৱহাৰ কৰিব পাৰে। আপুনি আপোনাৰ ফোন নম্বৰ সত্যাপন কৰিবলৈ পাঠ মেচেজ হৈ এটা ক'ড প্ৰাপ্ত কৰিব।"</string>
+    <string name="dialog_text_rcs_config_cancel">বাতিল কৰক</string>
+    <string name="dialog_text_rcs_config_msisdn_text">"সমৃদ্ধ যোগাযোগে আপোনাৰ ইণ্টাৰনেট সংযোগ ব্যৱহাৰ কৰি পাঠ মেচেজসমূহৰ লগতে আপুনি চাট মেচেজসমূহ, চিত্ৰসমূহ, ভিডিঅ'সমূহ আৰু ধ্বনি প্ৰেৰণ বা প্ৰাপ্ত কৰিবলৈ ব্যৱহাৰ কৰিব পৰা নতুন সুবিধাসমূহ অন্তৰ্ভুক্ত কৰে৷ এই সুবিধাৰ বাবে পঞ্জীয়ন কৰিবলৈ, আপুনি এটা ফোন নম্বৰ প্ৰৱিষ্ট কৰিব লাগিব৷"</string>
+    <string name="dialog_text_rcs_config_msisdn_title">নতুন মেচেজিং সুবিধা</string>
+    <string name="dialog_text_rcs_config_next">পৰৱৰ্তী</string>
+    <string name="dialog_text_rcs_config_no">নহয়</string>
+    <string name="dialog_text_rcs_config_ok">ঠিক</string>
+    <string name="dialog_text_rcs_config_reject">নাকচ</string>
+    <string name="dialog_text_rcs_config_skip">এৰক</string>
+    <string name="dialog_text_rcs_config_yes">হয়</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">সদায় অনুমতি দিয়ক</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">এবাৰ অনুমতি দিয়ক</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">অনুমতি নিদিব</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">এটা নেটৱৰ্কলৈ সংযোগ কৰিবৰ বাবে Rich Communications-ক অনুমতি দিবনে? যিহেতু আপুনি ৰোমিঙত আছে, তাৰ ফলত অতিৰিক্ত মাছুল ভৰিব লাগিব পাৰে৷</string>
+    <string name="dialog_title_rcs_service">"ম'বাইল নেটৱৰ্কলৈ সংযোগ কৰক"</string>
+    <string name="status_bar_notification_info_overflow">৯৯৯+</string>
+</resources>

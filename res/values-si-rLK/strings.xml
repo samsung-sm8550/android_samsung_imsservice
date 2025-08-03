@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">සෙලියුලර් ආවරණය පමණක් සහිත ප්‍රදේශවල හදිසි ඇමතුම්</string>
+    <string name="aka_challenge_failed_msg_skt">HD කටහඬ සේවා ලියාපදිංචිය අවසන් කිරීමට නොහැකි විය. ඔබේ උපාංගය යළි ඇරඹීමට උත්සාහ කරන්න. එය ක්‍රියා නොකරන්නේ නම්, SIM පතක් හෝ උපාංග පරීක්ෂණයක් අවශ්‍ය විය හැකි බැවින් පාරිභෝගික මධ්‍යස්ථානය සම්බන්ධ කර ගන්න.</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications හි ඔබේ අන්තර්ජාල සබැඳුම භාවිතයෙන්, සංවාද පණිවිඩ, පින්තූර, වීඩියෝ, සහ හඬ, මෙන්ම පෙළ පණිවිඩ ද යැවීමට හා ලැබීමට භාවිතා කළ හැකි නව විශේෂාංග ඇතුළත් වේ. ඔබට ඔබේ දුරකථන අංකය සත්‍යාපනය සඳහා පෙළ පණිවිඩයක් ඔස්සේ කේතයක් ලැබෙනු ඇත.</string>
+    <string name="dialog_text_rcs_config_next">ඊළඟ</string>
+    <string name="dialog_text_rcs_config_skip">මඟහරින්න</string>
+</resources>

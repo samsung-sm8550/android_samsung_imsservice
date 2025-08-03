@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">ការហៅ​អាសន្ន​ក្នុង​តំបន់​ដែល​មាន​សេវា​គ្របដណ្ដប់​ចល័ត​ប៉ុណ្ណោះ</string>
+    <string name="aka_challenge_failed_msg_skt">មិន​អាច​បញ្ចប់​ការចុះបញ្ជី​សេវា​សំឡេង HD។ សាកល្បង​ចាប់ផ្ដើម​ឧបករណ៍​របស់​អ្នក​ឡើងវិញ។ បើ​វា​មិន​ដំណើរការ​ទេ សូម​ទាក់ទង​សេវា​អតិថិជន ដោយសារ​អាច​តម្រូវ​ឲ្យ​ត្រួតពិនិត្យ SIM ឬ​ឧបករណ៍។</string>
+    <string name="dialog_text_rcs_config_accept">ទទួល</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications រួមបញ្ចូល​មុខងារ​ថ្មីៗ​ដែល​អ្នក​អាច​ប្រើ ដើម្បី​ផ្ញើ​និង​ទទួល​សារ​ឆាត, រូបភាព, វីដេអូ និង សំឡេង ព្រមទាំង​សារ​អត្ថបទ ដោយ​ប្រើ​ការភ្ជាប់​អ៊ីនធើណិត​របស់​អ្នក។ អ្នក​នឹង​ទទួល​កូដ​មួយ​តាម​សារ​អត្ថបទ​សម្រាប់​ការផ្ទៀងផ្ទាត់​លេខ​ទូរសព្ទ​របស់​អ្នក។</string>
+    <string name="dialog_text_rcs_config_cancel">បោះបង់</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications រួមបញ្ចូល​មុខងារ​ថ្មីៗ​ដែល​អ្នក​អាច​ប្រើ ដើម្បី​ផ្ញើ​និង​ទទួល​សារ​ឆាត, រូបភាព, វីដេអូ និង សំឡេង ព្រមទាំង​សារ​អត្ថបទ ដោយ​ប្រើ​ការភ្ជាប់​អ៊ីនធើណិត​របស់​អ្នក។ ដើម្បី​ចុះបញ្ជី​មុខងារ​ទាំងនេះ អ្នក​ត្រូវតែ​វាយបញ្ចូល​លេខ​ទូរសព្ទ។</string>
+    <string name="dialog_text_rcs_config_msisdn_title">មុខងារ​សារ​ថ្មីៗ</string>
+    <string name="dialog_text_rcs_config_next">បន្ទាប់</string>
+    <string name="dialog_text_rcs_config_no">ទេ</string>
+    <string name="dialog_text_rcs_config_ok">ព្រម</string>
+    <string name="dialog_text_rcs_config_reject">ច្រាន</string>
+    <string name="dialog_text_rcs_config_skip">រំលង</string>
+    <string name="dialog_text_rcs_config_yes">ព្រម</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">អនុញ្ញាត​ជានិច្ច</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">អនុញ្ញាត​ម្ដង</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">កុំ​អនុញ្ញាត</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">អនុញ្ញាត Rich Communications ដើម្បី​ភ្ជាប់​ទៅ​បណ្ដាញ​ចល័ត? ដោយសារ​អ្នក​កំពុង​រ៉ូមីង នេះ​អាច​នាំ​ឲ្យ​គិត​ថ្លៃ​ច្រើន។</string>
+    <string name="dialog_title_rcs_service">ភ្ជាប់​ទៅ​បណ្តាញ​ចល័ត</string>
+</resources>

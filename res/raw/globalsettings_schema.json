@@ -1,0 +1,1468 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "globalsettings.json schema",
+  "description": "Structure and description of globalsettings.json settings",
+  "x-intellij-html-description": "Structure and description of globalsettings.json settings",
+  "type": "object",
+  "definitions": {
+    "globalsettings": {
+      "description": "Operators global settings",
+      "x-intellij-html-description": "\"Operators global settings",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/globalsetting"
+      }
+    },
+    "globalsetting": {
+      "description": "Operator global settings",
+      "x-intellij-html-description": "Operator global settings",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mnoname"
+      ],
+      "properties": {
+
+        "setting_example": {
+          "$comment": "Step-by-step guide for Json Schema: https://json-schema.org/learn/getting-started-step-by-step.html",
+
+          "deprecationMessage": "If setting is deprecated",
+
+          "description": "Description of setting",
+          "x-intellij-html-description": "Description in HTML format if needed. Works only with AndroidStudio/IntellijIDEA. This tag will be used instead of 'description' if added",
+
+          "default": "default value for setting",
+
+          "$comment1": "possible types: array, boolean, integer, null, number, object, string",
+          "type": "null",
+
+          "$comment2": "regex for String",
+          "pattern": "^ Regular expression for settings value check .*",
+
+          "$comment3": "Enum if it can be only defined values",
+          "enum": ["possible", "values"],
+
+          "$comment4": "MIN and MAX length for strings",
+          "minLength": 2,
+          "maxLength": 10,
+
+          "$comment5": "Range for numbers",
+          "minimum": 1,
+          "exclusiveMinimum": 0,
+          "maximum": 10,
+          "exclusiveMaximum": 11
+        },
+
+        "note": {
+          "deprecationMessage": "NOT ALLOWED HERE! Please add description to schema!",
+          "description": "NOT ALLOWED HERE!",
+          "x-intellij-html-description": "NOT ALLOWED HERE!",
+          "type": "string",
+          "default": ""
+        },
+        "mnoname": {
+          "description": "TG: REGI\n\nUnique key for operator recognition\nUsually looks like OperatorName_CountryCode",
+          "x-intellij-html-description": "TG: REGI<br /><br />Unique key for operator recognition<br />Usually looks like OperatorName_CountryCode",
+          "default": "",
+          "type": "string",
+          "examples": [
+            "Telia_NO",
+            "Tele2_NL"
+          ]
+        },
+        "enable_hasati": {
+          "default": 0,
+          "type": "integer"
+        },
+        "rcs_network_type": {
+          "description": "TG: RCS\n\nNetwork type through which RCS HTTP configuration is working",
+          "x-intellij-html-description": "TG: RCS<br /><br />Network type through which RCS HTTP configuration is working",
+          "default": "ims,internet,wifi",
+          "type": "string",
+          "examples": [
+            "ims,internet,wifi",
+            "internet,wifi",
+            "internet"
+          ]
+        },
+        "rcs_local_config_server": {
+          "description": "TG: RCS\n\nSpecify config file source \n 0 for RCS_CONFIG_SOURCE_REMOTE_SERVER \n 1 for RCS_CONFIG_SOURCE_LOCAL_SERVER \n 2 for RCS_CONFIG_SOURCE_LOCAL_FILE \n 3 for RCS_CONFIG_SOURCE_LOCAL_FILE_FROM_SDCARD",
+          "x-intellij-html-description": "TG: RCS<br /><br />Specify config file source <br /> 0 for RCS_CONFIG_SOURCE_REMOTE_SERVER <br /> 1 for RCS_CONFIG_SOURCE_LOCAL_SERVER <br /> 2 for RCS_CONFIG_SOURCE_LOCAL_FILE <br /> 3 for RCS_CONFIG_SOURCE_LOCAL_FILE_FROM_SDCARD",
+          "default": 0,
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "rcs_custom_config_server_url": {
+          "description": "TG: RCS\n\nOperator specific auto configuration server URL. \n In case of Google project, add it referring Flatfile. \n If FQDN, not need to add",
+          "x-intellij-html-description": "TG: RCS<br /><br />Operator specific auto configuration server URL. <br /> In case of Google project, add it referring Flatfile. <br /> If FQDN, not need to add",
+          "default": "",
+          "type": "string",
+          "examples": [
+            "http://config.rcscloudconnect.net",
+            "http://config.rcs.mnc008.mcc450.pub.connectrcs.com",
+            "http://rcs-acs-ee-uk.jibe.google.com",
+            "http://rcs-acs-hutch-three-uk.jibe.google.com/",
+            "http://acs-ft-tel-ca.jibe.google.com",
+            "http://rcs-acs-virgin-mobile-uk.jibe.google.com/"
+          ]
+        },
+        "rcs_pre_consent": {
+          "description": "TG: RCS\n\nIf it has value 1 (true), than RCS ToC, MSISDN dialogs will be displayed by Message UI \n and autoconf won't start until user accepts ToC in Message UI (once this happens, UI initiates autoconf and regi by calling {@link ImsManager#sendTryRegister()}.\n If value is 0 (false), then autoconf and registration should proceed as before (without involving Message UI). \n This parameter is supposed to be used only with Google (Jibe) Guest Cloud servers. \n In code, default value is 0 (false)",
+          "x-intellij-html-description": "TG: RCS<br /><br />If it has value 1 (true), than RCS ToC, MSISDN dialogs will be displayed by Message UI <br /> and autoconf won't start until user accepts ToC in Message UI (once this happens, UI initiates autoconf and regi by calling {@link ImsManager#sendTryRegister()}.<br /> If value is 0 (false), then autoconf and registration should proceed as before (without involving Message UI). <br /> This parameter is supposed to be used only with Google (Jibe) Guest Cloud servers. <br /> In code, default value is 0 (false)",
+          "default": "",
+          "type": "string",
+          "enum": [
+            "",
+            "1",
+            "0"
+          ]
+        },
+        "rcs_min_gms_core_version": {
+          "description": "TG: RCS\n\nDO NOT Remove it. This parameter is the Google RCS value used by the Samsung message app. \n Minimal required Google Play Services package version for use with Google (Jibe) Guest Cloud servers. \n Should be int.\n Translation to Play Services package version can be found in \n SamsungMessages/Message/src/main/java/com/samsung/android/messaging/ui/view/firstlaunch/GoogleFirstLaunchManager.java \n class on Package Git repository. \n Add it referring Flatfile. If N/A, not need to add.",
+          "x-intellij-html-description": "TG: RCS<br /><br />DO NOT Remove it. This parameter is the Google RCS value used by the Samsung message app.<br /> Minimal required Google Play Services package version for use with Google (Jibe) Guest Cloud servers. <br /> Should be int.<br /> Translation to Play Services package version can be found in <br /> SamsungMessages/Message/src/main/java/com/samsung/android/messaging/ui/view/firstlaunch/GoogleFirstLaunchManager.java <br /> class on Package Git repository. <br /> Add it referring Flatfile. If N/A, not need to add",
+          "default": "",
+          "type": "string",
+          "examples": [
+            "",
+            "0",
+            "23",
+            "27"
+          ]
+        },
+        "rcs_otp_sms_type": {
+          "description":"TG: RCS\n\nSMS format to receive the OTP value, see RCC.14. \n Google project: refer the flatfile(if 'binary', no need to add). \n For non-Google project: 'binary'(no need to add)",
+          "x-intellij-html-description":"TG: RCS<br /><br />SMS format to receive the OTP value, see RCC.14. <br /> Google project: refer the flatfile(if 'binary', no need to add). <br /> For non-Google project: 'binary'(no need to add)",
+          "default": "",
+          "type": "string",
+          "enum": [
+            "text",
+            "binary",
+            ""
+          ]
+        },
+        "rcs_otp_sms_port": {
+          "description": "TG: RCS\n\nIndicates support of application port addressing via the SMS User Data Header (UDH) for the validation of user identification data through an OTP, see RCC.14 SMS_port",
+          "x-intellij-html-description": "TG: RCS<br /><br />Indicates support of application port addressing via the SMS User Data Header (UDH) for the validation of user identification data through an OTP, see RCC.14 SMS_port",
+          "default": "",
+          "type": "string",
+          "examples": [
+            "",
+            "0",
+            "37273"
+          ]
+        },
+        "rcs_otp_sms_regex": {
+          "description": "TG: RCS\n\nDO NOT Remove it. This parameter is the Google RCS value used by the Samsung message app. \n The regular expression to parse OTP out of text MT SMS during RCS provisioning. This regular expression should be active only when Samsung's RCS client is expecting the validation OTP.",
+          "x-intellij-html-description": "TG: RCS<br /><br />DO NOT Remove it. This parameter is the Google RCS value used by the Samsung message app. <br /> The regular expression to parse OTP out of text MT SMS during RCS provisioning. This regular expression should be active only when Samsung's RCS client is expecting the validation OTP.",
+          "default": "",
+          "type": "string",
+          "examples": [
+            "",
+            "your verification code for rcs messaging",
+            "Your\\sMessenger\\sverification\\scode\\sis\\sG-(\\d{6})",
+            "Messenger's\\senhanced\\sfeatures\\shave\\sbeen\\senabled\\s\\(Confirmation\\sID:\\s(\\d{6})\\)",
+            "(\\d{6})\\sis\\syour\\sRCS\\sverification\\scode\\.|Your\\sMessenger\\sverification\\scode\\sis\\sG-(\\d{6})",
+            "Your\\senhanced\\smessaging\\sactivation\\scode\\sis:\\s\\((\\d{6})\\)"
+          ]
+        },
+        "rcs_regex_to_hide": {
+          "description": "TG: RCS\n\nDO NOT Remove it. This parameter is the Google RCS value used by the Samsung message app. \n The regular expression to hide both MT and MO SMS. This regular expression should be active all the time. \n This parameter is the Google RCS value used by the Samsung message app",
+          "x-intellij-html-description": "TG: RCS<br /><br />DO NOT Remove it. This parameter is the Google RCS value used by the Samsung message app. <br /> The regular expression to hide both MT and MO SMS. This regular expression should be active all the time.  <br /> This parameter is the Google RCS value used by the Samsung message app",
+          "default": "",
+          "type": "string",
+          "examples": [
+            "",
+            "Google is verifying your number for Chat features [a-zA-Z0-9]{10}"
+          ]
+        },
+        "rcs_auto_config_pdn": {
+          "description": "TG: RCS\n\nPublic Data Network(PDN) configuration type. \n 0 for INET, 1 for IMS",
+          "x-intellij-html-description": "TG: RCS<br /><br />Public Data Network(PDN) configuration type. <br /> 0 for INET, 1 for IMS",
+          "default": 0,
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "rcs_policy_type": {
+          "description": "TG: RCS\n\nRcsPolicySettings#RcsPolicyType",
+          "x-intellij-html-description": "TG: RCS<br /><br />RcsPolicySettings#RcsPolicyType",
+          "default": "DEFAULT_RCS",
+          "type": "string",
+          "examples": [
+            "DEFAULT_RCS"
+          ]
+        },
+        "closed_group_chat": {
+          "description":"TG: RCS\n\nDecide if group chat is of type ChatType.CLOSED_GROUP_CHAT, \n It is type of closed group chat, \n 0 for closed group chat not supported, 1 for supported",
+          "x-intellij-html-description":"TG: RCS<br /><br />Decide if group chat is of type ChatType.CLOSED_GROUP_CHAT, <br /> It is type of closed group chat, <br /> 0 for closed group chat not supported, 1 for supported",
+          "default": 0,
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "full_sf_group_chat": {
+          "default": 0,
+          "type": "integer"
+        },
+        "rcs_ft_chunk_size": {
+          "description":"TG: RCS\n\nMessages sent using MSRP can be very large and can be delivered in several SEND requests, where each SEND request contains one chunk of the overall message - see rfc4975. \n TODO !! default in globalsettings is 10240 in code is 0",
+          "x-intellij-html-description":"TG: RCS<br /><br />Messages sent using MSRP can be very large and can be delivered in several SEND requests, where each SEND request contains one chunk of the overall message - see rfc4975. <br /> TODO !! default in globalsettings is 10240 in code is 0",
+          "default": 10240,
+          "type": "integer",
+          "examples": [
+            10240,
+            1048576,
+            262144
+          ]
+        },
+        "rcs_ish_chunk_size": {
+          "description":"TG: RCS\n\nMessages sent using MSRP can be very large and can be delivered in several SEND requests, where each SEND request contains one chunk of the overall message - see rfc4975. \n TODO !! default in globalsettings is 10240 in code is 0",
+          "x-intellij-html-description":"TG: RCS<br /><br />Messages sent using MSRP can be very large and can be delivered in several SEND requests, where each SEND request contains one chunk of the overall message - see rfc4975. <br /> TODO !! default in globalsettings is 10240 in code is 0",
+          "default": 10240,
+          "type": "integer",
+          "examples": [
+            10240,
+            262144
+          ]
+        },
+        "msrp_cema": {
+          "description": "TG: RCS\n\nThe CEMA extension is backward compatible, meaning that CEMA-enabled\n   MSRP endpoints can communicate with non-CEMA-enabled endpoints. \n See more https://tools.ietf.org/html/rfc6714",
+          "x-intellij-html-description": "TG: RCS<br /><br />The CEMA extension is backward compatible, meaning that CEMA-enabled<br />   MSRP endpoints can communicate with non-CEMA-enabled endpoints. <br /> See more https://tools.ietf.org/html/rfc6714",
+          "default": 0,
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "msrp_discard_port": {
+          "description": "TG: RCS\n\nAccording to [RFC6135] and in accordance with [RFC4145], if the a=setup attribute value is \"active\", the port number value should be 9 (discard port).",
+          "x-intellij-html-description": "TG: RCS<br /><br />According to [RFC6135] and in accordance with [RFC4145], if the a=setup attribute value is \"active\", the port number value should be 9 (discard port).",
+          "default": false,
+          "type": "boolean"
+        },
+        "pager_mode_size_limit": {
+          "description": "TG: RCS\n\nMessage size limit in standalone messaging pager mode, when exceeded large message mode will be used.",
+          "x-intellij-html-description": "TG: RCS<br /><br />Message size limit in standalone messaging pager mode, when exceeded large message mode will be used.",
+          "default": 1300,
+          "type": "integer",
+          "examples": [
+            1300,
+            900
+          ]
+        },
+        "conf_subscribe_enabled": {
+          "description": "TG: RCS\n\nSpecify whether device should subscribe for group chat events.",
+          "x-intellij-html-description": "TG: RCS<br /><br />Specify whether device should subscribe for group chat events.",
+          "default": true,
+          "type": "boolean"
+        },
+        "ft_cancel_memory_full": {
+          "description":"TG: RCS\n\nAuto cancel file transfer when disk space not available",
+          "x-intellij-html-description":"TG: RCS<br /><br />Auto cancel file transfer when disk space not available",
+          "default": false,
+          "type": "boolean"
+        },
+        "ft_fallback_all_fail": {
+          "description":"TG: RCS\n\nFile transfer only manually resumed in case of failure",
+          "x-intellij-html-description":"TG: RCS<br /><br />File transfer only manually resumed in case of failure",
+          "default": false,
+          "type": "boolean"
+        },
+        "enable_ft_auto_resumable": {
+          "description":"TG: RCS\n\nSpecify if file transfer should be automatically resumed. \n Also if after next registration Im session with failed file transfer messages will be loaded",
+          "x-intellij-html-description":"TG: RCS<br /><br />Specify if file transfer should be automatically resumed. <br /> Also if after next registration Im session with failed file transfer messages will be loaded",
+          "default": false,
+          "type": "boolean"
+        },
+        "fthttp_over_default_pdn": {
+          "description": "TG: RCS\n\nValue for whether support fthttp with default pdn or not. \n true - only India RJIL, rest: false(no need to add)",
+          "x-intellij-html-description": "TG: RCS<br /><br />Value for whether support fthttp with default pdn or not. <br /> true - only India RJIL, rest: false(no need to add)",
+          "default": false,
+          "type": "boolean"
+        },
+        "fthttp_trust_all_certs": {
+          "description": "TG: RCS\n\nConfigure HttpRequest to trust all certificates",
+          "x-intellij-html-description": "TG: RCS<br /><br />Configure HttpRequest to trust all certificates",
+          "default": false,
+          "type": "boolean"
+        },
+        "legacy_latching": {
+          "description":"TG: RCS\n\nShould be set true for RCS UP profiles only. \n Set if fallback to SMS should happen or not.\n  In case of only UP, set \"true\" CPR/BB: false(not need to add)",
+          "x-intellij-html-description":"TG: RCS<br /><br />Should be set true for RCS UP profiles only. <br /> Set if fallback to SMS should happen or not.<br />  In case of only UP, set \"true\" CPR/BB: false(not need to add)",
+          "default": false,
+          "type": "boolean"
+        },
+        "rcs_show_main_switch": {
+          "description":"TG: RCS\n\nSpecify if RCS main switch should be visible for user in RCSSetting. \n 0 to not display, 1 to display",
+          "x-intellij-html-description":"TG: RCS<br /><br />Specify if RCS main switch should be visible for user in RCSSetting. <br /> 0 to not display, 1 to display",
+          "default": 0,
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "show_rcs_regi_icon": {
+          "description": "TG: RCS\n\nShow RCS icon when registered.\n Works only on DEBUGGABLE soft (eng) \n 1 for true, 0 for false",
+          "x-intellij-html-description": "TG: RCS<br /><br />Show RCS icon when registered.<br /> Works only on DEBUGGABLE soft (eng) <br /> 1 for true, 0 for false",
+          "default": 1,
+          "type": "integer",
+          "enum": [
+            1,
+            0
+          ]
+        },
+        "rcs_im_include_declined_user": {
+          "description": "",
+          "x-intellij-html-description": "",
+          "default": false,
+          "type": "boolean"
+        },
+        "support_chat_on_default_mms_app": {
+          "description":"TG: RCS\n\nSpecify if autoconfig should start when changing messaging app from non-Samsung to Samsung one. \n 1 : Re-registration \n 2: Deregistration and autoconfig for RCS dual registration \n 3: Deregistration and init-registration \n 4: Removes messages and stat autoconfiguration with delay \n 5: Re-registration and autoconfig \n other: do nothing ",
+          "x-intellij-html-description":"TG: RCS<br /><br />Specify if autoconfig should start when changing messaging app from non-Samsung to Samsung one. <br /> 1 : Re-registration <br /> 2: Deregistration and autoconfig for RCS dual registration <br /> 3: Deregistration and init-registration <br /> 4: Removes messages and stat autoconfiguration with delay <br /> 5: Re-registration and autoconfig <br /> other: do nothing ",
+          "default": 0,
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "auth_proxy_ip": {
+          "description": "TG: CALL\n\nXCAP address",
+          "x-intellij-html-description": "TG: CALL<br /><br />XCAP address",
+          "default": "10.40.140.134",
+          "type": "string"
+        },
+        "auth_proxy_port": {
+          "description": "TG: CALL\n\nXCAP port",
+          "x-intellij-html-description": "TG: CALL<br /><br />XCAP port",
+          "default": 8090,
+          "type": "integer"
+        },
+        "bsf_ip": {
+          "description": "TG: CALL\n\nAddress of the BSF server",
+          "x-intellij-html-description": "TG: CALL<br /><br />Address of the BSF server",
+          "default": "10.40.140.134",
+          "type": "string"
+        },
+        "bsf_port": {
+          "description": "TG: CALL\n\nPort that will be used for BSF",
+          "x-intellij-html-description": "TG: CALL<br /><br />Port that will be used for BSF",
+          "default": 8090,
+          "type": "integer"
+        },
+        "http_username": {
+          "description": "TG: CALL\n\nUser name used when request the ss using HTTP without GBA. If setting is empty user name will be made based on IMPU",
+          "x-intellij-html-description": "TG: CALL<br /><br />User name used when request the ss using HTTP without GBA. If setting is empty user name will be made based on IMPU",
+          "default": "",
+          "type": "string"
+        },
+        "http_password": {
+          "description": "TG: CALL\n\nPassword used(if required) when request the ss using HTTP without GBA",
+          "x-intellij-html-description": "TG: CALL<br /><br />Password used(if required) when request the ss using HTTP without GBA",
+          "default": "test",
+          "type": "string"
+        },
+        "xcap_root_uri": {
+          "description": "TG:CALL \n\nShould be provided when a specific prefix must be included in URI. When no prefix is provided (blank or \"/\") then the feature should be left as default.",
+          "x-intellij-html-description": "TG:CALL <br /><br />Should be provided when a specific prefix must be included in URI. When no prefix is provided (blank or \"/\") then the feature should be left as default.",
+          "default": "",
+          "type": "string"
+        },
+        "xcap_root_uri_pref": {
+          "description": "TG:CALL \n\nMake the uri based on SIM data or device configuration.XCAP_ROOT_URI_PREF_DB = 0;\nXCAP_ROOT_URI_PREF_MSISDN = 1;\nXCAP_ROOT_URI_PREF_IMSI = 2;\nXCAP_ROOT_URI_PREF_MSISDN_WITH_DOMAIN = 3;",
+          "x-intellij-html-description": "TG:CALL <br /><br />Make the uri based on SIM data or device configuration.XCAP_ROOT_URI_PREF_DB = 0;<br />XCAP_ROOT_URI_PREF_MSISDN = 1;<br />XCAP_ROOT_URI_PREF_IMSI = 2;<br />XCAP_ROOT_URI_PREF_MSISDN_WITH_DOMAIN = 3;",
+          "default": 0,
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "deprecationMessage": "Note: Based on source code: 1, 2 and 3 have exactly the same meaning"
+        },
+        "xdm_user_agent": {
+          "description": "TG:CALL \n\nThis setting is used to create XCAP user agent header.",
+          "x-intellij-html-description": "TG:CALL <br /><br />This setting is used to create XCAP user agent header.",
+          "default": "3gpp-gba",
+          "type": "string"
+        },
+        "apn_selection": {
+          "description": "TG: CALL\n\nAPN which will be used for Ut",
+          "x-intellij-html-description": "TG: CALL<br /><br />APN which will be used for Ut",
+          "default": "xcap",
+          "type": "string"
+        },
+        "enable_gba": {
+          "description": "NOT_USED?",
+          "x-intellij-html-description": "NOT_USED?",
+          "default": 1,
+          "type": "integer"
+        },
+        "ims_enabled": {
+          "description": "TG: REGI\n\nWhen set to \"false\" profiles won't be loaded.",
+          "x-intellij-html-description": "TG: REGI<br /><br />When set to \"false\" profiles won't be loaded.",
+          "default": true,
+          "type": "boolean"
+        },
+        "iwlan_pani_format": {
+          "description": "TG: REGI\n\nTemplate for PANI header format in IWLAN\nAllowed template elements: <PREFIX> (IEEE-802.11), <NODE_ID> (i-wlan-node-id), <COUNTRY> (note: need supported_geolocation_phase in imsprofile set >= 1), <TIMESTAMP>",
+          "x-intellij-html-description": "TG: REGI<br /><br />Template for PANI header format in IWLAN<br />Allowed template elements: <PREFIX> (IEEE-802.11), <NODE_ID> (i-wlan-node-id), <COUNTRY> (note: need supported_geolocation_phase in imsprofile set >= 1), <TIMESTAMP>",
+          "default": "<PREFIX><NODE_ID>",
+          "type": "string",
+          "examples": [
+            "<PREFIX><NODE_ID><COUNTRY>",
+            "<PREFIX><COUNTRY><NODE_ID>",
+            "<PREFIX><NODE_ID><COUNTRY><TIMESTAMP>"
+          ]
+        },
+        "dm_app_id": {
+          "default": "ap2001",
+          "type": "string"
+        },
+        "dm_user_disp_name": {
+          "default": "APCPS",
+          "type": "string"
+        },
+        "enable_group_chat_list_retrieve": {
+          "default": 0,
+          "type": "integer"
+        },
+        "voice_domain_pref_eutran": {
+          "description": "TG: REGI\n\nDescribes voice domain preference for E-UTRAN\n-1 - not used, 1 - CSVoiceOnly, 2 - CSVoicePreferred, 3 - IMSPSVoicePreferred, 4 - IMSPSVoiceOnly\nMost used are 3 or 1",
+          "x-intellij-html-description": "TG: REGI<br /><br />Describes voice domain preference for E-UTRAN<br />-1 - not used, 1 - CSVoiceOnly, 2 - CSVoicePreferred, 3 - IMSPSVoicePreferred, 4 - IMSPSVoiceOnly<br />Most used are 3 or 1",
+          "default": 3,
+          "type": "integer",
+          "enum": [
+            -1,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "voice_domain_pref_utran": {
+          "description": "TG: REGI\n\nDescribes voice domain preference for UTRAN\n-1 - not used, 1 - CSVoiceOnly, 2 - CSVoicePreferred, 3 - IMSPSVoicePreferred, 4 - IMSPSVoiceOnly\nThis setting is almost not used!",
+          "x-intellij-html-description": "TG: REGI<br /><br />Describes voice domain preference for UTRAN<br />-1 - not used, 1 - CSVoiceOnly, 2 - CSVoicePreferred, 3 - IMSPSVoicePreferred, 4 - IMSPSVoiceOnly<br />This setting is almost not used!",
+          "default": 1,
+          "type": "integer",
+          "enum": [
+            -1,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "sms_over_ip_indication": {
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_domain_setting": {
+          "description": "TG: CALL\n\nThe SS_domain_setting leaf indicates the network operator's preference for the selection of the domain used by the UE when performing supplementary services (SS) setting control for voice services. \n\n1. CS always : Ut not supported\n2. PS always : UE will use XCAP always (if PS is not registered, UE will return error).\n3. PS only if VoLTE registered : UE will use XCAP only if VoLTE is registered.\n4. PS only if PS is registered : UE will use XCAP when PS is registered (if PS is not registered, UE will try CS domain).",
+          "x-intellij-html-description": "TG: CALL<br /><br />The SS_domain_setting leaf indicates the network operator's preference for the selection of the domain used by the UE when performing supplementary services (SS) setting control for voice services. <br /><br />1. CS always : Ut not supported<br />2. PS always : UE will use XCAP always (if PS is not registered, UE will return error).<br />3. PS only if VoLTE registered : UE will use XCAP only if VoLTE is registered.<br />4. PS only if PS is registered : UE will use XCAP when PS is registered (if PS is not registered, UE will try CS domain).",
+          "x-intellij-case-insensitive": true,
+          "default": "CS",
+          "type": "string",
+          "enum": [
+            "CS",
+            "CS_ALWAYS",
+            "PS",
+            "PS_ALWAYS",
+            "PS_ONLY_VOLTEREGIED",
+            "PS_ONLY_PSREGIED"
+          ]
+        },
+        "sms_write_uicc": {
+          "default": "0",
+          "type": "string"
+        },
+        "ussd_domain_setting": {
+          "description": "TG: CALL\n\nTo allow for selection of appropriate method for UE originating USSD request delivery, the following applies for a UE when the UE supports both the USSD using IMS and the USSD using CS domain. The UE shall first attempt USSD requests in the domain used for originating voice sessions. If an attempt to deliver the USSD request using IMS fails due to missing network support and the UE is registered in the CS domain, the UE shall attempt to deliver the USSD request using the CS domain.",
+          "x-intellij-html-description": "TG: CALL<br /><br />To allow for selection of appropriate method for UE originating USSD request delivery, the following applies for a UE when the UE supports both the USSD using IMS and the USSD using CS domain. The UE shall first attempt USSD requests in the domain used for originating voice sessions. If an attempt to deliver the USSD request using IMS fails due to missing network support and the UE is registered in the CS domain, the UE shall attempt to deliver the USSD request using the CS domain.",
+          "default": "CS",
+          "type": "string",
+          "enum": [
+            "CS",
+            "PS",
+            "PSCS"
+          ]
+        },
+        "emergency_domain_setting": {
+          "description": "TG: CALL\n\nEmergency Service is not a subscription service and therefore, when the UE has roamed out of its home network, emergency services shall not be provided by the home network and shall be provided in the roamed-to network if the roamed-to network supports emergency sessions. If a UE has sufficient credentials, it shall initiate an emergency registration with the network (requiring the involvement of the home network). The CSCFs providing service for emergency sessions may be different from the CSCFs involved in the other IMS services. If the registration fails, the UE may attempt an anonymous emergency call.\nIf an emergency session establishment request is routed to a P-CSCF located in the home network, the home network should be able to detect that the session is for emergency service (whether indicated as such or not) and respond to the UE indicating that the UE should initiate an emergency session in the visited network (e.g. via the CS domain of the visited network).",
+          "x-intellij-html-description": "TG: CALL<br /><br />Emergency Service is not a subscription service and therefore, when the UE has roamed out of its home network, emergency services shall not be provided by the home network and shall be provided in the roamed-to network if the roamed-to network supports emergency sessions. If a UE has sufficient credentials, it shall initiate an emergency registration with the network (requiring the involvement of the home network). The CSCFs providing service for emergency sessions may be different from the CSCFs involved in the other IMS services. If the registration fails, the UE may attempt an anonymous emergency call.<br />If an emergency session establishment request is routed to a P-CSCF located in the home network, the home network should be able to detect that the session is for emergency service (whether indicated as such or not) and respond to the UE indicating that the UE should initiate an emergency session in the visited network (e.g. via the CS domain of the visited network).",
+          "default": "CS",
+          "type": "string",
+          "enum": [
+            "CS",
+            "PS"
+          ]
+        },
+        "no_sim_emergency_domain_setting": {
+          "description": "TG: CALL\n\nIn case of a SIM-less emergency call, or in case of a non-registered (U)SIM emergency call, a non-dialable callbacknumber shall be used to identify the target UE. The format and structure of the non-dialable callback number is according to national or regional regulations. The non-dialable callback number in North America shall, according to J-STD-036 [32], be the digits 911 + the last 7 digits of IMEI expressed in decimal numbers.",
+          "x-intellij-html-description": "TG: CALL<br /><br />In case of a SIM-less emergency call, or in case of a non-registered (U)SIM emergency call, a non-dialable callbacknumber shall be used to identify the target UE. The format and structure of the non-dialable callback number is according to national or regional regulations. The non-dialable callback number in North America shall, according to J-STD-036 [32], be the digits 911 + the last 7 digits of IMEI expressed in decimal numbers.",
+          "default": "CS",
+          "type": "string",
+          "enum": [
+            "CS",
+            "PS"
+          ]
+        },
+        "volte_domestic_default_enabled": {
+          "description": "TG: REGI\n\nIndicates if VoLTE switch is enabled by default in the home network.\nDefault value: true",
+          "x-intellij-html-description": "TG: REGI<br /><br />Indicates if VoLTE switch is enabled by default in the home network.<br />Default value: true",
+          "default": true,
+          "type": "boolean"
+        },
+        "vt_default_enabled": {
+          "default": true,
+          "type": "boolean"
+        },
+        "srvcc_version": {
+          "description": "TG: CALL\n\nSets SRVCC version.",
+          "x-intellij-html-description": "TG: CALL<br /><br />Sets SRVCC version.",
+          "default": 0,
+          "type": "integer"
+        },
+        "ss_enable_in_roaming": {
+          "description": "TG: CALL\n\nSwitch for enabling/disabling UT in roaming area",
+          "x-intellij-html-description": "TG: CALL<br /><br />Switch for enabling/disabling UT in roaming area",
+          "default": true,
+          "type": "boolean"
+        },
+        "ss_callwaiting_by_network": {
+          "description": "TG: CALL\n\nSets if the call waiting feature is handled locally on UE (terminal based) or the info is stored on the server (network)",
+          "x-intellij-html-description": "TG: CALL<br /><br />Sets if the call waiting feature is handled locally on UE (terminal based) or the info is stored on the server (network)",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_callbarring_by_network": {
+          "description": "TG: CALL\n\n\"Sets if the call barring feature is handled locally on UE (terminal based) or the info is stored on the server (network)",
+          "x-intellij-html-description": "TG: CALL<br /><br />\"Sets if the call barring feature is handled locally on UE (terminal based) or the info is stored on the server (network)",
+          "default": true,
+          "type": "boolean"
+        },
+        "ss_support_callbarring": {
+          "description": "TG: CALL\n\n\"Sets whether the call barring feature is supported or not , if not , upload error",
+          "x-intellij-html-description": "TG: CALL<br /><br />\"ets whether the call barring feature is supported or not , if not , upload error",
+          "default": true,
+          "type": "boolean"
+        },
+        "ss_clip_clir_by_network": {
+          "description": "TG: CALL\n\nSets if the CLIP or CLIR feature is handled locally on UE (terminal based) or the info is stored on the server (network)",
+          "x-intellij-html-description": "TG: CALL<br /><br />Sets if the CLIP or CLIR feature is handled locally on UE (terminal based) or the info is stored on the server (network)",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_support_tls": {
+          "description": "TG: CALL\n\nIndicates if TLS is to be used for Ut",
+          "x-intellij-html-description": "TG: CALL<br /><br />Indicates if TLS is to be used for Ut",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_select_ip_version": {
+          "description": "TG: CALL\n\nSets the IP version used for SS",
+          "x-intellij-html-description": "TG: CALL<br /><br />Sets the IP version used for SS",
+          "default": "default",
+          "type": "string",
+          "enum": [
+            "ipv4only",
+            "ipv6only",
+            "naptr",
+            "srv",
+            "ipv4pref",
+            "ipv6pref",
+            "ipv4v6",
+            "default"
+          ]
+        },
+        "ss_select_mode": {
+          "description": "TG: CALL\n\nThis feature lets set the device to send all CF rules in one request or send a request for each CF rule",
+          "x-intellij-html-description": "TG: CALL<br /><br />This feature lets set the device to send all CF rules in one request or send a request for each CF rule",
+          "default": true,
+          "type": "boolean"
+        },
+        "ss_cb_select_mode": {
+          "description": "TG: CALL\n\nThis feature lets set the device to send all CB rules in one request or send a request for each CB rule",
+          "x-intellij-html-description": "TG: CALL<br /><br />This feature lets set the device to send all CB rules in one request or send a request for each CB rule",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_support_media": {
+          "description": "TG: CALL\n\nIf enabled, relevant <media> tag will be added to the requests (audio/video) and only rules such tag will be searched for. If disabled, no media tag will be added.\n\nfalse: disabled (default)\ntrue: enabled",
+          "x-intellij-html-description": "TG: CALL<br /><br />If enabled, relevant <media> tag will be added to  the requests (audio/video) and only rules such tag will be searched for. If disabled, no media tag will be added.<br /><br />false: disabled (default)<br />true: enabled",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_support_alternative_media_for_cf": {
+          "description": "TG: CALL\n\nIf both ss_support_media and this feature are enabled, when a call forwarding rule with media tag is missing,\n call forwarding rules without the tag are also checked",
+          "x-intellij-html-description": "TG: CALL<br /><br />If both ss_support_media and this feature are enabled, when a call forwarding rule with media tag is missing,<br />call forwarding rules without the tag are also checked",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_support_alternative_media_for_cb": {
+          "description": "TG: CALL\n\nIf both ss_support_media and this feature are enabled, when a call barring rule with media tag is missing,\n call barring rules without the tag are also checked",
+          "x-intellij-html-description": "TG: CALL<br /><br />If both ss_support_media and this feature are enabled, when a call barring rule with media tag is missing,<br />call barring rules without the tag are also checked",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_csfb_error_code_list": {
+          "description": "TG: CALL\n\nAfter receiving Http error code from Http response, if the error exists in this list CSFB will be triggered. Otherwise, only 403.",
+          "x-intellij-html-description": "TG: CALL<br /><br />After receiving Http error code from Http response, if the error exists in this list CSFB will be triggered. Otherwise, only 403.",
+          "default": ["all"],
+          "type": "array"
+        },
+        "ss_support_ss_namespace": {
+          "description": "TG: CALL\n\nAdd \"ss\" namespace on condition element",
+          "x-intellij-html-description": "TG: CALL<br /><br />Add \"ss\" namespace on condition element",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_support_simservs_retry": {
+          "description": "TG: CALL\n\nWhen the request to check the whole simserv doc fails with 404 error, it is retried",
+          "x-intellij-html-description": "TG: CALL<br /><br />When the request to check the whole simserv doc fails with 404 error, it is retried",
+          "default": true,
+          "type": "boolean"
+        },
+        "ss_disconnect_xcap_pdn": {
+          "description": "TG: CALL\n\nEnables disconnection of the xcap PDN by UE. If disabled, it will be disconnected only by NW.",
+          "x-intellij-html-description": "TG: CALL<br /><br />Enables disconnection of the xcap PDN by UE. If disabled, it will be disconnected only by NW.",
+          "default": true,
+          "type": "boolean"
+        },
+        "ss_delay_disconnect_xcap_pdn": {
+          "description": "TG: CALL\n\nSets the timeout (in seconds) before the xcap PDN will be disconnected",
+          "x-intellij-html-description": "TG: CALL<br /><br />Sets the timeout (in seconds) before the xcap PDN will be disconnected",
+          "default": 5,
+          "type": "integer"
+        },
+        "ss_reuse_connection": {
+          "description": "TG: CALL\n\nCreate one TCP connection for each XCAP PDN.",
+          "x-intellij-html-description": "TG: CALL<br /><br />Create one TCP connection for each XCAP PDN.",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_cf_busy_ruleid": {
+          "description": "TG: CALL\n\nDefault ID used in \"Call forward when busy\" XCAP rule. Value for parameter \"id\"",
+          "x-intellij-html-description": "TG: CALL<br /><br />Default ID used in \"Call forward when busy\" XCAP rule. Value for parameter \"id\"",
+          "default": "call-diversion-busy",
+          "type": "string"
+        },
+        "ss_cf_not_reachable_ruleid": {
+          "description": "TG: CALL\n\nDefault ID used in \"Call forward when unreachable\" XCAP rule. Value for parameter \"id\"",
+          "x-intellij-html-description": "TG: CALL<br /><br />Default ID used in \"Call forward when unreachable\" XCAP rule. Value for parameter \"id\"",
+          "default": "call-diversion-not-reachable",
+          "type": "string"
+        },
+        "ss_cf_no_answer_ruleId": {
+          "description": "TG: CALL\n\nDefault ID used in \"Call forward when unanswered\" XCAP rule. Value for parameter \"id\"",
+          "x-intellij-html-description": "TG: CALL<br /><br />Default ID used in \"Call forward when unanswered\" XCAP rule. Value for parameter \"id\"",
+          "default": "call-diversion-no-reply",
+          "type": "string"
+        },
+        "ss_cf_not_logged_in_ruleid": {
+          "description": "TG: CALL\n\nDefault ID used in \"Call forward when not logged in\" XCAP rule. Value for parameter \"id\"",
+          "x-intellij-html-description": "TG: CALL<br /><br />Default ID used in \"Call forward when not logged in\" XCAP rule. Value for parameter \"id\"",
+          "default": "call-diversion-not-logged-in",
+          "type": "string"
+        },
+        "ss_cf_unconditional_ruleid": {
+          "description": "TG: CALL\n\nDefault ID used in \"Call forward always\" XCAP rule. Value for parameter \"id\"",
+          "x-intellij-html-description": "TG: CALL<br /><br />Default ID used in \"Call forward always\" XCAP rule. Value for parameter \"id\"",
+          "default": "call-diversion-unconditional",
+          "type": "string"
+        },
+        "ss_ocb_unconditional_ruleid": {
+          "description": "TG: SS\n\nId of barring outgoing communication XCAP rule.\n\nReference: 3GPP TS 24.315",
+          "x-intellij-html-description": "TG: SS<br /><br />Id of barring outgoing communication XCAP rule.<br /><br />Reference: 3GPP TS 24.315",
+          "default": "",
+          "type": "string"
+        },
+        "ss_ocb_international_ruleid": {
+          "description": "TG: SS\n\nId of barring outgoing international communication XCAP rule.\n\nReference: 3GPP TS 24.315",
+          "x-intellij-html-description": "TG: SS<br /><br />Id of barring outgoing international communication XCAP rule.<br /><br />Reference: 3GPP TS 24.315",
+          "default": "",
+          "type": "string"
+        },
+        "ss_ocb_international_ex_home_ruleid": {
+          "description": "TG: SS\n\nId of XCAP rule for barring outgoing international communication except those directed to the home PLMN country.\n\nReference: 3GPP TS 24.315",
+          "x-intellij-html-description": "TG: SS<br /><br />Id of XCAP rule for barring outgoing international communication except those directed to the home PLMN country.<br /><br />Reference: 3GPP TS 24.315",
+          "default": "",
+          "type": "string"
+        },
+        "ss_icb_unconditional_ruleid": {
+          "description": "TG: SS\n\nId for barring incoming communication XCAP rule. If empty, Id is generated in code.\n\nReference: 3GPP TS 24.315",
+          "x-intellij-html-description": "TG: SS<br /><br />Id for barring incoming communication XCAP rule. If empty, Id is generated in code.<br /><br />Reference: 3GPP TS 24.315",
+          "default": "",
+          "type": "string"
+        },
+        "ss_icb_roaming_ruleid": {
+          "description": "TG: SS\n\nId of XCAP rule for barring incoming communication when roaming outside the home PLMN country.\nIf empty, Id is generated in code.\n\nReference: 3GPP TS 24.315",
+          "x-intellij-html-description": "TG: SS<br /><br />Id of XCAP rule for barring incoming communication when roaming outside the home PLMN country.<br />If empty, Id is generated in code.<br /><br />Reference: 3GPP TS 24.315",
+          "default": "",
+          "type": "string"
+        },
+        "ss_icb_anonymous_ruleid": {
+          "description": "TG: SS\n\nId of anonymous communication rejection XCAP rule.\n\nReference: 3GPP TS 24.611",
+          "x-intellij-html-description": "TG: SS<br /><br />Id of anonymous communication rejection XCAP rule.<br /><br />Reference: 3GPP TS 24.611",
+          "deprecationMessage": "It doesn't have any effect because it is not used in code.",
+          "default": "",
+          "type": "string"
+        },
+        "ss_timer_for_403": {
+          "description": "TG: SS\n\nIf the UE receives 403 error from the network, the SS request goes through the CS domain during this timer seconds. Timer : second, -1 : reboot, 0 : no CSFB",
+          "x-intellij-html-description": "TG: SS<br /><br />If the UE receives 403 error from the network, the SS request goes through the CS domain until the device is rebooted. Timer : second, -1 : reboot, 0 : no CSFB",
+          "default": -1,
+          "type": "integer"
+        },
+        "ss_is_need_get_first": {
+          "description": "TG: SS\n\nWhen boot completed, get the supplementary service information automatically",
+          "x-intellij-html-description": "TG: SS<br /><br />When boot completed, get the supplementary service information automatically",
+          "default": true,
+          "type": "boolean"
+        },
+        "ss_is_need_international_number": {
+          "description": "TG: SS\n\nWhen PUT call forwarding, this value indicates whether to change the number to an international number format or not.\n\nIf you change this ss_is_need_international_number to true, check again if Mno.java countryIso value meets the standard(ISO 3166).\n\nRefer to \"https://www.iso.org/obp/ui/#search\" or \"https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes\"",
+          "x-intellij-html-description": "TG: SS<br /><br />When PUT call forwarding, this value indicates whether to change the number to an international number format or not.<br /><br />If you change this ss_is_need_international_number to true, check again if Mno.java countryIso value meets the standard(ISO 3166).<br /><br />Refer to \"https://www.iso.org/obp/ui/#search\" or \"https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes\"",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_need_separate_CFNL": {
+          "description": "TG: SS\n\nIndicates whether CFNL rule is supported. When supported makes the single rule and transmit call-forwarding-not-logged separately.",
+          "x-intellij-html-description": "TG: SS<br /><br />Indicates whether CFNL rule is supported. When supported makes the single rule and transmit call-forwarding-not-logged separately.",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_need_separate_CFNRy": {
+          "description": "TG: SS\n\nMakes the single rule and transmit call-forwarding-not-reachable separately. When this feature is enabled, the timer for CFNR will be sent separately",
+          "x-intellij-html-description": "TG: SS<br /><br />Makes the single rule and transmit call-forwarding-not-reachable separately. When this feature is enabled, the timer for CFNR will be sent separately",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_need_separate_CFA": {
+          "description": "TG: SS\n\nMakes the single rule and transmit all conditions separately.",
+          "x-intellij-html-description": "TG: SS<br /><br />Makes the single rule and transmit all conditions separately.",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_error_msg_display": {
+          "description": "TG: SS\n\nIf UE receives an error on the network containing the phrase, UE displays an error pop-up containing the error string",
+          "x-intellij-html-description": "TG: SS<br /><br />If UE receives an error on the network containing the phrase, UE displays an error pop-up containing the error string",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_insert_new_rule": {
+          "description": "TG: SS\n\nIf network doesn't have specific rule for SS included in 200 OK response, UE doesn't send PUT for that rule.",
+          "x-intellij-html-description": "TG: SS<br /><br />If network doesn't have specific rule for SS included in 200 OK response, UE doesn't send PUT for that rule.",
+          "default": true,
+          "type": "boolean"
+        },
+        "ss_no_media_for_CB": {
+          "description": "TG: SS\n\nThis feature should be only enabled, when ss_support_media is set to true (media are enabled for SS) and operator only does not support media for call barring. Then device will only send voice information in call barring rule",
+          "x-intellij-html-description": "TG: SS<br /><br />This feature should be only enabled, when ss_support_media is set to true (media are enabled for SS) and operator only does not support media for call barring. Then device will only send voice information in call barring rule",
+          "default": false,
+          "type": "boolean"
+        },
+        "ss_cf_uri_type": {
+          "description": "TG: CALL\n\nSets what type of URI will be used for target numbers in CF requests",
+          "x-intellij-html-description": "TG: CALL<br /><br />Sets what type of URI will be used for target numbers in CF requests",
+          "default": "SIP",
+          "type": "string",
+          "enum": [
+            "SIP",
+            "TEL"
+          ]
+        },
+        "ss_cf_set_all_media": {
+          "type": "boolean",
+          "default": false
+        },
+        "show_regi_info_in_sec_settings": {
+          "description": "TG: REGI\n\nDefines whether IMS registration status should be displayed in SIM card status menu.\nIn imsservice it is only loaded into database, but it is actually checked and used in /apps/SecSettings/src/com/samsung/android/settings/deviceinfo/statusinfo/simstatus/SecSimStatus.java.\n\ndefault value: true",
+          "x-intellij-html-description": "TG: REGI<br /><br />Defines whether IMS registration status should be displayed in SIM card status menu.<br />In imsservice it is only loaded into database, but it is actually checked and used in /apps/SecSettings/src/com/samsung/android/settings/deviceinfo/statusinfo/simstatus/SecSimStatus.java.<br /><br />default value: true",
+          "default": true,
+          "type": "boolean"
+        },
+        "show_volte_regi_icon": {
+          "description": "TG: REGI\n\nIndicates if VoLTE registration icon is visible or not.\nDefault value: false",
+          "x-intellij-html-description": "TG: REGI<br /><br />Indicates if VoLTE registration icon is visible or not.<br />Default value: false",
+          "default": false,
+          "type": "boolean"
+        },
+        "volte_regi_icon_id": {
+          "description": "TG: REGI\n\nSets VoLTE Registration Icon for single SIM devices.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Sets VoLTE Registration Icon for single SIM devices.",
+          "default": "stat_sys_data_volte",
+          "type": "string",
+          "examples": [
+            "stat_sys_voz_4g",
+            "stat_sys_data_volte_amx_tce"
+          ]
+        },
+        "volte_regi_icon_id1": {
+          "description": "TG: REGI\n\nSets VoLTE Registration Icon for sim slot 1 in case of dual SIM devices.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Sets VoLTE Registration Icon for sim slot 1 in case of dual SIM devices.",
+          "default": "stat_sys_data_volte1",
+          "type": "string",
+          "examples": [
+            "stat_sys_voz_4g_1",
+            "stat_sys_data_volte_amx_tce_1"
+          ]
+        },
+        "volte_regi_icon_id2": {
+          "description": "TG: REGI\n\nSets VoLTE Registration Icon for sim slot 2 in case of dual SIM devices.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Sets VoLTE Registration Icon for sim slot 2 in case of dual SIM devices.",
+          "default": "stat_sys_data_volte2",
+          "type": "string",
+          "examples": [
+            "stat_sys_voz_4g_2",
+            "stat_sys_data_volte_amx_tce_2"
+          ]
+        },
+        "separate_vo5g_icon": {
+          "description": "TG: REGI\n\nIndicates if Vo5g registration icon will be separated (true) or not (false).\nDefault value: false(same with volte).",
+          "x-intellij-html-description": "TG: REGI<br /><br />Indicates if Vo5g registration icon will be separated (true) or not (false).<br />Default value: false(same with volte).",
+          "default": false,
+          "type": "boolean"
+        },
+        "vo5g_regi_icon_id": {
+          "description": "TG: REGI\n\nSets Vo5g Registration Icon for single SIM devices.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Sets Vo5G Registration Icon for single SIM devices.",
+          "default": "stat_sys_data_volte",
+          "type": "string",
+          "examples": [
+            "stat_sys_data_vo5g"
+          ]
+        },
+        "vo5g_regi_icon_id1": {
+          "description": "TG: REGI\n\nSets Vo5g Registration Icon for sim slot 1 in case of dual SIM devices.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Sets Vo5G Registration Icon for sim slot 1 in case of dual SIM devices.",
+          "default": "stat_sys_data_volte1",
+          "type": "string",
+          "examples": [
+            "stat_sys_data_vo5g1"
+          ]
+        },
+        "vo5g_regi_icon_id2": {
+          "description": "TG: REGI\n\nSets Vo5g Registration Icon for sim slot 2 in case of dual SIM devices.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Sets Vo5G Registration Icon for sim slot 2 in case of dual SIM devices.",
+          "default": "stat_sys_data_volte2",
+          "type": "string",
+          "examples": [
+            "stat_sys_data_vo5g2"
+          ]
+        },
+        "show_vowifi_regi_icon": {
+          "description": "TG: REGI\n\nIndicates if VoWIFI registration icon will be visible (true) or not (false).\nDefault value: true(visible).",
+          "x-intellij-html-description": "TG: REGI<br /><br />Indicates if VoWIFI registration icon will be visible (true) or not (false).<br />Default value: true(visible).",
+          "default": true,
+          "type": "boolean"
+        },
+        "vowifi_regi_icon_id": {
+          "description": "TG: REGI\n\nSets VoWiFi Registration Icon for single SIM devices.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Sets VoWiFi Registration Icon for single SIM devices.",
+          "default": "stat_sys_wfc",
+          "type": "string",
+          "examples": [
+            "stat_notify_wfc_telenor_nor",
+            "stat_sys_voz_wifi"
+          ]
+        },
+        "vowifi_regi_icon_id1": {
+          "description": "TG: REGI\n\nSets VoWiFi Registration Icon for sim slot 1 in case of dual SIM devices.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Sets VoWiFi Registration Icon for sim slot 1 in case of dual SIM devices.",
+          "default": "stat_sys_wfc_1",
+          "type": "string",
+          "examples": [
+            "stat_notify_wfc_telenor_nor_1",
+            "stat_sys_voz_wifi_1"
+          ]
+        },
+        "vowifi_regi_icon_id2": {
+          "description": "TG: REGI\n\nSets VoWiFi Registration Icon for sim slot 2 in case of dual SIM devices.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Sets VoWiFi Registration Icon for sim slot 2 in case of dual SIM devices.",
+          "default": "stat_sys_wfc_2",
+          "type": "string",
+          "examples": [
+            "stat_notify_wfc_telenor_nor_2",
+            "stat_sys_voz_wifi_2"
+          ]
+        },
+        "vowifi_operator_label": {
+          "description": "TG: REGI\n\nSets notification on status bar when VoWiFi is registered.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Sets notification on status bar when VoWiFi is registered.",
+          "default": "",
+          "type": "string",
+          "examples": [
+            "Vodafone WiFi volani",
+            "Vodafone WiFi Calling",
+            "Vodafone NL Wi-Fi"
+          ]
+        },
+        "vowifi_operator_label_ongoing": {
+          "description": "TG: REGI\n\nEnable ongoing notification when VoWiFi registered.\nOngoing means that the notification cannot be dismissed by the user.\nPossible values: 0 (disabled), 1 (enabled).\nDefault value: 0 (disabled).",
+          "x-intellij-html-description": "TG: REGI<br /><br />Enable ongoing notification when VoWiFi registered.<br />Ongoing means that the notification cannot be dismissed by the user.<br />Possible values: 0 (disabled), 1 (enabled).<br />Default value: 0 (disabled).",
+          "default": 0,
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "vowifi_subtext_on_lockscreen": {
+          "description": "TG: REGI\n\nSets notification on lock screen when VoWiFi is registered.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Sets notification on lock screen when VoWiFi is registered.",
+          "default": "",
+          "type": "string",
+          "examples": [
+            "SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA"
+
+          ]
+        },
+        "remove_icon_nosvc": {
+          "description": "TG: REGI\n\nRemoves VoLTE icon in No Service state.\nPossible values:  0 (icon stays), 1 (icon is being removed).\nDefault value: 0.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Removes VoLTE icon in No Service state.<br />Possible values:  0 (icon stays), 1 (icon is being removed).<br />Default value: 0.",
+          "default": 0,
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "all_csfb_error_code_list": {
+          "description": "TG: CALL\n\nAfter receiving error code from this list for INVITE csfb will be triggered.",
+          "x-intellij-html-description": "TG: CALL<br /><br />After receiving error code from this list for INVITE csfb will be triggered.",
+          "default": [380,1117],
+          "type": "array"
+        },
+        "voice_csfb_error_code_list": {
+          "description": "TG: CALL\n\nAfter receiving error code from this list for INVITE csfb will be triggered.",
+          "x-intellij-html-description": "TG: CALL<br /><br />After receiving error code from this list for INVITE csfb will be triggered.",
+          "default": [],
+          "type": "array"
+        },
+        "video_csfb_error_code_list": {
+          "description": "TG: CALL\n\nAfter receiving error code from this list for INVITE csfb will be triggered.",
+          "x-intellij-html-description": "TG: CALL<br /><br />After receiving error code from this list for INVITE csfb will be triggered.",
+          "default": [],
+          "type": "array"
+        },
+        "e911_csfb_error_code_list": {
+          "description": "TG: CALL\n\nAfter receiving error code from this list for INVITE csfb will be triggered.",
+          "x-intellij-html-description": "TG: CALL<br /><br />After receiving error code from this list for INVITE csfb will be triggered.",
+          "default": [],
+          "type": "array"
+        },
+        "numbers_with_geoloc_required_list": {
+          "description": "TG: CALL\n\nCalls to numbers on this list will have geolocation triggered and included in the selected SIP messaged.",
+          "x-intellij-html-description": "TG: CALL<br /><br />Calls to numbers on this list will have geolocation triggered and included in the selected SIP messaged.",
+          "default": [],
+          "type": "array"
+        },
+        "keep_msisdn_validation": {
+          "description": "TG: Regi\n\nAdd to uncheck the msisdn validation when device try to register for some other Usim\n1: enabled\n2: disabled",
+          "x-intellij-html-description": "TG: Regi<br /><br />Add to uncheck the msisdn validation when device try to register for some other Usim<br />1: enabled<br />2: disabled",
+          "deprecationMessage": "Only used for Verizon operator.",
+          "default": 1,
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "user_agent": {
+          "description": "TG: CALL\n\nSpecify SIP user agent value",
+          "x-intellij-html-description": "TG: CALL<br /><br />Specify SIP user agent value",
+          "default": "",
+          "type": "string",
+          "examples": [
+            "3gpp-gba"
+          ]
+        },
+        "rcs_support_video_capability": {
+          "description": "TG: RCS\n\nIndicates if rcs capability discovery is required for video call in application.",
+          "x-intellij-html-description": "TG: RCS<br /><br />Indicates if rcs capability discovery is required for video call in application.",
+          "default": false,
+          "type": "boolean"
+        },
+        "rcs_force_video_capability": {
+          "type": "boolean",
+          "default": false
+        },
+        "support_configserver": {
+          "default": "",
+          "type": "string"
+        },
+        "wfc_auto_on": {
+          "type": "boolean",
+          "default": false
+        },
+        "device_group": {
+          "default": false,
+          "type": "boolean"
+        },
+        "channel_name": {
+          "default": "",
+          "type": "string"
+        },
+        "pdn_fail_reason_list": {
+          "description": "TG: CALL\n\nSpecify kinds of pdn fail reasons received from the network",
+          "x-intellij-html-description": "TG: CALL<br /><br />Specify kinds of pdn fail reasons received from the network",
+          "default": [],
+          "type": "array",
+          "items": {
+            "enum": [
+              "NETWORK_SELECTION_ONGOING",
+              "PDN_MAX_TIMEOUT",
+              "PDN_THROTTLED",
+              "DETERMINED_BARRING",
+              "USER_AUTHENTICATION",
+              "INSUFFICIENT_RESOURCES",
+              "INSUFFICIENT_RESOURCES:3600000",
+              "INSUFFICIENT_RESOURCES:86400000",
+              "MISSING_UNKNOWN_APN",
+              "MISSING_UNKNOWN_APN:14400000",
+              "UNKNOWN_PDP_ADDRESS_TYPE",
+              "ACTIVATION_REJECT_GGSN",
+              "SERVICE_OPTION_NOT_SUPPORTED",
+              "SERVICE_OPTION_NOT_SUBSCRIBED",
+              "MULTI_CONN_TO_SAME_PDN_NOT_ALLOWED",
+              "NETWORK_INITIATED_DETACH_WITH_AUTO_REATTACH",
+              "PROTOCOL_ERRORS",
+              "NOT_DEFINED"
+            ]
+          },
+          "additionalItems": false
+        },
+        "allow_release_wfc_before_ho": {
+          "default": false,
+          "type": "boolean"
+        },
+        "ecc_category_list": {
+          "default": "",
+          "type": "string"
+        },
+        "ecc_category_list_cdma": {
+          "default": "",
+          "type": "string"
+        },
+        "is_server_header_enabled": {
+          "default": false,
+          "type": "boolean"
+        },
+        "bot_registry_addr": {
+          "default": "",
+          "type": "string"
+        },
+        "bot_info_fqdn_root": {
+          "default": "",
+          "type": "string"
+        },
+        "bot_rcc07_version": {
+          "default": "8.0",
+          "type": "string"
+        },
+        "bot_service_id_prefix_list": {
+          "default": "botplatform,rbm",
+          "type": "string"
+        },
+        "aggr_imdn_supported": {
+          "default": false,
+          "type": "boolean"
+        },
+        "rcs_application_server": {
+          "description":"TG: RCS\n\nSpecify platform on which RCS is running. \n Among Google projects, it should be added for buyer that is supported as UP. \n Otherwise it is not needed\n Need to be deleted for jibe CPR",
+          "x-intellij-html-description":"TG: RCS<br /><br />Specify platform on which RCS is running. <br /> Among Google projects, it should be added for buyer that is supported as UP. <br /> Otherwise it is not needed<br /> Need to be deleted for jibe CPR",
+          "default": "",
+          "type": "string",
+          "examples": [
+            "",
+            "sec",
+            "jibe"
+          ]
+        },
+        "rcs_botplatform_server": {
+          "description":"TG: RCS\n\nSpecify platform on which RCS chatbots are running. \n In case using Google RCS Chatbot server, it should be added. Otherwise: not need to add. ",
+          "x-intellij-html-description":"TG: RCS<br /><br />Specify platform on which RCS chatbots are running. <br /> In case using Google RCS Chatbot server, it should be added. Otherwise: not need to add. ",
+          "default": "",
+          "type": "string",
+          "examples": [
+            "",
+            "jibe"
+          ]
+        },
+        "rcs_up_profile": {
+          "description": "TG: RCS\n\nDetailed information on UP release and supported modules, related to rcs_profile parameter used in HTTP configuration request as defined in RCC.07.",
+          "x-intellij-html-description": "TG: RCS<br /><br />Detailed information on UP release and supported modules, related to rcs_profile parameter used in HTTP configuration request as defined in RCC.07.",
+          "default": "",
+          "type": "string",
+          "examples": [
+            "",
+            "UP_T-b1",
+            "UP_T-b",
+            "UP_1.0",
+            "UP_2.0-b",
+            "UP_2.0-b1"
+          ]
+        },
+        "rcs_support_exponential_retry_acs": {
+          "description": "TG: RCS\n\nIn case of usage of Samsung RCS AS, set true. Otherwise, set false(no need to add)",
+          "x-intellij-html-description": "TG: RCS<br /><br />In case of usage of Samsung RCS AS, set true. Otherwise, set false(no need to add)",
+          "default": false,
+          "type": "boolean"
+        },
+        "all_volte_retry_error_code_list": {
+          "description": "TG: CALL\n\nAfter receiving error code from this list volte re-try will be triggered" ,
+          "x-intellij-html-description": "TG: CALL<br /><br />After receiving error code from this list volte re-try will be triggered" ,
+          "default": [],
+          "type": "array"
+        },
+        "video_volte_retry_error_code_list": {
+          "description": "TG: CALL\n\nAfter receiving error code from this list ViLTE re-try will be triggered" ,
+          "x-intellij-html-description": "TG: CALL<br /><br />After receiving error code from this list ViLTE re-try will be triggered" ,
+          "default": [],
+          "type": "array"
+        },
+        "enable_default_sms_fallback": {
+          "description": "TG: CALL\n\nMS is preferred to be invoked over IP networks: the UE attempts to deliver SMS over IP networks. If\ndelivery of SMS over IP networks is not available, the UE attempts to deliver SMS over NAS signalling.",
+          "x-intellij-html-description": "TG: CALL<br /><br />MS is preferred to be invoked over IP networks: the UE attempts to deliver SMS over IP networks. If<br />delivery of SMS over IP networks is not available, the UE attempts to deliver SMS over NAS signalling.",
+          "default": false,
+          "type": "boolean"
+        },
+        "support_notification_for_TnC": {
+          "description":"TG: RCS\n\nSpecify if notification about using RCS and accepting it can be dismissed to notification bar",
+          "x-intellij-html-description":"TG: RCS<br /><br />Specify if notification about using RCS and accepting it can be dismissed to notification bar",
+          "default": true,
+          "type": "boolean"
+        },
+        "block_regi_on_invalid_isim": {
+          "default": true,
+          "type": "boolean"
+        },
+        "use_usim_on_invalid_isim": {
+          "default": false,
+          "type": "boolean"
+        },
+        "rcs_default_enabled": {
+          "description": "TG: RCS\n\n1- RCS enabled by default\n0- RCS disable by default\n-1 - Guest cloud -related setting - RCS will hold autoconfig until triggered by Messaging app. User has to accept Google's T&C first.\n  If rcs_pre_consent is 1, this has to be -1",
+          "x-intellij-html-description": "TG: RCS<br /><br />1- RCS enabled by default<br />0- RCS disable by default<br />-1 - Guest cloud -related setting - RCS will hold autoconfig until triggered by Messaging app. User has to accept Google's T&C first.<br />  If rcs_pre_consent is 1, this has to be -1",
+          "default": 1,
+          "type": "integer",
+          "enum": [
+            1,
+            0,
+            -1
+          ]
+        },
+        "rcs_phase_version": {
+          "description": "",
+          "x-intellij-html-description": "",
+          "default": "",
+          "type": "string"
+        },
+        "rcs_contact_sync_in_switch_off": {
+          "type": "boolean",
+          "default": true
+        },
+        "dual_rcs_policy": {
+          "description": "TG: RCS\n\n0 : Do not support Dual RCS.\n1 : Support dual RCS at same operator's sim inserted only(Allow whole sales_code fam: ex) TELUS has several sales_codes like PMB, TLS).\n2 : Support Dual RCS when rcs_profile of both are same.\n3 : Support Dual RCS.\n4 : Support dual RCS at same operator's sim inserted only(Disallow sales_code family: ex) VZW/CCT/CHA)",
+          "x-intellij-html-description": "TG: RCS<br /><br />0 : Do not support Dual RCS.<br />1 : Support dual RCS at same operator's sim inserted only(Allow whole sales_code fam: ex) TELUS has several sales_codes like PMB, TLS).<br />2 : Support Dual RCS when rcs_profile of both are same.<br />3 : Support Dual RCS.<br />4 : Support dual RCS at same operator's sim inserted only(Disallow sales_code family: ex) VZW/CCT/CHA)",
+          "default": 0,
+          "type": "integer"
+        },
+        "rcs_version": {
+          "default": "6.0",
+          "type": "string",
+          "enum": [
+            "5.1B",
+            "6.0",
+            "7.0"
+          ]
+        },
+        "rcs_client_platform": {
+          "description": "TG: RCS\n\nThis setting allows to customize RCS client platform prefix, which was before hardcoded.\nIt was created for the sake of Orange Spain Chatbot Discovery feature.",
+          "x-intellij-html-description": "TG: RCS<br /><br />This setting allows to customize RCS client platform prefix, which was before hardcoded.<br />It was created for the sake of Orange Spain Chatbot Discovery feature.",
+          "default": "RCSAndr-",
+          "type": "string"
+        },
+        "rcs_client_version": {
+          "default": "6.0",
+          "type": "string"
+        },
+        "rcs_provisioning_version": {
+          "description": "This parameter sets the RCS ACS Http provisioning_version param value. Default is 2.0, which corresponds to UP_1.0 / UP_T profile. UP_2.0 profiles should have provisioning_version param set to 4.0. Blackbird and CPR profiles should leave the parameter empty string, as this Http param was introduced for UP_1.0",
+          "x-intellij-html-description": "This parameter sets the RCS ACS Http provisioning_version param value.</br> Default value is 2.0, which corresponds to UP_1.0 / UP_T profile. </br>UP_2.0 profiles should have provisioning_version param set to 4.0. </br>Blackbird and CPR profiles should leave the parameter empty string, as this Http param was introduced for UP_1.0",
+          "default": "2.0",
+          "type": "string"
+        },
+        "alt_provisioning_versions": {
+          "description": "This parameter sets alternate prov versions supported by operator. Default is empty, if operator has any alternate acs provisioning version supported, they need to be mentioned. These values will be compared against Supported-Version http header value received in ACS response. Maintain this array in descending order of(Ex: 4.0,3.0) acs prov versions client supporting",
+          "default": [],
+          "type": "array"
+        },
+        "rcs_default_disable_initial_scan": {
+          "type": "boolean",
+          "default": false
+        },
+        "rcs_force_disable_initial_scan": {
+          "type": "boolean",
+          "default": false
+        },
+        "cms_channel_type": {
+          "type": "string",
+          "default": ""
+        },
+        "cms_channel_sub_type": {
+          "type": "string",
+          "default": ""
+        },
+        "cms_channel_sub_type_version": {
+          "type": "string",
+          "default": ""
+        },
+        "cms_max_notifications": {
+          "type": "integer",
+          "default": 0
+        },
+        "cms_polling_enabled": {
+          "type": "boolean",
+          "default": false
+        },
+        "cms_max_polling_notifications": {
+          "type": "integer",
+          "default": 0
+        },
+        "cms_channel_lifetime": {
+          "type": "integer",
+          "default": 0
+        },
+        "cms_channel_expiration": {
+          "type": "integer",
+          "default": 0
+        },
+        "cms_mcs_enabled": {
+          "type": "boolean",
+          "default": false
+        },
+        "cms_mcs_client_version": {
+          "description": "TG: RCS\n\nThis parameter is MCS Client Version value corresponding to rcs_stack_app_version.",
+          "type": "string",
+          "default": ""
+        },
+        "cms_open_device_vvm_enabled": {
+          "type": "boolean",
+          "default": false
+        },
+        "rcs_app_list": {
+          "description": "This parameter sets the RCS ACS Http multiple app param values. Empty list is a default value. This param was made mandatory for UP_2.0 and newer profiles. Blackbird, CPR, UP_T and UP_1.0 profiles should leave the parameter as an empty list.",
+          "x-intellij-html-description": "This parameter sets the RCS ACS Http multiple app param values.</br>Empty list is a default value. This param was made mandatory for UP_2.0 and newer profiles.</br>Blackbird, CPR, UP_T and UP_1.0 profiles should leave the parameter as an empty list.",
+          "default": [],
+          "type": "array"
+        },
+        "ignore_display_name": {
+          "description": "TG: CALL\n\nIf enabled the incoming call number will not be taken from \"display name\" value from P-Asserted-Identity or From fields and will use number from URI instead",
+          "x-intellij-html-description": "TG: CALL<br /><br />If enabled EU ignores display name value from P-Asserted-Identity and From fields and will use number from URI instead",
+          "default": false,
+          "type": "boolean"
+        },
+        "notify_rejected_call": {
+          "description": "TG: CALL\n\nGoogle implements call app including 3rd party app to show the rejected call in call logs list when incoming calls are rejected with IMS itself",
+          "x-intellij-html-description": "TG: CALL<br /><br />Google implements call app including 3rd party app to show the rejected call in call logs list when incoming calls are rejected with IMS itself",
+          "default": false,
+          "type": "boolean"
+        },
+        "max_size_ft_thumb": {
+          "type": "integer",
+          "default": 102400
+        },
+        "services": {
+          "default": "",
+          "type": "string"
+        },
+        "default_rcs_volte_registration": {
+          "description": "TG: RCS\n\nThis parameter specifies default value of autoconfiguration parameter 'rcsVolteSingleRegistration' (see RCC.07 v11.0, section A.3.2) for an operator.\nAs per specifications, the default value is 1.\nHowever, we are allowing operator customization for this default value.\nIf the value is set to -1, the received value of 'rcsVolteSingleRegistration' is ignored and single/dual registration is performed based on profiles in imsprofile.json.\nBefore enabling, ensure that there are two profiles for the operator, one for VoLTE only and other for RCS only.",
+          "x-intellij-html-description": "TG: RCS<br /><br />This parameter specifies default value of autoconfiguration parameter 'rcsVolteSingleRegistration' (see RCC.07 v11.0, section A.3.2) for an operator.<br />As per specifications, the default value is 1.<br />However, we are allowing operator customization for this default value.<br />If the value is set to -1, the received value of 'rcsVolteSingleRegistration' is ignored and single/dual registration is performed based on profiles in imsprofile.json.<br />Before enabling, ensure that there are two profiles for the operator, one for VoLTE only and other for RCS only.",
+          "default": -1,
+          "type": "integer",
+          "enum": [
+            -1,
+            0,
+            1,
+            2
+          ]
+        },
+        "supported_bot_versions": {
+          "description": "TG: RCS\n\nThis parameter is used as suffix to botversion feature tag so this must be provided in format as per RCC 07 section 3.6.2.2. for an operator.\nAs per specification A Chatbot application version media feature tag indicating the support of all Chatbotapplication versions up to 4 could be represented as follows:\n+g.gsma.rcs.botversion=\"#<=4\", or +g.gsma.rcs.botversion=\"#=1,#=2,#=3,#=4\"\nSo supported_bot_versions: \"#=1,#=2,#=3,#=4\" or supported_bot_versions: \"#<=4\"",
+          "x-intellij-html-description": "TG: RCS<br /><br />This parameter is used as suffix to botversion feature tag so this must be provided in format as per RCC 07 section 3.6.2.2. for an operator.<br />As per specification a Chatbot application version media feature tag indicating the support of all Chatbotapplication versions up to 4 could be represented as follows:<br />+g.gsma.rcs.botversion=\"#<=4\", or +g.gsma.rcs.botversion=\"#=1,#=2,#=3,#=4\"<br />So supported_bot_versions: \"#=1,#=2,#=3,#=4\" or supported_bot_versions: \"#<=4\"",
+          "default": "",
+          "type": "string"
+        },
+        "goog_message_app_package": {
+          "default": "com.google.android.apps.messaging",
+          "type": "string"
+        },
+        "support_disable_vowifi_5gsa": {
+          "description": "TG: CALL\n\nThis parameter is used when disabling SA for VoWifi calling",
+          "x-intellij-html-description": "TG: CALL<br /><br />This parameter is used when disabling SA for VoWifi calling",
+          "default": "false",
+          "type": "boolean"
+        },
+        "support_vowifi_deprioritize_nr5g": {
+          "description": "TG: CALL\n\nThis parameter is used when deprioritizing NR5G for VoWifi calling",
+          "x-intellij-html-description": "TG: CALL<br /><br />This parameter is used when deprioritizing NR5G for VoWifi calling",
+          "default": "false",
+          "type": "boolean"
+        },
+        "vowifi_5gsa_mode": {
+          "description": "TG: CALL\n\nThis parameter is used to set NR5G SA mode\n ENABLE : use SA mode(default), DISABLE : disable SA mode, DEPRIORITIZE : deprioritize SA mode",
+          "x-intellij-html-description": "TG: CALL<br /><br />This parameter is used to set NR5G SA mode<br /> ENABLE : use SA mode(default), DISABLE : disable SA mode, DEPRIORITIZE : deprioritize SA mode",
+          "default": "ENABLE",
+          "type": "string",
+          "enum": [
+            "ENABLE",
+            "DISABLE",
+            "DEPRIORITIZE"
+          ]
+        },
+        "ussi_exempt":{
+          "description": "TG: REGI\n\nIndicates that USSI is a 3GPP PS data off exempt service \n 0 : If PS Data is OFF, ussi should also be OFF. \n 1 : PS data ON/OFF and ussi do not affect each other.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Indicates that USSI is a 3GPP PS data off exempt service. <br /> 0 : If PS Data is OFF, ussi should also be OFF. <br /> 1 : PS data ON/OFF and ussi do not affect each other.",
+          "default": 1,
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "ss_xcap_config_exempt":{
+          "description": "TG: REGI\n\nIndicates that the SS configuration via XCAP is a 3GPP PS data off. \n 0 : If PS Data is OFF, xcap should also be OFF. \n 1 : PS data ON/OFF and xcap do not affect each other.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Indicates that the SS configuration via XCAP is a 3GPP PS data off.  <br /> 0 : If PS Data is OFF, xcap should also be OFF. <br /> 1 : PS data ON/OFF and xcap do not affect each other.",
+          "default": 1,
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "sip_ua_vonr_service_type":{
+          "description": "TG: REGI\n\nThis parameter is used to add EPSFB or VoNR tag to user agent header",
+          "default": "",
+          "type": "string"
+        },
+        "keep_alive_factor": {
+          "description": "TG: REGI\n\nKeepAlive range factor (RFC 6223.5 Keep-Alive Frequency, keep_alive_factor ~ 100).",
+          "x-intellij-html-description": "TG: REGI<br /><br />KeepAlive range factor (RFC 6223.5 Keep-Alive Frequency, keep_alive_factor ~ 100)",
+          "type": "integer",
+          "default": 80,
+          "minimum": 80,
+          "maximum": 100
+        },
+        "hide_vowifi_icon_when_cs_call": {
+          "description": "TG: REGI\n\nHide vowifi icon when CS call",
+          "x-intellij-html-description": "TG: REGI<br /><br />Hide vowifi icon when CS call",
+          "default": false,
+          "type": "boolean"
+        },
+        "volte_setting_dim_by_vops": {
+          "description": "TG: REGI\n\nvolte setting is dimmed when vops is not supported",
+          "x-intellij-html-description": "TG: REGI<br /><br />volte setting is dimmed when vops is not supported",
+          "default": false,
+          "type": "boolean"
+        },
+        "support_realtime_user_alias": {
+          "description": "TG: RCS\n\nThis parameter controls enabling Realtime User Alias featre and is used by Samsung Message App to sync up the support with IMS.",
+          "x-intellij-html-description": "TG: RCS<br /><br />This parameter controls enabling Realtime User Alias featre and is used by Samsung Message App to sync up the support with IMS.",
+          "default": "false",
+          "type": "boolean"
+        },
+        "cms_extended_func_list": {
+          "description": "TG: RCS\n\nThis parameter to increase SD client usability by synchronizing the ExtendedFunc List to the MCS server. Be sure to comply with the Json standard. standalonesupport false is is applied only when FW and APP are written together, standalonesupport true is FW standalone Func, needforceupdate true is need SD Force Update notify. 'standalonesupport' and 'needforceupdate' can be omitted.",
+          "x-intellij-html-description": "TG: RCS<br /><br />This parameter to increase SD client usability by synchronizing the ExtendedFunc List to the MCS server. Be sure to comply with the Json standard. standalonesupport false is is applied only when FW and APP are written together, standalonesupport true is FW standalone Func, needforceupdate true is need SD Force Update notify. 'standalonesupport' and 'needforceupdate' can be omitted.",
+          "default": "",
+          "type": "json"
+        },
+        "enable_mdmi": {
+          "description": "TG: CALL\n\nThis parameter controls enabling MDMI feature.",
+          "x-intellij-html-description": "TG: CALL<br /><br />This parameter controls enabling MDMI feature.",
+          "default": "false",
+          "type": "boolean"
+        },
+        "simmobility_update": {
+          "description": "TG: REGI\n\nSome values should be updated at SimMobility case.",
+          "x-intellij-html-description": "TG: REGI<br /><br />Some values should be updated at SimMobility case.",
+          "default": {},
+          "type": "object"
+        },
+        "allowed_gid_for_devoceconfig": {
+          "description": "TG: REGI\n\nGid list for TMO device config",
+          "x-intellij-html-description": "TG: REGI<br /><br />Gid list for TMO device config.",
+          "default": "",
+          "type": "string"
+        },
+        "support_uac": {
+          "description": "TG: CALL\n\nThis parameter controls enabling uac feature.",
+          "x-intellij-html-description": "TG: REGI<br /><br />This parameter controls enabling uac feature.",
+          "default": "false",
+          "type": "boolean"
+        },
+        "support_ciq": {
+          "description": "TG: CALL\n\nThis parameter controls enabling IQI Logging feature. It should be enabled in CSC as it is model specific.",
+          "x-intellij-html-description": "TG: REGI<br /><br />This parameter controls enabling IQI Logging feature.",
+          "default": "false",
+          "type": "boolean"
+        },
+        "is_support_update_sa_mode_on_start": {
+          "description": "TG: CALL\n\nThis parameter is used when call starting for sa mode update",
+          "x-intellij-html-description": "TG: CALL<br /><br />This parameter is used when call starting for sa mode update",
+          "default": "false",
+          "type": "boolean"
+        },
+        "support_extended_messaging": {
+          "description": "TG: RCS\nMUST SET FLOAT VALUE\nThis parameter controls enabling [rcs.msg.extended] Extended Messaging : Reply, Reactions, Edit and Delete, UP2.7 RCC.07\nDisable if it is below 0 If it exceeds 0 (like 1.1,2.0), it is enabled and the declared value is regarded as a version.\nYou should be careful about version handling.",
+          "x-intellij-html-description": "TG: RCS<br /><h1> MUST SET FLOAT VALUE</h1><br />This parameter controls enabling [rcs.msg.extended] Extended Messaging : Reply, Reactions, Edit and Delete, UP2.7 RCC.07<br />Disable if it is below 0 If it exceeds 0 (like 1.1,2.0), it is enabled and the declared value is regarded as a version.<br />You should be careful about version handling.",
+          "default": "0",
+          "type": "String"
+        },
+        "is_support_update_sa_mode_on_airplane_mode": {
+          "description": "TG: CALL\n\nThis parameter is used when updating airplane mode for sa mode update",
+          "x-intellij-html-description": "TG: CALL<br /><br />This parameter is used when updating airplane mode for sa mode update",
+          "default": "false",
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "properties": {
+    "version": {
+      "description": "Version of file",
+      "x-intellij-html-description": "Version of file",
+      "deprecationMessage": "Not used from CL#16542581",
+      "type": "integer"
+    },
+    "defaultsetting": {
+      "$ref": "#/definitions/globalsetting"
+    },
+    "nohitsetting": {
+      "$ref": "#/definitions/globalsetting"
+    },
+    "globalsetting": {
+      "$ref": "#/definitions/globalsettings"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">שיחות חירום אפשריות רק באזורים עם כיסוי סלולרי</string>
+    <string name="aka_challenge_failed_msg_skt">לא ניתן היה לסיים את הרישום ל-HD Voice Service. נסה להפעיל את המכשיר מחדש. אם הבעיה לא נפתרה, צור קשר עם שירות הלקוחות מכיוון שייתכן שיהיה צורך בבדיקת כרטיס ה-SIM או המכשיר.</string>
+    <string name="call_notification_answer_action">מענה</string>
+    <string name="call_notification_answer_video_action">וידאו</string>
+    <string name="call_notification_decline_action">דחייה</string>
+    <string name="call_notification_hang_up_action">ניתוק</string>
+    <string name="call_notification_incoming_text">שיחה נכנסת</string>
+    <string name="call_notification_ongoing_text">שיחה פעילה</string>
+    <string name="call_notification_screening_text">סינון שיחה נכנסת</string>
+    <string name="common_google_play_services_unknown_issue">‏%1$s נתקלה בבעיה בשירותי Google Play. נסה שוב.</string>
+    <string name="dialog_text_rcs_config_accept">קבל</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">"היישום Rich Communications מכיל תכונות חדשות לשליחה וקבלה של הודעות צ'אט, תמונות, סרטונים, צלילים ואף הודעות טקסט - הכל באמצעות החיבור שלך לאינטרנט. הקוד לאימות מספר הטלפון שלך יגיע אליך בהודעת טקסט."</string>
+    <string name="dialog_text_rcs_config_cancel">ביטול</string>
+    <string name="dialog_text_rcs_config_msisdn_text">"היישום 'תקשורת עשירה' מכיל תכונות חדשות לשליחה וקבלה של הודעות צ'אט, תמונות, סרטונים וצלילים, כמו גם הודעות טקסט ­ והכל באמצעות החיבור שלך לאינטרנט. כדי להירשם לתכונות אלה חובה להזין מספר טלפון."</string>
+    <string name="dialog_text_rcs_config_msisdn_title">תכונות חדשות של העברת הודעות</string>
+    <string name="dialog_text_rcs_config_next">הבא</string>
+    <string name="dialog_text_rcs_config_no">לא</string>
+    <string name="dialog_text_rcs_config_ok">אישור</string>
+    <string name="dialog_text_rcs_config_reject">דחה</string>
+    <string name="dialog_text_rcs_config_skip">דלג</string>
+    <string name="dialog_text_rcs_config_yes">כן</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">אפשר תמיד</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">אפשר פעם אחת</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">אל תאשר</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">"לאפשר ליישום 'תקשורת עשירה' להתחבר אל רשת סלולרית? מאחר שאתה בנדידה, הדבר עשוי לגרור חיובים משמעותיים."</string>
+    <string name="dialog_title_rcs_service">התחבר לרשת ניידת</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

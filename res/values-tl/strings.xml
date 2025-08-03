@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">Mga emergency na tawag sa mga lugar na may cell signal lang</string>
+    <string name="aka_challenge_failed_msg_skt">Hindi matapos ang pagrehistro sa HD Voice Service. Subukang i-restart ang device mo. Kung hindi iyon umubra, makipag-ugnayan sa Customer Center dahil maaaring kailanganin ang pagsuri sa SIM.</string>
+    <string name="call_notification_answer_action">Sagutin</string>
+    <string name="call_notification_answer_video_action">Video</string>
+    <string name="call_notification_decline_action">Tanggihan</string>
+    <string name="call_notification_hang_up_action">Ibaba</string>
+    <string name="call_notification_incoming_text">Papasok na tawag</string>
+    <string name="call_notification_ongoing_text">Kasalukuyang tawag</string>
+    <string name="call_notification_screening_text">Nagsi-screen ng papasok na tawag</string>
+    <string name="common_google_play_services_unknown_issue">Nagkakaproblema ang %1$s sa mga serbisyo ng Google Play. Pakisubukan ulit.</string>
+    <string name="dialog_text_rcs_config_accept">Sagot</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Kasama sa Rich Communications ang mga bagong feature na magagamit mo para magpadala at tumanggap ng mga chat message, larawan, video at tunog, pati na mga text message, gamit ang koneksiyon mo sa Internet. Makatatanggap ka ng code sa pamamagitan ng text message para sa pag-verify ng numero ng telepono mo.</string>
+    <string name="dialog_text_rcs_config_cancel">Kanselahin</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Kasama sa Rich Communications ang mga bagong feature na magagamit mo para magpadala at tumanggap ng mga chat message, larawan, video at mga tunog, pati na ng mga text message, gamit ang koneksyon mo sa Internet. Para magrehistro para sa mga feature na ito, dapat kang magpasok ng numero ng telepono.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">Bagong mga feature ng messaging</string>
+    <string name="dialog_text_rcs_config_next">Susunod</string>
+    <string name="dialog_text_rcs_config_no">Hindi</string>
+    <string name="dialog_text_rcs_config_ok">OK</string>
+    <string name="dialog_text_rcs_config_reject">Tnggi</string>
+    <string name="dialog_text_rcs_config_skip">Laktawan</string>
+    <string name="dialog_text_rcs_config_yes">Oo</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">Palaging payagan</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">Payagan nang isang beses</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">Huwag payagan</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Payagan ang Rich Communications na kumonekta sa mobile network? Habang naka-roaming ka, maaari itong magresulta sa malalaking bayad.</string>
+    <string name="dialog_title_rcs_service">Kumonekta sa mobile network</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

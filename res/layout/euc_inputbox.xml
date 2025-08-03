@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:paddingLeft="32.0dip" android:paddingTop="16.0dip" android:paddingRight="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="32.0dip" android:paddingEnd="32.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:rowCount="2" android:columnCount="1">
+        <TextView android:textAppearance="@android:style/TextAppearance.DeviceDefault" android:layout_gravity="left|top" android:id="@id/message" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginBottom="16.0dip" android:layout_row="0" />
+        <LinearLayout android:orientation="vertical" android:id="@id/pin_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_row="0">
+            <EditText android:theme="@android:style/Theme.DeviceDefault.Light" android:layout_gravity="start|top" android:id="@id/input" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/enter_pin" android:ems="11" android:privateImeOptions="disableOnBoarding=true;" />
+            <CheckBox android:theme="@android:style/Theme.DeviceDefault.Light" android:layout_gravity="left|top" android:id="@id/show_pin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/show_pin" />
+        </LinearLayout>
+    </GridLayout>
+</ScrollView>

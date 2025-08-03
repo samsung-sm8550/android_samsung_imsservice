@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">केवल सेल्युलर कवरेज वाले क्षेत्रों में आपातकालीन कॉल्स</string>
+    <string name="aka_challenge_failed_msg_skt">HD वॉइस सेवा का पंजीकरण पूरा नहीं किया जा सका। अपने डिवाइस को रीस्टार्ट करने का प्रयास करें। अगर यह काम नहीं करता है, तो ग्राहक केंद्र से संपर्क करें क्योंकि SIM या डिवाइस का निरीक्षण करने की आवश्यकता हो सकती है।</string>
+    <string name="call_notification_answer_action">जवाब दें</string>
+    <string name="call_notification_answer_video_action">वीडियो</string>
+    <string name="call_notification_decline_action">अस्वीकार करें</string>
+    <string name="call_notification_hang_up_action">कॉल काटें</string>
+    <string name="call_notification_incoming_text">आने वाला (इनकमिंग) कॉल</string>
+    <string name="call_notification_ongoing_text">पहले से जारी कॉल</string>
+    <string name="call_notification_screening_text">इनकमिंग कॉल को स्क्रीन किया जा रहा है</string>
+    <string name="common_google_play_services_unknown_issue">%1$s को Google Play सेवाओं के साथ समस्या आ रही है. कृपया फिर से कोशिश करें.</string>
+    <string name="dialog_text_rcs_config_accept">स्वी</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications में ऐसी नई सुविधाएँ शामिल हैं जिसका उपयोग आप अपने इंटरनेट कनेक्शन का उपयोग करके चैट सन्देशों, तस्वीरों, वी‍डियो और ध्वनि के साथ-साथ टेक्स्ट सन्देश भेजने और प्राप्त करने के लिए कर सकते हैं। आपको अपना फोन नंबर सत्यापित करने के लिए टेक्स्ट सन्देश के माध्यम से एक कोड प्राप्त होगा।</string>
+    <string name="dialog_text_rcs_config_cancel">रद्द</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications में ऐसी नई सुविधाएँ शामिल हैं, जिसे आप इंटरनेट कनेक्शन का उपयोग करके चैट सन्देश, तस्वीरें, वीडियोज और ध्वनियाँ साथ ही साथ टेक्स्ट सन्देश भेजने और प्राप्त करने के लिए उपयोग कर सकते हैं। इन सुविधाओं के लिए पंजीकरण करने हेतु, आपको एक फोन नंबर प्रविष्ट करना आवश्यक है।</string>
+    <string name="dialog_text_rcs_config_msisdn_title">नई सन्देश सेवा सुविधाएँ</string>
+    <string name="dialog_text_rcs_config_next">अगला</string>
+    <string name="dialog_text_rcs_config_no">नहीं</string>
+    <string name="dialog_text_rcs_config_ok">ओके</string>
+    <string name="dialog_text_rcs_config_reject">अस्वी</string>
+    <string name="dialog_text_rcs_config_skip">छोड़ें</string>
+    <string name="dialog_text_rcs_config_yes">हाँ</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">हमेशा अनुमति दे</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">एकबार अनुमति दे</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">अनुमति न दें</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Rich Communications को मोबाइल नेटवर्क से कनेक्ट करने की अनुमति दें? चूंकि आप रोमिंग में हैं, इसके परिणाम स्वरूप बहुत अधिक शुल्क लग सकते हैं।</string>
+    <string name="dialog_title_rcs_service">मोबाइल नेटवर्क से कनेक्ट करें</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

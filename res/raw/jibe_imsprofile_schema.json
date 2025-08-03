@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "jibe_imsprofile.json schema",
+  "description": "Structure and description of jibe_imsprofile.json",
+  "x-intellij-html-description": "Structure and description of jibe_imsprofile.json",
+  "type": "object",
+  "definitions": {
+    "profile": {
+      "description": "Jibe RCS profiles for each MNO. Note that each profile is merged with the default profile of imsprofile.json",
+      "x-intellij-html-description": "Jibe RCS profiles for each MNO. Note that each profile is merged with the default profile of imsprofile.json",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "mnoname",
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "description": "A name of the profile",
+            "x-intellij-html-description": "A name of the profile. It should be same as the one defined in imsprofile.json",
+            "type": "string"
+          },
+          "mnoname": {
+            "description": "A unique ID for MNO. It is paired with a 'name' above",
+            "x-intellij-html-description": "A unique ID for MNO. It is paired with a 'name' above",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "default_setting": {
+    "mnoname": "",
+    "sms_display_policy_partial_long_sms": false,
+    "sms_special_address_handling_for": false,
+    "sms_wap_push_format_sms": false,
+    "sms_qmi_cdma_gsm": false,
+    "sms_smsp": false,
+    "sms_safe_message_indication": false,
+    "sms_3gpp2_lgt_network" : false,
+    "sms_global_mode_sms_address_rule" : false,
+    "sms_not_count_voicemail" : false,
+    "sms_segmented_sms" : false,
+    "sms_cdma_copy_to_ruim" : false,
+    "sms_cdma_sent_fail_display" : false,
+    "sms_error_class_retry" : false,
+    "sms_max_retries_zero" : false,
+    "sms_not_used_validity_period_format" : false,
+    "sms_read_confirm" : false,
+    "sms_show_hidden_menu_sms_pref_mode" : false,
+    "sms_allow_email_sms_address" : false,
+    "sms_support_ksc5601" : false,
+    "sms_support_reply_address" : false,
+    "sms_disable_sms_voicemail" : false,
+    "sms_mms_uap_build_id" : false,
+    "sms_max_retries_one" : false,
+    "sms_ecm_incoming_sms" : false,
+    "sms_support_gsm_8bit_sms" : false,
+    "sms_check_ecm_mode" : false,
+    "sms_write_uicc_supported" : false,
+    "sms_receive_sms_without_smscapable" : false,
+    "sms_rp_smma_not_supported" : false,
+    "sms_check_duplicate_port_omadm_wappush" : false,
+    "sms_not_receive_cmas_without_sim" : false,
+    "sms_nsri_security_solution": false,
+    "sms_networklock_allow_sms": false,
+    "sms_network_search_for_e911": false,
+    "sms_link_warning_indication": false
+  },
+  "sms_settings": [
+    {
+      "mnoname": "CTC_CN",
+      "sms_display_policy_partial_long_sms": true,
+      "sms_special_address_handling_for": true,
+      "sms_wap_push_format_sms": true,
+      "sms_qmi_cdma_gsm": true,
+      "sms_cdma_copy_to_ruim" : true
+    },
+    {
+      "mnoname": "Docomo_JP",
+      "sms_smsp": true
+    },
+    {
+      "mnoname": "KT_KR",
+      "sms_safe_message_indication": true,
+      "sms_not_count_voicemail": true,
+      "sms_not_used_validity_period_format": true,
+      "sms_read_confirm": true,
+      "sms_show_hidden_menu_sms_pref_mode": true,
+      "sms_support_ksc5601": true,
+      "sms_support_reply_address": true,
+      "sms_disable_sms_voicemail": true,
+      "sms_link_warning_indication": true
+    },
+    {
+      "mnoname": "LGU+_KR",
+      "sms_safe_message_indication": true,
+      "sms_3gpp2_lgt_network": true,
+      "sms_not_count_voicemail": true,
+      "sms_not_used_validity_period_format": true,
+      "sms_show_hidden_menu_sms_pref_mode": true,
+      "sms_support_ksc5601": true,
+      "sms_support_reply_address": true,
+      "sms_disable_sms_voicemail": true
+    },
+    {
+      "mnoname": "SKT_KR",
+      "sms_safe_message_indication": true,
+      "sms_not_count_voicemail": true,
+      "sms_not_used_validity_period_format": true,
+      "sms_show_hidden_menu_sms_pref_mode": true,
+      "sms_support_ksc5601": true,
+      "sms_support_reply_address": true,
+      "sms_disable_sms_voicemail": true
+    },
+    {
+      "mnoname": "VZW_US",
+      "sms_global_mode_sms_address_rule": true,
+      "sms_cdma_copy_to_ruim": true,
+      "sms_error_class_retry": true,
+      "sms_max_retries_zero": true,
+      "sms_allow_email_sms_address": true,
+      "sms_check_ecm_mode": true,
+      "sms_write_uicc_supported": true,
+      "sms_receive_sms_without_smscapable": true,
+      "sms_not_receive_cmas_without_sim": true,
+      "sms_network_search_for_e911": true
+    },
+    {
+      "mnoname": "TMobile_US",
+      "sms_not_count_voicemail": true,
+      "sms_check_duplicate_port_omadm_wappush": true
+    },
+    {
+      "mnoname": "Dish_US",
+      "sms_not_count_voicemail": true,
+      "sms_check_duplicate_port_omadm_wappush": true
+    },
+    {
+      "mnoname": "ATT_US",
+      "sms_mms_uap_build_id": true
+    },
+    {
+      "mnoname": "Sprint_US",
+      "sms_cdma_sent_fail_display": true,
+      "sms_allow_email_sms_address": true,
+      "sms_mms_uap_build_id": true,
+      "sms_max_retries_one": true,
+      "sms_ecm_incoming_sms": true,
+      "sms_check_duplicate_port_omadm_wappush": true
+    },
+    {
+      "mnoname": "USCC_US",
+      "sms_cdma_copy_to_ruim": true,
+      "sms_error_class_retry": true,
+      "sms_check_ecm_mode": true,
+      "sms_support_gsm_8bit_sms": true
+    },
+    {
+      "mnoname": "GenericIR92_US",
+      "sms_segmented_sms": true,
+      "sms_cdma_copy_to_ruim": true,
+      "sms_error_class_retry": true,
+      "sms_allow_email_sms_address": true
+    },
+    {
+      "mnoname": "Altice_US",
+      "sms_cdma_copy_to_ruim": true
+    },
+    {
+      "mnoname": "GCI_US",
+      "sms_cdma_copy_to_ruim": true
+    },
+    {
+      "mnoname": "GCF",
+      "sms_global_mode_sms_address_rule": true,
+      "sms_error_class_retry": true,
+      "sms_max_retries_zero": true
+    },
+    {
+      "mnoname": "Att_ius_MX",
+      "sms_support_gsm_8bit_sms": true
+    },
+    {
+      "mnoname": "AIS_TH",
+      "sms_networklock_allow_sms": true
+    }
+  ]
+}

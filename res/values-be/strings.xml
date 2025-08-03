@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">Экстраныя выклікі магчымы толькі ў месцах з сотавым пакрыццём</string>
+    <string name="call_notification_answer_action">Адказаць</string>
+    <string name="call_notification_answer_video_action">Відэа</string>
+    <string name="call_notification_decline_action">Адхіліць</string>
+    <string name="call_notification_hang_up_action">Завяршыць</string>
+    <string name="call_notification_incoming_text">Уваходны выклік</string>
+    <string name="call_notification_ongoing_text">Бягучы выклік</string>
+    <string name="call_notification_screening_text">Фільтраванне ўваходнага выкліку</string>
+    <string name="common_google_play_services_unknown_issue">У праграмы %1$s узніклі праблемы са службамі Google Play. Паўтарыце спробу.</string>
+    <string name="dialog_text_rcs_config_accept">Прын.</string>
+    <string name="dialog_text_rcs_config_cancel">Адмена</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications уключае новыя функцыя, якія вы можаце выкарыстоўваць для адпраўкі і прымання паведамленняў чату, фатаграфій, відэа і гукаў, а таксама тэкставых паведамленняў пры дапамозе злучэння з Інтэрнэтам. Каб зарэгістраваць гэтыя функцыі, вы павінны ўвесці нумар тэлефона.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">Новыя функцыі абмену паведамленнямі</string>
+    <string name="dialog_text_rcs_config_no">Не</string>
+    <string name="dialog_text_rcs_config_ok">ОК</string>
+    <string name="dialog_text_rcs_config_reject">Адхіл.</string>
+    <string name="dialog_text_rcs_config_yes">Так</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">Заўжды дазв.</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">Дазв.1 раз</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">Не дазваляць</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Дазволіць Rich Communications падлучыцца да мабільнай сеткі? Так як вы знаходзіцеся ў роўмінге, за гэта можа спаганяцца дадатковая плата.</string>
+    <string name="dialog_title_rcs_service">Падлучыцца да мабільнай сеткі</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

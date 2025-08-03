@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">مكالمات الطوارئ في المناطق ذات تغطية للأجهزة الخلوية فقط</string>
+    <string name="aka_challenge_failed_msg_skt">تعذر إنهاء تسجيل خدمة الصوت عالي الدقة. حاول إعادة تشغيل جهازك. إذا لم ينجح هذا الأمر، فاتصل بمركز خدمة العملاء نظراً لأنه قد يكون فحص SIM أو الجهاز مطلوباً.</string>
+    <string name="call_notification_answer_action">ردّ</string>
+    <string name="call_notification_answer_video_action">فيديو</string>
+    <string name="call_notification_decline_action">رفض</string>
+    <string name="call_notification_hang_up_action">قطع الاتصال</string>
+    <string name="call_notification_incoming_text">مكالمة واردة</string>
+    <string name="call_notification_ongoing_text">مكالمة جارية</string>
+    <string name="call_notification_screening_text">يتم فحص المكالمة الواردة</string>
+    <string name="common_google_play_services_unknown_issue">‏لدى %1$s مشكلة في خدمات Google Play. يُرجى إعادة المحاولة.</string>
+    <string name="dialog_text_rcs_config_accept">قبول</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">يشمل تطبيق Rich Communications ميزات جديدة يمكنك استخدامها لإرسال رسائل دردشة وصور ومقاطع فيديو وأصوات ورسائل نصية وتلقيها باستخدام اتصال الإنترنت لديك. ستتلقى رمزاً عبر رسالة نصية للتحقق من رقم هاتفك.</string>
+    <string name="dialog_text_rcs_config_cancel">إلغاء</string>
+    <string name="dialog_text_rcs_config_msisdn_text">تشمل Rich Communications ميزات جديدة يمكنك استخدامها لإرسال رسائل دردشة وصور ومقاطع فيديو وأصوات ورسائل نصية وتلقيها باستخدام اتصال الإنترنت. للاشتراك في هذه الميزات، عليك إدخال رقم هاتف.</string>
+    <string name="dialog_text_rcs_config_msisdn_title">ميزات المراسلة الجديدة</string>
+    <string name="dialog_text_rcs_config_next">التالي</string>
+    <string name="dialog_text_rcs_config_no">لا</string>
+    <string name="dialog_text_rcs_config_ok">موافق</string>
+    <string name="dialog_text_rcs_config_reject">رفض</string>
+    <string name="dialog_text_rcs_config_skip">تخطي</string>
+    <string name="dialog_text_rcs_config_yes">نعم</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">السماح دائماً</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">السماح مرة واحدة</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">عدم السماح</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">هل تريد السماح لـ Rich Communications بالاتصال بشبكة هاتف محمول؟ أثناء التجوال، قد يترتب على ذلك فرض تكاليف كبيرة.</string>
+    <string name="dialog_title_rcs_service">الاتصال بشبكة المحمول</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DREAM_VOLTE_T_DEX_OPT_ABB">VoLTE</string>
+    <string name="DREAM_VOWIFI_T_DEX_OPT_ABB">VoWiFi</string>
+    <string name="LEGAL_DOWNLOAD_IN_PROGRESS">Download in progress… %1$d%%</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE">IMS Service Update</string>
+    <string name="LEGAL_IMS_SERVICE_UPDATE_IS_AVAILABLE">IMS Service Update is available.</string>
+    <string name="LEGAL_IMS_UPDATE_REQUIRES_PHONE_RESTART">IMS Update requires phone restart</string>
+    <string name="LEGAL_LATER">Later</string>
+    <string name="LEGAL_SAMSUNG_IMS_CAN_BE_UPDATED_BY_CLICKING_THE_OK_BUTTON_MSG">Samsung IMS can be updated by clicking the “OK” button, and the device will be restarted to complete to update Samsung IMS.</string>
+    <string name="LEGAL_SAMSUNG_IMS_IP_MULTIMEDIA_SUBSYSTEM_IS_A_SERVICE_MSG2">"Samsung IMS (IP Multimedia Subsystem) is a service that provides High Definition voice and video calling and Rich Communication Services (enhanced chat features) to Galaxy devices.
+If you click the “OK” button, the improved Samsung IMS will be downloaded.
+Size: %1$s MB
+
+Please note that data charges may apply as a result if you are not connected to a Wi-Fi network. If you are on a call, the app update may be put on hold or the call may be terminated during the update process."</string>
+    <string name="LEGAL_SUCCESSFULLY_DOWNLOADED_UPDATES">Successfully downloaded updates</string>
+    <string name="SS_EMERGENCY_CALLS_IN_AREAS_WITH_CELLULAR_COVERAGE_ONLY_M_STATUS_SBODY_VODA">Արտակարգ իրավիճակի կանչեր՝ միայն բջջային ծածկույթ ունեցող տարածքներում</string>
+    <string name="aka_challenge_failed_msg_skt">Չհաջողվեց վերջացնել HD Ձայնային ծառայության գրանցումը: Փորձեք վերագործարկեք Ձեր սարքը: Եթե դա չաշխատի, դիմեք Հաճախորդների սպասարկման կենտրոն, քանի որ կարող է պահանջվել SIM-ի կամ սարքի զննում:</string>
+    <string name="dialog_text_rcs_config_accept">Ընդել</string>
+    <string name="dialog_text_rcs_config_autoconfig_text">Rich Communications-ը ներառում է նոր գործառական հնարավորություններ, որոնք կարող եք օգտագործել ինտերնետին միանալու միջոցով զրույցի հաղորդագրություններ, նկարներ, տեսանյութեր և հնչյուններ, ինչպես նաև տեքստային հաղորդագրություններ ուղարկելու և ստանալու համար: Ձեր հեռախոսահամարը հաստատելու համար կոդ կստանաք տեքստային հաղորդագրությամբ:</string>
+    <string name="dialog_text_rcs_config_cancel">Դդրցնլ</string>
+    <string name="dialog_text_rcs_config_msisdn_text">Rich Communications-ը ներառում է նոր գործառական հնարավորություններ, որոնք կարող եք օգտագործել ինտերնետին միանալու միջոցով զրույցի հաղորդագրություններ, նկարներ, տեսանյութեր և հնչյուններ, ինչպես նաև տեքստային հաղորդագրություններ ուղարկելու և ստանալու համար: Որպեսզի գրանցվեք այս գործառական հնարավորությունների համար, պետք է մուտքագրեք հեռախոսահամար:</string>
+    <string name="dialog_text_rcs_config_msisdn_title">Հաղորդագրման նոր գործառական հնարավորություններ</string>
+    <string name="dialog_text_rcs_config_next">Հաջորդ</string>
+    <string name="dialog_text_rcs_config_no">Ոչ</string>
+    <string name="dialog_text_rcs_config_ok">Ընդունել</string>
+    <string name="dialog_text_rcs_config_reject">Մերժլ</string>
+    <string name="dialog_text_rcs_config_skip">Բաց թողնել</string>
+    <string name="dialog_text_rcs_config_yes">Այո</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_always">Միշտ թյլտրել</string>
+    <string name="dialog_text_rcs_pdn_pref_allow_once">Թտրել մեկ</string>
+    <string name="dialog_text_rcs_pdn_pref_deny">Թույլ չտալ</string>
+    <string name="dialog_text_rcs_pdn_pref_roaming">Թույլ տա՞լ, որ Rich Communications-ը միանա շարժական կապի ցանցի: Ռոումինգը կարող է նշանակալի վճարների հանգեցնել:</string>
+    <string name="dialog_title_rcs_service">Միանալ շարժական կապի ցանցին</string>
+</resources>

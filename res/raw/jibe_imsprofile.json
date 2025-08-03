@@ -1,0 +1,344 @@
+{
+  "$schema": "jibe_imsprofile_schema.json",
+  "imsprofile_update": {
+    "profile": [
+      {
+        "name": "TMobile LTE/WiFi",
+        "mnoname": "TMobile_US",
+        "need_autoconfig": false,
+        "rcs_profile": "",
+        "network": [
+          {
+            "type": "nr,lte,wifi",
+            "services": [
+              "mmtel",
+              "mmtel-video",
+              "smsip",
+              "mmtel-call-composer"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "TMobile 3G",
+        "mnoname": "TMobile_US",
+        "enabled": 0
+      },
+      {
+        "name": "TMobile JIBE RCS",
+        "mnoname": "TMobile_US",
+        "representative_plmn": "310260",
+        "port": 5672,
+        "pcscf_pref": 3,
+        "ipver": "ipv4",
+        "regi_algo": "MD5",
+        "auth_algo": "hmac-md5-96",
+        "enc_algo": "null",
+        "subscribe_for_reg": false,
+        "pdn": "default",
+        "useragent": "IM-client/OMA1.0 Samsung/[PRODUCT_MODEL]-[BUILD_VERSION] Samsung-RCS/[CLIENT_VERSION]",
+        "timer": "1:2000,2:16000,4:17000,A:2000,B:32000,C:180000,D:32000,E:2000,F:32000,G:2000,H:32000,I:17000,J:32000,K:17000",
+        "mss_size": 1200,
+        "need_autoconfig": true,
+        "session_refresher": "uac",
+        "need_naptr_dns": true,
+        "need_ipv4_dns": false,
+        "rcs_profile": "UP_1.0",
+        "try_reregister_from_keepalive": true,
+        "support_ipsec": false,
+        "network": [
+          {
+            "type": "nr,lte,hspa,umts,gsm,wifi",
+            "services": [
+              "im",
+              "ft_http",
+              "options",
+              "euc",
+              "gls",
+              "chatbot-communication"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "TMobile Google Fi LTE/WiFi",
+        "mnoname": "TMobile_US:GoogleFi",
+        "need_autoconfig": false,
+        "rcs_profile": "",
+        "network": [
+          {
+            "type": "nr,lte,wifi",
+            "services": [
+              "mmtel",
+              "mmtel-video",
+              "smsip"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "TMobile Google Fi JIBE RCS",
+        "mnoname": "TMobile_US:GoogleFi",
+        "representative_plmn": "310260",
+        "port": 5672,
+        "pcscf_pref": 3,
+        "ipver": "ipv4",
+        "regi_algo": "MD5",
+        "auth_algo": "hmac-md5-96",
+        "enc_algo": "null",
+        "subscribe_for_reg": false,
+        "pdn": "default",
+        "useragent": "IM-client/OMA1.0 Samsung/[PRODUCT_MODEL]-[BUILD_VERSION] Samsung-RCS/[CLIENT_VERSION]",
+        "timer": "1:2000,2:16000,4:17000,A:2000,B:32000,C:180000,D:32000,E:2000,F:32000,G:2000,H:32000,I:17000,J:32000,K:17000",
+        "mss_size": 1200,
+        "need_autoconfig": true,
+        "session_refresher": "uac",
+        "need_naptr_dns": true,
+        "need_ipv4_dns": false,
+        "rcs_profile": "UP_1.0",
+        "try_reregister_from_keepalive": true,
+        "support_ipsec": false,
+        "network": [
+          {
+            "type": "nr,lte,hspa,umts,gsm,wifi",
+            "services": [
+              "im",
+              "ft_http",
+              "options",
+              "euc",
+              "gls",
+              "chatbot-communication"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "TMobile Google Fi 3G",
+        "mnoname": "TMobile_US:GoogleFi",
+        "enabled": 0
+      },
+      {
+        "name": "ATT VoLTE",
+        "mnoname": "ATT_US",
+        "need_autoconfig": false,
+        "rcs_profile": "",
+        "network": [
+          {
+            "type": "nr,wifi,lte,hspa,umts",
+            "services": [
+              "mmtel",
+              "smsip",
+              "mmtel-video"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "ATT JIBE RCS",
+        "mnoname": "ATT_US",
+        "representative_plmn": "310410",
+        "port": 5672,
+        "pcscf_pref": 3,
+        "ipver": "ipv4",
+        "regi_algo": "MD5",
+        "auth_algo": "hmac-md5-96",
+        "enc_algo": "null",
+        "subscribe_for_reg": false,
+        "pdn": "default",
+        "useragent": "IM-client/OMA1.0 Samsung/[PRODUCT_MODEL]-[BUILD_VERSION] Samsung-RCS/[CLIENT_VERSION]",
+        "timer": "1:2000,2:16000,4:17000,A:2000,B:32000,C:180000,D:32000,E:2000,F:32000,G:2000,H:32000,I:17000,J:32000,K:17000",
+        "mss_size": 1200,
+        "need_autoconfig": true,
+        "session_refresher": "uac",
+        "need_naptr_dns": true,
+        "need_ipv4_dns": false,
+        "rcs_profile": "UP_1.0",
+        "try_reregister_from_keepalive": true,
+        "support_ipsec": false,
+        "use_precondition": false,
+        "network": [
+          {
+            "type": "nr,lte,hspa,umts,gsm,wifi",
+            "services": [
+              "im",
+              "ft_http",
+              "options",
+              "euc",
+              "gls",
+              "chatbot-communication"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "AIO VoLTE",
+        "mnoname": "ATT_US:AIO",
+        "need_autoconfig": false,
+        "rcs_profile": "",
+        "network": [
+          {
+            "type": "nr,lte,hspa,umts,wifi",
+            "services": [
+              "mmtel",
+              "smsip"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "AIO JIBE RCS",
+        "mnoname": "ATT_US:AIO",
+        "representative_plmn": "310150",
+        "port": 5672,
+        "pcscf_pref": 3,
+        "ipver": "ipv4",
+        "regi_algo": "MD5",
+        "auth_algo": "hmac-md5-96",
+        "enc_algo": "null",
+        "subscribe_for_reg": false,
+        "pdn": "default",
+        "useragent": "IM-client/OMA1.0 Samsung/[PRODUCT_MODEL]-[BUILD_VERSION] Samsung-RCS/[CLIENT_VERSION]",
+        "timer": "1:2000,2:16000,4:17000,A:2000,B:32000,C:180000,D:32000,E:2000,F:32000,G:2000,H:32000,I:17000,J:32000,K:17000",
+        "mss_size": 1200,
+        "need_autoconfig": true,
+        "session_refresher": "uac",
+        "need_naptr_dns": true,
+        "need_ipv4_dns": false,
+        "rcs_profile": "UP_1.0",
+        "try_reregister_from_keepalive": true,
+        "support_ipsec": false,
+        "use_precondition": false,
+        "network": [
+          {
+            "type": "nr,lte,hspa,umts,gsm,wifi",
+            "services": [
+              "im",
+              "ft_http",
+              "options",
+              "euc",
+              "gls",
+              "chatbot-communication"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "FirstNet VoLTE",
+        "mnoname": "ATT_US:FN",
+        "need_autoconfig": false,
+        "rcs_profile": "",
+        "network": [
+          {
+            "type": "nr,wifi,lte,hspa,umts",
+            "services": [
+              "mmtel",
+              "smsip",
+              "mmtel-video"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "FirstNet JIBE RCS",
+        "mnoname": "ATT_US:FN",
+        "representative_plmn": "312670",
+        "port": 5672,
+        "pcscf_pref": 3,
+        "ipver": "ipv4",
+        "regi_algo": "MD5",
+        "auth_algo": "hmac-md5-96",
+        "enc_algo": "null",
+        "subscribe_for_reg": false,
+        "pdn": "default",
+        "useragent": "IM-client/OMA1.0 Samsung/[PRODUCT_MODEL]-[BUILD_VERSION] Samsung-RCS/[CLIENT_VERSION]",
+        "timer": "1:2000,2:16000,4:17000,A:2000,B:32000,C:180000,D:32000,E:2000,F:32000,G:2000,H:32000,I:17000,J:32000,K:17000",
+        "mss_size": 1200,
+        "need_autoconfig": true,
+        "session_refresher": "uac",
+        "need_naptr_dns": true,
+        "need_ipv4_dns": false,
+        "rcs_profile": "UP_1.0",
+        "try_reregister_from_keepalive": true,
+        "support_ipsec": false,
+        "use_precondition": false,
+        "network": [
+          {
+            "type": "nr,lte,hspa,umts,gsm,wifi",
+            "services": [
+              "im",
+              "ft_http",
+              "options",
+              "euc",
+              "gls",
+              "chatbot-communication"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "VZW VoLTE",
+        "mnoname": "VZW_US",
+        "need_autoconfig": false,
+        "rcs_profile": "",
+        "network": [
+          {
+            "type": "nr,lte,wifi",
+            "services": [
+              "mmtel",
+              "mmtel-video",
+              "smsip"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "VZW JIBE RCS",
+        "mnoname": "VZW_US",
+        "representative_plmn": "311480",
+        "port": 5672,
+        "pcscf_pref": 3,
+        "ipver": "ipv4",
+        "regi_algo": "MD5",
+        "auth_algo": "hmac-md5-96",
+        "enc_algo": "null",
+        "subscribe_for_reg": false,
+        "pdn": "default",
+        "useragent": "IM-client/OMA1.0 Samsung/[PRODUCT_MODEL]-[BUILD_VERSION] Samsung-RCS/[CLIENT_VERSION]",
+        "timer": "1:2000,2:16000,4:17000,A:2000,B:32000,C:180000,D:32000,E:2000,F:32000,G:2000,H:32000,I:17000,J:32000,K:17000",
+        "mss_size": 1200,
+        "need_autoconfig": true,
+        "session_refresher": "uac",
+        "need_naptr_dns": true,
+        "need_ipv4_dns": false,
+        "rcs_profile": "UP_1.0",
+        "try_reregister_from_keepalive": true,
+        "support_ipsec": false,
+        "network": [
+          {
+            "type": "nr,lte,hspa,umts,gsm,wifi",
+            "services": [
+              "im",
+              "ft_http",
+              "options",
+              "euc",
+              "gls",
+              "chatbot-communication"
+            ],
+            "enabled": true
+          }
+        ]
+      }
+    ]
+  }
+}

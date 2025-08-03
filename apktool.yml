@@ -1,0 +1,38 @@
+version: 2.12.0-dirty
+apkFileName: imsservice.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 35
+  targetSdkVersion: 35
+packageInfo:
+  forcedPackageId: 127
+versionInfo:
+  versionCode: 250630180
+  versionName: 6.250630
+compactEntries: true
+doNotCompress:
+- arsc
+- dex
+- png
+- webp
+- META-INF/androidx.annotation_annotation-experimental.version
+- META-INF/androidx.arch.core_core-runtime.version
+- META-INF/androidx.core_core.version
+- META-INF/androidx.interpolator_interpolator.version
+- META-INF/androidx.lifecycle_lifecycle-runtime.version
+- META-INF/androidx.profileinstaller_profileinstaller.version
+- META-INF/androidx.startup_startup-runtime.version
+- META-INF/androidx.tracing_tracing.version
+- META-INF/androidx.versionedparcelable_versionedparcelable.version
+- META-INF/external__kotlinx.coroutines__android_common__kotlinx_coroutines_android.kotlin_module
+- META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler
+- META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory
+- firebase-annotations.properties
+- firebase-iid-interop.properties
+- firebase-installations-interop.properties
+- play-services-basement.properties
+- play-services-cloud-messaging.properties
+- play-services-stats.properties
+- play-services-tasks.properties
