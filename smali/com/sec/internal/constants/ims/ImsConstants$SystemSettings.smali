@@ -62,8 +62,6 @@
 
 .field public static final PREFFERED_VOICE_CALL:Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings$SettingsItem;
 
-.field public static final RCS_ALLOWED_URI:Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings$SettingsItem;
-
 .field public static final RCS_DISABLED:I = 0x0
 
 .field public static final RCS_DISABLED_BY_NETWORK:I = -0x2
@@ -571,19 +569,6 @@
     invoke-direct {v0, v2, v1, v5}, Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings$SettingsItem;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings;->WIFI_CALL_WHEN_ROAMING2:Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings$SettingsItem;
-
-    .line 226
-    new-instance v0, Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings$SettingsItem;
-
-    const-string v1, "PhoneRestrictionPolicy"
-
-    const-string v5, "isRCSEnabled"
-
-    const-string v6, "com.sec.knox.provider2"
-
-    invoke-direct {v0, v6, v1, v5}, Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings$SettingsItem;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v0, Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings;->RCS_ALLOWED_URI:Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings$SettingsItem;
 
     .line 231
     new-instance v0, Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings$SettingsItem;
