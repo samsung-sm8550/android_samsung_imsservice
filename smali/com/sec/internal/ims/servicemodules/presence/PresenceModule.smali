@@ -2083,7 +2083,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p2, v0}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {p2, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p2
 

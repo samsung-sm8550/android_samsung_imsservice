@@ -1378,7 +1378,7 @@
     :cond_2
     const-string/jumbo v8, "ro.product.first_api_level"
 
-    invoke-static {v8, v6}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v8, v6}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v9
 
@@ -1455,7 +1455,7 @@
 
     const-string v2, ""
 
-    invoke-static {p1, v2}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1466,7 +1466,7 @@
 
     move-result-object v2
 
-    invoke-static {}, Landroid/os/SemSystemProperties;->getCountryIso()Ljava/lang/String;
+    invoke-static {}, Landroid/os/SystemProperties;->getCountryIso()Ljava/lang/String;
 
     move-result-object v9
 
@@ -1485,7 +1485,7 @@
 
     if-eqz p1, :cond_7
 
-    invoke-static {v8, v6}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v8, v6}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p1
 

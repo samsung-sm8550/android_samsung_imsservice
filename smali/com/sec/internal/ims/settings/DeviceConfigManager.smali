@@ -3871,7 +3871,7 @@
 
     const-string v1, ""
 
-    invoke-static {v0, v1}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4225,7 +4225,7 @@
     check-cast v5, Ljava/lang/String;
 
     .line 496
-    invoke-static {v4, v5}, Landroid/os/SemSystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 498
     iget-object v4, p0, Lcom/sec/internal/ims/settings/DeviceConfigManager;->mMno:Lcom/sec/internal/constants/Mno;
@@ -5383,7 +5383,7 @@
     :goto_0
     const-string p1, "net.tether.always"
 
-    invoke-static {p1, p0}, Landroid/os/SemSystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -6353,7 +6353,7 @@
     :goto_6
     const-string/jumbo p1, "persist.sys.ims_test_mode"
 
-    invoke-static {p1, v7}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {p1, v7}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p1
 

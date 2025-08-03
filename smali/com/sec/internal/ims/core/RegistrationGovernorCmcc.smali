@@ -130,7 +130,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v2}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v1, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
@@ -199,7 +199,7 @@
 
     const-string/jumbo v1, "persist.ims.datachannel.enable"
 
-    invoke-static {v1, v0}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -215,7 +215,7 @@
     move-result-object p1
 
     .line 573
-    invoke-static {v1, p1}, Landroid/os/SemSystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 574
     iget p0, p0, Lcom/sec/internal/ims/core/RegistrationGovernor;->mPhoneId:I

@@ -519,7 +519,7 @@
 
     const v0, 0x5265c00
 
-    invoke-static {p0, v0}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {p0, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p0
 
@@ -2111,7 +2111,7 @@
     :cond_9
     const-string/jumbo v1, "persist.ril.config.defaultmsgapp"
 
-    invoke-static {v1}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

@@ -2151,7 +2151,7 @@
     .line 333
     const-string/jumbo p1, "ro.build.scafe.cream"
 
-    invoke-static {p1}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2232,7 +2232,7 @@
     .line 321
     const-string/jumbo p1, "ro.build.scafe.version"
 
-    invoke-static {p1}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

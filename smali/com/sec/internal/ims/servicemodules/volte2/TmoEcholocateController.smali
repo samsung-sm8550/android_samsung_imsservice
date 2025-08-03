@@ -416,7 +416,7 @@
     :try_start_0
     const-string/jumbo v1, "ro.csc.sales_code"
 
-    invoke-static {v1}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

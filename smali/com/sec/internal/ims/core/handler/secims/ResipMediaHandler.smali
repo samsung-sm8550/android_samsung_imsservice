@@ -3053,7 +3053,7 @@
     .line 432
     const-string/jumbo p1, "persist.ims.salescode.sve"
 
-    invoke-static {p1, p0}, Landroid/os/SemSystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 433
     invoke-virtual {v0, p2, p3}, Lcom/sec/internal/ims/core/handler/secims/UserAgent;->startCamera(II)V

@@ -85,7 +85,7 @@
 
     const/4 p2, 0x0
 
-    invoke-static {p0, p2}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {p0, p2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p0
 

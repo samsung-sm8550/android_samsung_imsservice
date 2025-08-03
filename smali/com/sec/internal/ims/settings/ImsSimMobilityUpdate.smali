@@ -675,7 +675,7 @@
 
     const/4 v3, -0x1
 
-    invoke-static {v1, v3}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v1, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
